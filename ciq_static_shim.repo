@@ -1,0 +1,12 @@
+# CIQ static repository
+# This repo should have all the Shim build-time requirements "frozen" so the built EFI binaries are reproducible exactly
+# DNF priority is set to guarantee these packages get used first
+
+[ciq_static_shim_8]
+name=ciq_static_shim_8
+baseurl=https://skiprocky.linuxdn.org/CIQ_tmp/ciq_shim_repo_8/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
+priority=5
+
