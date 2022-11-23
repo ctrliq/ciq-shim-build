@@ -4,7 +4,7 @@
 
 [ciq_static_shim_8]
 name=ciq_static_shim_8
-baseurl=https://skiprocky.linuxdn.org/CIQ_tmp/ciq_shim_repo_8/
+baseurl=https://rl-secure-boot.ewr1.vultrobjects.com/repos/shim_review_deps/
 gpgcheck=1
 enabled=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial

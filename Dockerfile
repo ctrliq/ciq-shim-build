@@ -21,7 +21,13 @@ COPY shimx64.efi  /
 COPY shimia32.efi  /
 
 
-# Should add static repos here:
+# Temporary line to update to 8.7 for testing:
+RUN dnf -y update
+
+
+# Remove all repos, and point *only* to our static one with the necessary BuildRequires
+# We don't want to contaminate the build with anything different - it must be reproducible
+RUN rm -f /etc/yum.repos.d/*.repo
 COPY ciq_static_shim.repo  /etc/yum.repos.d/
 
 # Install necessary packages, and run the build:
