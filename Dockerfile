@@ -5,9 +5,9 @@
 # Build and tag locally with:   docker build --tag ciq-shim-review:8 ./
 #
 
-FROM rockylinux:8.6.20227707
+FROM rockylinux:8.7.20230215
 
-ENV shim_release 15.6-1.el8
+ENV shim_release 15.7-1.el8
 
 # Copy and extract src rpm and macros, modify setarch in spec file because 32-bit mod is not allowed inside containers:
 COPY rpmmacros  /root/.rpmmacros
@@ -22,7 +22,7 @@ COPY shimia32.efi  /
 
 
 # Temporary line to update to 8.7 for testing:
-RUN dnf -y update
+# RUN dnf -y update
 
 
 # Remove all repos, and point *only* to our static one with the necessary BuildRequires
