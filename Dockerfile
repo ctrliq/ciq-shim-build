@@ -5,9 +5,9 @@
 # Build and tag locally with:   docker build --tag ciq-shim-review:8 ./
 #
 
-FROM rockylinux:8.7.20230215
+FROM rockylinux:8.8.20230518
 
-ENV shim_release 15.7-1.el8
+ENV shim_release 15.7-2.el8
 
 # Copy and extract src rpm and macros, modify setarch in spec file because 32-bit mod is not allowed inside containers:
 COPY rpmmacros  /root/.rpmmacros
@@ -16,13 +16,9 @@ RUN rpm -ivh /root/shim-unsigned-x64-$shim_release.src.rpm
 RUN sed -i 's/linux32 -B/linux32/g' /builddir/build/SPECS/shim-unsigned-x64.spec
 
 
-# already-build shim binaries for comparison:
+# already-built shim binaries for comparison:
 COPY shimx64.efi  /
 COPY shimia32.efi  /
-
-
-# Temporary line to update to 8.7 for testing:
-# RUN dnf -y update
 
 
 # Remove all repos, and point *only* to our static one with the necessary BuildRequires
