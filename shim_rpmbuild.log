@@ -1,53 +1,34 @@
-Sending build context to Docker daemon  8.786MB
-Step 1/17 : FROM rockylinux:8.8.20230518
- ---> 4e97feadb276
-Step 2/17 : ENV shim_release 15.7-2.el8
- ---> Running in aa8650058d17
-Removing intermediate container aa8650058d17
- ---> 9333ffd045d9
-Step 3/17 : COPY rpmmacros  /root/.rpmmacros
- ---> 55b8da5464dc
-Step 4/17 : COPY shim-unsigned-x64-$shim_release.src.rpm  /root
- ---> 03227713abcb
-Step 5/17 : RUN rpm -ivh /root/shim-unsigned-x64-$shim_release.src.rpm
- ---> Running in dda6015c2821
-Updating / installing...
-shim-unsigned-x64-15.7-2.el8          [91mwarning: user skip does not exist - using root
-[0m[91mwarning: group skip does not exist - using root
-[0m[91mwarning: user skip does not exist - using root
-[0m[91mwarning: group skip does not exist - using root
-[0m[91mwarning: user skip does not exist - using root
-[0m[91mwarning: group skip does not exist - using root
-[0m[91mwarning: user skip does not exist - using root
-[0m[91mwarning: group skip does not exist - using root
-[0m[91mwarning: user skip does not exist - using root
-[0m[91mwarning: group skip does not exist - using root
-[0m########################################
-[91mwarning: user skip does not exist - using root
-[0m[91mwarning: group skip does not exist - using root
-[0m[91mwarning: user skip does not exist - using root
-[0m[91mwarning: group skip does not exist - using root
-[0m[91mwarning: user skip does not exist - using root
-[0m[91mwarning: group skip does not exist - using root
-[0mRemoving intermediate container dda6015c2821
- ---> 6f2e6f2ea7c5
-Step 6/17 : RUN sed -i 's/linux32 -B/linux32/g' /builddir/build/SPECS/shim-unsigned-x64.spec
- ---> Running in f638018e7eda
-Removing intermediate container f638018e7eda
- ---> 2754170e4890
-Step 7/17 : COPY shimx64.efi  /
- ---> 07b41ae9d4ce
-Step 8/17 : COPY shimia32.efi  /
- ---> bfb7f4f57730
-Step 9/17 : RUN rm -f /etc/yum.repos.d/*.repo
- ---> Running in fb2060d31d41
-Removing intermediate container fb2060d31d41
- ---> 116df135a82d
-Step 10/17 : COPY ciq_static_shim.repo  /etc/yum.repos.d/
- ---> 2d11ee224aa3
-Step 11/17 : RUN dnf -y install dnf-plugins-core rpm-build;  dnf -y  builddep /builddir/build/SPECS/shim-unsigned-x64.spec
- ---> Running in 2a0f458518ff
-ciq_static_shim_8                               1.3 MB/s | 421 kB     00:00    
+Emulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.
+STEP 1/17: FROM rockylinux:8.8.20230518
+STEP 2/17: ENV shim_release 15.7-2.el8
+--> Using cache 7e6851b5fa63bd1d8e4a1ede6674996fe8e0dec18733341ea7833e19150b56b0
+--> 7e6851b5fa6
+STEP 3/17: COPY rpmmacros  /root/.rpmmacros
+--> Using cache f3c51e381c639c2094930337d40ce84bbb299c8a7c7c5fde6df58f6a66ea1343
+--> f3c51e381c6
+STEP 4/17: COPY shim-unsigned-x64-$shim_release.src.rpm  /root
+--> Using cache 8605134aec13e1943095b88bd288afc8e1926f8c11ab541b566c5fcaede90251
+--> 8605134aec1
+STEP 5/17: RUN rpm -ivh /root/shim-unsigned-x64-$shim_release.src.rpm
+--> Using cache 6968b7bc8800117700282981a3ac5023643c1a84bb1e091c053405cfd9c0e0e4
+--> 6968b7bc880
+STEP 6/17: RUN sed -i 's/linux32 -B/linux32/g' /builddir/build/SPECS/shim-unsigned-x64.spec
+--> Using cache f1973c0c5ff2b08eeded5b34a7f74724d897835b2a9644b2fa090e570b5fd3c0
+--> f1973c0c5ff
+STEP 7/17: COPY shimx64.efi  /
+--> Using cache bd5251c90434f9ea74669d2202c639cbb6e744402620ba9af748d79077fe10c1
+--> bd5251c9043
+STEP 8/17: COPY shimia32.efi  /
+--> Using cache cb6c6baa69fbdf55805513b409685da31d68ed88983b0df2017e864fc6607e81
+--> cb6c6baa69f
+STEP 9/17: RUN rm -f /etc/yum.repos.d/*.repo
+--> Using cache ec89077513cec2d29a3093f88fe7e7ad92ed39588e0d1704c95372258558ed68
+--> ec89077513c
+STEP 10/17: COPY ciq_static_shim.repo  /etc/yum.repos.d/
+--> Using cache 2dde6def8aadf81ff93cd2e71587567ee7718f5933bc700639cd67afd0d1d836
+--> 2dde6def8aa
+STEP 11/17: RUN dnf -y install dnf-plugins-core rpm-build;  dnf -y  builddep /builddir/build/SPECS/shim-unsigned-x64.spec
+ciq_static_shim_8                               1.1 MB/s | 421 kB     00:00    
 Dependencies resolved.
 ================================================================================
  Package                   Arch    Version             Repository          Size
@@ -106,58 +87,58 @@ Install  44 Packages
 Total download size: 14 M
 Installed size: 44 M
 Downloading Packages:
-(1/44): bzip2-1.0.6-26.el8.x86_64.rpm           414 kB/s |  59 kB     00:00    
-(2/44): dbus-glib-0.110-2.el8.x86_64.rpm        732 kB/s | 126 kB     00:00    
-(3/44): cpio-2.12-11.el8.x86_64.rpm             1.4 MB/s | 265 kB     00:00    
-(4/44): dnf-plugins-core-4.0.21-19.el8_8.noarch 1.6 MB/s |  74 kB     00:00    
-(5/44): diffutils-3.6-6.el8.x86_64.rpm          3.6 MB/s | 358 kB     00:00    
-(6/44): efi-srpm-macros-3-3.el8.noarch.rpm      549 kB/s |  21 kB     00:00    
-(7/44): file-5.33-24.el8.x86_64.rpm             1.7 MB/s |  76 kB     00:00    
-(8/44): dwz-0.12-10.el8.x86_64.rpm              870 kB/s | 108 kB     00:00    
-(9/44): elfutils-0.188-3.el8.x86_64.rpm         8.3 MB/s | 543 kB     00:00    
-(10/44): gc-7.6.4-3.el8.x86_64.rpm              3.1 MB/s | 108 kB     00:00    
-(11/44): findutils-4.6.0-20.el8.x86_64.rpm      5.2 MB/s | 526 kB     00:00    
-(12/44): ghc-srpm-macros-1.4.2-7.el8.noarch.rpm 106 kB/s | 8.3 kB     00:00    
-(13/44): gdb-headless-8.2-19.el8.x86_64.rpm      25 MB/s | 3.7 MB     00:00    
-(14/44): go-srpm-macros-2-17.el8.noarch.rpm     132 kB/s |  12 kB     00:00    
-(15/44): glibc-gconv-extra-2.28-225.el8.x86_64.  14 MB/s | 1.5 MB     00:00    
-(16/44): libbabeltrace-1.5.4-4.el8.x86_64.rpm   4.5 MB/s | 199 kB     00:00    
-(17/44): libatomic_ops-7.6.2-3.el8.x86_64.rpm   330 kB/s |  37 kB     00:00    
-(18/44): libipt-1.6.1-8.el8.x86_64.rpm          749 kB/s |  49 kB     00:00    
-(19/44): guile-2.0.14-7.el8.x86_64.rpm           20 MB/s | 3.5 MB     00:00    
-(20/44): libtool-ltdl-2.4.6-25.el8.x86_64.rpm   1.5 MB/s |  57 kB     00:00    
-(21/44): ocaml-srpm-macros-5-4.el8.noarch.rpm   252 kB/s | 8.3 kB     00:00    
-(22/44): libpkgconf-1.4.2-1.el8.x86_64.rpm      417 kB/s |  34 kB     00:00    
-(23/44): patch-2.7.6-11.el8.x86_64.rpm          2.5 MB/s | 137 kB     00:00    
-(24/44): openblas-srpm-macros-2-2.el8.noarch.rp 112 kB/s | 6.9 kB     00:00    
-(25/44): pkgconf-m4-1.4.2-1.el8.noarch.rpm      421 kB/s |  16 kB     00:00    
-(26/44): perl-srpm-macros-1-25.el8.noarch.rpm   119 kB/s | 9.7 kB     00:00    
-(27/44): pkgconf-pkg-config-1.4.2-1.el8.x86_64. 233 kB/s |  14 kB     00:00    
-(28/44): python-rpm-macros-3-45.el8.noarch.rpm  236 kB/s |  15 kB     00:00    
-(29/44): python-srpm-macros-3-45.el8.noarch.rpm 216 kB/s |  15 kB     00:00    
-(30/44): python3-dateutil-2.6.1-6.el8.noarch.rp 3.8 MB/s | 250 kB     00:00    
-(31/44): python3-dbus-1.2.4-15.el8.x86_64.rpm   3.4 MB/s | 133 kB     00:00    
-(32/44): pkgconf-1.4.2-1.el8.x86_64.rpm         164 kB/s |  37 kB     00:00    
-(33/44): python3-dnf-plugins-core-4.0.21-19.el8 4.3 MB/s | 260 kB     00:00    
-(34/44): python3-rpm-macros-3-45.el8.noarch.rpm 236 kB/s |  14 kB     00:00    
-(35/44): python3-systemd-234-8.el8.x86_64.rpm   2.9 MB/s |  80 kB     00:00    
-(36/44): qt5-srpm-macros-5.15.3-1.el8.noarch.rp 465 kB/s | 9.5 kB     00:00    
-(37/44): redhat-rpm-config-131-1.el8.noarch.rpm 2.3 MB/s |  90 kB     00:00    
-(38/44): rpm-build-4.14.3-26.el8.x86_64.rpm     3.5 MB/s | 173 kB     00:00    
-(39/44): rust-srpm-macros-5-2.el8.noarch.rpm    264 kB/s | 8.2 kB     00:00    
-(40/44): python3-six-1.11.0-8.el8.noarch.rpm    258 kB/s |  37 kB     00:00    
-(41/44): xz-5.2.4-4.el8_6.x86_64.rpm            4.0 MB/s | 152 kB     00:00    
-(42/44): unzip-6.0-46.el8.x86_64.rpm            2.5 MB/s | 195 kB     00:00    
-(43/44): zip-3.0-23.el8.x86_64.rpm              4.9 MB/s | 269 kB     00:00    
-(44/44): zstd-1.4.4-1.el8.x86_64.rpm            5.6 MB/s | 392 kB     00:00    
+(1/44): bzip2-1.0.6-26.el8.x86_64.rpm           368 kB/s |  59 kB     00:00    
+(2/44): dbus-glib-0.110-2.el8.x86_64.rpm        670 kB/s | 126 kB     00:00    
+(3/44): cpio-2.12-11.el8.x86_64.rpm             1.0 MB/s | 265 kB     00:00    
+(4/44): dnf-plugins-core-4.0.21-19.el8_8.noarch 1.0 MB/s |  74 kB     00:00    
+(5/44): diffutils-3.6-6.el8.x86_64.rpm          3.2 MB/s | 358 kB     00:00    
+(6/44): dwz-0.12-10.el8.x86_64.rpm              2.8 MB/s | 108 kB     00:00    
+(7/44): efi-srpm-macros-3-3.el8.noarch.rpm      636 kB/s |  21 kB     00:00    
+(8/44): elfutils-0.188-3.el8.x86_64.rpm         6.9 MB/s | 543 kB     00:00    
+(9/44): file-5.33-24.el8.x86_64.rpm             993 kB/s |  76 kB     00:00    
+(10/44): gc-7.6.4-3.el8.x86_64.rpm              2.3 MB/s | 108 kB     00:00    
+(11/44): findutils-4.6.0-20.el8.x86_64.rpm      4.8 MB/s | 526 kB     00:00    
+(12/44): ghc-srpm-macros-1.4.2-7.el8.noarch.rpm 111 kB/s | 8.3 kB     00:00    
+(13/44): gdb-headless-8.2-19.el8.x86_64.rpm      24 MB/s | 3.7 MB     00:00    
+(14/44): glibc-gconv-extra-2.28-225.el8.x86_64.  11 MB/s | 1.5 MB     00:00    
+(15/44): go-srpm-macros-2-17.el8.noarch.rpm     130 kB/s |  12 kB     00:00    
+(16/44): libatomic_ops-7.6.2-3.el8.x86_64.rpm   1.1 MB/s |  37 kB     00:00    
+(17/44): libbabeltrace-1.5.4-4.el8.x86_64.rpm   2.5 MB/s | 199 kB     00:00    
+(18/44): guile-2.0.14-7.el8.x86_64.rpm           16 MB/s | 3.5 MB     00:00    
+(19/44): libpkgconf-1.4.2-1.el8.x86_64.rpm      334 kB/s |  34 kB     00:00    
+(20/44): libipt-1.6.1-8.el8.x86_64.rpm          223 kB/s |  49 kB     00:00    
+(21/44): libtool-ltdl-2.4.6-25.el8.x86_64.rpm   709 kB/s |  57 kB     00:00    
+(22/44): patch-2.7.6-11.el8.x86_64.rpm          3.4 MB/s | 137 kB     00:00    
+(23/44): openblas-srpm-macros-2-2.el8.noarch.rp  97 kB/s | 6.9 kB     00:00    
+(24/44): pkgconf-1.4.2-1.el8.x86_64.rpm         1.1 MB/s |  37 kB     00:00    
+(25/44): pkgconf-m4-1.4.2-1.el8.noarch.rpm      304 kB/s |  16 kB     00:00    
+(26/44): pkgconf-pkg-config-1.4.2-1.el8.x86_64. 248 kB/s |  14 kB     00:00    
+(27/44): ocaml-srpm-macros-5-4.el8.noarch.rpm    31 kB/s | 8.3 kB     00:00    
+(28/44): perl-srpm-macros-1-25.el8.noarch.rpm    52 kB/s | 9.7 kB     00:00    
+(29/44): python-rpm-macros-3-45.el8.noarch.rpm  222 kB/s |  15 kB     00:00    
+(30/44): python-srpm-macros-3-45.el8.noarch.rpm 211 kB/s |  15 kB     00:00    
+(31/44): python3-dateutil-2.6.1-6.el8.noarch.rp 6.2 MB/s | 250 kB     00:00    
+(32/44): python3-dnf-plugins-core-4.0.21-19.el8 6.7 MB/s | 260 kB     00:00    
+(33/44): python3-dbus-1.2.4-15.el8.x86_64.rpm   1.2 MB/s | 133 kB     00:00    
+(34/44): python3-systemd-234-8.el8.x86_64.rpm   2.4 MB/s |  80 kB     00:00    
+(35/44): qt5-srpm-macros-5.15.3-1.el8.noarch.rp 110 kB/s | 9.5 kB     00:00    
+(36/44): redhat-rpm-config-131-1.el8.noarch.rpm 2.1 MB/s |  90 kB     00:00    
+(37/44): python3-rpm-macros-3-45.el8.noarch.rpm  53 kB/s |  14 kB     00:00    
+(38/44): python3-six-1.11.0-8.el8.noarch.rpm    143 kB/s |  37 kB     00:00    
+(39/44): rpm-build-4.14.3-26.el8.x86_64.rpm     2.8 MB/s | 173 kB     00:00    
+(40/44): rust-srpm-macros-5-2.el8.noarch.rpm    116 kB/s | 8.2 kB     00:00    
+(41/44): zip-3.0-23.el8.x86_64.rpm              7.6 MB/s | 269 kB     00:00    
+(42/44): unzip-6.0-46.el8.x86_64.rpm            1.5 MB/s | 195 kB     00:00    
+(43/44): zstd-1.4.4-1.el8.x86_64.rpm            5.3 MB/s | 392 kB     00:00    
+(44/44): xz-5.2.4-4.el8_6.x86_64.rpm            399 kB/s | 152 kB     00:00    
 --------------------------------------------------------------------------------
-Total                                            12 MB/s |  14 MB     00:01     
+Total                                           7.6 MB/s |  14 MB     00:01     
 ciq_static_shim_8                               1.6 MB/s | 1.6 kB     00:00    
-[91mImporting GPG key 0x6D745A60:
+Importing GPG key 0x6D745A60:
  Userid     : "Release Engineering <infrastructure@rockylinux.org>"
  Fingerprint: 7051 C470 A929 F454 CEBE 37B7 15AF 5DAC 6D74 5A60
  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
-[0mKey imported successfully
+Key imported successfully
 Running transaction check
 Transaction check succeeded.
 Running transaction test
@@ -309,7 +290,7 @@ Installed:
   zstd-1.4.4-1.el8.x86_64                                                       
 
 Complete!
-Last metadata expiration check: 0:00:03 ago on Wed Aug 23 01:21:06 2023.
+Last metadata expiration check: 0:00:03 ago on Fri Sep  8 17:06:02 2023.
 Package findutils-1:4.6.0-20.el8.x86_64 is already installed.
 Dependencies resolved.
 ================================================================================
@@ -407,89 +388,89 @@ Install  81 Packages
 Total download size: 85 M
 Installed size: 207 M
 Downloading Packages:
-(1/81): crypto-policies-scripts-20221215-1.gite 583 kB/s |  83 kB     00:00    
-(2/81): annobin-10.94-1.el8.x86_64.rpm          4.4 MB/s | 964 kB     00:00    
-(3/81): dos2unix-7.4.0-3.el8.x86_64.rpm         3.1 MB/s | 240 kB     00:00    
-(4/81): elfutils-libelf-devel-0.188-3.el8.x86_6 634 kB/s |  60 kB     00:00    
-(5/81): efivar-libs-37-4.el8.x86_64.rpm         797 kB/s | 107 kB     00:00    
-(6/81): emacs-filesystem-26.1-10.el8_8.2.noarch 1.2 MB/s |  69 kB     00:00    
-(7/81): gcc-plugin-annobin-8.5.0-18.el8.x86_64. 452 kB/s |  34 kB     00:00    
-(8/81): cpp-8.5.0-18.el8.x86_64.rpm              19 MB/s |  10 MB     00:00    
-(9/81): git-2.39.3-1.el8_8.x86_64.rpm           990 kB/s | 103 kB     00:00    
-(10/81): git-core-2.39.3-1.el8_8.x86_64.rpm      15 MB/s |  11 MB     00:00    
-(11/81): glibc-devel-2.28-225.el8.x86_64.rpm    1.2 MB/s |  82 kB     00:00    
-(12/81): glibc-headers-2.28-225.el8.x86_64.rpm  4.9 MB/s | 487 kB     00:00    
-(13/81): gcc-8.5.0-18.el8.x86_64.rpm             20 MB/s |  23 MB     00:01    
-(14/81): git-core-doc-2.39.3-1.el8_8.noarch.rpm 3.1 MB/s | 3.0 MB     00:00    
-(15/81): groff-base-1.22.3-18.el8.x86_64.rpm    9.8 MB/s | 1.0 MB     00:00    
-(16/81): keyutils-libs-devel-1.5.10-9.el8.x86_6 1.1 MB/s |  47 kB     00:00    
-(17/81): isl-0.16.1-6.el8.x86_64.rpm             12 MB/s | 834 kB     00:00    
-(18/81): libcom_err-devel-1.45.6-5.el8.x86_64.r 587 kB/s |  38 kB     00:00    
-(19/81): krb5-devel-1.18.2-22.el8_7.x86_64.rpm  6.5 MB/s | 559 kB     00:00    
-(20/81): libedit-3.1-23.20170329cvs.el8.x86_64. 4.3 MB/s | 102 kB     00:00    
-(21/81): libkadm5-1.18.2-22.el8_7.x86_64.rpm    3.8 MB/s | 186 kB     00:00    
-(22/81): libmpc-1.1.0-9.1.el8.x86_64.rpm        934 kB/s |  60 kB     00:00    
-(23/81): libgomp-8.5.0-18.el8.x86_64.rpm        1.4 MB/s | 207 kB     00:00    
-(24/81): libselinux-devel-2.9-8.el8.x86_64.rpm  6.6 MB/s | 199 kB     00:00    
-(25/81): libverto-devel-0.3.2-2.el8.x86_64.rpm  208 kB/s |  17 kB     00:00    
-(26/81): libxcrypt-devel-4.1.1-6.el8.x86_64.rpm 297 kB/s |  24 kB     00:00    
-(27/81): libsepol-devel-2.9-3.el8.x86_64.rpm    406 kB/s |  86 kB     00:00    
-(28/81): make-4.2.1-11.el8.x86_64.rpm           7.2 MB/s | 497 kB     00:00    
-(29/81): ncurses-6.1-9.20180224.el8.x86_64.rpm  6.4 MB/s | 386 kB     00:00    
-(30/81): nspr-4.34.0-3.el8_6.x86_64.rpm         3.0 MB/s | 142 kB     00:00    
-(31/81): nss-3.79.0-11.el8_7.x86_64.rpm         8.2 MB/s | 746 kB     00:00    
-(32/81): nss-softokn-3.79.0-11.el8_7.x86_64.rpm  11 MB/s | 1.2 MB     00:00    
-(33/81): nss-softokn-freebl-3.79.0-11.el8_7.x86 6.1 MB/s | 397 kB     00:00    
-(34/81): nss-sysinit-3.79.0-11.el8_7.x86_64.rpm 1.3 MB/s |  73 kB     00:00    
-(35/81): kernel-headers-4.18.0-477.21.1.el8_8.x  14 MB/s |  11 MB     00:00    
-(36/81): nss-util-3.79.0-11.el8_7.x86_64.rpm    2.5 MB/s | 138 kB     00:00    
-(37/81): nss-tools-3.79.0-11.el8_7.x86_64.rpm   7.1 MB/s | 581 kB     00:00    
-(38/81): openssh-8.0p1-19.el8_8.x86_64.rpm      9.2 MB/s | 523 kB     00:00    
-(39/81): openssl-1.1.1k-9.el8_7.x86_64.rpm      8.1 MB/s | 709 kB     00:00    
-(40/81): openssh-clients-8.0p1-19.el8_8.x86_64. 7.2 MB/s | 668 kB     00:00    
-(41/81): pcre2-utf16-10.32-3.el8_6.x86_64.rpm   5.8 MB/s | 228 kB     00:00    
-(42/81): pcre2-devel-10.32-3.el8_6.x86_64.rpm   7.3 MB/s | 604 kB     00:00    
-(43/81): pcre2-utf32-10.32-3.el8_6.x86_64.rpm   5.1 MB/s | 219 kB     00:00    
-(44/81): openssl-devel-1.1.1k-9.el8_7.x86_64.rp  17 MB/s | 2.3 MB     00:00    
-(45/81): perl-Carp-1.42-396.el8.noarch.rpm      693 kB/s |  29 kB     00:00    
-(46/81): perl-Error-0.17025-2.el8.noarch.rpm    1.0 MB/s |  45 kB     00:00    
-(47/81): perl-Errno-1.28-422.el8.x86_64.rpm     1.0 MB/s |  75 kB     00:00    
-(48/81): perl-Encode-2.97-3.el8.x86_64.rpm       15 MB/s | 1.5 MB     00:00    
-(49/81): perl-File-Path-2.15-2.el8.noarch.rpm   1.1 MB/s |  37 kB     00:00    
-(50/81): perl-Exporter-5.72-396.el8.noarch.rpm  704 kB/s |  33 kB     00:00    
-(51/81): perl-File-Temp-0.230.600-1.el8.noarch. 1.7 MB/s |  62 kB     00:00    
-(52/81): perl-Git-2.39.3-1.el8_8.noarch.rpm     2.3 MB/s |  78 kB     00:00    
-(53/81): perl-Getopt-Long-2.50-4.el8.noarch.rpm 750 kB/s |  62 kB     00:00    
-(54/81): perl-IO-1.38-422.el8.x86_64.rpm        3.1 MB/s | 141 kB     00:00    
-(55/81): perl-HTTP-Tiny-0.074-1.el8.noarch.rpm  492 kB/s |  57 kB     00:00    
-(56/81): perl-MIME-Base64-3.15-396.el8.x86_64.r 379 kB/s |  30 kB     00:00    
-(57/81): perl-Pod-Escapes-1.07-395.el8.noarch.r 481 kB/s |  19 kB     00:00    
-(58/81): perl-PathTools-3.74-1.el8.x86_64.rpm   1.0 MB/s |  89 kB     00:00    
-(59/81): perl-Pod-Simple-3.35-395.el8.noarch.rp 8.1 MB/s | 212 kB     00:00    
-(60/81): perl-Pod-Perldoc-3.28-396.el8.noarch.r 2.3 MB/s |  85 kB     00:00    
-(61/81): perl-Scalar-List-Utils-1.49-2.el8.x86_ 2.8 MB/s |  67 kB     00:00    
-(62/81): perl-Socket-2.027-3.el8.x86_64.rpm     839 kB/s |  58 kB     00:00    
-(63/81): perl-Pod-Usage-1.69-395.el8.noarch.rpm 259 kB/s |  33 kB     00:00    
-(64/81): perl-Term-ANSIColor-4.06-396.el8.noarc 630 kB/s |  45 kB     00:00    
-(65/81): perl-TermReadKey-2.37-7.el8.x86_64.rpm 1.3 MB/s |  39 kB     00:00    
-(66/81): perl-Storable-3.11-3.el8.x86_64.rpm    608 kB/s |  97 kB     00:00    
-(67/81): perl-Term-Cap-1.17-395.el8.noarch.rpm  277 kB/s |  22 kB     00:00    
-(68/81): perl-Text-ParseWords-3.30-395.el8.noar 221 kB/s |  17 kB     00:00    
-(69/81): perl-Text-Tabs+Wrap-2013.0523-395.el8. 325 kB/s |  23 kB     00:00    
-(70/81): perl-Time-Local-1.280-1.el8.noarch.rpm 437 kB/s |  32 kB     00:00    
-(71/81): perl-Unicode-Normalize-1.25-396.el8.x8 3.6 MB/s |  81 kB     00:00    
-(72/81): perl-constant-1.33-396.el8.noarch.rpm  399 kB/s |  24 kB     00:00    
-(73/81): perl-macros-5.26.3-422.el8.x86_64.rpm  1.7 MB/s |  71 kB     00:00    
-(74/81): perl-libs-5.26.3-422.el8.x86_64.rpm     11 MB/s | 1.6 MB     00:00    
-(75/81): perl-parent-0.237-1.el8.noarch.rpm     219 kB/s |  19 kB     00:00    
-(76/81): perl-podlators-4.11-1.el8.noarch.rpm   3.6 MB/s | 117 kB     00:00    
-(77/81): perl-threads-shared-1.58-2.el8.x86_64. 1.1 MB/s |  47 kB     00:00    
-(78/81): pesign-0.112-27.el8_7.x86_64.rpm       5.5 MB/s | 185 kB     00:00    
-(79/81): perl-threads-2.21-2.el8.x86_64.rpm     744 kB/s |  60 kB     00:00    
-(80/81): zlib-devel-1.2.11-21.el8_7.x86_64.rpm  1.4 MB/s |  57 kB     00:00    
-(81/81): perl-interpreter-5.26.3-422.el8.x86_64  20 MB/s | 6.3 MB     00:00    
+(1/81): crypto-policies-scripts-20221215-1.gite 499 kB/s |  83 kB     00:00    
+(2/81): annobin-10.94-1.el8.x86_64.rpm          3.4 MB/s | 964 kB     00:00    
+(3/81): dos2unix-7.4.0-3.el8.x86_64.rpm         2.0 MB/s | 240 kB     00:00    
+(4/81): efivar-libs-37-4.el8.x86_64.rpm         2.9 MB/s | 107 kB     00:00    
+(5/81): elfutils-libelf-devel-0.188-3.el8.x86_6 981 kB/s |  60 kB     00:00    
+(6/81): emacs-filesystem-26.1-10.el8_8.2.noarch 726 kB/s |  69 kB     00:00    
+(7/81): gcc-plugin-annobin-8.5.0-18.el8.x86_64. 613 kB/s |  34 kB     00:00    
+(8/81): cpp-8.5.0-18.el8.x86_64.rpm              21 MB/s |  10 MB     00:00    
+(9/81): git-2.39.3-1.el8_8.x86_64.rpm           2.1 MB/s | 103 kB     00:00    
+(10/81): git-core-doc-2.39.3-1.el8_8.noarch.rpm  15 MB/s | 3.0 MB     00:00    
+(11/81): glibc-devel-2.28-225.el8.x86_64.rpm    428 kB/s |  82 kB     00:00    
+(12/81): git-core-2.39.3-1.el8_8.x86_64.rpm      25 MB/s |  11 MB     00:00    
+(13/81): gcc-8.5.0-18.el8.x86_64.rpm             34 MB/s |  23 MB     00:00    
+(14/81): groff-base-1.22.3-18.el8.x86_64.rpm    8.4 MB/s | 1.0 MB     00:00    
+(15/81): glibc-headers-2.28-225.el8.x86_64.rpm  3.6 MB/s | 487 kB     00:00    
+(16/81): isl-0.16.1-6.el8.x86_64.rpm             13 MB/s | 834 kB     00:00    
+(17/81): krb5-devel-1.18.2-22.el8_7.x86_64.rpm  3.7 MB/s | 559 kB     00:00    
+(18/81): keyutils-libs-devel-1.5.10-9.el8.x86_6 220 kB/s |  47 kB     00:00    
+(19/81): kernel-headers-4.18.0-477.21.1.el8_8.x  47 MB/s |  11 MB     00:00    
+(20/81): libedit-3.1-23.20170329cvs.el8.x86_64. 1.9 MB/s | 102 kB     00:00    
+(21/81): libgomp-8.5.0-18.el8.x86_64.rpm        2.4 MB/s | 207 kB     00:00    
+(22/81): libkadm5-1.18.2-22.el8_7.x86_64.rpm    2.1 MB/s | 186 kB     00:00    
+(23/81): libselinux-devel-2.9-8.el8.x86_64.rpm  2.9 MB/s | 199 kB     00:00    
+(24/81): libcom_err-devel-1.45.6-5.el8.x86_64.r 174 kB/s |  38 kB     00:00    
+(25/81): libsepol-devel-2.9-3.el8.x86_64.rpm    975 kB/s |  86 kB     00:00    
+(26/81): libverto-devel-0.3.2-2.el8.x86_64.rpm  160 kB/s |  17 kB     00:00    
+(27/81): libxcrypt-devel-4.1.1-6.el8.x86_64.rpm 248 kB/s |  24 kB     00:00    
+(28/81): make-4.2.1-11.el8.x86_64.rpm           6.3 MB/s | 497 kB     00:00    
+(29/81): nspr-4.34.0-3.el8_6.x86_64.rpm         3.6 MB/s | 142 kB     00:00    
+(30/81): ncurses-6.1-9.20180224.el8.x86_64.rpm  6.1 MB/s | 386 kB     00:00    
+(31/81): libmpc-1.1.0-9.1.el8.x86_64.rpm        149 kB/s |  60 kB     00:00    
+(32/81): nss-3.79.0-11.el8_7.x86_64.rpm          10 MB/s | 746 kB     00:00    
+(33/81): nss-softokn-3.79.0-11.el8_7.x86_64.rpm 9.3 MB/s | 1.2 MB     00:00    
+(34/81): nss-softokn-freebl-3.79.0-11.el8_7.x86 4.5 MB/s | 397 kB     00:00    
+(35/81): nss-sysinit-3.79.0-11.el8_7.x86_64.rpm 706 kB/s |  73 kB     00:00    
+(36/81): nss-util-3.79.0-11.el8_7.x86_64.rpm    2.2 MB/s | 138 kB     00:00    
+(37/81): openssh-clients-8.0p1-19.el8_8.x86_64. 6.5 MB/s | 668 kB     00:00    
+(38/81): openssh-8.0p1-19.el8_8.x86_64.rpm      2.6 MB/s | 523 kB     00:00    
+(39/81): openssl-1.1.1k-9.el8_7.x86_64.rpm      4.9 MB/s | 709 kB     00:00    
+(40/81): nss-tools-3.79.0-11.el8_7.x86_64.rpm   1.4 MB/s | 581 kB     00:00    
+(41/81): pcre2-devel-10.32-3.el8_6.x86_64.rpm   5.5 MB/s | 604 kB     00:00    
+(42/81): pcre2-utf32-10.32-3.el8_6.x86_64.rpm   4.5 MB/s | 219 kB     00:00    
+(43/81): pcre2-utf16-10.32-3.el8_6.x86_64.rpm   1.8 MB/s | 228 kB     00:00    
+(44/81): perl-Carp-1.42-396.el8.noarch.rpm      371 kB/s |  29 kB     00:00    
+(45/81): perl-Errno-1.28-422.el8.x86_64.rpm     948 kB/s |  75 kB     00:00    
+(46/81): openssl-devel-1.1.1k-9.el8_7.x86_64.rp 5.3 MB/s | 2.3 MB     00:00    
+(47/81): perl-Error-0.17025-2.el8.noarch.rpm    475 kB/s |  45 kB     00:00    
+(48/81): perl-Exporter-5.72-396.el8.noarch.rpm  348 kB/s |  33 kB     00:00    
+(49/81): perl-File-Path-2.15-2.el8.noarch.rpm   402 kB/s |  37 kB     00:00    
+(50/81): perl-Encode-2.97-3.el8.x86_64.rpm      4.3 MB/s | 1.5 MB     00:00    
+(51/81): perl-Getopt-Long-2.50-4.el8.noarch.rpm 689 kB/s |  62 kB     00:00    
+(52/81): perl-Git-2.39.3-1.el8_8.noarch.rpm     759 kB/s |  78 kB     00:00    
+(53/81): perl-HTTP-Tiny-0.074-1.el8.noarch.rpm  477 kB/s |  57 kB     00:00    
+(54/81): perl-IO-1.38-422.el8.x86_64.rpm        2.6 MB/s | 141 kB     00:00    
+(55/81): perl-File-Temp-0.230.600-1.el8.noarch. 170 kB/s |  62 kB     00:00    
+(56/81): perl-MIME-Base64-3.15-396.el8.x86_64.r 290 kB/s |  30 kB     00:00    
+(57/81): perl-Pod-Perldoc-3.28-396.el8.noarch.r 1.8 MB/s |  85 kB     00:00    
+(58/81): perl-Pod-Escapes-1.07-395.el8.noarch.r 136 kB/s |  19 kB     00:00    
+(59/81): perl-Pod-Simple-3.35-395.el8.noarch.rp 1.7 MB/s | 212 kB     00:00    
+(60/81): perl-PathTools-3.74-1.el8.x86_64.rpm   299 kB/s |  89 kB     00:00    
+(61/81): perl-Socket-2.027-3.el8.x86_64.rpm     1.1 MB/s |  58 kB     00:00    
+(62/81): perl-Pod-Usage-1.69-395.el8.noarch.rpm 237 kB/s |  33 kB     00:00    
+(63/81): perl-Scalar-List-Utils-1.49-2.el8.x86_ 574 kB/s |  67 kB     00:00    
+(64/81): perl-Term-Cap-1.17-395.el8.noarch.rpm  250 kB/s |  22 kB     00:00    
+(65/81): perl-Storable-3.11-3.el8.x86_64.rpm    713 kB/s |  97 kB     00:00    
+(66/81): perl-TermReadKey-2.37-7.el8.x86_64.rpm 469 kB/s |  39 kB     00:00    
+(67/81): perl-Term-ANSIColor-4.06-396.el8.noarc 242 kB/s |  45 kB     00:00    
+(68/81): perl-Text-ParseWords-3.30-395.el8.noar 172 kB/s |  17 kB     00:00    
+(69/81): perl-Text-Tabs+Wrap-2013.0523-395.el8. 281 kB/s |  23 kB     00:00    
+(70/81): perl-Time-Local-1.280-1.el8.noarch.rpm 340 kB/s |  32 kB     00:00    
+(71/81): perl-Unicode-Normalize-1.25-396.el8.x8 393 kB/s |  81 kB     00:00    
+(72/81): perl-constant-1.33-396.el8.noarch.rpm   92 kB/s |  24 kB     00:00    
+(73/81): perl-macros-5.26.3-422.el8.x86_64.rpm  1.4 MB/s |  71 kB     00:00    
+(74/81): perl-libs-5.26.3-422.el8.x86_64.rpm    7.6 MB/s | 1.6 MB     00:00    
+(75/81): perl-parent-0.237-1.el8.noarch.rpm     218 kB/s |  19 kB     00:00    
+(76/81): perl-podlators-4.11-1.el8.noarch.rpm   1.8 MB/s | 117 kB     00:00    
+(77/81): perl-interpreter-5.26.3-422.el8.x86_64  14 MB/s | 6.3 MB     00:00    
+(78/81): perl-threads-2.21-2.el8.x86_64.rpm     734 kB/s |  60 kB     00:00    
+(79/81): pesign-0.112-27.el8_7.x86_64.rpm       3.7 MB/s | 185 kB     00:00    
+(80/81): perl-threads-shared-1.58-2.el8.x86_64. 433 kB/s |  47 kB     00:00    
+(81/81): zlib-devel-1.2.11-21.el8_7.x86_64.rpm  413 kB/s |  57 kB     00:00    
 --------------------------------------------------------------------------------
-Total                                            25 MB/s |  85 MB     00:03     
+Total                                            20 MB/s |  85 MB     00:04     
 Running transaction check
 Transaction check succeeded.
 Running transaction test
@@ -760,50 +741,48 @@ Installed:
   zlib-devel-1.2.11-21.el8_7.x86_64                                             
 
 Complete!
-Removing intermediate container 2a0f458518ff
- ---> b8896c808dba
-Step 12/17 : RUN rpmbuild -bb /builddir/build/SPECS/shim-unsigned-x64.spec
- ---> Running in 4f772486f53f
-Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.g0EAme
-[91m+ umask 022
+--> 68ac9b66d09
+STEP 12/17: RUN rpmbuild -bb /builddir/build/SPECS/shim-unsigned-x64.spec
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.DBFBDz
++ umask 022
 + cd /builddir/build//BUILD
-[0m[91m+ cd /builddir/build/BUILD
-[0m[91m+ rm -rf shim-15.7
-[0m[91m+ /usr/bin/bzip2 -dc /builddir/build/SOURCES/shim-15.7.tar.bz2
-[0m[91m+ /usr/bin/tar -xof -
-[0m[91m+ STATUS=0
++ cd /builddir/build/BUILD
++ rm -rf shim-15.7
++ /usr/bin/bzip2 -dc /builddir/build/SOURCES/shim-15.7.tar.bz2
++ /usr/bin/tar -xof -
++ STATUS=0
 + '[' 0 -ne 0 ']'
 + cd shim-15.7
-[0m[91m+ /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
-[0m[91m+ /usr/bin/git init -q
-[0m[91m+ /usr/bin/git config user.name rpm-build
-[0m[91m+ /usr/bin/git config user.email '<rpm-build>'
-[0m[91m+ /usr/bin/git add .
-[0m[91m+ /usr/bin/git commit -q --allow-empty -a --author 'rpm-build <rpm-build>' -m 'shim-unsigned-x64-15.7 base'
-[0m[91m+ /usr/bin/cat /builddir/build/SOURCES/0001-Enable-the-NX-compatibility-flag-by-default.patch
-[0m[91m+ /usr/bin/git am -q
-[0m[91m+ git config --unset user.email
-[0m[91m+ git config --unset user.name
-[0m[91m+ mkdir build-x64
-[0m[91m+ mkdir build-ia32
-[0m[91m+ cp /builddir/build/SOURCES/sbat.ciq.csv data/
-[0m[91m+ exit 0
-[0mExecuting(%build): /bin/sh -e /var/tmp/rpm-tmp.V6DYM3
-[91m+ umask 022
++ /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
++ /usr/bin/git init -q
++ /usr/bin/git config user.name rpm-build
++ /usr/bin/git config user.email '<rpm-build>'
++ /usr/bin/git add .
++ /usr/bin/git commit -q --allow-empty -a --author 'rpm-build <rpm-build>' -m 'shim-unsigned-x64-15.7 base'
++ /usr/bin/cat /builddir/build/SOURCES/0001-Enable-the-NX-compatibility-flag-by-default.patch
++ /usr/bin/git am -q
++ git config --unset user.email
++ git config --unset user.name
++ mkdir build-x64
++ mkdir build-ia32
++ cp /builddir/build/SOURCES/sbat.ciq.csv data/
++ exit 0
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.QiGPU5
++ umask 022
 + cd /builddir/build//BUILD
-[0m[91m+ cd shim-15.7
-[0m[91m++ cat commit
-[0m[91m+ COMMITID=11491619f4336fef41c3519877ba242161763580
-[0m[91m+ MAKEFLAGS='TOPDIR=.. -f ../Makefile COMMITID=11491619f4336fef41c3519877ba242161763580 '
-[0m[91m+ MAKEFLAGS+='EFIDIR=rocky PKGNAME=shim RELEASE=2.el8 '
++ cd shim-15.7
+++ cat commit
++ COMMITID=11491619f4336fef41c3519877ba242161763580
++ MAKEFLAGS='TOPDIR=.. -f ../Makefile COMMITID=11491619f4336fef41c3519877ba242161763580 '
++ MAKEFLAGS+='EFIDIR=rocky PKGNAME=shim RELEASE=2.el8 '
 + MAKEFLAGS+='ENABLE_SHIM_HASH=true '
-[0m[91m+ MAKEFLAGS+=
-[0m[91m+ '[' -s /builddir/build/SOURCES/ciq_sb_ca.der ']'
-[0m[91m+ MAKEFLAGS='TOPDIR=.. -f ../Makefile COMMITID=11491619f4336fef41c3519877ba242161763580 EFIDIR=rocky PKGNAME=shim RELEASE=2.el8 ENABLE_SHIM_HASH=true  VENDOR_CERT_FILE=/builddir/build/SOURCES/ciq_sb_ca.der'
-[0m[91m+ '[' -s /builddir/build/SOURCES/dbx.esl ']'
-[0m[91m+ cd build-x64
-[0m[91m+ make TOPDIR=.. -f ../Makefile COMMITID=11491619f4336fef41c3519877ba242161763580 EFIDIR=rocky PKGNAME=shim RELEASE=2.el8 ENABLE_SHIM_HASH=true VENDOR_CERT_FILE=/builddir/build/SOURCES/ciq_sb_ca.der 'DEFAULT_LOADER=\\\\grubx64.efi' all
-[0msed	-e "s,@@VERSION@@,15.7," \
++ MAKEFLAGS+=
++ '[' -s /builddir/build/SOURCES/ciq_sb_ca.der ']'
++ MAKEFLAGS='TOPDIR=.. -f ../Makefile COMMITID=11491619f4336fef41c3519877ba242161763580 EFIDIR=rocky PKGNAME=shim RELEASE=2.el8 ENABLE_SHIM_HASH=true  VENDOR_CERT_FILE=/builddir/build/SOURCES/ciq_sb_ca.der'
++ '[' -s /builddir/build/SOURCES/dbx.esl ']'
++ cd build-x64
++ make TOPDIR=.. -f ../Makefile COMMITID=11491619f4336fef41c3519877ba242161763580 EFIDIR=rocky PKGNAME=shim RELEASE=2.el8 ENABLE_SHIM_HASH=true VENDOR_CERT_FILE=/builddir/build/SOURCES/ciq_sb_ca.der 'DEFAULT_LOADER=\\\\grubx64.efi' all
+sed	-e "s,@@VERSION@@,15.7," \
 	-e "s,@@UNAME@@,Linux x86_64 x86_64 x86_64 GNU/Linux," \
 	-e "s,@@COMMIT@@,master," \
 	< /builddir/build/BUILD/shim-15.7/version.c.in > version.c
@@ -818,8 +797,8 @@ gcc -std=gnu11 -ggdb -ffreestanding -fmacro-prefix-map=/builddir/build/BUILD/shi
 gcc -std=gnu11 -ggdb -ffreestanding -fmacro-prefix-map=/builddir/build/BUILD/shim-15.7/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/builddir/build/BUILD/shim-15.7/Cryptlib -I/builddir/build/BUILD/shim-15.7/Cryptlib/Include -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/x86_64 -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/protocol -I/builddir/build/BUILD/shim-15.7/include -iquote /builddir/build/BUILD/shim-15.7 -iquote /builddir/build/BUILD/shim-15.7/build-x64 -isystem /builddir/build/BUILD/shim-15.7/include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/8/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.7-2.el8/"' -DVENDOR_CERT_FILE=\"/builddir/build/SOURCES/ciq_sb_ca.der\"   -c -o errlog.o /builddir/build/BUILD/shim-15.7/errlog.c
 gcc -std=gnu11 -ggdb -ffreestanding -fmacro-prefix-map=/builddir/build/BUILD/shim-15.7/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/builddir/build/BUILD/shim-15.7/Cryptlib -I/builddir/build/BUILD/shim-15.7/Cryptlib/Include -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/x86_64 -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/protocol -I/builddir/build/BUILD/shim-15.7/include -iquote /builddir/build/BUILD/shim-15.7 -iquote /builddir/build/BUILD/shim-15.7/build-x64 -isystem /builddir/build/BUILD/shim-15.7/include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/8/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.7-2.el8/"' -DVENDOR_CERT_FILE=\"/builddir/build/SOURCES/ciq_sb_ca.der\"   -c -o sbat.o /builddir/build/BUILD/shim-15.7/sbat.c
 dos2unix -r -l -F -f -n /builddir/build/BUILD/shim-15.7/data/sbat.ciq.csv sbat.ciq.csv
-[91mdos2unix: converting file /builddir/build/BUILD/shim-15.7/data/sbat.ciq.csv to file sbat.ciq.csv in Unix format...
-[0mtail -c1 sbat.ciq.csv | read -r _ || echo >> sbat.ciq.csv # ensure a trailing newline
+dos2unix: converting file /builddir/build/BUILD/shim-15.7/data/sbat.ciq.csv to file sbat.ciq.csv in Unix format...
+tail -c1 sbat.ciq.csv | read -r _ || echo >> sbat.ciq.csv # ensure a trailing newline
 gcc -std=gnu11 -ggdb -ffreestanding -fmacro-prefix-map=/builddir/build/BUILD/shim-15.7/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/builddir/build/BUILD/shim-15.7/Cryptlib -I/builddir/build/BUILD/shim-15.7/Cryptlib/Include -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/x86_64 -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/protocol -I/builddir/build/BUILD/shim-15.7/include -iquote /builddir/build/BUILD/shim-15.7 -iquote /builddir/build/BUILD/shim-15.7/build-x64 -isystem /builddir/build/BUILD/shim-15.7/include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/8/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.7-2.el8/"' -DVENDOR_CERT_FILE=\"/builddir/build/SOURCES/ciq_sb_ca.der\" -x c -c -o sbat_data.o /dev/null
 objcopy --add-section .sbat=/builddir/build/BUILD/shim-15.7/data/sbat.csv \
 	--set-section-flags .sbat=contents,alloc,load,readonly,data \
@@ -1332,8 +1311,8 @@ gcc -I/builddir/build/BUILD/shim-15.7/gnu-efi//lib -I/builddir/build/BUILD/shim-
 gcc -I/builddir/build/BUILD/shim-15.7/gnu-efi//lib -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/x86_64 -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/protocol -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /builddir/build/BUILD/shim-15.7/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/8/include -fno-merge-all-constants -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /builddir/build/BUILD/shim-15.7/gnu-efi//lib/x86_64/callwrap.c -o x86_64/callwrap.o
 gcc -I/builddir/build/BUILD/shim-15.7/gnu-efi//lib -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/x86_64 -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/protocol -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /builddir/build/BUILD/shim-15.7/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/8/include -fno-merge-all-constants -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /builddir/build/BUILD/shim-15.7/gnu-efi//lib/x86_64/efi_stub.S -o x86_64/efi_stub.o
 gcc-ar rv -U libefi.a boxdraw.o smbios.o console.o crc.o data.o debug.o dpath.o error.o event.o exit.o guid.o hand.o hw.o init.o lock.o misc.o pause.o print.o sread.o str.o cmdline.o runtime/rtlock.o runtime/efirtlib.o runtime/rtstr.o runtime/vm.o runtime/rtdata.o x86_64/initplat.o x86_64/math.o x86_64/setjmp.o x86_64/callwrap.o x86_64/efi_stub.o
-[91m/usr/bin/ar: creating libefi.a
-[0ma - boxdraw.o
+/usr/bin/ar: creating libefi.a
+a - boxdraw.o
 a - smbios.o
 a - console.o
 a - crc.o
@@ -1371,8 +1350,8 @@ make[2]: Entering directory '/builddir/build/BUILD/shim-15.7/build-x64/gnu-efi/x
 gcc -I/builddir/build/BUILD/shim-15.7/gnu-efi//gnuefi -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/x86_64 -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/protocol -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /builddir/build/BUILD/shim-15.7/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/8/include -fno-merge-all-constants -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /builddir/build/BUILD/shim-15.7/gnu-efi//gnuefi/crt0-efi-x86_64.S -o crt0-efi-x86_64.o
 gcc -I/builddir/build/BUILD/shim-15.7/gnu-efi//gnuefi -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/x86_64 -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/protocol -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /builddir/build/BUILD/shim-15.7/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/8/include -fno-merge-all-constants -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /builddir/build/BUILD/shim-15.7/gnu-efi//gnuefi/reloc_x86_64.c -o reloc_x86_64.o
 gcc-ar rv -U libgnuefi.a reloc_x86_64.o
-[91m/usr/bin/ar: creating libgnuefi.a
-[0ma - reloc_x86_64.o
+/usr/bin/ar: creating libgnuefi.a
+a - reloc_x86_64.o
 make[2]: Leaving directory '/builddir/build/BUILD/shim-15.7/build-x64/gnu-efi/x86_64/gnuefi'
 mkdir -p /builddir/build/BUILD/shim-15.7/build-x64/gnu-efi/x86_64/inc
 make -C /builddir/build/BUILD/shim-15.7/build-x64/gnu-efi/x86_64/inc -f /builddir/build/BUILD/shim-15.7/gnu-efi//inc/Makefile SRCDIR=/builddir/build/BUILD/shim-15.7/gnu-efi//inc ARCH=x86_64
@@ -1389,7 +1368,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	--target efi-app-x86_64 shimx64.so shimx64.efi
 ./post-process-pe -vv  shimx64.efi
 set_dll_characteristics():355: Updating DLL Characteristics from 0x0000 to 0x0100
-fix_checksum():413: Updating checksum from 0x000ede19 to 0x000edf19
+fix_checksum():413: Updating checksum from 0x000ec2f6 to 0x000ec3f6
 objcopy -D -j .text -j .sdata -j .data \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .dyn -j .reloc -j .eh_frame -j .sbat \
@@ -1428,7 +1407,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	--target efi-app-x86_64 mmx64.so mmx64.efi
 ./post-process-pe -vv  mmx64.efi
 set_dll_characteristics():355: Updating DLL Characteristics from 0x0000 to 0x0100
-fix_checksum():413: Updating checksum from 0x000da3f5 to 0x000da4f5
+fix_checksum():413: Updating checksum from 0x000d88b8 to 0x000d89b8
 objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .dyn -j .reloc -j .eh_frame \
@@ -1436,11 +1415,11 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	--target efi-app-x86_64 fbx64.so fbx64.efi
 ./post-process-pe -vv  fbx64.efi
 set_dll_characteristics():355: Updating DLL Characteristics from 0x0000 to 0x0100
-fix_checksum():413: Updating checksum from 0x00017e3e to 0x00017f3e
-[91m+ cd ..
-[0m[91m+ cd build-ia32
-[0m[91m+ setarch linux32 make TOPDIR=.. -f ../Makefile COMMITID=11491619f4336fef41c3519877ba242161763580 EFIDIR=rocky PKGNAME=shim RELEASE=2.el8 ENABLE_SHIM_HASH=true VENDOR_CERT_FILE=/builddir/build/SOURCES/ciq_sb_ca.der ARCH=ia32 'DEFAULT_LOADER=\\\\grubia32.efi' all
-[0msed	-e "s,@@VERSION@@,15.7," \
+fix_checksum():413: Updating checksum from 0x00016301 to 0x00016401
++ cd ..
++ cd build-ia32
++ setarch linux32 make TOPDIR=.. -f ../Makefile COMMITID=11491619f4336fef41c3519877ba242161763580 EFIDIR=rocky PKGNAME=shim RELEASE=2.el8 ENABLE_SHIM_HASH=true VENDOR_CERT_FILE=/builddir/build/SOURCES/ciq_sb_ca.der ARCH=ia32 'DEFAULT_LOADER=\\\\grubia32.efi' all
+sed	-e "s,@@VERSION@@,15.7," \
 	-e "s,@@UNAME@@,Linux i686 i686 i386 GNU/Linux," \
 	-e "s,@@COMMIT@@,master," \
 	< /builddir/build/BUILD/shim-15.7/version.c.in > version.c
@@ -1455,8 +1434,8 @@ gcc -std=gnu11 -ggdb -ffreestanding -fmacro-prefix-map=/builddir/build/BUILD/shi
 gcc -std=gnu11 -ggdb -ffreestanding -fmacro-prefix-map=/builddir/build/BUILD/shim-15.7/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m32 -malign-double -DMDE_CPU_IA32 -DPAGE_SIZE=4096 -Werror -nostdinc -I/builddir/build/BUILD/shim-15.7/Cryptlib -I/builddir/build/BUILD/shim-15.7/Cryptlib/Include -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/ia32 -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/protocol -I/builddir/build/BUILD/shim-15.7/include -iquote /builddir/build/BUILD/shim-15.7 -iquote /builddir/build/BUILD/shim-15.7/build-ia32 -isystem /builddir/build/BUILD/shim-15.7/include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/8/include -DDEFAULT_LOADER='L"\\\\grubia32.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubia32.efi"' -DEFI_ARCH='L"ia32"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/ia32-15.7-2.el8/"' -DVENDOR_CERT_FILE=\"/builddir/build/SOURCES/ciq_sb_ca.der\"   -c -o errlog.o /builddir/build/BUILD/shim-15.7/errlog.c
 gcc -std=gnu11 -ggdb -ffreestanding -fmacro-prefix-map=/builddir/build/BUILD/shim-15.7/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m32 -malign-double -DMDE_CPU_IA32 -DPAGE_SIZE=4096 -Werror -nostdinc -I/builddir/build/BUILD/shim-15.7/Cryptlib -I/builddir/build/BUILD/shim-15.7/Cryptlib/Include -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/ia32 -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/protocol -I/builddir/build/BUILD/shim-15.7/include -iquote /builddir/build/BUILD/shim-15.7 -iquote /builddir/build/BUILD/shim-15.7/build-ia32 -isystem /builddir/build/BUILD/shim-15.7/include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/8/include -DDEFAULT_LOADER='L"\\\\grubia32.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubia32.efi"' -DEFI_ARCH='L"ia32"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/ia32-15.7-2.el8/"' -DVENDOR_CERT_FILE=\"/builddir/build/SOURCES/ciq_sb_ca.der\"   -c -o sbat.o /builddir/build/BUILD/shim-15.7/sbat.c
 dos2unix -r -l -F -f -n /builddir/build/BUILD/shim-15.7/data/sbat.ciq.csv sbat.ciq.csv
-[91mdos2unix: converting file /builddir/build/BUILD/shim-15.7/data/sbat.ciq.csv to file sbat.ciq.csv in Unix format...
-[0mtail -c1 sbat.ciq.csv | read -r _ || echo >> sbat.ciq.csv # ensure a trailing newline
+dos2unix: converting file /builddir/build/BUILD/shim-15.7/data/sbat.ciq.csv to file sbat.ciq.csv in Unix format...
+tail -c1 sbat.ciq.csv | read -r _ || echo >> sbat.ciq.csv # ensure a trailing newline
 gcc -std=gnu11 -ggdb -ffreestanding -fmacro-prefix-map=/builddir/build/BUILD/shim-15.7/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m32 -malign-double -DMDE_CPU_IA32 -DPAGE_SIZE=4096 -Werror -nostdinc -I/builddir/build/BUILD/shim-15.7/Cryptlib -I/builddir/build/BUILD/shim-15.7/Cryptlib/Include -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/ia32 -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/protocol -I/builddir/build/BUILD/shim-15.7/include -iquote /builddir/build/BUILD/shim-15.7 -iquote /builddir/build/BUILD/shim-15.7/build-ia32 -isystem /builddir/build/BUILD/shim-15.7/include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/8/include -DDEFAULT_LOADER='L"\\\\grubia32.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubia32.efi"' -DEFI_ARCH='L"ia32"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/ia32-15.7-2.el8/"' -DVENDOR_CERT_FILE=\"/builddir/build/SOURCES/ciq_sb_ca.der\" -x c -c -o sbat_data.o /dev/null
 objcopy --add-section .sbat=/builddir/build/BUILD/shim-15.7/data/sbat.csv \
 	--set-section-flags .sbat=contents,alloc,load,readonly,data \
@@ -1967,8 +1946,8 @@ gcc -I/builddir/build/BUILD/shim-15.7/gnu-efi//lib -I/builddir/build/BUILD/shim-
 gcc -I/builddir/build/BUILD/shim-15.7/gnu-efi//lib -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/ia32 -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/protocol -Wno-error=pragmas -mno-mmx -mno-sse -mno-avx -fpic -m32 -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /builddir/build/BUILD/shim-15.7/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/8/include -fno-merge-all-constants -DCONFIG_ia32 -c /builddir/build/BUILD/shim-15.7/gnu-efi//lib/ia32/math.c -o ia32/math.o
 gcc -I/builddir/build/BUILD/shim-15.7/gnu-efi//lib -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/ia32 -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/protocol -Wno-error=pragmas -mno-mmx -mno-sse -mno-avx -fpic -m32 -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /builddir/build/BUILD/shim-15.7/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/8/include -fno-merge-all-constants -DCONFIG_ia32 -c /builddir/build/BUILD/shim-15.7/gnu-efi//lib/ia32/setjmp.S -o ia32/setjmp.o
 gcc-ar rv -U libefi.a boxdraw.o smbios.o console.o crc.o data.o debug.o dpath.o error.o event.o exit.o guid.o hand.o hw.o init.o lock.o misc.o pause.o print.o sread.o str.o cmdline.o runtime/rtlock.o runtime/efirtlib.o runtime/rtstr.o runtime/vm.o runtime/rtdata.o ia32/initplat.o ia32/math.o ia32/setjmp.o
-[91m/usr/bin/ar: creating libefi.a
-[0ma - boxdraw.o
+/usr/bin/ar: creating libefi.a
+a - boxdraw.o
 a - smbios.o
 a - console.o
 a - crc.o
@@ -2002,12 +1981,12 @@ mkdir -p /builddir/build/BUILD/shim-15.7/build-ia32/gnu-efi/ia32/gnuefi
 make -C /builddir/build/BUILD/shim-15.7/build-ia32/gnu-efi/ia32/gnuefi -f /builddir/build/BUILD/shim-15.7/gnu-efi//gnuefi/Makefile SRCDIR=/builddir/build/BUILD/shim-15.7/gnu-efi//gnuefi ARCH=ia32
 make[2]: Entering directory '/builddir/build/BUILD/shim-15.7/build-ia32/gnu-efi/ia32/gnuefi'
 gcc -I/builddir/build/BUILD/shim-15.7/gnu-efi//gnuefi -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/ia32 -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/protocol -Wno-error=pragmas -mno-mmx -mno-sse -mno-avx -fpic -m32 -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /builddir/build/BUILD/shim-15.7/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/8/include -fno-merge-all-constants -DCONFIG_ia32 -c /builddir/build/BUILD/shim-15.7/gnu-efi//gnuefi/crt0-efi-ia32.S -o crt0-efi-ia32.o
-[91m/builddir/build/BUILD/shim-15.7/gnu-efi//gnuefi/crt0-efi-ia32.S: Assembler messages:
+/builddir/build/BUILD/shim-15.7/gnu-efi//gnuefi/crt0-efi-ia32.S: Assembler messages:
 /builddir/build/BUILD/shim-15.7/gnu-efi//gnuefi/crt0-efi-ia32.S:74: Warning: setting incorrect section attributes for .reloc
-[0mgcc -I/builddir/build/BUILD/shim-15.7/gnu-efi//gnuefi -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/ia32 -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/protocol -Wno-error=pragmas -mno-mmx -mno-sse -mno-avx -fpic -m32 -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /builddir/build/BUILD/shim-15.7/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/8/include -fno-merge-all-constants -DCONFIG_ia32 -c /builddir/build/BUILD/shim-15.7/gnu-efi//gnuefi/reloc_ia32.c -o reloc_ia32.o
+gcc -I/builddir/build/BUILD/shim-15.7/gnu-efi//gnuefi -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/ia32 -I/builddir/build/BUILD/shim-15.7/gnu-efi/inc/protocol -Wno-error=pragmas -mno-mmx -mno-sse -mno-avx -fpic -m32 -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /builddir/build/BUILD/shim-15.7/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/8/include -fno-merge-all-constants -DCONFIG_ia32 -c /builddir/build/BUILD/shim-15.7/gnu-efi//gnuefi/reloc_ia32.c -o reloc_ia32.o
 gcc-ar rv -U libgnuefi.a reloc_ia32.o
-[91m/usr/bin/ar: creating libgnuefi.a
-[0ma - reloc_ia32.o
+/usr/bin/ar: creating libgnuefi.a
+a - reloc_ia32.o
 make[2]: Leaving directory '/builddir/build/BUILD/shim-15.7/build-ia32/gnu-efi/ia32/gnuefi'
 mkdir -p /builddir/build/BUILD/shim-15.7/build-ia32/gnu-efi/ia32/inc
 make -C /builddir/build/BUILD/shim-15.7/build-ia32/gnu-efi/ia32/inc -f /builddir/build/BUILD/shim-15.7/gnu-efi//inc/Makefile SRCDIR=/builddir/build/BUILD/shim-15.7/gnu-efi//inc ARCH=ia32
@@ -2024,7 +2003,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	--target efi-app-ia32 shimia32.so shimia32.efi
 ./post-process-pe -vv  shimia32.efi
 set_dll_characteristics():355: Updating DLL Characteristics from 0x0000 to 0x0100
-fix_checksum():413: Updating checksum from 0x000b9a7f to 0x000b9b7f
+fix_checksum():413: Updating checksum from 0x000b7f4f to 0x000b804f
 objcopy -D -j .text -j .sdata -j .data \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .dyn -j .reloc -j .eh_frame -j .sbat \
@@ -2063,7 +2042,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	--target efi-app-ia32 mmia32.so mmia32.efi
 ./post-process-pe -vv  mmia32.efi
 set_dll_characteristics():355: Updating DLL Characteristics from 0x0000 to 0x0100
-fix_checksum():413: Updating checksum from 0x000a7cdc to 0x000a7ddc
+fix_checksum():413: Updating checksum from 0x000a619f to 0x000a629f
 objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .dyn -j .reloc -j .eh_frame \
@@ -2071,29 +2050,29 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	--target efi-app-ia32 fbia32.so fbia32.efi
 ./post-process-pe -vv  fbia32.efi
 set_dll_characteristics():355: Updating DLL Characteristics from 0x0000 to 0x0100
-fix_checksum():413: Updating checksum from 0x0001ce15 to 0x0001cf15
-[91m+ cd ..
-[0m[91m+ exit 0
-[0mExecuting(%install): /bin/sh -e /var/tmp/rpm-tmp.sKKabB
-[91m+ umask 022
+fix_checksum():413: Updating checksum from 0x0001b2d8 to 0x0001b3d8
++ cd ..
++ exit 0
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.Ac54Gw
++ umask 022
 + cd /builddir/build//BUILD
-[0m[91m+ '[' /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64 '!=' / ']'
++ '[' /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64 '!=' / ']'
 + rm -rf /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64
-[0m[91m++ dirname /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64
-[0m[91m+ mkdir -p /builddir/build/BUILDROOT
-[0m[91m+ mkdir /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64
-[0m[91m+ cd shim-15.7
-[0m[91m++ cat commit
-[0m[91m+ COMMITID=11491619f4336fef41c3519877ba242161763580
-[0m[91m+ MAKEFLAGS='TOPDIR=.. -f ../Makefile COMMITID=11491619f4336fef41c3519877ba242161763580 '
-[0m[91m+ MAKEFLAGS+='EFIDIR=rocky PKGNAME=shim RELEASE=2.el8 '
+++ dirname /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64
++ mkdir -p /builddir/build/BUILDROOT
++ mkdir /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64
++ cd shim-15.7
+++ cat commit
++ COMMITID=11491619f4336fef41c3519877ba242161763580
++ MAKEFLAGS='TOPDIR=.. -f ../Makefile COMMITID=11491619f4336fef41c3519877ba242161763580 '
++ MAKEFLAGS+='EFIDIR=rocky PKGNAME=shim RELEASE=2.el8 '
 + MAKEFLAGS+='ENABLE_HTTPBOOT=true ENABLE_SHIM_HASH=true '
-[0m[91m+ '[' -s /builddir/build/SOURCES/ciq_sb_ca.der ']'
-[0m[91m+ MAKEFLAGS='TOPDIR=.. -f ../Makefile COMMITID=11491619f4336fef41c3519877ba242161763580 EFIDIR=rocky PKGNAME=shim RELEASE=2.el8 ENABLE_HTTPBOOT=true ENABLE_SHIM_HASH=true  VENDOR_CERT_FILE=/builddir/build/SOURCES/ciq_sb_ca.der'
-[0m[91m+ '[' -s /builddir/build/SOURCES/dbx.esl ']'
-[0m[91m+ cd build-x64
-[0m[91m+ make TOPDIR=.. -f ../Makefile COMMITID=11491619f4336fef41c3519877ba242161763580 EFIDIR=rocky PKGNAME=shim RELEASE=2.el8 ENABLE_HTTPBOOT=true ENABLE_SHIM_HASH=true VENDOR_CERT_FILE=/builddir/build/SOURCES/ciq_sb_ca.der 'DEFAULT_LOADER=\\\\grubx64.efi' DESTDIR=/builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64 install-as-data install-debuginfo install-debugsource
-[0mgcc -I/usr/include -Og -g3 -Wall -Werror -Wextra -o buildid /builddir/build/BUILD/shim-15.7/buildid.c -lelf
++ '[' -s /builddir/build/SOURCES/ciq_sb_ca.der ']'
++ MAKEFLAGS='TOPDIR=.. -f ../Makefile COMMITID=11491619f4336fef41c3519877ba242161763580 EFIDIR=rocky PKGNAME=shim RELEASE=2.el8 ENABLE_HTTPBOOT=true ENABLE_SHIM_HASH=true  VENDOR_CERT_FILE=/builddir/build/SOURCES/ciq_sb_ca.der'
++ '[' -s /builddir/build/SOURCES/dbx.esl ']'
++ cd build-x64
++ make TOPDIR=.. -f ../Makefile COMMITID=11491619f4336fef41c3519877ba242161763580 EFIDIR=rocky PKGNAME=shim RELEASE=2.el8 ENABLE_HTTPBOOT=true ENABLE_SHIM_HASH=true VENDOR_CERT_FILE=/builddir/build/SOURCES/ciq_sb_ca.der 'DEFAULT_LOADER=\\\\grubx64.efi' DESTDIR=/builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64 install-as-data install-debuginfo install-debugsource
+gcc -I/usr/include -Og -g3 -Wall -Werror -Wextra -o buildid /builddir/build/BUILD/shim-15.7/buildid.c -lelf
 Making BOOTX64.CSV
 install -d -m 0755 /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64//usr/share//shim/15.7-2.el8/x64/
 install -m 0644 shimx64.efi /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64//usr/share//shim/15.7-2.el8/x64//
@@ -2109,10 +2088,10 @@ find /builddir/build/BUILD/shim-15.7 -type f -a '(' -iname '*.c' -o -iname '*.h'
 	install -d -m 0755 /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64//usr/src/debug//shim-15.7-2.el8/$(dirname ${outfile}) ; \
 	install -m 0644 ${file} /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64//usr/src/debug//shim-15.7-2.el8/${outfile} ; \
 done
-[91m+ cd ..
++ cd ..
 + cd build-ia32
-[0m[91m+ setarch linux32 make TOPDIR=.. -f ../Makefile COMMITID=11491619f4336fef41c3519877ba242161763580 EFIDIR=rocky PKGNAME=shim RELEASE=2.el8 ENABLE_HTTPBOOT=true ENABLE_SHIM_HASH=true VENDOR_CERT_FILE=/builddir/build/SOURCES/ciq_sb_ca.der ARCH=ia32 'DEFAULT_LOADER=\\\\grubia32.efi' DESTDIR=/builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64 install-as-data install-debuginfo install-debugsource
-[0mgcc -I/usr/include -Og -g3 -Wall -Werror -Wextra -o buildid /builddir/build/BUILD/shim-15.7/buildid.c -lelf
++ setarch linux32 make TOPDIR=.. -f ../Makefile COMMITID=11491619f4336fef41c3519877ba242161763580 EFIDIR=rocky PKGNAME=shim RELEASE=2.el8 ENABLE_HTTPBOOT=true ENABLE_SHIM_HASH=true VENDOR_CERT_FILE=/builddir/build/SOURCES/ciq_sb_ca.der ARCH=ia32 'DEFAULT_LOADER=\\\\grubia32.efi' DESTDIR=/builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64 install-as-data install-debuginfo install-debugsource
+gcc -I/usr/include -Og -g3 -Wall -Werror -Wextra -o buildid /builddir/build/BUILD/shim-15.7/buildid.c -lelf
 Making BOOTIA32.CSV
 install -d -m 0755 /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64//usr/share//shim/15.7-2.el8/ia32/
 install -m 0644 shimia32.efi /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64//usr/share//shim/15.7-2.el8/ia32//
@@ -2128,55 +2107,55 @@ find /builddir/build/BUILD/shim-15.7 -type f -a '(' -iname '*.c' -o -iname '*.h'
 	install -d -m 0755 /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64//usr/src/debug//shim-15.7-2.el8/$(dirname ${outfile}) ; \
 	install -m 0644 ${file} /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64//usr/src/debug//shim-15.7-2.el8/${outfile} ; \
 done
-[91m+ cd ..
++ cd ..
 + /builddir/build/SOURCES/shim-find-debuginfo.sh x64 ia32
-[0m[91m+ /usr/lib/rpm/check-buildroot
-[0m[91m+ /usr/lib/rpm/redhat/brp-ldconfig
-[0m[91m/sbin/ldconfig: Warning: ignoring configuration file that cannot be opened: /etc/ld.so.conf: No such file or directory
-[0m[91m+ /usr/lib/rpm/brp-compress
-[0m[91m+ /usr/lib/rpm/brp-strip-static-archive /usr/bin/strip
-[0m[91m+ /usr/lib/rpm/brp-python-bytecompile '' 1
-[0m[91m+ /usr/lib/rpm/brp-python-hardlink
-[0m[91m+ PYTHON3=/usr/libexec/platform-python
++ /usr/lib/rpm/check-buildroot
++ /usr/lib/rpm/redhat/brp-ldconfig
+/sbin/ldconfig: Warning: ignoring configuration file that cannot be opened: /etc/ld.so.conf: No such file or directory
++ /usr/lib/rpm/brp-compress
++ /usr/lib/rpm/brp-strip-static-archive /usr/bin/strip
++ /usr/lib/rpm/brp-python-bytecompile '' 1
++ /usr/lib/rpm/brp-python-hardlink
++ PYTHON3=/usr/libexec/platform-python
 + /usr/lib/rpm/redhat/brp-mangle-shebangs
-[0mProcessing files: shim-unsigned-x64-15.7-2.el8.x86_64
-Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.sDoDSX
-[91m+ umask 022
-[0m[91m+ cd /builddir/build//BUILD
-[0m[91m+ cd shim-15.7
-[0m[91m+ LICENSEDIR=/builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64/usr/share/licenses/shim-unsigned-x64
-[0m[91m+ export LC_ALL=C
+Processing files: shim-unsigned-x64-15.7-2.el8.x86_64
+Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.m1kfor
++ umask 022
++ cd /builddir/build//BUILD
++ cd shim-15.7
++ LICENSEDIR=/builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64/usr/share/licenses/shim-unsigned-x64
++ export LC_ALL=C
 + LC_ALL=C
-[0m[91m+ export LICENSEDIR
-[0m[91m+ /usr/bin/mkdir -p /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64/usr/share/licenses/shim-unsigned-x64
-[0m[91m+ cp -pr COPYRIGHT /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64/usr/share/licenses/shim-unsigned-x64
-[0m[91m+ exit 0
-[0mProvides: bundled(openssl) = 1.0.2j shim-unsigned-x64 = 15.7-2.el8 shim-unsigned-x64(x86-64) = 15.7-2.el8
++ export LICENSEDIR
++ /usr/bin/mkdir -p /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64/usr/share/licenses/shim-unsigned-x64
++ cp -pr COPYRIGHT /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64/usr/share/licenses/shim-unsigned-x64
++ exit 0
+Provides: bundled(openssl) = 1.0.2j shim-unsigned-x64 = 15.7-2.el8 shim-unsigned-x64(x86-64) = 15.7-2.el8
 Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
 Processing files: shim-unsigned-ia32-15.7-2.el8.x86_64
-Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.YAgNar
-[91m+ umask 022
+Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.o5azsU
++ umask 022
 + cd /builddir/build//BUILD
-[0m[91m+ cd shim-15.7
-[0m[91m+ LICENSEDIR=/builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64/usr/share/licenses/shim-unsigned-ia32
-[0m[91m+ export LC_ALL=C
++ cd shim-15.7
++ LICENSEDIR=/builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64/usr/share/licenses/shim-unsigned-ia32
++ export LC_ALL=C
 + LC_ALL=C
-[0m[91m+ export LICENSEDIR
-[0m[91m+ /usr/bin/mkdir -p /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64/usr/share/licenses/shim-unsigned-ia32
-[0m[91m+ cp -pr COPYRIGHT /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64/usr/share/licenses/shim-unsigned-ia32
-[0m[91m+ exit 0
-[0mProvides: bundled(openssl) = 1.0.2j shim-unsigned-ia32 = 15.7-2.el8 shim-unsigned-ia32(x86-64) = 15.7-2.el8
++ export LICENSEDIR
++ /usr/bin/mkdir -p /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64/usr/share/licenses/shim-unsigned-ia32
++ cp -pr COPYRIGHT /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64/usr/share/licenses/shim-unsigned-ia32
++ exit 0
+Provides: bundled(openssl) = 1.0.2j shim-unsigned-ia32 = 15.7-2.el8 shim-unsigned-ia32(x86-64) = 15.7-2.el8
 Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
 Processing files: shim-unsigned-x64-debuginfo-15.7-2.el8.noarch
 Provides: shim-unsigned-x64-debuginfo = 15.7-2.el8
 Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
 Recommends: shim-unsigned-x64-debugsource(x86-64) = 15.7-2.el8
-[91mwarning: Arch dependent binaries in noarch package
-[0mProcessing files: shim-unsigned-ia32-debuginfo-15.7-2.el8.noarch
+warning: Arch dependent binaries in noarch package
+Processing files: shim-unsigned-ia32-debuginfo-15.7-2.el8.noarch
 Provides: shim-unsigned-ia32-debuginfo = 15.7-2.el8
 Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-[91mwarning: Arch dependent binaries in noarch package
-[0mProcessing files: shim-unsigned-x64-debugsource-15.7-2.el8.noarch
+warning: Arch dependent binaries in noarch package
+Processing files: shim-unsigned-x64-debugsource-15.7-2.el8.noarch
 Provides: shim-unsigned-x64-debugsource = 15.7-2.el8
 Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
 Checking for unpackaged file(s): /usr/lib/rpm/check-files /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64
@@ -2185,40 +2164,32 @@ Wrote: /builddir/build/RPMS/x86_64/shim-unsigned-ia32-15.7-2.el8.x86_64.rpm
 Wrote: /builddir/build/RPMS/noarch/shim-unsigned-x64-debuginfo-15.7-2.el8.noarch.rpm
 Wrote: /builddir/build/RPMS/noarch/shim-unsigned-ia32-debuginfo-15.7-2.el8.noarch.rpm
 Wrote: /builddir/build/RPMS/noarch/shim-unsigned-x64-debugsource-15.7-2.el8.noarch.rpm
-Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.Jo1cAT
-[91m+ umask 022
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.fHCaag
++ umask 022
 + cd /builddir/build//BUILD
-[0m[91m+ cd shim-15.7
-[0m[91m+ /usr/bin/rm -rf /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64
-[0m[91m+ exit 0
-[0mRemoving intermediate container 4f772486f53f
- ---> 8930a80a51bf
-Step 13/17 : RUN mkdir -p /shim_result
- ---> Running in afa2deb434bc
-Removing intermediate container afa2deb434bc
- ---> 9377586901ed
-Step 14/17 : RUN rpm2cpio /builddir/build/RPMS/x86_64/shim-unsigned-ia32-$shim_release.x86_64.rpm | cpio -diu -D /shim_result
- ---> Running in e382c5df828b
-[91m2901 blocks
-[0mRemoving intermediate container e382c5df828b
- ---> 4f7ed2a53860
-Step 15/17 : RUN rpm2cpio /builddir/build/RPMS/x86_64/shim-unsigned-x64-$shim_release.x86_64.rpm | cpio -diu -D /shim_result
- ---> Running in 17882e7d6b72
-[91m3668 blocks
-[0mRemoving intermediate container 17882e7d6b72
- ---> f199ace5227a
-Step 16/17 : COPY shim-compare.sh  /root
- ---> b93bc0ef61df
-Step 17/17 : RUN chmod 0755 /root/shim-compare.sh;  /root/shim-compare.sh
- ---> Running in 464d40b74b82
++ cd shim-15.7
++ /usr/bin/rm -rf /builddir/build/BUILDROOT/shim-unsigned-x64-15.7-2.el8.x86_64
++ exit 0
+--> d677daf5d04
+STEP 13/17: RUN mkdir -p /shim_result
+--> 289624a223d
+STEP 14/17: RUN rpm2cpio /builddir/build/RPMS/x86_64/shim-unsigned-ia32-$shim_release.x86_64.rpm | cpio -diu -D /shim_result
+2901 blocks
+--> 5bd0a838aa0
+STEP 15/17: RUN rpm2cpio /builddir/build/RPMS/x86_64/shim-unsigned-x64-$shim_release.x86_64.rpm | cpio -diu -D /shim_result
+3668 blocks
+--> 82fe3adbd27
+STEP 16/17: COPY shim-compare.sh  /root
+--> a2dd50d0f1a
+STEP 17/17: RUN chmod 0755 /root/shim-compare.sh;  /root/shim-compare.sh
 
 Shim Comparison, original binary vs. freshly built binaries:
 
 SHA256 sums ::
-7f739b33cd666685cdba46a9b16265d12b73e73c41838a76be4d01f342b5831b  /shimx64.efi
-7f739b33cd666685cdba46a9b16265d12b73e73c41838a76be4d01f342b5831b  /shim_result/usr/share/shim/15.7-2.el8/x64/shimx64.efi
-938ae828267d3dafec8261c5a270b44abac1249ea6e3d7d4ea2d225240ba1ff2  /shimia32.efi
-938ae828267d3dafec8261c5a270b44abac1249ea6e3d7d4ea2d225240ba1ff2  /shim_result/usr/share/shim/15.7-2.el8/ia32/shimia32.efi
+2afcd729e96f057304dde277bf8a7c10bc7740bbf63ab1adb1a1cbf304d2fa44  /shimx64.efi
+2afcd729e96f057304dde277bf8a7c10bc7740bbf63ab1adb1a1cbf304d2fa44  /shim_result/usr/share/shim/15.7-2.el8/x64/shimx64.efi
+642c6d26a3a5b0fa77c6917877971b1bdd0a7831f5af136e6c7db5a5e41d91e1  /shimia32.efi
+642c6d26a3a5b0fa77c6917877971b1bdd0a7831f5af136e6c7db5a5e41d91e1  /shim_result/usr/share/shim/15.7-2.el8/ia32/shimia32.efi
 
 Binary compare (blank output means binaries are the same) ::
 
@@ -2226,12 +2197,12 @@ Binary compare (blank output means binaries are the same) ::
 
 
 Pesign checks ::
-/shim_result/usr/share/shim/15.7-2.el8/ia32/shimia32.efi a0b6fd5a4b00d35ba953a639f4758d7a7e1e29ed0831e8ff1625fc9e98fb842a
-/shimia32.efi a0b6fd5a4b00d35ba953a639f4758d7a7e1e29ed0831e8ff1625fc9e98fb842a
-/shim_result/usr/share/shim/15.7-2.el8/x64/shimx64.efi 8c9713f99b39248d2eccdd84df8ef98bf23bf609213b0aeffa6376a4dbd5d212
-/shimx64.efi 8c9713f99b39248d2eccdd84df8ef98bf23bf609213b0aeffa6376a4dbd5d212
+/shim_result/usr/share/shim/15.7-2.el8/ia32/shimia32.efi f2e6045980fa8dec2fde19c3006fa74d1ebfd50a08ba0c38d11eb6365a6e3052
+/shimia32.efi f2e6045980fa8dec2fde19c3006fa74d1ebfd50a08ba0c38d11eb6365a6e3052
+/shim_result/usr/share/shim/15.7-2.el8/x64/shimx64.efi 581de961a32e565e58317b5d35959d3844d3dfcf1e8ca327756dbbeea9456acc
+/shimx64.efi 581de961a32e565e58317b5d35959d3844d3dfcf1e8ca327756dbbeea9456acc
 
-Removing intermediate container 464d40b74b82
- ---> aa3dc818f7a9
-Successfully built aa3dc818f7a9
-Successfully tagged ciq-shim-review:8
+COMMIT ciq-shim-review:8
+--> 1cc94a92914
+Successfully tagged localhost/ciq-shim-review:8
+1cc94a9291408732cc8ee055d9d0ae579eb788e677540bec899d85dcf3e89aa6
