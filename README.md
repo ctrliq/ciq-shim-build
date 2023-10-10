@@ -79,7 +79,7 @@ Yes.  We are adding the relevant enable-NX-by-default patch to this code:  https
 
 Same patch in our RPM source:  https://bitbucket.org/ciqinc/shim-unsigned-x64/src/ciq8/SOURCES/0001-Enable-the-NX-compatibility-flag-by-default.patch
 
-
+Buggy binutils patch: https://bitbucket.org/ciqinc/shim-unsigned-x64/src/ciq8/SOURCES/buggy-binutils.patch
 
 
 *******************************************************************************
