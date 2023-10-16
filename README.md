@@ -158,11 +158,12 @@ https://git.rockylinux.org/staging/rpms/grub2/-/blob/r8/SPECS/grub2.spec#L511
 *******************************************************************************
 Yes, the global SBAT generation on our GRUB binary has been set to 3
 
+```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
 grub.rhel8,2,Red Hat Enterprise Linux 8,grub2,2.02-148.el8_ciq.1.rocky.0.3,mail:secalert@redhat.com
 grub.rocky8,2,Rocky Linux 8,grub2,2.02-148.el8_ciq.1.rocky.0.3,mail:security@rockylinux.org
-
+```
 
 *******************************************************************************
 ### Were old shims hashes provided to Microsoft for verification and to be added to future DBX updates?
@@ -229,8 +230,8 @@ N/A
 *******************************************************************************
 ### What is the SHA256 hash of your final SHIM binary?
 *******************************************************************************
-SHA256 (shimx64.efi) = 8f0d4cdae78a9c404ea70ff9a36189067dfa646aa3368d472e7782003d30a969
-SHA256 (shimia32.efi) = c267adea2ad49ac3b2d595d3e7cf597a5caab8206415df748a5f7770be8c1a3f
+* SHA256 (shimx64.efi) = 8f0d4cdae78a9c404ea70ff9a36189067dfa646aa3368d472e7782003d30a969
+* SHA256 (shimia32.efi) = c267adea2ad49ac3b2d595d3e7cf597a5caab8206415df748a5f7770be8c1a3f
 
 *******************************************************************************
 ### How do you manage and protect the keys used in your SHIM?
