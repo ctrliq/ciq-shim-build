@@ -102,9 +102,11 @@ We are including the NX-compatibility-by default patch, in addition to the stock
 
 https://github.com/rhboot/shim/pull/530
 
-
 This is to align with updated Microsoft requirements, ( https://techcommunity.microsoft.com/t5/hardware-dev-center/updated-uefi-signing-requirements/ba-p/1062916 )
 
+We are also including the Buggy binutils patch as well.
+Buggy binutils patch: https://bitbucket.org/ciqinc/shim-unsigned-x64/src/ciq8/SOURCES/buggy-binutils.patch
+The patch remedies a compatibility issue with binutils versions prior to 2.36. (https://github.com/rhboot/shim/issues/533)
 
 
 *******************************************************************************
@@ -154,7 +156,13 @@ https://git.rockylinux.org/staging/rpms/grub2/-/blob/r8/SPECS/grub2.spec#L511
 *******************************************************************************
 ### If these fixes have been applied, have you set the global SBAT generation on your GRUB binary to 3?
 *******************************************************************************
-We have not, as we are a new vendor.  Our release should exactly match the Rocky and RHEL equivalents.
+Yes, the global SBAT generation on our GRUB binary has been set to 3
+
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
+grub.rhel8,2,Red Hat Enterprise Linux 8,grub2,2.02-148.el8_ciq.1.rocky.0.3,mail:secalert@redhat.com
+grub.rocky8,2,Rocky Linux 8,grub2,2.02-148.el8_ciq.1.rocky.0.3,mail:security@rockylinux.org
+
 
 *******************************************************************************
 ### Were old shims hashes provided to Microsoft for verification and to be added to future DBX updates?
@@ -221,16 +229,17 @@ N/A
 *******************************************************************************
 ### What is the SHA256 hash of your final SHIM binary?
 *******************************************************************************
-SHA256 (shimx64.efi) = 7f739b33cd666685cdba46a9b16265d12b73e73c41838a76be4d01f342b5831b
-
+SHA256 (shimx64.efi) = 8f0d4cdae78a9c404ea70ff9a36189067dfa646aa3368d472e7782003d30a969
+SHA256 (shimia32.efi) = c267adea2ad49ac3b2d595d3e7cf597a5caab8206415df748a5f7770be8c1a3f
 
 *******************************************************************************
 ### How do you manage and protect the keys used in your SHIM?
 *******************************************************************************
-- Private key for CA is kept in offline vault by default
-- Private keys for child certificates stored on HSM in a FIPS-140-2 environment for signing
-- Private keys are not exportable from HSM by design
-- Key backups are also kept in secure offline vault
+We use a managed PKI solution that meets all industry standards and requirements for issuing, protecting, backing up and securing code signing certs.
+
+There is a Private Root CA and a Private Issuing CA.  The Private Issuing CA was used for issuing of the private code signing certs that are found in the SHIM.
+
+Those issued certs are then stored on a physical HSM.  That HSM is installed within a FIPS environment.  All access to that environment is strictly controlled with physical and logical controls in place, with no outside access permitted.  The servers are in a locked environment and within a secure data center with proper physical access controls in place at that location for security purposes.
 
 *******************************************************************************
 ### Do you use EV certificates as embedded certificates in the SHIM?
@@ -243,6 +252,35 @@ No, only the CIQ secureboot CA (PKI) is embedded in our Shim
 ### Where your code is only slightly modified from an upstream vendor's, please also preserve their SBAT entries to simplify revocation.
 *******************************************************************************
 Besides being signed with our keys, We intend to leave our grub2 and fwupd source code completely unchanged from the upstream Rocky (RHEL) versions, as we have no need to customize it beyond that.
+```
+objcopy --only-section .sbat -O binary grubx64.efi /dev/stdout
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
+grub.rhel8,2,Red Hat Enterprise Linux 8,grub2,2.02-148.el8_ciq.1.rocky.0.3,mail:secalert@redhat.com
+grub.rocky8,2,Rocky Linux 8,grub2,2.02-148.el8_ciq.1.rocky.0.3,mail:security@rockylinux.org
+
+objcopy --only-section .sbat -O binary grubia32.efi /dev/stdout 
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
+grub.rhel8,2,Red Hat Enterprise Linux 8,grub2,2.02-148.el8_ciq.1.rocky.0.3,mail:secalert@redhat.com
+grub.rocky8,2,Rocky Linux 8,grub2,2.02-148.el8_ciq.1.rocky.0.3,mail:security@rockylinux.org
+
+objcopy --only-section .sbat -O binary fwupdx64.efi /dev/stdout 
+sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+fwupd-efi,1,Firmware update daemon,fwupd-efi,1.3,https://github.com/fwupd/fwupd-efi
+fwupd-efi.rhel,1,Red Hat Enterprise Linux,fwupd,1.7.8,mail:secalert@redhat.com
+fwupd-efi.rocky,1,Rocky Linux,fwupd,1.7.8,mail:security@rockylinux.org
+
+objcopy --only-section .sbat -O binary  shimx64.efi /dev/stdout 
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+shim,3,UEFI shim,shim,1,https://github.com/rhboot/shim
+shim.ciq,1,Ctrl IQ Inc,shim,15.7,mail:it_security@ciq.com
+
+objcopy --only-section .sbat -O binary shimia32.efi /dev/stdout
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+shim,3,UEFI shim,shim,1,https://github.com/rhboot/shim
+shim.ciq,1,Ctrl IQ Inc,shim,15.7,mail:it_security@ciq.com
+```
 
 
 *******************************************************************************
