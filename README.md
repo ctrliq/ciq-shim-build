@@ -72,14 +72,10 @@ well known in the Linux community.)
 ### Were these binaries created from the 15.7 shim release tar?
 Please create your shim binaries starting with the 15.7 shim release tar file: https://github.com/rhboot/shim/releases/download/15.7/shim-15.7.tar.bz2
 
-This matches https://github.com/rhboot/shim/releases/tag/15.7 (plus the NX patch) and contains the appropriate gnu-efi source.
+This matches https://github.com/rhboot/shim/releases/tag/15.7 which contains the appropriate gnu-efi source.
 
 ******************************************************************************
-Yes.  We are adding the relevant enable-NX-by-default patch to this code:  https://github.com/rhboot/shim/pull/530
-
-Same patch in our RPM source:  https://bitbucket.org/ciqinc/shim-unsigned-x64/src/ciq8/SOURCES/0001-Enable-the-NX-compatibility-flag-by-default.patch
-
-Buggy binutils patch: https://bitbucket.org/ciqinc/shim-unsigned-x64/src/ciq8/SOURCES/buggy-binutils.patch
+We are also adding the Buggy binutils patch: https://bitbucket.org/ciqinc/shim-unsigned-x64/src/ciq8/SOURCES/buggy-binutils.patch
 
 
 *******************************************************************************
@@ -87,7 +83,7 @@ Buggy binutils patch: https://bitbucket.org/ciqinc/shim-unsigned-x64/src/ciq8/SO
 *******************************************************************************
 CIQ shim-unsigned-x64 RPM repository:  https://bitbucket.org/ciqinc/shim-unsigned-x64/src/ciq8/
 
-This code is a combination of:  https://github.com/rhboot/shim/releases/download/15.7/shim-15.7.tar.bz2 , NX patch https://github.com/rhboot/shim/pull/530 , and an RPM spec file derived from the Rocky (and in turn RHEL) one.
+This code is a combination of:  https://github.com/rhboot/shim/releases/download/15.7/shim-15.7.tar.bz2 , and an RPM spec file derived from the Rocky (and in turn RHEL) one.
 
 Additionally, I have a "frozen" repository copy of the Mock buildroot and build dependencies (gcc, openssl, et al.) here:  https://rl-secure-boot.ewr1.vultrobjects.com/repos/shim_review_deps/  (this gets used by Mock as a source of RPM dependencies)
 
@@ -98,12 +94,6 @@ Using this repository (consisting of public Rocky Linux 8 packages) ensures a re
 *******************************************************************************
 ### What patches are being applied and why:
 *******************************************************************************
-We are including the NX-compatibility-by default patch, in addition to the stock 15.7 tag:
-
-https://github.com/rhboot/shim/pull/530
-
-This is to align with updated Microsoft requirements, ( https://techcommunity.microsoft.com/t5/hardware-dev-center/updated-uefi-signing-requirements/ba-p/1062916 )
-
 We are also including the Buggy binutils patch as well.
 Buggy binutils patch: https://bitbucket.org/ciqinc/shim-unsigned-x64/src/ciq8/SOURCES/buggy-binutils.patch
 The patch remedies a compatibility issue with binutils versions prior to 2.36. (https://github.com/rhboot/shim/issues/533)
