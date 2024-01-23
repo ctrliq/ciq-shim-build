@@ -7,7 +7,7 @@
 
 FROM rockylinux:8.8.20230518
 
-ENV shim_release 15.7-4.el8
+ENV shim_release 15.8-0.el8
 
 # Copy and extract src rpm and macros, modify setarch in spec file because 32-bit mod is not allowed inside containers:
 COPY rpmmacros  /root/.rpmmacros
