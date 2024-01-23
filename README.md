@@ -15,6 +15,9 @@ Note that we really only have experience with using GRUB2 on Linux, so asking
 us to endorse anything else for signing is going to require some convincing on
 your part.
 
+Check the docs directory in this repo for guidance on submission and
+getting your shim signed.
+
 Here's the template:
 
 *******************************************************************************
@@ -69,17 +72,13 @@ like keyserver.ubuntu.com, and preferably have signatures that are reasonably
 well known in the Linux community.)
 
 *******************************************************************************
-### Were these binaries created from the 15.7 shim release tar?
-Please create your shim binaries starting with the 15.7 shim release tar file: https://github.com/rhboot/shim/releases/download/15.7/shim-15.7.tar.bz2
+### Were these binaries created from the 15.8 shim release tar?
+Please create your shim binaries starting with the 15.8 shim release tar file: https://github.com/rhboot/shim/releases/download/15.7/shim-15.8.tar.bz2
 
-This matches https://github.com/rhboot/shim/releases/tag/15.7 (plus the NX patch) and contains the appropriate gnu-efi source.
+This matches https://github.com/rhboot/shim/releases/tag/15.8 and contains the appropriate gnu-efi source.
 
 ******************************************************************************
-Yes.  We are adding the relevant enable-NX-by-default patch to this code:  https://github.com/rhboot/shim/pull/530
-
-Same patch in our RPM source:  https://bitbucket.org/ciqinc/shim-unsigned-x64/src/ciq8/SOURCES/0001-Enable-the-NX-compatibility-flag-by-default.patch
-
-Buggy binutils patch: https://bitbucket.org/ciqinc/shim-unsigned-x64/src/ciq8/SOURCES/buggy-binutils.patch
+Yes. no other patches are applied
 
 
 *******************************************************************************
@@ -87,7 +86,7 @@ Buggy binutils patch: https://bitbucket.org/ciqinc/shim-unsigned-x64/src/ciq8/SO
 *******************************************************************************
 CIQ shim-unsigned-x64 RPM repository:  https://bitbucket.org/ciqinc/shim-unsigned-x64/src/ciq8/
 
-This code is a combination of:  https://github.com/rhboot/shim/releases/download/15.7/shim-15.7.tar.bz2 , NX patch https://github.com/rhboot/shim/pull/530 , and an RPM spec file derived from the Rocky (and in turn RHEL) one.
+This code is a combination of:  https://github.com/rhboot/shim/releases/download/15.7/shim-15.7.tar.bz2 and an RPM spec file derived from the Rocky (and in turn RHEL) one.
 
 Additionally, I have a "frozen" repository copy of the Mock buildroot and build dependencies (gcc, openssl, et al.) here:  https://rl-secure-boot.ewr1.vultrobjects.com/repos/shim_review_deps/  (this gets used by Mock as a source of RPM dependencies)
 
@@ -98,15 +97,8 @@ Using this repository (consisting of public Rocky Linux 8 packages) ensures a re
 *******************************************************************************
 ### What patches are being applied and why:
 *******************************************************************************
-We are including the NX-compatibility-by default patch, in addition to the stock 15.7 tag:
+N/a
 
-https://github.com/rhboot/shim/pull/530
-
-This is to align with updated Microsoft requirements, ( https://techcommunity.microsoft.com/t5/hardware-dev-center/updated-uefi-signing-requirements/ba-p/1062916 )
-
-We are also including the Buggy binutils patch as well.
-Buggy binutils patch: https://bitbucket.org/ciqinc/shim-unsigned-x64/src/ciq8/SOURCES/buggy-binutils.patch
-The patch remedies a compatibility issue with binutils versions prior to 2.36. (https://github.com/rhboot/shim/issues/533)
 
 
 *******************************************************************************
@@ -116,35 +108,46 @@ We intend to use the Rocky 8 + 9 (based on RHEL 8 + 9) GRUB2 source code unmodif
 
 
 *******************************************************************************
-### If shim is loading GRUB2 bootloader and your previously released shim booted a version of grub affected by any of the CVEs in the July 2020 grub2 CVE list, the March 2021 grub2 CVE list, the June 7th 2022 grub2 CVE list, or the November 15th 2022 list, have fixes for all these CVEs been applied?
+### If shim is loading GRUB2 bootloader and your previously released shim booted a version of GRUB2 affected by any of the CVEs in the July 2020, the March 2021, the June 7th 2022, the November 15th 2022, or 3rd of October 2023 GRUB2 CVE list, have fixes for all these CVEs been applied?
 
-* CVE-2020-14372
-* CVE-2020-25632
-* CVE-2020-25647
-* CVE-2020-27749
-* CVE-2020-27779
-* CVE-2021-20225
-* CVE-2021-20233
-
-* CVE-2020-10713
-* CVE-2020-14308
-* CVE-2020-14309
-* CVE-2020-14310
-* CVE-2020-14311
-* CVE-2020-15705
-* CVE-2021-3418 (if you are shipping the shim_lock module)
-
-* CVE-2021-3695
-* CVE-2021-3696
-* CVE-2021-3697
-* CVE-2022-28733
-* CVE-2022-28734
-* CVE-2022-28735
-* CVE-2022-28736
-* CVE-2022-28737
-
-* CVE-2022-2601
-* CVE-2022-3775
+* 2020 July - BootHole
+  * Details: https://lists.gnu.org/archive/html/grub-devel/2020-07/msg00034.html
+  * CVE-2020-10713
+  * CVE-2020-14308
+  * CVE-2020-14309
+  * CVE-2020-14310
+  * CVE-2020-14311
+  * CVE-2020-15705
+  * CVE-2020-15706
+  * CVE-2020-15707
+* March 2021
+  * Details: https://lists.gnu.org/archive/html/grub-devel/2021-03/msg00007.html
+  * CVE-2020-14372
+  * CVE-2020-25632
+  * CVE-2020-25647
+  * CVE-2020-27749
+  * CVE-2020-27779
+  * CVE-2021-3418 (if you are shipping the shim_lock module)
+  * CVE-2021-20225
+  * CVE-2021-20233
+* June 2022
+  * Details: https://lists.gnu.org/archive/html/grub-devel/2022-06/msg00035.html, SBAT increase to 2
+  * CVE-2021-3695
+  * CVE-2021-3696
+  * CVE-2021-3697
+  * CVE-2022-28733
+  * CVE-2022-28734
+  * CVE-2022-28735
+  * CVE-2022-28736
+  * CVE-2022-28737
+* November 2022
+  * Details: https://lists.gnu.org/archive/html/grub-devel/2022-11/msg00059.html, SBAT increase to 3
+  * CVE-2022-2601
+  * CVE-2022-3775
+* October 2023 - NTFS vulnerabilities
+  * Details: https://lists.gnu.org/archive/html/grub-devel/2023-10/msg00028.html, SBAT increase to 4
+  * CVE-2023-4693
+  * CVE-2023-4692
 *******************************************************************************
 We are a new vendor, and this is our first submission.  But I can confirm that our grub2 builds will not be affected by any of those, as they've all been fixed in our upstream:
 
@@ -154,13 +157,14 @@ https://git.rockylinux.org/staging/rpms/grub2/-/blob/r8/SPECS/grub2.spec#L511
 
 
 *******************************************************************************
-### If these fixes have been applied, have you set the global SBAT generation on your GRUB binary to 3?
+### If these fixes have been applied, is the upstream global SBAT generation in your GRUB2 binary set to 4?
+The entry should look similar to: `grub,4,Free Software Foundation,grub,GRUB_UPSTREAM_VERSION,https://www.gnu.org/software/grub/`
 *******************************************************************************
-Yes, the global SBAT generation on our GRUB binary has been set to 3
+Yes, the global SBAT generation on our GRUB binary has been set to 4
 
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
+grub,4,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
 grub.rhel8,2,Red Hat Enterprise Linux 8,grub2,2.02-148.el8_ciq.1.rocky.0.3,mail:secalert@redhat.com
 grub.rocky8,2,Rocky Linux 8,grub2,2.02-148.el8_ciq.1.rocky.0.3,mail:security@rockylinux.org
 ```
@@ -189,6 +193,11 @@ Generally we'll be performing 2 sorts of mofifications:
 
 - Builds of recent mainline (ML) and longterm (LT) upstream kernel releases designed for installation on Rocky Linux.  Different variants are planned with compile-time configuration tweaks, especially around enhancing high performance computing (HPC) applications.
 
+*******************************************************************************
+### Do you use an ephemeral key for signing kernel modules?
+### If not, please describe how you ensure that one kernel build does not load modules built for another kernel.
+*******************************************************************************
+A temporary ephemral key is used to sign kernel modules
 
 
 *******************************************************************************
@@ -230,8 +239,8 @@ N/A
 *******************************************************************************
 ### What is the SHA256 hash of your final SHIM binary?
 *******************************************************************************
-* SHA256 (shimx64.efi) = 8f0d4cdae78a9c404ea70ff9a36189067dfa646aa3368d472e7782003d30a969
-* SHA256 (shimia32.efi) = c267adea2ad49ac3b2d595d3e7cf597a5caab8206415df748a5f7770be8c1a3f
+* SHA256 (shimx64.efi) = 654d8efe248cd113f7ecb5a1f4fc9c309cc0d65a66b4bb8d9b2991f57f2dbcf6
+* SHA256 (shimia32.efi) = b739423471c03d32f2918906286076ea73c1385ced3f175a60ceeb8fadf009de
 
 *******************************************************************************
 ### How do you manage and protect the keys used in your SHIM?
@@ -248,21 +257,24 @@ Those issued certs are then stored on a physical HSM.  That HSM is installed wit
 No, only the CIQ secureboot CA (PKI) is embedded in our Shim
 
 *******************************************************************************
-### Do you add a vendor-specific SBAT entry to the SBAT section in each binary that supports SBAT metadata ( grub2, fwupd, fwupdate, shim + all child shim binaries )?
+### Do you add a vendor-specific SBAT entry to the SBAT section in each binary that supports SBAT metadata ( GRUB2, fwupd, fwupdate, shim + all child shim binaries )?
 ### Please provide exact SBAT entries for all SBAT binaries you are booting or planning to boot directly through shim.
 ### Where your code is only slightly modified from an upstream vendor's, please also preserve their SBAT entries to simplify revocation.
+If you are using a downstream implementation of GRUB2 (e.g. from Fedora or Debian), please
+preserve the SBAT entry from those distributions and only append your own.
+More information on how SBAT works can be found [here](https://github.com/rhboot/shim/blob/main/SBAT.md).
 *******************************************************************************
 Besides being signed with our keys, We intend to leave our grub2 and fwupd source code completely unchanged from the upstream Rocky (RHEL) versions, as we have no need to customize it beyond that.
 ```
 objcopy --only-section .sbat -O binary grubx64.efi /dev/stdout
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
+grub,4,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
 grub.rhel8,2,Red Hat Enterprise Linux 8,grub2,2.02-148.el8_ciq.1.rocky.0.3,mail:secalert@redhat.com
 grub.rocky8,2,Rocky Linux 8,grub2,2.02-148.el8_ciq.1.rocky.0.3,mail:security@rockylinux.org
 
 objcopy --only-section .sbat -O binary grubia32.efi /dev/stdout 
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
+grub,4,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
 grub.rhel8,2,Red Hat Enterprise Linux 8,grub2,2.02-148.el8_ciq.1.rocky.0.3,mail:secalert@redhat.com
 grub.rocky8,2,Rocky Linux 8,grub2,2.02-148.el8_ciq.1.rocky.0.3,mail:security@rockylinux.org
 
@@ -275,17 +287,17 @@ fwupd-efi.rocky,1,Rocky Linux,fwupd,1.7.8,mail:security@rockylinux.org
 objcopy --only-section .sbat -O binary  shimx64.efi /dev/stdout 
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 shim,3,UEFI shim,shim,1,https://github.com/rhboot/shim
-shim.ciq,1,Ctrl IQ Inc,shim,15.7,mail:it_security@ciq.com
+shim.ciq,1,Ctrl IQ Inc,shim,15.8,mail:it_security@ciq.com
 
 objcopy --only-section .sbat -O binary shimia32.efi /dev/stdout
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 shim,3,UEFI shim,shim,1,https://github.com/rhboot/shim
-shim.ciq,1,Ctrl IQ Inc,shim,15.7,mail:it_security@ciq.com
+shim.ciq,1,Ctrl IQ Inc,shim,15.8,mail:it_security@ciq.com
 ```
 
 
 *******************************************************************************
-### Which modules are built into your signed grub image?
+### Which modules are built into your signed GRUB2 image?
 *******************************************************************************
 Rocky 8 / Grub 2.02-148 :
 ```
@@ -331,7 +343,7 @@ usbserial_usbdebug keylayouts at_keyboard
 ```
 
 *******************************************************************************
-### What is the origin and full version number of your bootloader (GRUB or other)?
+### What is the origin and full version number of your bootloader (GRUB2 or other)?
 *******************************************************************************
 
 Rocky / RHEL 8 base:
@@ -365,7 +377,7 @@ In the case of the kernel, both the RHEL variant and the upstream ("new") varian
 In the case of Grub + Fwupd, we will be running the same Rocky/RHEL versions unmodified, which also do not execute unauthenticated code by default.
 
 *******************************************************************************
-### Does your SHIM load any loaders that support loading unsigned kernels (e.g. GRUB)?
+### Does your SHIM load any loaders that support loading unsigned kernels (e.g. GRUB2)?
 *******************************************************************************
 Grub2 will only load unsigned code if the secureboot feature is turned off  load unsigned kernels, but only with secureboot mode turned off on an end-user's system.
 
