@@ -165,8 +165,9 @@ Yes, the global SBAT generation on our GRUB binary has been set to 4
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,4,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
-grub.rhel8,2,Red Hat Enterprise Linux 8,grub2,2.02-148.el8_ciq.1.rocky.0.3,mail:secalert@redhat.com
-grub.rocky8,2,Rocky Linux 8,grub2,2.02-148.el8_ciq.1.rocky.0.3,mail:security@rockylinux.org
+grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-148.el8_8.1,mail:secalert@redhat.com
+grub.rocky8,2,Rocky Linux 8,grub2,2.02-148.el8_8.1.rocky.0.3,mail:security@rockylinux.org
+grub.ciq_rocky8,1,Rocky Linux 8 (CIQ modified),grub2,2.02-148.el8.1.ciq.0.3,mail:secureboot@ciq.com
 ```
 
 *******************************************************************************
@@ -269,14 +270,16 @@ Besides being signed with our keys, We intend to leave our grub2 and fwupd sourc
 objcopy --only-section .sbat -O binary grubx64.efi /dev/stdout
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,4,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
-grub.rhel8,2,Red Hat Enterprise Linux 8,grub2,2.02-148.el8_ciq.1.rocky.0.3,mail:secalert@redhat.com
-grub.rocky8,2,Rocky Linux 8,grub2,2.02-148.el8_ciq.1.rocky.0.3,mail:security@rockylinux.org
+grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-148.el8_8.1,mail:secalert@redhat.com
+grub.rocky8,2,Rocky Linux 8,grub2,2.02-148.el8_8.1.rocky.0.3,mail:security@rockylinux.org
+grub.ciq_rocky8,1,Rocky Linux 8 (CIQ modified),grub2,2.02-148.el8.1.ciq.0.3,mail:secureboot@ciq.com
 
 objcopy --only-section .sbat -O binary grubia32.efi /dev/stdout 
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,4,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
-grub.rhel8,2,Red Hat Enterprise Linux 8,grub2,2.02-148.el8_ciq.1.rocky.0.3,mail:secalert@redhat.com
-grub.rocky8,2,Rocky Linux 8,grub2,2.02-148.el8_ciq.1.rocky.0.3,mail:security@rockylinux.org
+grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-148.el8_8.1,mail:secalert@redhat.com
+grub.rocky8,2,Rocky Linux 8,grub2,2.02-148.el8_8.1.rocky.0.3,mail:security@rockylinux.org
+grub.ciq_rocky8,1,Rocky Linux 8 (CIQ modified),grub2,2.02-148.el8.1.ciq.0.3,mail:secureboot@ciq.com
 
 objcopy --only-section .sbat -O binary fwupdx64.efi /dev/stdout 
 sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
@@ -301,45 +304,41 @@ shim.ciq,1,Ctrl IQ Inc,shim,15.8,mail:it_security@ciq.com
 *******************************************************************************
 Rocky 8 / Grub 2.02-148 :
 ```
-efinet lsefi lsefimmap connectefi
-all_video boot blscfg btrfs 
-cat configfile cryptodisk echo 
-ext2 fat font gcry_rijndael 
-gcry_rsa gcry_serpent gcry_sha256 gcry_twofish 
-gcry_whirlpool gfxmenu gfxterm gzio 
-halt hfsplus http increment
-iso9660 jpeg loadenv loopback
-linux lvm luks mdraid09
-mdraid1x minicmd net normal
-part_apple part_msdos part_gpt password_pbkdf2
-png reboot regexp search
-search_fs_uuid search_fs_file search_label serial
-sleep syslinuxcfg test tftp
-video xfs efi_netfs efifwsetup 
-backtrace chain usb usbserial_common
-usbserial_pl2303 usbserial_ftdi usbserial_usbdebug keylayouts 
-at_keyboard
+efi_netfs efifwsetup efinet lsefi lsefimmap connectefi
+backtrace chain usb usbserial_common usbserial_pl2303 
+usbserial_ftdi usbserial_usbdebug keylayouts at_keyboard 
+all_video boot blscfg
+cat configfile cryptodisk echo ext2
+fat font gcry_rijndael gcry_rsa gcry_serpent
+gcry_sha256 gcry_twofish gcry_whirlpool
+gfxmenu gfxterm gzio halt http
+increment iso9660 jpeg loadenv loopback linux
+lvm luks mdraid09 mdraid1x minicmd net
+normal part_apple part_msdos part_gpt
+password_pbkdf2 png reboot regexp search
+search_fs_uuid search_fs_file search_label
+serial sleep syslinuxcfg test tftp video xfs
 ```
 
 Rocky 9 / Grub 2.06-61 :
 ```
-efinet lsefi lsefimmap connectefi 
-backtrace chain all_video boot 
-blscfg btrfs cat configfile 
-cryptodisk echo ext2 fat 
-font gcry_rijndael gcry_rsa gcry_serpent gcry_sha256 
-gcry_twofish gcry_whirlpool gfxmenu gfxterm 
-gzio halt hfsplus http 
-increment iso9660 jpeg loadenv
-loopback linux lvm luks 
-mdraid09 mdraid1x minicmd net 
-normal part_apple part_msdos part_gpt 
-password_pbkdf2 png reboot regexp 
-search search_fs_uuid search_fs_file search_label serial 
-sleep syslinuxcfg test tftp 
-video xfs efi_netfs efifwsetup
-usb usbserial_common usbserial_pl2303 usbserial_ftdi 
-usbserial_usbdebug keylayouts at_keyboard
+efi_netfs efifwsetup efinet lsefi lsefimmap connectefi
+backtrace chain tpm usb usbserial_common usbserial_pl2303
+usbserial_ftdi usbserial_usbdebug keylayouts at_keyboard 
+all_video boot blscfg
+cat configfile cryptodisk
+echo ext2 f2fs fat font
+gcry_rijndael gcry_rsa gcry_serpent
+gcry_sha256 gcry_twofish gcry_whirlpool
+gfxmenu gfxterm gzio
+halt http increment iso9660
+jpeg loadenv loopback linux lvm luks
+luks2 mdraid09 mdraid1x minicmd net
+normal part_apple part_msdos part_gpt
+password_pbkdf2 pgp png reboot regexp
+search search_fs_uuid search_fs_file
+search_label serial sleep syslinuxcfg
+test tftp version video xfs zstd 
 ```
 
 *******************************************************************************
