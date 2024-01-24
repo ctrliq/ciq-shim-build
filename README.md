@@ -347,7 +347,7 @@ test tftp version video xfs zstd
 
 Rocky / RHEL 8 base:
   - grub2-2.02 base version
-  - grub2-2.02-150.1 (current version)
+  - grub2-2.02-150 (current version)
   
 (We plan to track security updates from upstream when building Grub)
 
