@@ -165,9 +165,9 @@ Yes, the global SBAT generation on our GRUB binary has been set to 4
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,4,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
-grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-148.el8_8.1,mail:secalert@redhat.com
-grub.rocky8,2,Rocky Linux 8,grub2,2.02-148.el8_8.1.rocky.0.3,mail:security@rockylinux.org
-grub.ciq_rocky8,1,Rocky Linux 8 (CIQ modified),grub2,2.02-148.el8.1.ciq.0.3,mail:secureboot@ciq.com
+grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-150.el8_8.1,mail:secalert@redhat.com
+grub.rocky8,2,Rocky Linux 8,grub2,2.02-150.el8_8.1.rocky.0.3,mail:security@rockylinux.org
+grub.ciq_rocky8,1,Rocky Linux 8 (CIQ modified),grub2,2.02-150.el8.1.ciq.0.3,mail:secureboot@ciq.com
 ```
 
 *******************************************************************************
@@ -270,16 +270,16 @@ Besides being signed with our keys, We intend to leave our grub2 and fwupd sourc
 objcopy --only-section .sbat -O binary grubx64.efi /dev/stdout
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,4,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
-grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-148.el8_8.1,mail:secalert@redhat.com
-grub.rocky8,2,Rocky Linux 8,grub2,2.02-148.el8_8.1.rocky.0.3,mail:security@rockylinux.org
-grub.ciq_rocky8,1,Rocky Linux 8 (CIQ modified),grub2,2.02-148.el8.1.ciq.0.3,mail:secureboot@ciq.com
+grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-150.el8_8.1,mail:secalert@redhat.com
+grub.rocky8,2,Rocky Linux 8,grub2,2.02-150.el8_8.1.rocky.0.3,mail:security@rockylinux.org
+grub.ciq_rocky8,1,Rocky Linux 8 (CIQ modified),grub2,2.02-150.el8.1.ciq.0.3,mail:secureboot@ciq.com
 
 objcopy --only-section .sbat -O binary grubia32.efi /dev/stdout 
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,4,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
-grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-148.el8_8.1,mail:secalert@redhat.com
-grub.rocky8,2,Rocky Linux 8,grub2,2.02-148.el8_8.1.rocky.0.3,mail:security@rockylinux.org
-grub.ciq_rocky8,1,Rocky Linux 8 (CIQ modified),grub2,2.02-148.el8.1.ciq.0.3,mail:secureboot@ciq.com
+grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-150.el8_8.1,mail:secalert@redhat.com
+grub.rocky8,2,Rocky Linux 8,grub2,2.02-150.el8_8.1.rocky.0.3,mail:security@rockylinux.org
+grub.ciq_rocky8,1,Rocky Linux 8 (CIQ modified),grub2,2.02-150.el8.1.ciq.0.3,mail:secureboot@ciq.com
 
 objcopy --only-section .sbat -O binary fwupdx64.efi /dev/stdout 
 sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
@@ -302,7 +302,7 @@ shim.ciq,1,Ctrl IQ Inc,shim,15.8,mail:it_security@ciq.com
 *******************************************************************************
 ### Which modules are built into your signed GRUB2 image?
 *******************************************************************************
-Rocky 8 / Grub 2.02-148 :
+Rocky 8 / Grub 2.02-150 :
 ```
 efi_netfs efifwsetup efinet lsefi lsefimmap connectefi
 backtrace chain usb usbserial_common usbserial_pl2303 
@@ -347,7 +347,7 @@ test tftp version video xfs zstd
 
 Rocky / RHEL 8 base:
   - grub2-2.02 base version
-  - grub2-2.02-148.1 (current version)
+  - grub2-2.02-150.1 (current version)
   
 (We plan to track security updates from upstream when building Grub)
 
