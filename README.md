@@ -73,7 +73,7 @@ well known in the Linux community.)
 
 *******************************************************************************
 ### Were these binaries created from the 15.8 shim release tar?
-Please create your shim binaries starting with the 15.8 shim release tar file: https://github.com/rhboot/shim/releases/download/15.7/shim-15.8.tar.bz2
+Please create your shim binaries starting with the 15.8 shim release tar file: https://github.com/rhboot/shim/releases/download/15.8/shim-15.8.tar.bz2
 
 This matches https://github.com/rhboot/shim/releases/tag/15.8 and contains the appropriate gnu-efi source.
 
@@ -86,7 +86,7 @@ Yes. no other patches are applied
 *******************************************************************************
 CIQ shim-unsigned-x64 RPM repository:  https://bitbucket.org/ciqinc/shim-unsigned-x64/src/ciq8/
 
-This code is a combination of:  https://github.com/rhboot/shim/releases/download/15.7/shim-15.7.tar.bz2 and an RPM spec file derived from the Rocky (and in turn RHEL) one.
+This code is a combination of:  https://github.com/rhboot/shim/releases/download/15.8/shim-15.8.tar.bz2 and an RPM spec file derived from the Rocky (and in turn RHEL) one.
 
 Additionally, I have a "frozen" repository copy of the Mock buildroot and build dependencies (gcc, openssl, et al.) here:  https://rl-secure-boot.ewr1.vultrobjects.com/repos/shim_review_deps/  (this gets used by Mock as a source of RPM dependencies)
 
