@@ -289,12 +289,12 @@ fwupd-efi.rocky,1,Rocky Linux,fwupd,1.7.8,mail:security@rockylinux.org
 
 objcopy --only-section .sbat -O binary  shimx64.efi /dev/stdout 
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-shim,3,UEFI shim,shim,1,https://github.com/rhboot/shim
+shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
 shim.ciq,1,Ctrl IQ Inc,shim,15.8,mail:it_security@ciq.com
 
 objcopy --only-section .sbat -O binary shimia32.efi /dev/stdout
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-shim,3,UEFI shim,shim,1,https://github.com/rhboot/shim
+shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
 shim.ciq,1,Ctrl IQ Inc,shim,15.8,mail:it_security@ciq.com
 ```
 
