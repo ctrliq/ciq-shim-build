@@ -165,9 +165,9 @@ Our grub2 follows our upstream (Rocky linux), Rocky has not updated grub and is 
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
-grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-150.el8_8,mail:secalert@redhat.com
-grub.rocky8,2,Rocky Linux 8,grub2,2.02-150.el8_8.rocky.0.1,mail:security@rockylinux.org
-grub.ciq_rocky8,1,Rocky Linux 8 (CIQ modified),grub2,2.02-150.el8.ciq.0.1,mail:secureboot@ciq.com
+grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-150.el8_8,mailto:secalert@redhat.com
+grub.rocky8,2,Rocky Linux 8,grub2,2.02-150.el8_8.rocky.0.1,mailto:security@rockylinux.org
+grub.ciq_rocky8,1,Rocky Linux 8 (CIQ build),grub2,2.02-150.el8.ciq.0.1,mailto:secureboot@ciq.com
 ```
 
 *******************************************************************************
@@ -270,16 +270,16 @@ Besides being signed with our keys, We intend to leave our grub2 and fwupd sourc
 objcopy --only-section .sbat -O binary grubx64.efi /dev/stdout
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
-grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-150.el8_8,mail:secalert@redhat.com
-grub.rocky8,2,Rocky Linux 8,grub2,2.02-150.el8_8.rocky.0.1,mail:security@rockylinux.org
-grub.ciq_rocky8,1,Rocky Linux 8 (CIQ modified),grub2,2.02-150.el8.ciq.0.1,mail:secureboot@ciq.com
+grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-150.el8_8,mailto:secalert@redhat.com
+grub.rocky8,2,Rocky Linux 8,grub2,2.02-150.el8_8.rocky.0.1,mailto:security@rockylinux.org
+grub.ciq_rocky8,1,Rocky Linux 8 (CIQ build),grub2,2.02-150.el8.ciq.0.1,mailto:secureboot@ciq.com
 
 objcopy --only-section .sbat -O binary grubia32.efi /dev/stdout 
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
-grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-150.el8_8,mail:secalert@redhat.com
-grub.rocky8,2,Rocky Linux 8,grub2,2.02-150.el8_8.rocky.0.1,mail:security@rockylinux.org
-grub.ciq_rocky8,1,Rocky Linux 8 (CIQ modified),grub2,2.02-150.el8.ciq.0.1,mail:secureboot@ciq.com
+grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-150.el8_8,mailto:secalert@redhat.com
+grub.rocky8,2,Rocky Linux 8,grub2,2.02-150.el8_8.rocky.0.1,mailto:security@rockylinux.org
+grub.ciq_rocky8,1,Rocky Linux 8 (CIQ build),grub2,2.02-150.el8.ciq.0.1,mailto:secureboot@ciq.com
 
 objcopy --only-section .sbat -O binary fwupdx64.efi /dev/stdout 
 sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
