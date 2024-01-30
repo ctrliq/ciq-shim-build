@@ -1,0 +1,36 @@
+2024-01-30 15:31:59,663 - Mock Version: 5.4
+2024-01-30 15:31:59,666 - Start: chroot init
+2024-01-30 15:31:59,673 - Start: unpacking root cache
+2024-01-30 15:32:01,625 - Finish: unpacking root cache
+2024-01-30 15:32:01,626 - Start: cleaning package manager metadata
+2024-01-30 15:32:01,627 - Finish: cleaning package manager metadata
+2024-01-30 15:32:01,819 - Start: dnf update
+2024-01-30 15:32:02,471 - Finish: dnf update
+2024-01-30 15:32:02,622 - Finish: chroot init
+2024-01-30 15:32:02,624 - Start: buildsrpm
+2024-01-30 15:32:02,628 - Start: rpmbuild -bs
+2024-01-30 15:32:02,711 - Finish: rpmbuild -bs
+2024-01-30 15:32:02,713 - Finish: buildsrpm
+2024-01-30 15:32:02,714 - Start: clean chroot
+2024-01-30 15:32:03,849 - Finish: clean chroot
+2024-01-30 15:32:03,850 - Finish: run
+2024-01-30 15:32:11,214 - Mock Version: 5.4
+2024-01-30 15:32:11,217 - Start: chroot init
+2024-01-30 15:32:11,224 - Start: unpacking root cache
+2024-01-30 15:32:13,188 - Finish: unpacking root cache
+2024-01-30 15:32:13,189 - Start: cleaning package manager metadata
+2024-01-30 15:32:13,190 - Finish: cleaning package manager metadata
+2024-01-30 15:32:13,374 - Start: dnf update
+2024-01-30 15:32:13,953 - Finish: dnf update
+2024-01-30 15:32:14,109 - Finish: chroot init
+2024-01-30 15:32:14,109 - Start: build phase for shim-unsigned-x64-15.8-0.el8.src.rpm
+2024-01-30 15:32:14,111 - Start: build setup for shim-unsigned-x64-15.8-0.el8.src.rpm
+2024-01-30 15:32:18,860 - Finish: build setup for shim-unsigned-x64-15.8-0.el8.src.rpm
+2024-01-30 15:32:18,860 - Start: Outputting list of installed packages
+2024-01-30 15:32:18,943 - Finish: Outputting list of installed packages
+2024-01-30 15:32:18,943 - Start: rpmbuild shim-unsigned-x64-15.8-0.el8.src.rpm
+2024-01-30 15:32:39,349 - Finish: rpmbuild shim-unsigned-x64-15.8-0.el8.src.rpm
+2024-01-30 15:32:39,353 - Finish: build phase for shim-unsigned-x64-15.8-0.el8.src.rpm
+2024-01-30 15:32:39,355 - Start: clean chroot
+2024-01-30 15:32:41,043 - Finish: clean chroot
+2024-01-30 15:32:41,044 - Finish: run
