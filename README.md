@@ -160,14 +160,14 @@ https://git.rockylinux.org/staging/rpms/grub2/-/blob/r8/SPECS/grub2.spec#L511
 ### If these fixes have been applied, is the upstream global SBAT generation in your GRUB2 binary set to 4?
 The entry should look similar to: `grub,4,Free Software Foundation,grub,GRUB_UPSTREAM_VERSION,https://www.gnu.org/software/grub/`
 *******************************************************************************
-Yes, the global SBAT generation on our GRUB binary has been set to 4
+Our grub2 follows our upstream (Rocky linux), Rocky has not updated grub and is still on generation level 3.
 
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-grub,4,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
-grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-150.el8_8.1,mail:secalert@redhat.com
-grub.rocky8,2,Rocky Linux 8,grub2,2.02-150.el8_8.1.rocky.0.3,mail:security@rockylinux.org
-grub.ciq_rocky8,1,Rocky Linux 8 (CIQ modified),grub2,2.02-150.el8.1.ciq.0.3,mail:secureboot@ciq.com
+grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
+grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-150.el8_8,mailto:secalert@redhat.com
+grub.rocky8,2,Rocky Linux 8,grub2,2.02-150.el8_8.rocky.0.1,mailto:security@rockylinux.org
+grub.ciq_rocky8,1,Rocky Linux 8 (CIQ build),grub2,2.02-150.el8.ciq.0.1,mailto:secureboot@ciq.com
 ```
 
 *******************************************************************************
@@ -269,17 +269,17 @@ Besides being signed with our keys, We intend to leave our grub2 and fwupd sourc
 ```
 objcopy --only-section .sbat -O binary grubx64.efi /dev/stdout
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-grub,4,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
-grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-150.el8_8.1,mail:secalert@redhat.com
-grub.rocky8,2,Rocky Linux 8,grub2,2.02-150.el8_8.1.rocky.0.3,mail:security@rockylinux.org
-grub.ciq_rocky8,1,Rocky Linux 8 (CIQ modified),grub2,2.02-150.el8.1.ciq.0.3,mail:secureboot@ciq.com
+grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
+grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-150.el8_8,mailto:secalert@redhat.com
+grub.rocky8,2,Rocky Linux 8,grub2,2.02-150.el8_8.rocky.0.1,mailto:security@rockylinux.org
+grub.ciq_rocky8,1,Rocky Linux 8 (CIQ build),grub2,2.02-150.el8.ciq.0.1,mailto:secureboot@ciq.com
 
 objcopy --only-section .sbat -O binary grubia32.efi /dev/stdout 
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-grub,4,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
-grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-150.el8_8.1,mail:secalert@redhat.com
-grub.rocky8,2,Rocky Linux 8,grub2,2.02-150.el8_8.1.rocky.0.3,mail:security@rockylinux.org
-grub.ciq_rocky8,1,Rocky Linux 8 (CIQ modified),grub2,2.02-150.el8.1.ciq.0.3,mail:secureboot@ciq.com
+grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
+grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-150.el8_8,mailto:secalert@redhat.com
+grub.rocky8,2,Rocky Linux 8,grub2,2.02-150.el8_8.rocky.0.1,mailto:security@rockylinux.org
+grub.ciq_rocky8,1,Rocky Linux 8 (CIQ build),grub2,2.02-150.el8.ciq.0.1,mailto:secureboot@ciq.com
 
 objcopy --only-section .sbat -O binary fwupdx64.efi /dev/stdout 
 sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
@@ -289,12 +289,12 @@ fwupd-efi.rocky,1,Rocky Linux,fwupd,1.7.8,mail:security@rockylinux.org
 
 objcopy --only-section .sbat -O binary  shimx64.efi /dev/stdout 
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-shim,3,UEFI shim,shim,1,https://github.com/rhboot/shim
+shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
 shim.ciq,1,Ctrl IQ Inc,shim,15.8,mail:it_security@ciq.com
 
 objcopy --only-section .sbat -O binary shimia32.efi /dev/stdout
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-shim,3,UEFI shim,shim,1,https://github.com/rhboot/shim
+shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
 shim.ciq,1,Ctrl IQ Inc,shim,15.8,mail:it_security@ciq.com
 ```
 
@@ -320,7 +320,7 @@ search_fs_uuid search_fs_file search_label
 serial sleep syslinuxcfg test tftp video xfs
 ```
 
-Rocky 9 / Grub 2.06-61 :
+Rocky 9 / Grub 2.06-70 :
 ```
 efi_netfs efifwsetup efinet lsefi lsefimmap connectefi
 backtrace chain tpm usb usbserial_common usbserial_pl2303
