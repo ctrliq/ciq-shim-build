@@ -244,7 +244,6 @@ Nothing has changed since our el8 https://github.com/rhboot/shim-review/issues/3
 ### What is the SHA256 hash of your final SHIM binary?
 *******************************************************************************
 * SHA256 (shimx64.efi) = 
-* SHA256 (shimia32.efi) = 
 
 *******************************************************************************
 ### How do you manage and protect the keys used in your SHIM?
@@ -285,11 +284,6 @@ fwupd-efi.rhel,1,Red Hat Enterprise Linux,fwupd,1.8.16,mail:secalert@redhat.com
 fwupd-efi.rocky,1,Rocky Linux,fwupd,1.8.16,mail:security@rockylinux.org
 
 objcopy --only-section .sbat -O binary  shimx64.efi /dev/stdout 
-sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
-shim.ciq,1,Ctrl IQ Inc,shim,15.8,mail:it_security@ciq.com
-
-objcopy --only-section .sbat -O binary shimia32.efi /dev/stdout
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
 shim.ciq,1,Ctrl IQ Inc,shim,15.8,mail:it_security@ciq.com
