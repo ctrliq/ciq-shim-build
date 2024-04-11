@@ -166,13 +166,12 @@ The entry should look similar to: `grub,4,Free Software Foundation,grub,GRUB_UPS
 *******************************************************************************
 Our grub2 follows our upstream (Rocky linux), Rocky has not updated grub and is still on generation level 3.
 
-TODO: update with el9 grub sbat information
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
-grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-150.el8_8,mailto:secalert@redhat.com
-grub.rocky8,2,Rocky Linux 8,grub2,2.02-150.el8_8.rocky.0.1,mailto:security@rockylinux.org
-grub.ciq_rocky8,1,Rocky Linux 8 (CIQ build),grub2,2.02-150.el8.ciq.0.1,mailto:secureboot@ciq.com
+grub,3,Free Software Foundation,grub,2.06,https//www.gnu.org/software/grub/
+grub.rh,2,Red Hat,grub2,2.06-70.el9_3.ciqfips.2,mailto:secalert@redhat.com
+grub.rocky,2,Rocky Linux,grub2,2.06-70.el9_3.ciqfips.2.rocky.0.5,mail:security@rockylinux.org
+grub.ciq_rocky9,1,Rocky Linux 9 (CIQ build),grub2,2.06-70.el9.ciq.0.1,mailto:secureboot@ciq.com
 ```
 *******************************************************************************
 ### Were old shims hashes provided to Microsoft for verification and to be added to future DBX updates?
@@ -272,7 +271,18 @@ and only append your own. More information on how SBAT works can be found
 *******************************************************************************
 
 ```
-[your text here]
+objcopy --only-section .sbat -O binary grubx64.efi /dev/stdout
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+grub,3,Free Software Foundation,grub,2.06,https//www.gnu.org/software/grub/
+grub.rh,2,Red Hat,grub2,2.06-70.el9_3.ciqfips.2,mailto:secalert@redhat.com
+grub.rocky,2,Rocky Linux,grub2,2.06-70.el9_3.ciqfips.2.rocky.0.5,mail:security@rockylinux.org
+grub.ciq_rocky9,1,Rocky Linux 9 (CIQ build),grub2,2.06-70.el9.ciq.0.1,mailto:secureboot@ciq.com
+
+objcopy --only-section .sbat -O binary fwupdx64.efi /dev/stdout 
+sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+fwupd-efi,1,Firmware update daemon,fwupd-efi,1.4,https://github.com/fwupd/fwupd-efi
+fwupd-efi.rhel,1,Red Hat Enterprise Linux,fwupd,1.8.16,mail:secalert@redhat.com
+fwupd-efi.rocky,1,Rocky Linux,fwupd,1.8.16,mail:security@rockylinux.org
 
 objcopy --only-section .sbat -O binary  shimx64.efi /dev/stdout 
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
@@ -329,6 +339,7 @@ This seems perfect for our use-case, as the Rocky grub2 + fwupd upstream package
 I want to inquire about signing this wrapper efi and making it available to users.
 
 The certmule package in question (with the embedded Rocky CA) is located at:  https://bitbucket.org/ciqinc/certmule-rocky/
+
 *******************************************************************************
 ### If your GRUB2 or systemd-boot launches any other binaries that are not the Linux kernel in SecureBoot mode, please provide further details on what is launched and how it enforces Secureboot lockdown.
 *******************************************************************************
