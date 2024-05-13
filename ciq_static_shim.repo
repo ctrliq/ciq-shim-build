@@ -2,11 +2,27 @@
 # This repo should have all the Shim build-time requirements "frozen" so the built EFI binaries are reproducible exactly
 # DNF priority is set to guarantee these packages get used first
 
-[ciq_static_shim_9]
-name=ciq_static_shim_9
-baseurl=https://rl-secure-boot.ewr1.vultrobjects.com/repos/shim_review_deps/
-gpgcheck=1
+[base]
+name=CentOS-7 - Base
+#mirrorlist=http://mirrorlist.centos.org/?release=7&arch=$basearch&repo=os&infra=$infra
+baseurl=http://mirror.centos.org/centos/7/os/$basearch/
 enabled=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
-priority=5
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+
+[updates]
+name=CentOS-7 - Updates
+#mirrorlist=http://mirrorlist.centos.org/?release=7&arch=$basearch&repo=updates&infra=$infra
+baseurl=http://mirror.centos.org/centos/7/updates/$basearch/
+enabled=1
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentO
+
+[extras]
+name=CentOS-7 - Extras
+#mirrorlist=http://mirrorlist.centos.org/?release=7&arch=$basearch&repo=extras&infra=$infra
+baseurl=http://mirror.centos.org/centos/7/extras/$basearch/
+enabled=1
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 
