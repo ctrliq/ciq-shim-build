@@ -28,17 +28,17 @@ CIQ Inc.  ( https://ciq.com )
 *******************************************************************************
 ### What product or service is this for?
 *******************************************************************************
-CIQ provides enhancements to, and customizations around Rocky Linux for our customers.  We are especially interested in customized/improved Linux kernel builds, along with packaging and improving the out-of-tree driver experience.
+CIQ provides enhancements to, and customizations around CentOS Linux for our customers.  We are especially interested in customized/improved Linux kernel builds, along with packaging and improving the out-of-tree driver experience.
 
 *******************************************************************************
 ### What's the justification that this really does need to be signed for the whole world to be able to boot it?
 *******************************************************************************
-Our customers use a variety of hardware platforms.  Many of them have policies in place, or are contractually obligated in some way to use the default EFI firmware with no customized secureboot/MOK key injection.  At the same time, many customers require some modification from the stock Rocky / RHEL kernel, mostly around the area of security backports (supporting older minor versions), or customized options for their workload.
+Our customers use a variety of hardware platforms.  Many of them have policies in place, or are contractually obligated in some way to use the default EFI firmware with no customized secureboot/MOK key injection.  At the same time, many customers require some modification from the stock CentOS kernel, mostly around the area of security backports (supporting older minor versions), or customized options for their workload.
 
 *******************************************************************************
 ### Why are you unable to reuse shim from another distro that is already signed?
 *******************************************************************************
-We need these customized kernels to boot properly on stock hardware.  This is not possible with the default Rocky Linux (or RHEL) shim binary.
+We need these customized kernels to boot properly on stock hardware.  This is not possible with the default CentOS Linux shim binary.
 
 *******************************************************************************
 ### Who is the primary contact for security updates, etc.?
@@ -84,20 +84,21 @@ Yes. no other patches are applied
 *******************************************************************************
 ### URL for a repo that contains the exact code which was built to get this binary:
 *******************************************************************************
-CIQ shim-unsigned-x64 RPM repository:  https://bitbucket.org/ciqinc/shim-unsigned-x64/src/ciq9/
+CIQ shim-unsigned-x64 RPM repository:  https://bitbucket.org/ciqinc/shim-unsigned-x64/src/ciq7/
 
-This code is a combination of:  https://github.com/rhboot/shim/releases/download/15.8/shim-15.8.tar.bz2 and an RPM spec file derived from the Rocky (and in turn RHEL) one.
+This code is a combination of:  https://github.com/rhboot/shim/releases/download/15.8/shim-15.8.tar.bz2 and an RPM spec file derived from the RHEL one.
 
-Additionally, I have a "frozen" repository copy of the Mock buildroot and build dependencies (gcc, openssl, et al.) here:  https://rl-secure-boot.ewr1.vultrobjects.com/repos/shim_review_deps/  (this gets used by Mock as a source of RPM dependencies)
+Additionally, I have a "frozen" repository copy of the Mock buildroot and build dependencies (gcc, openssl, et al.) here:  
+# H1 https://rl-secure-boot.ewr1.vultrobjects.com/repos/c7/shim_review_deps/  (this gets used by Mock as a source of RPM dependencies)
 
-Using this repository (consisting of public Rocky Linux 8 packages) ensures a reproducible binary when building the shim-unsigned-x64 with mock (or Docker/Podman) and rpmbuild.
+Using this repository (consisting of public CentOS Linux 7 packages) ensures a reproducible binary when building the shim-unsigned-x64 with mock (or Docker/Podman) and rpmbuild.
 
 
 
 *******************************************************************************
 ### What patches are being applied and why:
 *******************************************************************************
-N/a
+CentOS 7 has a version of dos2unix that doesn't support -f, the patch removes the use of -f in the shim build
 
 *******************************************************************************
 ### Do you have the NX bit set in your shim? If so, is your entire boot stack NX-compatible and what testing have you done to ensure such compatibility?
@@ -109,7 +110,7 @@ No, we do not have the NX bit set on our shim
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader what exact implementation of Secureboot in GRUB2 do you have? (Either Upstream GRUB2 shim_lock verifier or Downstream RHEL/Fedora/Debian/Canonical-like implementation)
 *******************************************************************************
-We intend to use the Rocky 9 (based on RHEL 9) GRUB2 source code unmodified, as our projects have no need for bootloader modifications.  The Rocky/RHEL Grub versions (and their patches) are what we are using.
+We intend to use CentOS 7 GRUB2 source code unmodified, as our projects have no need for bootloader modifications.  The CentOS Grub versions (and their patches) are what we are using.
 
 
 *******************************************************************************
@@ -156,28 +157,26 @@ We intend to use the Rocky 9 (based on RHEL 9) GRUB2 source code unmodified, as 
 *******************************************************************************
 We are a new vendor, and this is our first submission.  But I can confirm that our grub2 builds will not be affected by any of those, as they've all been fixed in our upstream:
 
-https://git.rockylinux.org/staging/rpms/grub2/-/blob/r9/SPECS/grub2.spec#L536
-
+https://git.centos.org/rpms/grub2/blob/351970dbd07603ccb345cc9d743c9cd90b9e85e8/f/SPECS/grub2.spec#_471
 
 
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader, and if these fixes have been applied, is the upstream global SBAT generation in your GRUB2 binary set to 4?
 The entry should look similar to: `grub,4,Free Software Foundation,grub,GRUB_UPSTREAM_VERSION,https://www.gnu.org/software/grub/`
 *******************************************************************************
-Our grub2 follows our upstream (Rocky linux), Rocky has not updated grub and is still on generation level 3.
+Our grub2 follows our upstream (Centos linux), Centos has not updated grub and is still on generation level 3.
 
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-grub,3,Free Software Foundation,grub,2.06,https//www.gnu.org/software/grub/
-grub.rh,2,Red Hat,grub2,2.06-70.el9_3.ciqfips.2,mailto:secalert@redhat.com
-grub.rocky,2,Rocky Linux,grub2,2.06-70.el9_3.ciqfips.2.rocky.0.5,mail:security@rockylinux.org
-grub.ciq_rocky9,1,Rocky Linux 9 (CIQ build),grub2,2.06-70.el9.ciq.0.1,mailto:secureboot@ciq.com
+grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
+grub.rhel7,2,Red Hat Enterprise Linux 7,grub2,1:2.02-0.87.el7.14,mail:secalert@redhat.com
+grub.ciq_centos7,1,Centos Linux 7 (CIQ build),grub2,1:2.02-0.87.el7.14,mailto:secureboot@ciq.com
 ```
 *******************************************************************************
 ### Were old shims hashes provided to Microsoft for verification and to be added to future DBX updates?
 ### Does your new chain of trust disallow booting old GRUB2 builds affected by the CVEs?
 *******************************************************************************
-This is our first EL9 submission, we do not have old GRUB2 builds affected by CVEs.
+This is our first EL7 submission, we do not have old GRUB2 builds affected by CVEs.
 
 *******************************************************************************
 ### If your boot chain of trust includes a Linux kernel:
@@ -185,16 +184,16 @@ This is our first EL9 submission, we do not have old GRUB2 builds affected by CV
 ### Is upstream commit [75b0cea7bf307f362057cc778efe89af4c615354 "ACPI: configfs: Disallow loading ACPI tables when locked down"](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=75b0cea7bf307f362057cc778efe89af4c615354) applied?
 ### Is upstream commit [eadb2f47a3ced5c64b23b90fd2a3463f63726066 "lockdown: also lock down previous kgdb use"](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=eadb2f47a3ced5c64b23b90fd2a3463f63726066) applied?
 *******************************************************************************
-Yes, all of these patches are already in the Rocky/RHEL 9 kernels we plan to base on.
+Yes, all of these patches are already in the Centos 7 kernels.
 
 *******************************************************************************
 ### Do you build your signed kernel with additional local patches? What do they do?
 *******************************************************************************
 Generally we'll be performing 2 sorts of mofifications:
 
-- Fixes and enhancements (especially security updates) to continue long-term support of a previous Rocky Linux release.  For example, further backports to the Rocky/RHEL 9.2 kernel (kernel-5.14.0-284) to keep it updated for customers, or FIPS enhancements/restrictions for those that require compliance.
+- Fixes and enhancements (especially security updates) to continue long-term support of a previous Centos Linux release.  For example, further backports to the Centos/RHEL 7.9 kernel (kernel-5.14.0-284) to keep it updated for customers.
 
-- Builds of recent mainline (ML) and longterm (LT) upstream kernel releases designed for installation on Rocky Linux.  Different variants are planned with compile-time configuration tweaks, especially around enhancing high performance computing (HPC) applications.
+- Builds of recent mainline (ML) and longterm (LT) upstream kernel releases designed for installation on Centos Linux.  Different variants are planned with compile-time configuration tweaks, especially around enhancing high performance computing (HPC) applications.
 
 *******************************************************************************
 ### Do you use an ephemeral key for signing kernel modules?
@@ -219,9 +218,9 @@ We will be using the same CA as EL8, but we are generating new certs for the oth
 ### What OS and toolchain must we use to reproduce this build?  Include where to find it, etc.  We're going to try to reproduce your build as closely as possible to verify that it's really a build of the source tree you tell us it is, so these need to be fairly thorough. At the very least include the specific versions of gcc, binutils, and gnu-efi which were used, and where to find those binaries.
 ### If the shim binaries can't be reproduced using the provided Dockerfile, please explain why that's the case and what the differences would be.
 *******************************************************************************
-This build is all Rocky 9.2 dependencies, using rpmbuild.
+This build is all Centos 7.9 dependencies, using rpmbuild.
 
-To ensure reproducibility, I have "frozen" all the dependent Rocky 9 packages needed and put them in their own repository.  It can be found in the builder's Dockerfile.
+To ensure reproducibility, we have "frozen" all the dependent Centos 7 packages needed and put them in their own repository.  It can be found in the builder's Dockerfile.
 
 Using a tagged container base plus this repository should ensure binaries are 100% reproducible.
 
@@ -238,12 +237,13 @@ shim_rpmbuild.log contains a log of the docker build run.  This includes depende
 ### What changes were made in the distro's secure boot chain since your SHIM was last signed?
 For example, signing new kernel's variants, UKI, systemd-boot, new certs, new CA, etc..
 *******************************************************************************
-Nothing has changed since our el8 https://github.com/rhboot/shim-review/issues/339 submission, we are using new certs for signing Grub and the kernel. The new certs will allow for revocation of the compent without having to reocating all compents that share the cert.
+Nothing has changed since our el8 https://github.com/rhboot/shim-review/issues/339 submission, we are using new certs for signing Grub and the kernel. The new certs will allow for revocation of the component without having to revocating all compents that share the cert.
 
 *******************************************************************************
 ### What is the SHA256 hash of your final SHIM binary?
 *******************************************************************************
-* SHA256 (shimx64.efi) = 
+* SHA256 (shimx64.efi) = 088610925c2491017f6488f6235c6daec4e7f567dfb6c4e8c55d64d6acaafbae
+* SHA256 (shimai32.efi) = 14822c87e48f9ca65df08a4595ffa8cc6a7564197826521318488178fdf16272
 
 *******************************************************************************
 ### How do you manage and protect the keys used in your SHIM?
@@ -270,12 +270,17 @@ and only append your own. More information on how SBAT works can be found
 *******************************************************************************
 
 ```
-objcopy --only-section .sbat -O binary grubx64.efi /dev/stdout
+objcopy --only-section .sbat -O binary ./boot/efi/EFI/centos/grubx64.efi /dev/stdout
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-grub,3,Free Software Foundation,grub,2.06,https//www.gnu.org/software/grub/
-grub.rh,2,Red Hat,grub2,2.06-70.el9_3.ciqfips.2,mailto:secalert@redhat.com
-grub.rocky,2,Rocky Linux,grub2,2.06-70.el9_3.ciqfips.2.rocky.0.5,mail:security@rockylinux.org
-grub.ciq_rocky9,1,Rocky Linux 9 (CIQ build),grub2,2.06-70.el9.ciq.0.1,mailto:secureboot@ciq.com
+grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
+grub.rhel7,2,Red Hat Enterprise Linux 7,grub2,1:2.02-0.87.el7.14,mail:secalert@redhat.com
+grub.ciq_centos7,1,Centos Linux 7 (CIQ build),grub2,1:2.02-0.87.el7.14,mailto:secureboot@ciq.com
+
+objcopy --only-section .sbat -O binary ./boot/efi/EFI/centos/grubia32.efi /dev/stdout
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
+grub.rhel7,2,Red Hat Enterprise Linux 7,grub2,1:2.02-0.87.el7.14,mail:secalert@redhat.com
+grub.ciq_centos7,1,Centos Linux 7 (CIQ build),grub2,1:2.02-0.87.el7.14,mailto:secureboot@ciq.com
 
 objcopy --only-section .sbat -O binary fwupdx64.efi /dev/stdout 
 sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
@@ -293,26 +298,18 @@ shim.ciq,1,Ctrl IQ Inc,shim,15.8,mail:it_security@ciq.com
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader, which modules are built into your signed GRUB2 image?
 *******************************************************************************
-Rocky 9 / Grub 2.06-70 :
+Centos 7 / Grub 2.02-0 :
 ```
-efi_netfs efifwsetup efinet lsefi lsefimmap connectefi
-backtrace chain tpm usb usbserial_common usbserial_pl2303
-usbserial_ftdi usbserial_usbdebug keylayouts at_keyboard 
-all_video boot blscfg
-cat configfile cryptodisk
-echo ext2 f2fs fat font
-gcry_rijndael gcry_rsa gcry_serpent
-gcry_sha256 gcry_twofish gcry_whirlpool
-gfxmenu gfxterm gzio
-halt http increment iso9660
-jpeg loadenv loopback linux lvm luks
-luks2 mdraid09 mdraid1x minicmd net
-normal part_apple part_msdos part_gpt
-password_pbkdf2 pgp png reboot regexp
-search search_fs_uuid search_fs_file
-search_label serial sleep syslinuxcfg
-test tftp version video xfs zstd 
-```
+all_video boot btrfs cat chain configfile echo	
+efifwsetup efinet ext2 fat font gfxmenu gfxterm
+gzio halt hfsplus iso9660 jpeg loadenv loopback
+lvm mdraid09 mdraid1x minicmd normal part_apple
+part_msdos part_gpt password_pbkdf2 png reboot
+regexp search search_fs_uuid search_fs_file
+search_label serial sleep syslinuxcfg test tftp
+video xfs
+'''
+
 *******************************************************************************
 ### If you are using systemd-boot on arm64 or riscv, is the fix for [unverified Devicetree Blob loading](https://github.com/systemd/systemd/security/advisories/GHSA-6m6p-rjcq-334c) included?
 *******************************************************************************
@@ -321,18 +318,18 @@ N/a
 *******************************************************************************
 ### What is the origin and full version number of your bootloader (GRUB2 or systemd-boot or other)?
 *******************************************************************************
-We use the same version as Rocky - Grub 2.06-70
+We use the same version as Centos - Grub 2.02-0
 
 *******************************************************************************
 ### If your SHIM launches any other components, please provide further details on what is launched.
 *******************************************************************************
-We have successfully packaged and tested a RockyLinux version of certwrapper (formerly certmule).  That is, a certmule package signed by us, but containing the Rocky Linux CA.
+We have successfully packaged and tested a CentosLinux version of certwrapper (formerly certmule).  That is, a certmule package signed by us, but containing the Centos Linux CA.
 
-This seems perfect for our use-case, as the Rocky grub2 + fwupd upstream packages could be used as-is without the need for recompilation or re-signing.  While keenly interested in kernel modifications, we don't have as much cause to update fwupd or grub2, and would prefer to use our upstream whenever feasible.
+This seems perfect for our use-case, as the Centos grub2 + fwupd upstream packages could be used as-is without the need for recompilation or re-signing.  While keenly interested in kernel modifications, we don't have as much cause to update fwupd or grub2, and would prefer to use our upstream whenever feasible.
 
 I want to inquire about signing this wrapper efi and making it available to users.
 
-The certmule package in question (with the embedded Rocky CA) is located at:  https://bitbucket.org/ciqinc/certmule-rocky/
+The certmule package in question (with the embedded Centos CA) is located at:  https://bitbucket.org/ciqinc/certmule-rocky/
 
 *******************************************************************************
 ### If your GRUB2 or systemd-boot launches any other binaries that are not the Linux kernel in SecureBoot mode, please provide further details on what is launched and how it enforces Secureboot lockdown.
@@ -343,18 +340,19 @@ No, Linux kernel launches are all we are interested in.
 *******************************************************************************
 ### How do the launched components prevent execution of unauthenticated code?
 *******************************************************************************
-In the case of the kernel, both the RHEL variant and the upstream ("new") variants prevent this by default, and we do not want to change that.
+In the case of the kernel, both the Centos variant and the upstream ("new") variants prevent this by default, and we do not want to change that.
 
-In the case of Grub + Fwupd, we will be running the same Rocky/RHEL versions unmodified, which also do not execute unauthenticated code by default.
+In the case of Grub + Fwupd, we will be running the same Centos/RHEL versions unmodified, which also do not execute unauthenticated code by default.
 
 *******************************************************************************
 ### Does your SHIM load any loaders that support loading unsigned kernels (e.g. GRUB2)?
 *******************************************************************************
-Grub2 will only load unsigned code if the secureboot feature is turned off  load unsigned kernels, but only with secureboot mode turned off on an end-user's system.
+Grub2 will only load unsigned code if the secureboot feature is turned off load unsigned kernels, but only with secureboot mode turned off on an end-user's system.
 
 *******************************************************************************
 ### What kernel are you using? Which patches does it includes to enforce Secure Boot?
 *******************************************************************************
+TODO
 We are using our RHEL upstream variant 5.14 with minor patches (on top of the many patches from Red Hat and others).
 
 We are also building and packaging supported upstream kernels designed for use on Rocky and enterprise-Linux variants.  These include supported LT versions (5.4, 5.10, 5.15, 6.1), as well as the rollling latest-stable version.

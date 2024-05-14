@@ -40,4 +40,3 @@ COPY shim-compare.sh  /root
 RUN chmod 0755 /root/shim-compare.sh;  /root/shim-compare.sh
 
 
-
