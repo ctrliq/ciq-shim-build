@@ -5,21 +5,17 @@
 # Build and tag locally with:   docker build --tag ciq-shim-review:8 ./
 #
 
-FROM rockylinux:8.8.20230518
+FROM rockylinux/rockylinux:9.2
 
-ENV shim_release 15.8-0.el8
+ENV shim_release 15.8-0.el9
 
 # Copy and extract src rpm and macros, modify setarch in spec file because 32-bit mod is not allowed inside containers:
 COPY rpmmacros  /root/.rpmmacros
 COPY shim-unsigned-x64-$shim_release.src.rpm  /root
 RUN rpm -ivh /root/shim-unsigned-x64-$shim_release.src.rpm
-RUN sed -i 's/linux32 -B/linux32/g' /builddir/build/SPECS/shim-unsigned-x64.spec
-
 
 # already-built shim binaries for comparison:
 COPY shimx64.efi  /
-COPY shimia32.efi  /
-
 
 # Remove all repos, and point *only* to our static one with the necessary BuildRequires
 # We don't want to contaminate the build with anything different - it must be reproducible
@@ -33,7 +29,6 @@ RUN rpmbuild -bb /builddir/build/SPECS/shim-unsigned-x64.spec
 
 # Put resulting RPM in a temp folder (optionally mounted on host system for extraction)
 RUN mkdir -p /shim_result
-RUN rpm2cpio /builddir/build/RPMS/x86_64/shim-unsigned-ia32-$shim_release.x86_64.rpm | cpio -diu -D /shim_result
 RUN rpm2cpio /builddir/build/RPMS/x86_64/shim-unsigned-x64-$shim_release.x86_64.rpm | cpio -diu -D /shim_result
 
 

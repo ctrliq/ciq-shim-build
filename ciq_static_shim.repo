@@ -1,12 +1,21 @@
-# CIQ static repository
-# This repo should have all the Shim build-time requirements "frozen" so the built EFI binaries are reproducible exactly
-# DNF priority is set to guarantee these packages get used first
-
-[ciq_static_shim_8]
-name=ciq_static_shim_8
-baseurl=https://rl-secure-boot.ewr1.vultrobjects.com/repos/shim_review_deps/
+[rocky-appstream-92]
+name=Rocky Linux 9.2 AppStream
+baseurl=https://dl.rockylinux.org/vault/rocky/9.2/AppStream/x86_64/os/
 gpgcheck=1
 enabled=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
-priority=5
+gpgkey=https://dl.rockylinux.org/pub/rocky/RPM-GPG-KEY-Rocky-9
+
+[rocky-baseos-92]
+name=Rocky Linux 9.2 BaseOS
+baseurl=https://dl.rockylinux.org/vault/rocky/9.2/BaseOS/x86_64/os/
+gpgcheck=1
+enabled=1
+gpgkey=https://dl.rockylinux.org/pub/rocky/RPM-GPG-KEY-Rocky-9
+
+[rocky-crb-88]
+name=Rocky Linux 9.2 CRB
+baseurl=https://dl.rockylinux.org/vault/rocky/9.2/CRB/x86_64/os/
+gpgcheck=1
+enabled=1
+gpgkey=https://dl.rockylinux.org/pub/rocky/RPM-GPG-KEY-Rocky-9
 
