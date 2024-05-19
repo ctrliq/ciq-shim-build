@@ -84,7 +84,7 @@ Yes. no other patches are applied
 *******************************************************************************
 ### URL for a repo that contains the exact code which was built to get this binary:
 *******************************************************************************
-CIQ shim-unsigned-x64 RPM repository:  https://bitbucket.org/ciqinc/shim-unsigned-x64/src/ciq9/
+CIQ shim-unsigned-x64 RPM repository:  [https://www.github.com/ctrliq/shim-unsigned-x64/src/ciq9/](https://github.com/ctrliq/shim-unsigned-x64/tree/ciq9)
 
 This code is a combination of:  https://github.com/rhboot/shim/releases/download/15.8/shim-15.8.tar.bz2 and an RPM spec file derived from the Rocky (and in turn RHEL) one.
 The Build uses archives of Rocky 9.2 dependencies: 
@@ -226,8 +226,7 @@ This build is all Rocky 9.2 dependencies, using rpmbuild.
 To ensure reproducibility, are using Rocky 9.2 packages from a frozen vault.
 Using a tagged container base plus the rocky vault should ensure binaries are 100% reproducible.
 
-Current reproducible shim build location:  https://bitbucket.org/ciqinc/ciq-shim-build/r9
-
+Current reproducible shim build location:  https://github.com/ctrliq/ciq-shim-build/tree/r9
 
 *******************************************************************************
 ### Which files in this repo are the logs for your build?
@@ -332,7 +331,7 @@ This seems perfect for our use-case, as the Rocky grub2 + fwupd upstream package
 
 I want to inquire about signing this wrapper efi and making it available to users.
 
-The certmule package in question (with the embedded Rocky CA) is located at:  https://bitbucket.org/ciqinc/certmule-rocky/
+The certmule package in question (with the embedded Rocky CA) is located at:  https://github.com/ctrliq/certmule-rocky
 
 *******************************************************************************
 ### If your GRUB2 or systemd-boot launches any other binaries that are not the Linux kernel in SecureBoot mode, please provide further details on what is launched and how it enforces Secureboot lockdown.
