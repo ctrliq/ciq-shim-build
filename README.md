@@ -280,9 +280,9 @@ grub.ciq_rocky9,1,Rocky Linux 9 (CIQ build),grub2,2.06-77.el9_2.92ciq_lts,mailto
 objcopy --only-section .sbat -O binary fwupdx64.efi /dev/stdout 
 sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 fwupd-efi,1,Firmware update daemon,fwupd-efi,1.4,https://github.com/fwupd/fwupd-efi
-fwupd-efi.rhel,1,Red Hat Enterprise Linux,fwupd,1.9.13,mail:secalert@redhat.com
-fwupd-efi.rocky,1,Rocky Linux,fwupd,1.9.13,mail:security@rockylinux.org
-fwupd-efi.ciq_rocky9,1,Rocky Linux 9 (CIQ build),fwupd,1.9.13,mailto:secureboot@ciq.com
+fwupd-efi.rhel,1,Red Hat Enterprise Linux,fwupd,1.8.10,mail:secalert@redhat.com
+fwupd-efi.rocky,1,Rocky Linux,fwupd,1.8.10,mail:security@rockylinux.org
+fwupd-efi.ciq_rocky9,1,Rocky Linux 9 (CIQ build),fwupd,1.8.10,mailto:secureboot@ciq.com
 
 objcopy --only-section .sbat -O binary  shimx64.efi /dev/stdout 
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
