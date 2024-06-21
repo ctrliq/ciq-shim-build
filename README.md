@@ -280,7 +280,9 @@ grub.ciq_rocky9,1,Rocky Linux 9 (CIQ build),grub2,2.06-77.el9_2.92ciq_lts,mailto
 objcopy --only-section .sbat -O binary fwupdx64.efi /dev/stdout 
 sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 fwupd-efi,1,Firmware update daemon,fwupd-efi,1.4,https://github.com/fwupd/fwupd-efi
-fwupd-efi.rocky,1,Rocky Linux,fwupd,1.8.10,mail:security@rockylinux.org
+fwupd-efi.rhel,1,Red Hat Enterprise Linux,fwupd,1.9.13,mail:secalert@redhat.com
+fwupd-efi.rocky,1,Rocky Linux,fwupd,1.9.13,mail:security@rockylinux.org
+fwupd-efi.ciq_rocky9,1,Rocky Linux 9 (CIQ build),fwupd,1.9.13,mailto:secureboot@ciq.com
 
 objcopy --only-section .sbat -O binary  shimx64.efi /dev/stdout 
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
@@ -349,7 +351,7 @@ In the case of Grub + Fwupd, we will be running the same Rocky/RHEL versions unm
 *******************************************************************************
 ### Does your SHIM load any loaders that support loading unsigned kernels (e.g. GRUB2)?
 *******************************************************************************
-Grub2 will only load unsigned code if the secureboot feature is turned off  load unsigned kernels, but only with secureboot mode turned off on an end-user's system.
+Grub2 will only load unsigned code if the secureboot feature is turned off.  Otherwise booting signed code is always enforced, same as the upstream Rocky/RHEL/CentOS loaders.
 
 *******************************************************************************
 ### What kernel are you using? Which patches does it includes to enforce Secure Boot?
