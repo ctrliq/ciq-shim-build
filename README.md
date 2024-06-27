@@ -27,12 +27,16 @@ CIQ Inc.  ( https://ciq.com )
 *******************************************************************************
 ### What product or service is this for?
 *******************************************************************************
-CIQ provides enhancements to, and customizations around CentOS Linux for our customers.  We are especially interested in customized/improved Linux kernel builds, along with packaging and improving the out-of-tree driver experience.
+
+CIQ is offering a product named "CIQ bridge". CIQ Bridge allows for a secure transition from from CentOS 7 to Rocky 8. During the the 3 year transistion period. CIQ will offer Kernel vulnerability patching along with userland and scecure boot chain components.
+
 
 *******************************************************************************
 ### What's the justification that this really does need to be signed for the whole world to be able to boot it?
 *******************************************************************************
+
 Our customers use a variety of hardware platforms.  Many of them have policies in place, or are contractually obligated in some way to use the default EFI firmware with no customized secureboot/MOK key injection.  At the same time, many customers require security backports for their workload.
+
 
 *******************************************************************************
 ### Why are you unable to reuse shim from another distro that is already signed?
@@ -77,7 +81,7 @@ Please create your shim binaries starting with the 15.8 shim release tar file: h
 This matches https://github.com/rhboot/shim/releases/tag/15.8 and contains the appropriate gnu-efi source.
 
 ******************************************************************************
-Yes. no other patches are applied
+Yes, along with a patch needed for compilation on CentOS 7
 
 
 *******************************************************************************
@@ -88,6 +92,7 @@ CIQ shim-unsigned-x64 RPM repository:  https://bitbucket.org/ciqinc/shim-unsigne
 This code is a combination of:  https://github.com/rhboot/shim/releases/download/15.8/shim-15.8.tar.bz2 and an RPM spec file derived from the RHEL one.
 
 Additionally, I have a "frozen" repository copy of the Mock buildroot and build dependencies (gcc, openssl, et al.) here:  
+
 https://rl-secure-boot.ewr1.vultrobjects.com/repos/c7/shim_review_deps/  (this gets used by Mock as a source of RPM dependencies)
 
 Using this repository (consisting of public CentOS Linux 7 packages) ensures a reproducible binary when building the shim-unsigned-x64 with mock (or Docker/Podman) and rpmbuild.
@@ -190,6 +195,7 @@ Yes, all of these patches are already in the Centos 7 kernels.
 *******************************************************************************
 Generally we'll be performing 2 sorts of mofifications:
 
+
 - Fixes and enhancements (especially security updates) to continue long-term support of a previous Centos Linux release.  For example, further backports to the Centos/RHEL 7.9 kernel (kernel-3.10.0-1160) to keep it updated for customers.
 
 *******************************************************************************
@@ -235,6 +241,7 @@ shim_rpmbuild.log contains a log of the docker build run.  This includes depende
 ### What changes were made in the distro's secure boot chain since your SHIM was last signed?
 For example, signing new kernel's variants, UKI, systemd-boot, new certs, new CA, etc..
 *******************************************************************************
+
 Nothing has changed since our EL8 https://github.com/rhboot/shim-review/issues/366 submission, we are using new certs for signing Grub and the kernel. The new certs will allow for revocation of the component without having to revocating all compents that share the cert.
 
 *******************************************************************************
@@ -280,6 +287,13 @@ grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
 grub.rhel7,2,Red Hat Enterprise Linux 7,grub2,1:2.02-0.87.el7.14,mail:secalert@redhat.com
 grub.ciq_centos7,1,Centos Linux 7 (CIQ build),grub2,1:2.02-0.87.el7.14,mailto:secureboot@ciq.com
 
+
+objcopy --only-section .sbat -O binary ./boot/efi/EFI/centos/grubia32.efi /dev/stdout
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
+grub.rhel7,2,Red Hat Enterprise Linux 7,grub2,1:2.02-0.87.el7.14,mail:secalert@redhat.com
+grub.ciq_centos7,1,Centos Linux 7 (CIQ build),grub2,1:2.02-0.87.el7.14,mailto:secureboot@ciq.com
+
 objcopy --only-section .sbat -O binary fwupdx64.efi /dev/stdout 
 sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 fwupd-efi,1,Firmware update daemon,fwupd-efi,1.4,https://github.com/fwupd/fwupd-efi
@@ -290,12 +304,18 @@ objcopy --only-section .sbat -O binary  shimx64.efi /dev/stdout
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
 shim.ciq,1,Ctrl IQ Inc,shim,15.8,mail:it_security@ciq.com
+
+objcopy --only-section .sbat -O binary  shimia32.efi /dev/stdout
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
+shim.ciq,1,Ctrl IQ Inc,shim,15.8,mail:it_security@ciq.com
 ```
 
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader, which modules are built into your signed GRUB2 image?
 *******************************************************************************
 Centos 7 / Grub 2.02-0 :
+
 ```
 all_video boot btrfs cat chain configfile echo	
 efifwsetup efinet ext2 fat font gfxmenu gfxterm
@@ -352,6 +372,7 @@ Grub2 will only load unsigned code if the secureboot feature is turned off. Othe
 We are using the centos upstream variant 3.10 with minor patches (on top of the many patches from Red Hat and others).
 
 I understand that these all enforce secure boot "out of the box".
+
 *******************************************************************************
 ### What contributions have you made to help us review the applications of other applicants?
 The reviewing process is meant to be a peer-review effort and the best way to have your application reviewed faster is to help with reviewing others. We are in most cases volunteers working on this venue in our free time, rather than being employed and paid to review the applications during our business hours. 
