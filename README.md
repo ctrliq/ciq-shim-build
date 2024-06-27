@@ -1,13 +1,13 @@
-This repo is for review of requests for signing shim.  To create a request for review:
+This repo is for review of requests for signing shim. To create a request for review:
 
-- clone this repo
+- clone this repo (preferably fork it)
 - edit the template below
 - add the shim.efi to be signed
 - add build logs
 - add any additional binaries/certificates/SHA256 hashes that may be needed
 - commit all of that
 - tag it with a tag of the form "myorg-shim-arch-YYYYMMDD"
-- push that to github
+- push it to GitHub
 - file an issue at https://github.com/rhboot/shim-review/issues with a link to your tag
 - approval is ready when the "accepted" label is added to your issue
 
@@ -15,8 +15,7 @@ Note that we really only have experience with using GRUB2 or systemd-boot on Lin
 asking us to endorse anything else for signing is going to require some convincing on
 your part.
 
-Check the docs directory in this repo for guidance on submission and
-getting your shim signed.
+Check the docs directory in this repo for guidance on submission and getting your shim signed.
 
 Here's the template:
 
@@ -33,7 +32,7 @@ CIQ provides enhancements to, and customizations around CentOS Linux for our cus
 *******************************************************************************
 ### What's the justification that this really does need to be signed for the whole world to be able to boot it?
 *******************************************************************************
-Our customers use a variety of hardware platforms.  Many of them have policies in place, or are contractually obligated in some way to use the default EFI firmware with no customized secureboot/MOK key injection.  At the same time, many customers require some modification from the stock CentOS kernel, mostly around the area of security backports (supporting older minor versions), or customized options for their workload.
+Our customers use a variety of hardware platforms.  Many of them have policies in place, or are contractually obligated in some way to use the default EFI firmware with no customized secureboot/MOK key injection.  At the same time, many customers require security backports for their workload.
 
 *******************************************************************************
 ### Why are you unable to reuse shim from another distro that is already signed?
@@ -89,7 +88,7 @@ CIQ shim-unsigned-x64 RPM repository:  https://bitbucket.org/ciqinc/shim-unsigne
 This code is a combination of:  https://github.com/rhboot/shim/releases/download/15.8/shim-15.8.tar.bz2 and an RPM spec file derived from the RHEL one.
 
 Additionally, I have a "frozen" repository copy of the Mock buildroot and build dependencies (gcc, openssl, et al.) here:  
-# H1 https://rl-secure-boot.ewr1.vultrobjects.com/repos/c7/shim_review_deps/  (this gets used by Mock as a source of RPM dependencies)
+https://rl-secure-boot.ewr1.vultrobjects.com/repos/c7/shim_review_deps/  (this gets used by Mock as a source of RPM dependencies)
 
 Using this repository (consisting of public CentOS Linux 7 packages) ensures a reproducible binary when building the shim-unsigned-x64 with mock (or Docker/Podman) and rpmbuild.
 
@@ -191,16 +190,13 @@ Yes, all of these patches are already in the Centos 7 kernels.
 *******************************************************************************
 Generally we'll be performing 2 sorts of mofifications:
 
-- Fixes and enhancements (especially security updates) to continue long-term support of a previous Centos Linux release.  For example, further backports to the Centos/RHEL 7.9 kernel (kernel-5.14.0-284) to keep it updated for customers.
-
-- Builds of recent mainline (ML) and longterm (LT) upstream kernel releases designed for installation on Centos Linux.  Different variants are planned with compile-time configuration tweaks, especially around enhancing high performance computing (HPC) applications.
+- Fixes and enhancements (especially security updates) to continue long-term support of a previous Centos Linux release.  For example, further backports to the Centos/RHEL 7.9 kernel (kernel-3.10.0-1160) to keep it updated for customers.
 
 *******************************************************************************
 ### Do you use an ephemeral key for signing kernel modules?
 ### If not, please describe how you ensure that one kernel build does not load modules built for another kernel.
 *******************************************************************************
 A temporary ephemral key is used to sign kernel modules
-
 
 *******************************************************************************
 ### If you use vendor_db functionality of providing multiple certificates and/or hashes please briefly describe your certificate setup.
@@ -212,7 +208,9 @@ We aren't using vendor_db functionality at this time.
 ### If you are re-using a previously used (CA) certificate, you will need to add the hashes of the previous GRUB2 binaries exposed to the CVEs to vendor_dbx in shim in order to prevent GRUB2 from being able to chainload those older GRUB2 binaries. If you are changing to a new (CA) certificate, this does not apply.
 ### Please describe your strategy.
 *******************************************************************************
-We will be using the same CA as EL8, but we are generating new certs for the other componemts in the secure boot chain.
+We are using a previously used (currently active) CA from our past Rocky Linux 8-based submission.
+
+There have no built GRUB2 binaries exposed to the listed CVEs that we have released, as our previous submission was relatively recent.
 
 *******************************************************************************
 ### What OS and toolchain must we use to reproduce this build?  Include where to find it, etc.  We're going to try to reproduce your build as closely as possible to verify that it's really a build of the source tree you tell us it is, so these need to be fairly thorough. At the very least include the specific versions of gcc, binutils, and gnu-efi which were used, and where to find those binaries.
@@ -224,7 +222,7 @@ To ensure reproducibility, we have "frozen" all the dependent Centos 7 packages 
 
 Using a tagged container base plus this repository should ensure binaries are 100% reproducible.
 
-Current reproducible shim build location:  https://bitbucket.org/ciqinc/ciq-shim-build
+Current reproducible shim build location:  https://github.com/ctrliq/ciq-shim-build/tree/c7
 
 
 *******************************************************************************
@@ -237,7 +235,7 @@ shim_rpmbuild.log contains a log of the docker build run.  This includes depende
 ### What changes were made in the distro's secure boot chain since your SHIM was last signed?
 For example, signing new kernel's variants, UKI, systemd-boot, new certs, new CA, etc..
 *******************************************************************************
-Nothing has changed since our el8 https://github.com/rhboot/shim-review/issues/339 submission, we are using new certs for signing Grub and the kernel. The new certs will allow for revocation of the component without having to revocating all compents that share the cert.
+Nothing has changed since our EL8 https://github.com/rhboot/shim-review/issues/366 submission, we are using new certs for signing Grub and the kernel. The new certs will allow for revocation of the component without having to revocating all compents that share the cert.
 
 *******************************************************************************
 ### What is the SHA256 hash of your final SHIM binary?
@@ -294,7 +292,6 @@ shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
 shim.ciq,1,Ctrl IQ Inc,shim,15.8,mail:it_security@ciq.com
 ```
 
-
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader, which modules are built into your signed GRUB2 image?
 *******************************************************************************
@@ -308,7 +305,7 @@ part_msdos part_gpt password_pbkdf2 png reboot
 regexp search search_fs_uuid search_fs_file
 search_label serial sleep syslinuxcfg test tftp
 video xfs
-'''
+```
 
 *******************************************************************************
 ### If you are using systemd-boot on arm64 or riscv, is the fix for [unverified Devicetree Blob loading](https://github.com/systemd/systemd/security/advisories/GHSA-6m6p-rjcq-334c) included?
@@ -329,7 +326,7 @@ This seems perfect for our use-case, as the Centos grub2 + fwupd upstream packag
 
 I want to inquire about signing this wrapper efi and making it available to users.
 
-The certmule package in question (with the embedded Centos CA) is located at:  https://bitbucket.org/ciqinc/certmule-rocky/
+The certmule package in question (with the embedded Centos CA) is located at:  https://github.com/ctrliq/certmule-rocky
 
 *******************************************************************************
 ### If your GRUB2 or systemd-boot launches any other binaries that are not the Linux kernel in SecureBoot mode, please provide further details on what is launched and how it enforces Secureboot lockdown.
@@ -347,23 +344,25 @@ In the case of Grub + Fwupd, we will be running the same Centos/RHEL versions un
 *******************************************************************************
 ### Does your SHIM load any loaders that support loading unsigned kernels (e.g. GRUB2)?
 *******************************************************************************
-Grub2 will only load unsigned code if the secureboot feature is turned off load unsigned kernels, but only with secureboot mode turned off on an end-user's system.
+Grub2 will only load unsigned code if the secureboot feature is turned off. Otherwise booting signed code is always enforced, same as the upstream CentOS loaders
 
 *******************************************************************************
-### What kernel are you using? Which patches does it includes to enforce Secure Boot?
+### What kernel are you using? Which patches and configuration does it include to enforce Secure Boot?
 *******************************************************************************
-TODO
-We are using our RHEL upstream variant 5.14 with minor patches (on top of the many patches from Red Hat and others).
-
-We are also building and packaging supported upstream kernels designed for use on Rocky and enterprise-Linux variants.  These include supported LT versions (5.4, 5.10, 5.15, 6.1), as well as the rollling latest-stable version.
+We are using the centos upstream variant 3.10 with minor patches (on top of the many patches from Red Hat and others).
 
 I understand that these all enforce secure boot "out of the box".
+*******************************************************************************
+### What contributions have you made to help us review the applications of other applicants?
+The reviewing process is meant to be a peer-review effort and the best way to have your application reviewed faster is to help with reviewing others. We are in most cases volunteers working on this venue in our free time, rather than being employed and paid to review the applications during our business hours. 
+
+A reasonable timeframe of waiting for a review can reach 2-3 months. Helping us is the best way to shorten this period. The more help we get, the faster and the smoother things will go.
+
+For newcomers, the applications labeled as [*easy to review*](https://github.com/rhboot/shim-review/issues?q=is%3Aopen+is%3Aissue+label%3A%22easy+to+review%22) are recommended to start the contribution process.
+*******************************************************************************
+Jason Rodriguez has contributed to the review process of other submissions, he should do a lot more to invest in the process.
 
 *******************************************************************************
-### Add any additional information you think we may need to validate this shim.
+### Add any additional information you think we may need to validate this shim signing application.
 *******************************************************************************
 No extra info, just some questions about using certwrapper/certmule to trust upstream distro components. (I like the "mule" name better ;-) )  Can't find this being used or approved in other reviews, but it's very interesting.  We're maintaining the beginnings of an RPM, and it's definitely something that should find its way into distros!
-
-
-
-
