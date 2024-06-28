@@ -87,7 +87,7 @@ Yes, along with a patch needed for compilation on CentOS 7
 *******************************************************************************
 ### URL for a repo that contains the exact code which was built to get this binary:
 *******************************************************************************
-CIQ shim-unsigned-x64 RPM repository:  https://bitbucket.org/ciqinc/shim-unsigned-x64/src/ciq7/
+CIQ shim-unsigned-x64 RPM repository:  https://github.com/ctrliq/shim-unsigned-x64/tree/ciq7
 
 This code is a combination of:  https://github.com/rhboot/shim/releases/download/15.8/shim-15.8.tar.bz2 and an RPM spec file derived from the RHEL one.
 
@@ -114,7 +114,7 @@ No, we do not have the NX bit set on our shim
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader what exact implementation of Secureboot in GRUB2 do you have? (Either Upstream GRUB2 shim_lock verifier or Downstream RHEL/Fedora/Debian/Canonical-like implementation)
 *******************************************************************************
-We intend to use CentOS 7 GRUB2 source code unmodified, as our projects have no need for bootloader modifications.  The CentOS Grub versions (and their patches) are what we are using.
+We intend to use the default CentOS 7 GRUB2, as our projects have no need for bootloader modifications.  Our engineers will be patching this grub2 version for security issues as they are discovered.
 
 
 *******************************************************************************
@@ -159,16 +159,21 @@ We intend to use CentOS 7 GRUB2 source code unmodified, as our projects have no 
   * CVE-2023-4693
   * CVE-2023-4692
 *******************************************************************************
-We are a new vendor, and this is our first submission.  But I can confirm that our grub2 builds will not be affected by any of those, as they've all been fixed in our upstream:
+This is our first submission for CentOS/EL7.  I can confirm that our grub2 builds will not be affected by any of those.  
+
+All but the NTFS ones have been fixed in our upstream:
 
 https://git.centos.org/rpms/grub2/blob/351970dbd07603ccb345cc9d743c9cd90b9e85e8/f/SPECS/grub2.spec#_471
+
+
+The NTFS fixes are not relevant to us, as we don't build or support those modules in the signed bootloader.
 
 
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader, and if these fixes have been applied, is the upstream global SBAT generation in your GRUB2 binary set to 4?
 The entry should look similar to: `grub,4,Free Software Foundation,grub,GRUB_UPSTREAM_VERSION,https://www.gnu.org/software/grub/`
 *******************************************************************************
-Our grub2 follows our upstream (Centos linux), Centos has not updated grub and is still on generation level 3.
+Our grub2 originates from our upstream (Centos / RHEL 7). Centos has not updated grub and is still on generation level 3, due to being unaffected by the NTFS issue.
 
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
@@ -193,10 +198,7 @@ Yes, all of these patches are already in the Centos 7 kernels.
 *******************************************************************************
 ### Do you build your signed kernel with additional local patches? What do they do?
 *******************************************************************************
-Generally we'll be performing 2 sorts of mofifications:
-
-
-- Fixes and enhancements (especially security updates) to continue long-term support of a previous Centos Linux release.  For example, further backports to the Centos/RHEL 7.9 kernel (kernel-3.10.0-1160) to keep it updated for customers.
+Fixes and enhancements (especially security updates) to continue long-term support of a previous Centos Linux release.  For example, further backports to the Centos/RHEL 7.9 kernel (kernel-3.10.0-1160) to keep it updated for customers.
 
 *******************************************************************************
 ### Do you use an ephemeral key for signing kernel modules?
@@ -216,7 +218,7 @@ We aren't using vendor_db functionality at this time.
 *******************************************************************************
 We are using a previously used (currently active) CA from our past Rocky Linux 8-based submission.
 
-There have no built GRUB2 binaries exposed to the listed CVEs that we have released, as our previous submission was relatively recent.
+There have been no built GRUB2 binaries exposed to the listed CVEs that we have released, as our previous submission was relatively recent.
 
 *******************************************************************************
 ### What OS and toolchain must we use to reproduce this build?  Include where to find it, etc.  We're going to try to reproduce your build as closely as possible to verify that it's really a build of the source tree you tell us it is, so these need to be fairly thorough. At the very least include the specific versions of gcc, binutils, and gnu-efi which were used, and where to find those binaries.
@@ -242,7 +244,8 @@ shim_rpmbuild.log contains a log of the docker build run.  This includes depende
 For example, signing new kernel's variants, UKI, systemd-boot, new certs, new CA, etc..
 *******************************************************************************
 
-Nothing has changed since our EL8 https://github.com/rhboot/shim-review/issues/366 submission, we are using new certs for signing Grub and the kernel. The new certs will allow for revocation of the component without having to revocating all compents that share the cert.
+Our shim has never been signed for this distro derivative, our previous submission uses a chain derived from Rocky 8.
+
 
 *******************************************************************************
 ### What is the SHA256 hash of your final SHIM binary?
@@ -335,18 +338,15 @@ N/a
 *******************************************************************************
 ### What is the origin and full version number of your bootloader (GRUB2 or systemd-boot or other)?
 *******************************************************************************
-We use the same version as Centos - Grub 2.02-0
+We currently use the same version as Centos - 2.02-0.87.el7.14 .  Subject to minor incremental patches as security issues crop up.
 
 *******************************************************************************
 ### If your SHIM launches any other components, please provide further details on what is launched.
 *******************************************************************************
-We have successfully packaged and tested a CentosLinux version of certwrapper (formerly certmule).  That is, a certmule package signed by us, but containing the Centos Linux CA.
+We have successfully packaged and tested a CentosLinux version of certwrapper (formerly certmule).  That is, a certwrapper package signed by us, but containing the Centos Linux CA.
 
-This seems perfect for our use-case, as the Centos grub2 + fwupd upstream packages could be used as-is without the need for recompilation or re-signing.  While keenly interested in kernel modifications, we don't have as much cause to update fwupd or grub2, and would prefer to use our upstream whenever feasible.
+This seems perfect for our use-case, as the default Centos grub2 + fwupate upstream packages could be used by customers as-is without the need for recompilation or re-signing.
 
-I want to inquire about signing this wrapper efi and making it available to users.
-
-The certmule package in question (with the embedded Centos CA) is located at:  https://github.com/ctrliq/certmule-rocky
 
 *******************************************************************************
 ### If your GRUB2 or systemd-boot launches any other binaries that are not the Linux kernel in SecureBoot mode, please provide further details on what is launched and how it enforces Secureboot lockdown.
@@ -359,17 +359,17 @@ No, Linux kernel launches are all we are interested in.
 *******************************************************************************
 In the case of the kernel, both the Centos variant and the upstream ("new") variants prevent this by default, and we do not want to change that.
 
-In the case of Grub + Fwupd, we will be running the same Centos/RHEL versions unmodified, which also do not execute unauthenticated code by default.
+In the case of Grub + fwupdate, we are derived from Centos/RHEL versions with minimal ongoing security fixes.  They also do not execute unauthenticated code by default.
 
 *******************************************************************************
 ### Does your SHIM load any loaders that support loading unsigned kernels (e.g. GRUB2)?
 *******************************************************************************
-Grub2 will only load unsigned code if the secureboot feature is turned off. Otherwise booting signed code is always enforced, same as the upstream CentOS loaders
+Grub2 will only load unsigned code if the secureboot feature is turned off. Otherwise booting signed code is always enforced, same as upstream CentOS/RHEL.
 
 *******************************************************************************
 ### What kernel are you using? Which patches and configuration does it include to enforce Secure Boot?
 *******************************************************************************
-We are using the centos upstream variant 3.10 with minor patches (on top of the many patches from Red Hat and others).
+We are using the centos upstream variant 3.10 with minor patches (on top of the heavy backports and modifications from Red Hat and others).
 
 I understand that these all enforce secure boot "out of the box".
 
@@ -386,4 +386,4 @@ Jason Rodriguez has contributed to the review process of other submissions, he s
 *******************************************************************************
 ### Add any additional information you think we may need to validate this shim signing application.
 *******************************************************************************
-No extra info, just some questions about using certwrapper/certmule to trust upstream distro components. (I like the "mule" name better ;-) )  Can't find this being used or approved in other reviews, but it's very interesting.  We're maintaining the beginnings of an RPM, and it's definitely something that should find its way into distros!
+No extra info, just some questions about using certwrapper to trust upstream distro components - hoping others look into this really useful tool as well.
