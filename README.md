@@ -290,18 +290,17 @@ grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
 grub.rhel7,2,Red Hat Enterprise Linux 7,grub2,1:2.02-0.87.el7.14,mail:secalert@redhat.com
 grub.ciq_centos7,1,Centos Linux 7 (CIQ build),grub2,1:2.02-0.87.el7.14,mailto:secureboot@ciq.com
 
-
-objcopy --only-section .sbat -O binary ./boot/efi/EFI/centos/grubia32.efi /dev/stdout
+objcopy --only-section .sbat -O binary ./boot/efi/EFI/centos/fwupx64.efi /dev/stdout
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
-grub.rhel7,2,Red Hat Enterprise Linux 7,grub2,1:2.02-0.87.el7.14,mail:secalert@redhat.com
-grub.ciq_centos7,1,Centos Linux 7 (CIQ build),grub2,1:2.02-0.87.el7.14,mailto:secureboot@ciq.com
+fwupdate,1,UEFI firmware update tool,fwupdate,12,https://github.com/rhboot/fwupdate
+fwupdate.rhel7,1,Red Hat Enterprise Linux 7,fwupdate,12-6.el7_6.1,mail:secalert@redhat.com
+fwupdate.ciq_centos7,1,Centos Linux 7 (CIQ build),fwupdate,12-7.el7,mailto:secureboot@ciq.com
 
-objcopy --only-section .sbat -O binary fwupdx64.efi /dev/stdout 
-sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-fwupd-efi,1,Firmware update daemon,fwupd-efi,1.4,https://github.com/fwupd/fwupd-efi
-fwupd-efi.rhel,1,Red Hat Enterprise Linux,fwupd,1.8.16,mail:secalert@redhat.com
-fwupd-efi.rocky,1,Rocky Linux,fwupd,1.8.16,mail:security@rockylinux.org
+objcopy --only-section .sbat -O binary ./boot/efi/EFI/centos/fwupia32.efi /dev/stdout
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+fwupdate,1,UEFI firmware update tool,fwupdate,12,https://github.com/rhboot/fwupdate
+fwupdate.rhel7,1,Red Hat Enterprise Linux 7,fwupdate,12-6.el7_6.1,mail:secalert@redhat.com
+fwupdate.ciq_centos7,1,Centos Linux 7 (CIQ build),fwupdate,12-7.el7,mailto:secureboot@ciq.com
 
 objcopy --only-section .sbat -O binary  shimx64.efi /dev/stdout 
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
@@ -320,7 +319,7 @@ shim.ciq,1,Ctrl IQ Inc,shim,15.8,mail:it_security@ciq.com
 Centos 7 / Grub 2.02-0 :
 
 ```
-all_video boot btrfs cat chain configfile echo	
+all_video boot btrfs cat chain configfile echo
 efifwsetup efinet ext2 fat font gfxmenu gfxterm
 gzio halt hfsplus iso9660 jpeg loadenv loopback
 lvm mdraid09 mdraid1x minicmd normal part_apple
