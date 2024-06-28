@@ -1,11 +1,11 @@
 Emulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.
 STEP 1/18: FROM centos:centos7.9.2009
 STEP 2/18: ENV shim_release 15.8-0.el7
---> d88b7b8a0629
+--> 811b6d9af329
 STEP 3/18: COPY rpmmacros  /root/.rpmmacros
---> 3b6db1270893
+--> 472503aebbe0
 STEP 4/18: COPY shim-unsigned-x64-$shim_release.src.rpm  /root
---> db9f9d37cf07
+--> bcd75cbd573b
 STEP 5/18: RUN rpm -ivh /root/shim-unsigned-x64-$shim_release.src.rpm
 Updating / installing...
 shim-unsigned-x64-15.8-0.el7          ########################################
@@ -25,17 +25,17 @@ warning: user builduser does not exist - using root
 warning: group mock does not exist - using root
 warning: user builduser does not exist - using root
 warning: group mock does not exist - using root
---> df823971e9df
+--> d48fdb89c0e8
 STEP 6/18: RUN sed -i 's/linux32 -B/linux32/g' /builddir/build/SPECS/shim-unsigned-x64.spec
---> 2212ac254dd8
+--> 36e6eafb9b2a
 STEP 7/18: COPY shimx64.efi  /
---> aeb723cd2fba
+--> 3a154ae6c279
 STEP 8/18: COPY shimia32.efi  /
---> 5f50cca052a2
+--> a06420cb301c
 STEP 9/18: RUN rm -f /etc/yum.repos.d/*.repo
---> 5545a2ca49f0
+--> f11cf7242e7f
 STEP 10/18: COPY ciq_static_shim.repo  /etc/yum.repos.d/
---> 4f8a91cdbc92
+--> ef352ed54b9a
 STEP 11/18: RUN yum -y install yum-plugins-core yum-utils rpm-build
 Loaded plugins: fastestmirror, ovl
 Determining fastest mirrors
@@ -214,7 +214,7 @@ Total download size: 18 M
 Downloading packages:
 Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
 --------------------------------------------------------------------------------
-Total                                               13 MB/s |  18 MB  00:01     
+Total                                              6.7 MB/s |  18 MB  00:02     
 Running transaction check
 Running transaction test
 Transaction test succeeded
@@ -368,7 +368,7 @@ Dependency Updated:
   rpm-libs.x86_64 0:4.11.3-48.el7_9   rpm-python.x86_64 0:4.11.3-48.el7_9      
 
 Complete!
---> 772def950ee7
+--> 169afc7184c6
 STEP 12/18: RUN yum-builddep -y /builddir/build/SPECS/shim-unsigned-x64.spec
 Loaded plugins: fastestmirror, ovl
 Loading mirror speeds from cached hostfile
@@ -426,10 +426,12 @@ Getting requirements for /builddir/build/SPECS/shim-unsigned-x64.spec
 --> Processing Dependency: pcsc-lite for package: coolkey-1.1.0-40.el7.x86_64
 --> Processing Dependency: ccid for package: coolkey-1.1.0-40.el7.x86_64
 ---> Package cpp.x86_64 0:4.8.5-44.el7 will be installed
----> Package glibc-devel.x86_64 0:2.17-326.el7_9 will be installed
---> Processing Dependency: glibc-headers = 2.17-326.el7_9 for package: glibc-devel-2.17-326.el7_9.x86_64
---> Processing Dependency: glibc = 2.17-326.el7_9 for package: glibc-devel-2.17-326.el7_9.x86_64
---> Processing Dependency: glibc-headers for package: glibc-devel-2.17-326.el7_9.x86_64
+---> Package glibc-devel.x86_64 0:2.17-326.el7_9.3 will be installed
+--> Processing Dependency: glibc-headers = 2.17-326.el7_9.3 for package: glibc-devel-2.17-326.el7_9.3.x86_64
+--> Processing Dependency: glibc = 2.17-326.el7_9.3 for package: glibc-devel-2.17-326.el7_9.3.x86_64
+Package: glibc-2.17-326.el7_9.3.src - can't co-install with glibc-2.17-326.el7_9.3.x86_64
+Package: glibc-2.17-326.el7_9.3.src - can't co-install with glibc-2.17-326.el7_9.3.x86_64
+--> Processing Dependency: glibc-headers for package: glibc-devel-2.17-326.el7_9.3.x86_64
 ---> Package krb5-devel.x86_64 0:1.15.1-55.el7_9 will be installed
 --> Processing Dependency: libkadm5(x86-64) = 1.15.1-55.el7_9 for package: krb5-devel-1.15.1-55.el7_9.x86_64
 --> Processing Dependency: krb5-libs(x86-64) = 1.15.1-55.el7_9 for package: krb5-devel-1.15.1-55.el7_9.x86_64
@@ -437,7 +439,7 @@ Getting requirements for /builddir/build/SPECS/shim-unsigned-x64.spec
 --> Processing Dependency: libselinux-devel for package: krb5-devel-1.15.1-55.el7_9.x86_64
 --> Processing Dependency: libcom_err-devel for package: krb5-devel-1.15.1-55.el7_9.x86_64
 --> Processing Dependency: keyutils-libs-devel for package: krb5-devel-1.15.1-55.el7_9.x86_64
----> Package less.x86_64 0:458-9.el7 will be installed
+---> Package less.x86_64 0:458-10.el7_9 will be installed
 ---> Package libgomp.x86_64 0:4.8.5-44.el7 will be installed
 ---> Package libmpc.x86_64 0:1.0.1-3.el7 will be installed
 ---> Package make.x86_64 1:3.82-24.el7 will be installed
@@ -462,10 +464,10 @@ Getting requirements for /builddir/build/SPECS/shim-unsigned-x64.spec
 --> Processing Dependency: /usr/bin/fipscheck for package: fipscheck-lib-1.4.1-6.el7.x86_64
 ---> Package glibc.x86_64 0:2.17-317.el7 will be updated
 --> Processing Dependency: glibc = 2.17-317.el7 for package: glibc-common-2.17-317.el7.x86_64
----> Package glibc.x86_64 0:2.17-326.el7_9 will be an update
----> Package glibc-headers.x86_64 0:2.17-326.el7_9 will be installed
---> Processing Dependency: kernel-headers >= 2.2.1 for package: glibc-headers-2.17-326.el7_9.x86_64
---> Processing Dependency: kernel-headers for package: glibc-headers-2.17-326.el7_9.x86_64
+---> Package glibc.x86_64 0:2.17-326.el7_9.3 will be an update
+---> Package glibc-headers.x86_64 0:2.17-326.el7_9.3 will be installed
+--> Processing Dependency: kernel-headers >= 2.2.1 for package: glibc-headers-2.17-326.el7_9.3.x86_64
+--> Processing Dependency: kernel-headers for package: glibc-headers-2.17-326.el7_9.3.x86_64
 ---> Package keyutils-libs-devel.x86_64 0:1.5.8-3.el7 will be installed
 ---> Package krb5-libs.x86_64 0:1.15.1-50.el7 will be updated
 ---> Package krb5-libs.x86_64 0:1.15.1-55.el7_9 will be an update
@@ -487,8 +489,8 @@ Getting requirements for /builddir/build/SPECS/shim-unsigned-x64.spec
 --> Running transaction check
 ---> Package fipscheck.x86_64 0:1.4.1-6.el7 will be installed
 ---> Package glibc-common.x86_64 0:2.17-317.el7 will be updated
----> Package glibc-common.x86_64 0:2.17-326.el7_9 will be an update
----> Package kernel-headers.x86_64 0:3.10.0-1160.118.1.el7 will be installed
+---> Package glibc-common.x86_64 0:2.17-326.el7_9.3 will be an update
+---> Package kernel-headers.x86_64 0:3.10.0-1160.119.1.el7 will be installed
 ---> Package libsepol-devel.x86_64 0:2.5-10.el7 will be installed
 ---> Package libusbx.x86_64 0:1.0.21-1.el7 will be installed
 ---> Package pcre-devel.x86_64 0:8.32-17.el7 will be installed
@@ -517,12 +519,12 @@ Installing for dependencies:
  cpp                      x86_64    4.8.5-44.el7               base       5.9 M
  fipscheck                x86_64    1.4.1-6.el7                base        21 k
  fipscheck-lib            x86_64    1.4.1-6.el7                base        11 k
- glibc-devel              x86_64    2.17-326.el7_9             updates    1.1 M
- glibc-headers            x86_64    2.17-326.el7_9             updates    691 k
- kernel-headers           x86_64    3.10.0-1160.118.1.el7      updates    9.1 M
+ glibc-devel              x86_64    2.17-326.el7_9.3           updates    1.1 M
+ glibc-headers            x86_64    2.17-326.el7_9.3           updates    692 k
+ kernel-headers           x86_64    3.10.0-1160.119.1.el7      updates    9.1 M
  keyutils-libs-devel      x86_64    1.5.8-3.el7                base        37 k
  krb5-devel               x86_64    1.15.1-55.el7_9            updates    273 k
- less                     x86_64    458-9.el7                  base       120 k
+ less                     x86_64    458-10.el7_9               updates    120 k
  libcom_err-devel         x86_64    1.42.9-19.el7              base        32 k
  libedit                  x86_64    3.0-12.20121213cvs.el7     base        92 k
  libgomp                  x86_64    4.8.5-44.el7               base       159 k
@@ -548,8 +550,8 @@ Installing for dependencies:
  vim-filesystem           x86_64    2:7.4.629-8.el7_9          updates     11 k
  zlib-devel               x86_64    1.2.7-21.el7_9             updates     50 k
 Updating for dependencies:
- glibc                    x86_64    2.17-326.el7_9             updates    3.6 M
- glibc-common             x86_64    2.17-326.el7_9             updates     12 M
+ glibc                    x86_64    2.17-326.el7_9.3           updates    3.6 M
+ glibc-common             x86_64    2.17-326.el7_9.3           updates     12 M
  krb5-libs                x86_64    1.15.1-55.el7_9            updates    810 k
  openssl-libs             x86_64    1:1.0.2k-26.el7_9          updates    1.2 M
  zlib                     x86_64    1.2.7-21.el7_9             updates     90 k
@@ -563,55 +565,55 @@ Total download size: 69 M
 Downloading packages:
 Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
 --------------------------------------------------------------------------------
-Total                                               28 MB/s |  69 MB  00:02     
+Total                                               11 MB/s |  69 MB  00:06     
 Running transaction check
 Running transaction test
 Transaction test succeeded
 Running transaction
-  Updating   : glibc-common-2.17-326.el7_9.x86_64                          1/56 
-  Updating   : glibc-2.17-326.el7_9.x86_64                                 2/56 
-  Updating   : zlib-1.2.7-21.el7_9.x86_64                                  3/56 
-  Updating   : 1:openssl-libs-1.0.2k-26.el7_9.x86_64                       4/56 
+  Installing : 1:perl-Error-0.17020-2.el7.noarch                           1/56 
+  Updating   : glibc-2.17-326.el7_9.3.x86_64                               2/56 
+  Updating   : glibc-common-2.17-326.el7_9.3.x86_64                        3/56 
+  Updating   : zlib-1.2.7-21.el7_9.x86_64                                  4/56 
   Updating   : krb5-libs-1.15.1-55.el7_9.x86_64                            5/56 
-  Installing : mpfr-3.1.1-4.el7.x86_64                                     6/56 
-  Installing : pcsc-lite-libs-1.8.8-8.el7.x86_64                           7/56 
-  Installing : libmpc-1.0.1-3.el7.x86_64                                   8/56 
-  Installing : zlib-devel-1.2.7-21.el7_9.x86_64                            9/56 
-  Installing : 1:perl-Error-0.17020-2.el7.noarch                          10/56 
+  Updating   : 1:openssl-libs-1.0.2k-26.el7_9.x86_64                       6/56 
+  Installing : mpfr-3.1.1-4.el7.x86_64                                     7/56 
+  Installing : pcsc-lite-libs-1.8.8-8.el7.x86_64                           8/56 
+  Installing : libmpc-1.0.1-3.el7.x86_64                                   9/56 
+  Installing : zlib-devel-1.2.7-21.el7_9.x86_64                           10/56 
   Installing : cpp-4.8.5-44.el7.x86_64                                    11/56 
-  Installing : libkadm5-1.15.1-55.el7_9.x86_64                            12/56 
-  Installing : fipscheck-1.4.1-6.el7.x86_64                               13/56 
-  Installing : fipscheck-lib-1.4.1-6.el7.x86_64                           14/56 
-  Installing : openssh-7.4p1-23.el7_9.x86_64                              15/56 
+  Installing : fipscheck-1.4.1-6.el7.x86_64                               12/56 
+  Installing : fipscheck-lib-1.4.1-6.el7.x86_64                           13/56 
+  Installing : openssh-7.4p1-23.el7_9.x86_64                              14/56 
+  Installing : libkadm5-1.15.1-55.el7_9.x86_64                            15/56 
   Installing : rsync-3.1.2-12.el7_9.x86_64                                16/56 
   Installing : perl-TermReadKey-2.30-20.el7.x86_64                        17/56 
   Installing : 1:make-3.82-24.el7.x86_64                                  18/56 
-  Installing : libusbx-1.0.21-1.el7.x86_64                                19/56 
-  Installing : pcsc-lite-ccid-1.4.10-15.el7.x86_64                        20/56 
+  Installing : less-458-10.el7_9.x86_64                                   19/56 
+  Installing : libusbx-1.0.21-1.el7.x86_64                                20/56 
   Installing : pcsc-lite-1.8.8-8.el7.x86_64                               21/56 
-  Installing : coolkey-1.1.0-40.el7.x86_64                                22/56 
-  Installing : opensc-0.19.0-4.el7_9.x86_64                               23/56 
-  Installing : libedit-3.0-12.20121213cvs.el7.x86_64                      24/56 
-  Installing : openssh-clients-7.4p1-23.el7_9.x86_64                      25/56 
-  Installing : efivar-libs-36-12.el7.x86_64                               26/56 
-  Installing : libgomp-4.8.5-44.el7.x86_64                                27/56 
-  Installing : less-458-9.el7.x86_64                                      28/56 
-  Installing : perl-Git-1.8.3.1-25.el7_9.noarch                           29/56 
-  Installing : git-1.8.3.1-25.el7_9.x86_64                                30/56 
+  Installing : pcsc-lite-ccid-1.4.10-15.el7.x86_64                        22/56 
+  Installing : coolkey-1.1.0-40.el7.x86_64                                23/56 
+  Installing : opensc-0.19.0-4.el7_9.x86_64                               24/56 
+  Installing : libedit-3.0-12.20121213cvs.el7.x86_64                      25/56 
+  Installing : openssh-clients-7.4p1-23.el7_9.x86_64                      26/56 
+  Installing : perl-Git-1.8.3.1-25.el7_9.noarch                           27/56 
+  Installing : git-1.8.3.1-25.el7_9.x86_64                                28/56 
+  Installing : efivar-libs-36-12.el7.x86_64                               29/56 
+  Installing : libgomp-4.8.5-44.el7.x86_64                                30/56 
   Installing : 1:gnu-efi-3.0.8-2.el7.x86_64                               31/56 
   Installing : libcom_err-devel-1.42.9-19.el7.x86_64                      32/56 
-  Installing : libsepol-devel-2.5-10.el7.x86_64                           33/56 
-  Installing : pcre-devel-8.32-17.el7.x86_64                              34/56 
-  Installing : libselinux-devel-2.5-15.el7.x86_64                         35/56 
-  Installing : kernel-headers-3.10.0-1160.118.1.el7.x86_64                36/56 
-  Installing : glibc-headers-2.17-326.el7_9.x86_64                        37/56 
-  Installing : glibc-devel-2.17-326.el7_9.x86_64                          38/56 
-  Installing : libverto-devel-0.2.5-4.el7.x86_64                          39/56 
-  Installing : keyutils-libs-devel-1.5.8-3.el7.x86_64                     40/56 
-  Installing : krb5-devel-1.15.1-55.el7_9.x86_64                          41/56 
-  Installing : 2:vim-filesystem-7.4.629-8.el7_9.x86_64                    42/56 
-  Installing : 2:vim-common-7.4.629-8.el7_9.x86_64                        43/56 
-  Installing : 1:openssl-devel-1.0.2k-26.el7_9.x86_64                     44/56 
+  Installing : kernel-headers-3.10.0-1160.119.1.el7.x86_64                33/56 
+  Installing : glibc-headers-2.17-326.el7_9.3.x86_64                      34/56 
+  Installing : glibc-devel-2.17-326.el7_9.3.x86_64                        35/56 
+  Installing : libsepol-devel-2.5-10.el7.x86_64                           36/56 
+  Installing : libverto-devel-0.2.5-4.el7.x86_64                          37/56 
+  Installing : keyutils-libs-devel-1.5.8-3.el7.x86_64                     38/56 
+  Installing : 2:vim-filesystem-7.4.629-8.el7_9.x86_64                    39/56 
+  Installing : pcre-devel-8.32-17.el7.x86_64                              40/56 
+  Installing : libselinux-devel-2.5-15.el7.x86_64                         41/56 
+  Installing : krb5-devel-1.15.1-55.el7_9.x86_64                          42/56 
+  Installing : 1:openssl-devel-1.0.2k-26.el7_9.x86_64                     43/56 
+  Installing : 2:vim-common-7.4.629-8.el7_9.x86_64                        44/56 
   Installing : gcc-4.8.5-44.el7.x86_64                                    45/56 
   Installing : 1:gnu-efi-devel-3.0.8-2.el7.x86_64                         46/56 
   Installing : efivar-devel-36-12.el7.x86_64                              47/56 
@@ -628,13 +630,13 @@ Running transaction
   Verifying  : libselinux-devel-2.5-15.el7.x86_64                          2/56 
   Verifying  : dos2unix-6.0.3-7.el7.x86_64                                 3/56 
   Verifying  : rsync-3.1.2-12.el7_9.x86_64                                 4/56 
-  Verifying  : glibc-2.17-326.el7_9.x86_64                                 5/56 
-  Verifying  : efivar-devel-36-12.el7.x86_64                               6/56 
-  Verifying  : 2:vim-common-7.4.629-8.el7_9.x86_64                         7/56 
-  Verifying  : krb5-devel-1.15.1-55.el7_9.x86_64                           8/56 
-  Verifying  : openssh-clients-7.4p1-23.el7_9.x86_64                       9/56 
-  Verifying  : pesign-0.109-11.el7_9.x86_64                               10/56 
-  Verifying  : glibc-devel-2.17-326.el7_9.x86_64                          11/56 
+  Verifying  : efivar-devel-36-12.el7.x86_64                               5/56 
+  Verifying  : 2:vim-common-7.4.629-8.el7_9.x86_64                         6/56 
+  Verifying  : krb5-devel-1.15.1-55.el7_9.x86_64                           7/56 
+  Verifying  : glibc-headers-2.17-326.el7_9.3.x86_64                       8/56 
+  Verifying  : pcre-devel-8.32-17.el7.x86_64                               9/56 
+  Verifying  : openssh-clients-7.4p1-23.el7_9.x86_64                      10/56 
+  Verifying  : pesign-0.109-11.el7_9.x86_64                               11/56 
   Verifying  : 1:gnu-efi-devel-3.0.8-2.el7.x86_64                         12/56 
   Verifying  : 2:vim-filesystem-7.4.629-8.el7_9.x86_64                    13/56 
   Verifying  : zlib-1.2.7-21.el7_9.x86_64                                 14/56 
@@ -644,42 +646,42 @@ Running transaction
   Verifying  : libverto-devel-0.2.5-4.el7.x86_64                          18/56 
   Verifying  : perl-TermReadKey-2.30-20.el7.x86_64                        19/56 
   Verifying  : 1:openssl-libs-1.0.2k-26.el7_9.x86_64                      20/56 
-  Verifying  : cpp-4.8.5-44.el7.x86_64                                    21/56 
-  Verifying  : glibc-headers-2.17-326.el7_9.x86_64                        22/56 
+  Verifying  : krb5-libs-1.15.1-55.el7_9.x86_64                           21/56 
+  Verifying  : cpp-4.8.5-44.el7.x86_64                                    22/56 
   Verifying  : coolkey-1.1.0-40.el7.x86_64                                23/56 
   Verifying  : git-1.8.3.1-25.el7_9.x86_64                                24/56 
   Verifying  : fipscheck-1.4.1-6.el7.x86_64                               25/56 
   Verifying  : 1:make-3.82-24.el7.x86_64                                  26/56 
   Verifying  : zlib-devel-1.2.7-21.el7_9.x86_64                           27/56 
   Verifying  : 1:openssl-1.0.2k-26.el7_9.x86_64                           28/56 
-  Verifying  : libusbx-1.0.21-1.el7.x86_64                                29/56 
+  Verifying  : glibc-common-2.17-326.el7_9.3.x86_64                       29/56 
   Verifying  : openssh-7.4p1-23.el7_9.x86_64                              30/56 
-  Verifying  : kernel-headers-3.10.0-1160.118.1.el7.x86_64                31/56 
-  Verifying  : krb5-libs-1.15.1-55.el7_9.x86_64                           32/56 
-  Verifying  : 1:perl-Error-0.17020-2.el7.noarch                          33/56 
-  Verifying  : pcsc-lite-1.8.8-8.el7.x86_64                               34/56 
-  Verifying  : perl-Git-1.8.3.1-25.el7_9.noarch                           35/56 
-  Verifying  : gcc-4.8.5-44.el7.x86_64                                    36/56 
-  Verifying  : libmpc-1.0.1-3.el7.x86_64                                  37/56 
-  Verifying  : glibc-common-2.17-326.el7_9.x86_64                         38/56 
-  Verifying  : elfutils-libelf-devel-0.176-5.el7.x86_64                   39/56 
-  Verifying  : pcre-devel-8.32-17.el7.x86_64                              40/56 
-  Verifying  : libkadm5-1.15.1-55.el7_9.x86_64                            41/56 
+  Verifying  : less-458-10.el7_9.x86_64                                   31/56 
+  Verifying  : 1:perl-Error-0.17020-2.el7.noarch                          32/56 
+  Verifying  : pcsc-lite-1.8.8-8.el7.x86_64                               33/56 
+  Verifying  : perl-Git-1.8.3.1-25.el7_9.noarch                           34/56 
+  Verifying  : gcc-4.8.5-44.el7.x86_64                                    35/56 
+  Verifying  : libmpc-1.0.1-3.el7.x86_64                                  36/56 
+  Verifying  : glibc-2.17-326.el7_9.3.x86_64                              37/56 
+  Verifying  : elfutils-libelf-devel-0.176-5.el7.x86_64                   38/56 
+  Verifying  : libusbx-1.0.21-1.el7.x86_64                                39/56 
+  Verifying  : libkadm5-1.15.1-55.el7_9.x86_64                            40/56 
+  Verifying  : glibc-devel-2.17-326.el7_9.3.x86_64                        41/56 
   Verifying  : libedit-3.0-12.20121213cvs.el7.x86_64                      42/56 
   Verifying  : mpfr-3.1.1-4.el7.x86_64                                    43/56 
   Verifying  : efivar-libs-36-12.el7.x86_64                               44/56 
   Verifying  : libsepol-devel-2.5-10.el7.x86_64                           45/56 
-  Verifying  : libcom_err-devel-1.42.9-19.el7.x86_64                      46/56 
-  Verifying  : 1:gnu-efi-3.0.8-2.el7.x86_64                               47/56 
-  Verifying  : opensc-0.19.0-4.el7_9.x86_64                               48/56 
-  Verifying  : libgomp-4.8.5-44.el7.x86_64                                49/56 
-  Verifying  : less-458-9.el7.x86_64                                      50/56 
+  Verifying  : kernel-headers-3.10.0-1160.119.1.el7.x86_64                46/56 
+  Verifying  : libcom_err-devel-1.42.9-19.el7.x86_64                      47/56 
+  Verifying  : 1:gnu-efi-3.0.8-2.el7.x86_64                               48/56 
+  Verifying  : opensc-0.19.0-4.el7_9.x86_64                               49/56 
+  Verifying  : libgomp-4.8.5-44.el7.x86_64                                50/56 
   Verifying  : pcsc-lite-libs-1.8.8-8.el7.x86_64                          51/56 
   Verifying  : glibc-common-2.17-317.el7.x86_64                           52/56 
   Verifying  : krb5-libs-1.15.1-50.el7.x86_64                             53/56 
-  Verifying  : zlib-1.2.7-18.el7.x86_64                                   54/56 
-  Verifying  : 1:openssl-libs-1.0.2k-19.el7.x86_64                        55/56 
-  Verifying  : glibc-2.17-317.el7.x86_64                                  56/56 
+  Verifying  : 1:openssl-libs-1.0.2k-19.el7.x86_64                        54/56 
+  Verifying  : glibc-2.17-317.el7.x86_64                                  55/56 
+  Verifying  : zlib-1.2.7-18.el7.x86_64                                   56/56 
 
 Installed:
   dos2unix.x86_64 0:6.0.3-7.el7     efivar-devel.x86_64 0:36-12.el7            
@@ -694,12 +696,12 @@ Dependency Installed:
   cpp.x86_64 0:4.8.5-44.el7                                                     
   fipscheck.x86_64 0:1.4.1-6.el7                                                
   fipscheck-lib.x86_64 0:1.4.1-6.el7                                            
-  glibc-devel.x86_64 0:2.17-326.el7_9                                           
-  glibc-headers.x86_64 0:2.17-326.el7_9                                         
-  kernel-headers.x86_64 0:3.10.0-1160.118.1.el7                                 
+  glibc-devel.x86_64 0:2.17-326.el7_9.3                                         
+  glibc-headers.x86_64 0:2.17-326.el7_9.3                                       
+  kernel-headers.x86_64 0:3.10.0-1160.119.1.el7                                 
   keyutils-libs-devel.x86_64 0:1.5.8-3.el7                                      
   krb5-devel.x86_64 0:1.15.1-55.el7_9                                           
-  less.x86_64 0:458-9.el7                                                       
+  less.x86_64 0:458-10.el7_9                                                    
   libcom_err-devel.x86_64 0:1.42.9-19.el7                                       
   libedit.x86_64 0:3.0-12.20121213cvs.el7                                       
   libgomp.x86_64 0:4.8.5-44.el7                                                 
@@ -726,14 +728,14 @@ Dependency Installed:
   zlib-devel.x86_64 0:1.2.7-21.el7_9                                            
 
 Dependency Updated:
-  glibc.x86_64 0:2.17-326.el7_9         glibc-common.x86_64 0:2.17-326.el7_9    
-  krb5-libs.x86_64 0:1.15.1-55.el7_9    openssl-libs.x86_64 1:1.0.2k-26.el7_9   
-  zlib.x86_64 0:1.2.7-21.el7_9         
+  glibc.x86_64 0:2.17-326.el7_9.3      glibc-common.x86_64 0:2.17-326.el7_9.3  
+  krb5-libs.x86_64 0:1.15.1-55.el7_9   openssl-libs.x86_64 1:1.0.2k-26.el7_9   
+  zlib.x86_64 0:1.2.7-21.el7_9        
 
 Complete!
---> 2bb2bc9c1349
+--> db4d0f60cdf1
 STEP 13/18: RUN rpmbuild -bb /builddir/build/SPECS/shim-unsigned-x64.spec
-Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.8Oqpbb
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.6nmgFQ
 + umask 022
 + cd /builddir/build//BUILD
 + cd /builddir/build/BUILD
@@ -757,7 +759,7 @@ Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.8Oqpbb
 + mkdir build-ia32
 + cp /builddir/build/SOURCES/sbat.ciq.csv data/
 + exit 0
-Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.UMabWX
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.MdPXDu
 + umask 022
 + cd /builddir/build//BUILD
 + cd shim-15.8
@@ -789,8 +791,8 @@ gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -f
 gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/builddir/build/BUILD/shim-15.8/Cryptlib -I/builddir/build/BUILD/shim-15.8/Cryptlib/Include -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/x86_64 -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/protocol -I/builddir/build/BUILD/shim-15.8/include -iquote /builddir/build/BUILD/shim-15.8 -iquote /builddir/build/BUILD/shim-15.8/build-x64 -isystem /builddir/build/BUILD/shim-15.8/include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.8-0.el7/"' -DVENDOR_CERT_FILE=\"/builddir/build/SOURCES/ciq_sb_ca.der\"   -c -o errlog.o /builddir/build/BUILD/shim-15.8/errlog.c
 gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/builddir/build/BUILD/shim-15.8/Cryptlib -I/builddir/build/BUILD/shim-15.8/Cryptlib/Include -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/x86_64 -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/protocol -I/builddir/build/BUILD/shim-15.8/include -iquote /builddir/build/BUILD/shim-15.8 -iquote /builddir/build/BUILD/shim-15.8/build-x64 -isystem /builddir/build/BUILD/shim-15.8/include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.8-0.el7/"' -DVENDOR_CERT_FILE=\"/builddir/build/SOURCES/ciq_sb_ca.der\"   -c -o sbat.o /builddir/build/BUILD/shim-15.8/sbat.c
 dos2unix -l -F -f -n /builddir/build/BUILD/shim-15.8/data/sbat.ciq.csv sbat.ciq.csv
-dos2unix: converting file /builddir/build/BUILD/shim-15.8/data/sbat.ciq.csv to file sbat.ciq.csv in Unix format ...
 tail -c1 sbat.ciq.csv | read -r _ || echo >> sbat.ciq.csv # ensure a trailing newline
+dos2unix: converting file /builddir/build/BUILD/shim-15.8/data/sbat.ciq.csv to file sbat.ciq.csv in Unix format ...
 gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/builddir/build/BUILD/shim-15.8/Cryptlib -I/builddir/build/BUILD/shim-15.8/Cryptlib/Include -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/x86_64 -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/protocol -I/builddir/build/BUILD/shim-15.8/include -iquote /builddir/build/BUILD/shim-15.8 -iquote /builddir/build/BUILD/shim-15.8/build-x64 -isystem /builddir/build/BUILD/shim-15.8/include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.8-0.el7/"' -DVENDOR_CERT_FILE=\"/builddir/build/SOURCES/ciq_sb_ca.der\" -x c -c -o sbat_data.o /dev/null
 objcopy --add-section .sbat=/builddir/build/BUILD/shim-15.8/data/sbat.csv \
 	--set-section-flags .sbat=contents,alloc,load,readonly,data \
@@ -2062,7 +2064,7 @@ fix_timestamp():375: Updating timestamp from 0x0000004b to 0
 fix_checksum():413: Updating checksum from 0x0001b223 to 0x0001b1d8
 + cd ..
 + exit 0
-Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.gousBT
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.o3cQed
 + umask 022
 + cd /builddir/build//BUILD
 + '[' /builddir/build/BUILDROOT/shim-unsigned-x64-15.8-0.el7.x86_64 '!=' / ']'
@@ -2130,7 +2132,7 @@ done
 + /usr/lib/rpm/redhat/brp-python-hardlink
 + /usr/lib/rpm/redhat/brp-java-repack-jars
 Processing files: shim-unsigned-x64-15.8-0.el7.x86_64
-Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.qYlda6
+Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.sGV74b
 + umask 022
 + cd /builddir/build//BUILD
 + cd shim-15.8
@@ -2142,7 +2144,7 @@ Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.qYlda6
 Provides: bundled(openssl) = 1.0.2j shim-unsigned-x64 = 15.8-0.el7 shim-unsigned-x64(x86-64) = 15.8-0.el7
 Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
 Processing files: shim-unsigned-ia32-15.8-0.el7.x86_64
-Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.g8hkLi
+Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.SkrEXa
 + umask 022
 + cd /builddir/build//BUILD
 + cd shim-15.8
@@ -3007,23 +3009,23 @@ warning: Installed (but unpackaged) file(s) found:
    /usr/src/debug/shim-15.8-0.el7/version.h
 Wrote: /builddir/build/RPMS/x86_64/shim-unsigned-x64-15.8-0.el7.x86_64.rpm
 Wrote: /builddir/build/RPMS/x86_64/shim-unsigned-ia32-15.8-0.el7.x86_64.rpm
-Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.YNBzIV
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.in8OK8
 + umask 022
 + cd /builddir/build//BUILD
 + cd shim-15.8
 + /usr/bin/rm -rf /builddir/build/BUILDROOT/shim-unsigned-x64-15.8-0.el7.x86_64
 + exit 0
---> 320d794bcdf8
+--> c57b29cb5aca
 STEP 14/18: RUN mkdir -p /shim_result
---> d5c64dff56cf
+--> c170e8593f80
 STEP 15/18: RUN cd /shim_result; rpm2cpio /builddir/build/RPMS/x86_64/shim-unsigned-ia32-$shim_release.x86_64.rpm | cpio -diu
 3152 blocks
---> 72dd12a5a56f
+--> 0041d0804072
 STEP 16/18: RUN cd /shim_result; rpm2cpio /builddir/build/RPMS/x86_64/shim-unsigned-x64-$shim_release.x86_64.rpm | cpio -diu 
 3684 blocks
---> 6057f2b0b6fa
+--> 69232a365aaf
 STEP 17/18: COPY shim-compare.sh  /root
---> 73ac812a725a
+--> 7d184e4d67b2
 STEP 18/18: RUN chmod 0755 /root/shim-compare.sh;  /root/shim-compare.sh
 
 Shim Comparison, original binary vs. freshly built binaries:
@@ -3046,6 +3048,6 @@ hash: cc849c210c71cbb6d4a4152f5a50ddfcbf949aade1a49834ce070d745be05d8a
 hash: cc849c210c71cbb6d4a4152f5a50ddfcbf949aade1a49834ce070d745be05d8a
 
 COMMIT shim
---> 409d9a535793
+--> 20700b3dee31
 Successfully tagged localhost/shim:latest
-409d9a5357934f3d6b47e774394c01ac511a55342a229b5f736e0b6dfbe44796
+20700b3dee314fec18e53d937868839011f2069d1cd78c740c0ace75025ca221
