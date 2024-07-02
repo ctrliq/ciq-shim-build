@@ -1,11 +1,11 @@
 Emulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.
 STEP 1/18: FROM centos:centos7.9.2009
 STEP 2/18: ENV shim_release 15.8-0.el7
---> 811b6d9af329
+--> d9ce9cdd6f13
 STEP 3/18: COPY rpmmacros  /root/.rpmmacros
---> 472503aebbe0
+--> 6ef6a6372a3a
 STEP 4/18: COPY shim-unsigned-x64-$shim_release.src.rpm  /root
---> bcd75cbd573b
+--> bb3ac77ac8d0
 STEP 5/18: RUN rpm -ivh /root/shim-unsigned-x64-$shim_release.src.rpm
 Updating / installing...
 shim-unsigned-x64-15.8-0.el7          ########################################
@@ -25,17 +25,17 @@ warning: user builduser does not exist - using root
 warning: group mock does not exist - using root
 warning: user builduser does not exist - using root
 warning: group mock does not exist - using root
---> d48fdb89c0e8
+--> 2d8ae0acd1b9
 STEP 6/18: RUN sed -i 's/linux32 -B/linux32/g' /builddir/build/SPECS/shim-unsigned-x64.spec
---> 36e6eafb9b2a
+--> f4f83d500423
 STEP 7/18: COPY shimx64.efi  /
---> 3a154ae6c279
+--> dd62c10c3ddd
 STEP 8/18: COPY shimia32.efi  /
---> a06420cb301c
+--> bb5c743f777d
 STEP 9/18: RUN rm -f /etc/yum.repos.d/*.repo
---> f11cf7242e7f
+--> 718bd98c7caf
 STEP 10/18: COPY ciq_static_shim.repo  /etc/yum.repos.d/
---> ef352ed54b9a
+--> b69942858cd0
 STEP 11/18: RUN yum -y install yum-plugins-core yum-utils rpm-build
 Loaded plugins: fastestmirror, ovl
 Determining fastest mirrors
@@ -214,7 +214,7 @@ Total download size: 18 M
 Downloading packages:
 Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
 --------------------------------------------------------------------------------
-Total                                              6.7 MB/s |  18 MB  00:02     
+Total                                              5.6 MB/s |  18 MB  00:03     
 Running transaction check
 Running transaction test
 Transaction test succeeded
@@ -368,7 +368,7 @@ Dependency Updated:
   rpm-libs.x86_64 0:4.11.3-48.el7_9   rpm-python.x86_64 0:4.11.3-48.el7_9      
 
 Complete!
---> 169afc7184c6
+--> 1c1cebf9da10
 STEP 12/18: RUN yum-builddep -y /builddir/build/SPECS/shim-unsigned-x64.spec
 Loaded plugins: fastestmirror, ovl
 Loading mirror speeds from cached hostfile
@@ -565,7 +565,7 @@ Total download size: 69 M
 Downloading packages:
 Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
 --------------------------------------------------------------------------------
-Total                                               11 MB/s |  69 MB  00:06     
+Total                                              7.3 MB/s |  69 MB  00:09     
 Running transaction check
 Running transaction test
 Transaction test succeeded
@@ -733,9 +733,9 @@ Dependency Updated:
   zlib.x86_64 0:1.2.7-21.el7_9        
 
 Complete!
---> db4d0f60cdf1
+--> 32ee9b73c08a
 STEP 13/18: RUN rpmbuild -bb /builddir/build/SPECS/shim-unsigned-x64.spec
-Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.6nmgFQ
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.MbEPRm
 + umask 022
 + cd /builddir/build//BUILD
 + cd /builddir/build/BUILD
@@ -759,7 +759,7 @@ Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.6nmgFQ
 + mkdir build-ia32
 + cp /builddir/build/SOURCES/sbat.ciq.csv data/
 + exit 0
-Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.MdPXDu
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.sJR6Y7
 + umask 022
 + cd /builddir/build//BUILD
 + cd shim-15.8
@@ -791,8 +791,8 @@ gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -f
 gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/builddir/build/BUILD/shim-15.8/Cryptlib -I/builddir/build/BUILD/shim-15.8/Cryptlib/Include -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/x86_64 -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/protocol -I/builddir/build/BUILD/shim-15.8/include -iquote /builddir/build/BUILD/shim-15.8 -iquote /builddir/build/BUILD/shim-15.8/build-x64 -isystem /builddir/build/BUILD/shim-15.8/include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.8-0.el7/"' -DVENDOR_CERT_FILE=\"/builddir/build/SOURCES/ciq_sb_ca.der\"   -c -o errlog.o /builddir/build/BUILD/shim-15.8/errlog.c
 gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/builddir/build/BUILD/shim-15.8/Cryptlib -I/builddir/build/BUILD/shim-15.8/Cryptlib/Include -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/x86_64 -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/protocol -I/builddir/build/BUILD/shim-15.8/include -iquote /builddir/build/BUILD/shim-15.8 -iquote /builddir/build/BUILD/shim-15.8/build-x64 -isystem /builddir/build/BUILD/shim-15.8/include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.8-0.el7/"' -DVENDOR_CERT_FILE=\"/builddir/build/SOURCES/ciq_sb_ca.der\"   -c -o sbat.o /builddir/build/BUILD/shim-15.8/sbat.c
 dos2unix -l -F -f -n /builddir/build/BUILD/shim-15.8/data/sbat.ciq.csv sbat.ciq.csv
-tail -c1 sbat.ciq.csv | read -r _ || echo >> sbat.ciq.csv # ensure a trailing newline
 dos2unix: converting file /builddir/build/BUILD/shim-15.8/data/sbat.ciq.csv to file sbat.ciq.csv in Unix format ...
+tail -c1 sbat.ciq.csv | read -r _ || echo >> sbat.ciq.csv # ensure a trailing newline
 gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/builddir/build/BUILD/shim-15.8/Cryptlib -I/builddir/build/BUILD/shim-15.8/Cryptlib/Include -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/x86_64 -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/protocol -I/builddir/build/BUILD/shim-15.8/include -iquote /builddir/build/BUILD/shim-15.8 -iquote /builddir/build/BUILD/shim-15.8/build-x64 -isystem /builddir/build/BUILD/shim-15.8/include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.8-0.el7/"' -DVENDOR_CERT_FILE=\"/builddir/build/SOURCES/ciq_sb_ca.der\" -x c -c -o sbat_data.o /dev/null
 objcopy --add-section .sbat=/builddir/build/BUILD/shim-15.8/data/sbat.csv \
 	--set-section-flags .sbat=contents,alloc,load,readonly,data \
@@ -2064,7 +2064,7 @@ fix_timestamp():375: Updating timestamp from 0x0000004b to 0
 fix_checksum():413: Updating checksum from 0x0001b223 to 0x0001b1d8
 + cd ..
 + exit 0
-Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.o3cQed
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.qLh921
 + umask 022
 + cd /builddir/build//BUILD
 + '[' /builddir/build/BUILDROOT/shim-unsigned-x64-15.8-0.el7.x86_64 '!=' / ']'
@@ -2132,7 +2132,7 @@ done
 + /usr/lib/rpm/redhat/brp-python-hardlink
 + /usr/lib/rpm/redhat/brp-java-repack-jars
 Processing files: shim-unsigned-x64-15.8-0.el7.x86_64
-Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.sGV74b
+Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.YMSB6b
 + umask 022
 + cd /builddir/build//BUILD
 + cd shim-15.8
@@ -2144,7 +2144,7 @@ Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.sGV74b
 Provides: bundled(openssl) = 1.0.2j shim-unsigned-x64 = 15.8-0.el7 shim-unsigned-x64(x86-64) = 15.8-0.el7
 Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
 Processing files: shim-unsigned-ia32-15.8-0.el7.x86_64
-Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.SkrEXa
+Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.UXpdcm
 + umask 022
 + cd /builddir/build//BUILD
 + cd shim-15.8
@@ -3009,23 +3009,23 @@ warning: Installed (but unpackaged) file(s) found:
    /usr/src/debug/shim-15.8-0.el7/version.h
 Wrote: /builddir/build/RPMS/x86_64/shim-unsigned-x64-15.8-0.el7.x86_64.rpm
 Wrote: /builddir/build/RPMS/x86_64/shim-unsigned-ia32-15.8-0.el7.x86_64.rpm
-Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.in8OK8
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.SG8ovR
 + umask 022
 + cd /builddir/build//BUILD
 + cd shim-15.8
 + /usr/bin/rm -rf /builddir/build/BUILDROOT/shim-unsigned-x64-15.8-0.el7.x86_64
 + exit 0
---> c57b29cb5aca
+--> 383dffcc1f71
 STEP 14/18: RUN mkdir -p /shim_result
---> c170e8593f80
+--> 20292a86bdf5
 STEP 15/18: RUN cd /shim_result; rpm2cpio /builddir/build/RPMS/x86_64/shim-unsigned-ia32-$shim_release.x86_64.rpm | cpio -diu
 3152 blocks
---> 0041d0804072
+--> 12ad54135150
 STEP 16/18: RUN cd /shim_result; rpm2cpio /builddir/build/RPMS/x86_64/shim-unsigned-x64-$shim_release.x86_64.rpm | cpio -diu 
 3684 blocks
---> 69232a365aaf
+--> d158a0a558ad
 STEP 17/18: COPY shim-compare.sh  /root
---> 7d184e4d67b2
+--> 587e31a24da9
 STEP 18/18: RUN chmod 0755 /root/shim-compare.sh;  /root/shim-compare.sh
 
 Shim Comparison, original binary vs. freshly built binaries:
@@ -3048,6 +3048,6 @@ hash: cc849c210c71cbb6d4a4152f5a50ddfcbf949aade1a49834ce070d745be05d8a
 hash: cc849c210c71cbb6d4a4152f5a50ddfcbf949aade1a49834ce070d745be05d8a
 
 COMMIT shim
---> 20700b3dee31
+--> 505004988ba7
 Successfully tagged localhost/shim:latest
-20700b3dee314fec18e53d937868839011f2069d1cd78c740c0ace75025ca221
+505004988ba7aa5aaa71d8556900b5654f0204a863d876ea54e1e82c10048d1d

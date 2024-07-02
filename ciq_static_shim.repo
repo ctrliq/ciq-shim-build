@@ -5,7 +5,8 @@
 [base]
 name=CentOS-7 - Base
 #mirrorlist=http://mirrorlist.centos.org/?release=7&arch=$basearch&repo=os&infra=$infra
-baseurl=http://mirror.centos.org/centos/7/os/$basearch/
+#baseurl=http://mirror.centos.org/centos/7/os/$basearch/
+baseurl=http://archive.kernel.org/centos-vault/7.9.2009/os/$basearch/
 enabled=1
 gpgcheck=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
@@ -13,7 +14,8 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 [updates]
 name=CentOS-7 - Updates
 #mirrorlist=http://mirrorlist.centos.org/?release=7&arch=$basearch&repo=updates&infra=$infra
-baseurl=http://mirror.centos.org/centos/7/updates/$basearch/
+#baseurl=http://mirror.centos.org/centos/7/updates/$basearch/
+baseurl=http://archive.kernel.org/centos-vault/7.9.2009/updates/$basearch/
 enabled=1
 gpgcheck=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentO
@@ -21,7 +23,8 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentO
 [extras]
 name=CentOS-7 - Extras
 #mirrorlist=http://mirrorlist.centos.org/?release=7&arch=$basearch&repo=extras&infra=$infra
-baseurl=http://mirror.centos.org/centos/7/extras/$basearch/
+#baseurl=http://mirror.centos.org/centos/7/extras/$basearch/
+baseurl=http://archive.kernel.org/centos-vault/7.9.2009/extras/$basearch/
 enabled=1
 gpgcheck=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
