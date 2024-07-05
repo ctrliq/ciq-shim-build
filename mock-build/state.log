@@ -1,36 +1,40 @@
-2024-01-30 15:31:59,663 - Mock Version: 5.4
-2024-01-30 15:31:59,666 - Start: chroot init
-2024-01-30 15:31:59,673 - Start: unpacking root cache
-2024-01-30 15:32:01,625 - Finish: unpacking root cache
-2024-01-30 15:32:01,626 - Start: cleaning package manager metadata
-2024-01-30 15:32:01,627 - Finish: cleaning package manager metadata
-2024-01-30 15:32:01,819 - Start: dnf update
-2024-01-30 15:32:02,471 - Finish: dnf update
-2024-01-30 15:32:02,622 - Finish: chroot init
-2024-01-30 15:32:02,624 - Start: buildsrpm
-2024-01-30 15:32:02,628 - Start: rpmbuild -bs
-2024-01-30 15:32:02,711 - Finish: rpmbuild -bs
-2024-01-30 15:32:02,713 - Finish: buildsrpm
-2024-01-30 15:32:02,714 - Start: clean chroot
-2024-01-30 15:32:03,849 - Finish: clean chroot
-2024-01-30 15:32:03,850 - Finish: run
-2024-01-30 15:32:11,214 - Mock Version: 5.4
-2024-01-30 15:32:11,217 - Start: chroot init
-2024-01-30 15:32:11,224 - Start: unpacking root cache
-2024-01-30 15:32:13,188 - Finish: unpacking root cache
-2024-01-30 15:32:13,189 - Start: cleaning package manager metadata
-2024-01-30 15:32:13,190 - Finish: cleaning package manager metadata
-2024-01-30 15:32:13,374 - Start: dnf update
-2024-01-30 15:32:13,953 - Finish: dnf update
-2024-01-30 15:32:14,109 - Finish: chroot init
-2024-01-30 15:32:14,109 - Start: build phase for shim-unsigned-x64-15.8-0.el8.src.rpm
-2024-01-30 15:32:14,111 - Start: build setup for shim-unsigned-x64-15.8-0.el8.src.rpm
-2024-01-30 15:32:18,860 - Finish: build setup for shim-unsigned-x64-15.8-0.el8.src.rpm
-2024-01-30 15:32:18,860 - Start: Outputting list of installed packages
-2024-01-30 15:32:18,943 - Finish: Outputting list of installed packages
-2024-01-30 15:32:18,943 - Start: rpmbuild shim-unsigned-x64-15.8-0.el8.src.rpm
-2024-01-30 15:32:39,349 - Finish: rpmbuild shim-unsigned-x64-15.8-0.el8.src.rpm
-2024-01-30 15:32:39,353 - Finish: build phase for shim-unsigned-x64-15.8-0.el8.src.rpm
-2024-01-30 15:32:39,355 - Start: clean chroot
-2024-01-30 15:32:41,043 - Finish: clean chroot
-2024-01-30 15:32:41,044 - Finish: run
+2024-07-05 11:30:18,105 - Mock Version: 5.6
+2024-07-05 11:30:18,109 - Start(bootstrap): chroot init
+2024-07-05 11:30:18,117 - Start(bootstrap): cleaning package manager metadata
+2024-07-05 11:30:18,117 - Finish(bootstrap): cleaning package manager metadata
+2024-07-05 11:30:18,304 - Finish(bootstrap): chroot init
+2024-07-05 11:30:18,306 - Start: chroot init
+2024-07-05 11:30:18,313 - Start: unpacking root cache
+2024-07-05 11:30:20,029 - Finish: unpacking root cache
+2024-07-05 11:30:20,031 - Start: cleaning package manager metadata
+2024-07-05 11:30:20,032 - Finish: cleaning package manager metadata
+2024-07-05 11:30:20,216 - Start: dnf update
+2024-07-05 11:30:21,045 - Finish: dnf update
+2024-07-05 11:30:21,403 - Finish: chroot init
+2024-07-05 11:30:21,405 - Start: buildsrpm
+2024-07-05 11:30:21,408 - Start: rpmbuild -bs
+2024-07-05 11:30:21,491 - Finish: rpmbuild -bs
+2024-07-05 11:30:21,493 - Finish: buildsrpm
+2024-07-05 11:30:21,494 - Start: clean chroot
+2024-07-05 11:30:22,585 - Finish: clean chroot
+2024-07-05 11:30:22,585 - Finish: run
+2024-07-05 11:30:22,956 - Mock Version: 5.6
+2024-07-05 11:30:22,960 - Start(bootstrap): chroot init
+2024-07-05 11:30:22,969 - Start(bootstrap): cleaning package manager metadata
+2024-07-05 11:30:22,969 - Finish(bootstrap): cleaning package manager metadata
+2024-07-05 11:30:23,154 - Finish(bootstrap): chroot init
+2024-07-05 11:30:23,156 - Start: chroot init
+2024-07-05 11:30:23,163 - Start: unpacking root cache
+2024-07-05 11:30:24,889 - Finish: unpacking root cache
+2024-07-05 11:30:24,891 - Start: cleaning package manager metadata
+2024-07-05 11:30:24,892 - Finish: cleaning package manager metadata
+2024-07-05 11:30:25,440 - Finish: chroot init
+2024-07-05 11:30:25,441 - Start: build phase for shim-unsigned-x64-15.8-0.el9_2.ciqlts.src.rpm
+2024-07-05 11:30:25,442 - Start: build setup for shim-unsigned-x64-15.8-0.el9_2.ciqlts.src.rpm
+2024-07-05 11:30:30,090 - Finish: build setup for shim-unsigned-x64-15.8-0.el9_2.ciqlts.src.rpm
+2024-07-05 11:30:30,090 - Start: Outputting list of installed packages
+2024-07-05 11:30:30,186 - Finish: Outputting list of installed packages
+2024-07-05 11:30:30,186 - Start: rpmbuild shim-unsigned-x64-15.8-0.el9_2.ciqlts.src.rpm
+2024-07-05 11:30:41,447 - Finish: rpmbuild shim-unsigned-x64-15.8-0.el9_2.ciqlts.src.rpm
+2024-07-05 11:30:41,450 - Finish: build phase for shim-unsigned-x64-15.8-0.el9_2.ciqlts.src.rpm
+2024-07-05 11:30:41,452 - Finish: run
