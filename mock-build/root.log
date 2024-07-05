@@ -1,127 +1,127 @@
 INFO buildroot.py:605:  Mock Version: 5.6
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
 DEBUG file_util.py:21:  created dir: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/results
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/results
 INFO buildroot.py:284:  calling preinit hooks
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/cache/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root_cache/
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/cache/mock/rocky-CIQ-LTS92-x86_64-bootstrap/yum_cache
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/cache/mock/rocky-CIQ-LTS92-x86_64-bootstrap/dnf_cache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/cache/mock/rocky-9-x86_64_ciqshim-bootstrap/root_cache/
+DEBUG file_util.py:18:  ensuring that dir exists: /var/cache/mock/rocky-9-x86_64_ciqshim-bootstrap/yum_cache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/cache/mock/rocky-9-x86_64_ciqshim-bootstrap/dnf_cache
 DEBUG buildroot.py:661:  create skeleton dirs
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/lib/rpm
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/lib/yum
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/lib/dbus
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/log
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/cache/dnf
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/cache/yum
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/rpm
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/tmp
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/tmp/ccache
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/tmp
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/dnf
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/dnf/vars
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/yum.repos.d
-DEBUG file_util.py:21:  created dir: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/yum.repos.d
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/yum
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/proc
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/sys
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/run/lock
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/dev/pts
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/dev/shm
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/dev/mapper
-DEBUG file_util.py:21:  created dir: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/dev/mapper
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/lib/rpm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/lib/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/lib/dbus
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/log
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/cache/dnf
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/cache/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/rpm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/tmp
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/tmp/ccache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/tmp
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/dnf
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/dnf/vars
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/yum.repos.d
+DEBUG file_util.py:21:  created dir: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/yum.repos.d
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/proc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/sys
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/run/lock
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/dev/pts
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/dev/shm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/dev/mapper
+DEBUG file_util.py:21:  created dir: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/dev/mapper
 DEBUG buildroot.py:805:  kernel version == 6.1.92-1.el9.elrepo.x86_64
-DEBUG file_util.py:30:  touching file: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/fstab
-DEBUG file_util.py:30:  touching file: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/yum/yum.conf
-DEBUG file_util.py:30:  touching file: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/dnf/dnf.conf
-DEBUG file_util.py:30:  touching file: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/log/yum.log
-DEBUG buildroot.py:298:  rootdir = /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root
-DEBUG buildroot.py:299:  resultdir = /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/results
+DEBUG file_util.py:30:  touching file: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/fstab
+DEBUG file_util.py:30:  touching file: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/yum/yum.conf
+DEBUG file_util.py:30:  touching file: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/dnf/dnf.conf
+DEBUG file_util.py:30:  touching file: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/log/yum.log
+DEBUG buildroot.py:298:  rootdir = /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root
+DEBUG buildroot.py:299:  resultdir = /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/results
 DEBUG package_manager.py:56:  searching for 'dnf' package manager or alternatives
 INFO buildroot.py:174:  Package manager dnf detected and used (fallback)
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/pki/mock
-DEBUG file_util.py:158:  Updating files in /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/pki/ca-trust with files from /etc/pki/ca-trust
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/pki/ca-trust
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/pki/ca-trust/./extracted
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/pki/ca-trust/./source
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/pki/ca-trust/extracted/edk2
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/pki/ca-trust/extracted/java
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/pki/ca-trust/extracted/openssl
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/pki/ca-trust/extracted/pem
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/pki/ca-trust/source/anchors
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/pki/ca-trust/source/blocklist
-DEBUG file_util.py:158:  Updating files in /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/usr/share/pki/ca-trust-source with files from /usr/share/pki/ca-trust-source
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/usr/share/pki/ca-trust-source
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/usr/share/pki/ca-trust-source/./anchors
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/usr/share/pki/ca-trust-source/./blocklist
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/usr/share
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/pki/mock
+DEBUG file_util.py:158:  Updating files in /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust with files from /etc/pki/ca-trust
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/./extracted
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/./source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/extracted/edk2
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/extracted/java
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/extracted/openssl
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/extracted/pem
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/source/anchors
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/source/blocklist
+DEBUG file_util.py:158:  Updating files in /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/usr/share/pki/ca-trust-source with files from /usr/share/pki/ca-trust-source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/usr/share/pki/ca-trust-source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/usr/share/pki/ca-trust-source/./anchors
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/usr/share/pki/ca-trust-source/./blocklist
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/usr/share
 DEBUG package_manager.py:382:  Copying /usr/share/distribution-gpg-keys to the bootstrap chroot
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['cp', '-a', '/usr/share/distribution-gpg-keys', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/usr/share'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['cp', '-a', '/usr/share/distribution-gpg-keys', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/usr/share'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/dnf
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/dnf
 DEBUG package_manager.py:683:  configure DNF vars
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/proc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/proc
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/proc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/proc
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/proc', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:610:  Child return code was: 0
-DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/sys
-DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/sys
-DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/sys', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/proc', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/dev/shm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/sys
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/dev/pts
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/sys
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/sys', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.4td2g9jc', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/sys/fs/selinux
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/dev/shm
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/cache/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/dev/pts
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/home/jrodriguez/mock/cache/mock/rocky-CIQ-LTS92-x86_64-bootstrap/yum_cache', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/cache/dnf
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/home/jrodriguez/mock/cache/mock/rocky-CIQ-LTS92-x86_64-bootstrap/dnf_cache', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.imzlc_26', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/sys/fs/selinux
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/cache/yum
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/rocky-9-x86_64_ciqshim-bootstrap/yum_cache', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/cache/dnf
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/rocky-9-x86_64_ciqshim-bootstrap/dnf_cache', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc
 DEBUG buildroot.py:38:  method _cleanup_homedir skipped in bootstrap
 DEBUG buildroot.py:38:  method _setup_build_dirs skipped in bootstrap
 DEBUG buildroot.py:38:  method _make_users skipped in bootstrap
-DEBUG file_util.py:30:  touching file: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/.initialized
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64
+DEBUG file_util.py:30:  touching file: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/.initialized
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res
 INFO buildroot.py:284:  calling preinit hooks
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/cache/mock/rocky-CIQ-LTS92-x86_64/root_cache/
+DEBUG file_util.py:18:  ensuring that dir exists: /var/cache/mock/rocky-9-x86_64_ciqshim/root_cache/
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/tar', '--use-compress-program', 'pigz', '-xf', '/home/jrodriguez/mock/cache/mock/rocky-CIQ-LTS92-x86_64/root_cache/cache.tar.gz', '-C', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/tar', '--use-compress-program', 'pigz', '-xf', '/var/cache/mock/rocky-9-x86_64_ciqshim/root_cache/cache.tar.gz', '-C', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/./proc
 DEBUG file_util.py:21:  created dir: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/./proc
@@ -137,8 +137,8 @@ DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/sh
 DEBUG file_util.py:21:  created dir: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/./var/cache/dnf
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/./var/log
 DEBUG file_util.py:21:  created dir: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/./var/log
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/cache/mock/rocky-CIQ-LTS92-x86_64/yum_cache
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/cache/mock/rocky-CIQ-LTS92-x86_64/dnf_cache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/cache/mock/rocky-9-x86_64_ciqshim/yum_cache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/cache/mock/rocky-9-x86_64_ciqshim/dnf_cache
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/usr/bin/lscpu'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:463:  Architecture:                         x86_64
@@ -155,7 +155,7 @@ DEBUG util.py:463:  Thread(s) per core:                   2
 DEBUG util.py:463:  Core(s) per socket:                   14
 DEBUG util.py:463:  Socket(s):                            1
 DEBUG util.py:463:  Stepping:                             3
-DEBUG util.py:463:  CPU(s) scaling MHz:                   60%
+DEBUG util.py:463:  CPU(s) scaling MHz:                   39%
 DEBUG util.py:463:  CPU max MHz:                          4700.0000
 DEBUG util.py:463:  CPU min MHz:                          400.0000
 DEBUG util.py:463:  BogoMIPS:                             5376.00
@@ -185,14 +185,14 @@ DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/bin/free'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:463:                 total        used        free      shared  buff/cache   available
-DEBUG util.py:463:  Mem:        65240436    36005156     1194888    12132396    40902604    29235280
+DEBUG util.py:463:  Mem:        65240436    35778756     1046520    12072596    41216416    29461680
 DEBUG util.py:463:  Swap:       32821244      691712    32129532
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/df', '-H', '-T', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock', '/home/jrodriguez/mock/cache/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/df', '-H', '-T', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock', '/var/cache/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:463:  Filesystem          Type  Size  Used Avail Use% Mounted on
 DEBUG util.py:463:  /dev/mapper/rl-home xfs   1.5T  868G  534G  62% /home
-DEBUG util.py:463:  /dev/mapper/rl-home xfs   1.5T  868G  534G  62% /home
+DEBUG util.py:463:  /dev/mapper/rl-root xfs    76G   62G   14G  82% /
 DEBUG util.py:610:  Child return code was: 0
 DEBUG buildroot.py:661:  create skeleton dirs
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/var/lib/rpm
@@ -274,7 +274,7 @@ DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.7p3ni1an', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.8w704trv', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/sys/fs/selinux
 DEBUG util.py:636:  child environment: None
@@ -282,11 +282,11 @@ DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpf
 DEBUG util.py:610:  Child return code was: 0
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/var/cache/yum
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/home/jrodriguez/mock/cache/mock/rocky-CIQ-LTS92-x86_64/yum_cache', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/rocky-9-x86_64_ciqshim/yum_cache', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/var/cache/dnf
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/home/jrodriguez/mock/cache/mock/rocky-CIQ-LTS92-x86_64/dnf_cache', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/rocky-9-x86_64_ciqshim/dnf_cache', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['rpm', '-q', 'rpm', 'rpm-sequoia', 'python3-dnf', 'python3-dnf-plugins-core', 'yum', 'yum-utils', 'dnf5', 'dnf5-plugins'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
@@ -294,26 +294,27 @@ DEBUG util.py:463:  rpm-4.16.1.3-29.el9.x86_64
 DEBUG util.py:463:  package rpm-sequoia is not installed
 DEBUG util.py:463:  python3-dnf-4.14.0-9.el9.noarch
 DEBUG util.py:463:  python3-dnf-plugins-core-4.3.0-5.el9_2.noarch
-DEBUG util.py:463:  package yum is not installed
+DEBUG util.py:463:  yum-4.14.0-9.el9.noarch
 DEBUG util.py:463:  package yum-utils is not installed
 DEBUG util.py:463:  package dnf5 is not installed
 DEBUG util.py:463:  package dnf5-plugins is not installed
-DEBUG util.py:610:  Child return code was: 5
+DEBUG util.py:610:  Child return code was: 4
 INFO package_manager.py:195:  Buildroot is handled by package management downloaded with a bootstrap image:
   rpm-4.16.1.3-29.el9.x86_64
   python3-dnf-4.14.0-9.el9.noarch
   python3-dnf-plugins-core-4.3.0-5.el9_2.noarch
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
-DEBUG file_util.py:21:  created dir: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
+  yum-4.14.0-9.el9.noarch
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
+DEBUG file_util.py:21:  created dir: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'private,mode=0755', 'tmpfs', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'private,mode=0755', 'tmpfs', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '--target', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '--target', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/bin/rpm', '-qa', '--root', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
@@ -519,56 +520,56 @@ DEBUG util.py:463:  util-linux-2.37.4-11.el9_2.x86_64
 DEBUG util.py:463:  which-2.21-28.el9.x86_64
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:185:  kill orphans in chroot /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
-DEBUG util.py:185:  kill orphans in chroot /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
+DEBUG util.py:185:  kill orphans in chroot /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'private,mode=0755', 'tmpfs', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'private,mode=0755', 'tmpfs', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '--target', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '--target', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/installation-homedir
 DEBUG package_manager.py:289:  ['/usr/bin/dnf-3', '--installroot', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/', '-y', '--releasever', '9', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', 'update']
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/usr/bin/dnf-3', '--installroot', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/', '-y', '--releasever', '9', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', 'update', '--setopt=tsflags=nocontexts'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8'} and shell False
 DEBUG util.py:461:  No matches found for the following disable plugin patterns: local, spacewalk, versionlock
-DEBUG util.py:463:  Rocky Linux 9 - BaseOS                                                                                           61 kB/s | 4.1 kB     00:00    
-DEBUG util.py:463:  Rocky Linux 9 - AppStream                                                                                        85 kB/s | 4.5 kB     00:00    
-DEBUG util.py:463:  Rocky Linux 9 - CodeReadyBuilder                                                                                 88 kB/s | 4.5 kB     00:00    
-DEBUG util.py:463:  Rocky Linux 9 - Extras                                                                                           53 kB/s | 2.9 kB     00:00    
-DEBUG util.py:463:  Rocky Linux 9 - Devel (WARNING: UNSUPPORTED - FOR BUILDROOT USE ONLY!)                                          131 kB/s | 3.4 kB     00:00    
+DEBUG util.py:463:  Rocky Linux 9 - BaseOS                                                                                            73 kB/s | 4.1 kB     00:00    
+DEBUG util.py:463:  Rocky Linux 9 - AppStream                                                                                         84 kB/s | 4.5 kB     00:00    
+DEBUG util.py:463:  Rocky Linux 9 - CodeReadyBuilder                                                                                  76 kB/s | 4.5 kB     00:00    
+DEBUG util.py:463:  Rocky Linux 9 - Extras                                                                                            39 kB/s | 2.9 kB     00:00    
+DEBUG util.py:463:  Rocky Linux 9 - Devel (WARNING: UNSUPPORTED - FOR BUILDROOT USE ONLY!)                                           343  B/s | 3.4 kB     00:10    
 DEBUG util.py:463:  Dependencies resolved.
 DEBUG util.py:463:  Nothing to do.
 DEBUG util.py:463:  Complete!
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:185:  kill orphans in chroot /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
-DEBUG util.py:185:  kill orphans in chroot /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
+DEBUG util.py:185:  kill orphans in chroot /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'private,mode=0755', 'tmpfs', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'private,mode=0755', 'tmpfs', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '--target', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '--target', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/bin/rpm', '-qa', '--root', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
@@ -774,12 +775,12 @@ DEBUG util.py:463:  util-linux-2.37.4-11.el9_2.x86_64
 DEBUG util.py:463:  which-2.21-28.el9.x86_64
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:185:  kill orphans in chroot /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
-DEBUG util.py:185:  kill orphans in chroot /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
+DEBUG util.py:185:  kill orphans in chroot /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/builddir/build
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/builddir/build/RPMS
@@ -846,162 +847,162 @@ DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['btrfs', 'subv', 'list', '/home/jrodriguez/mock/lib/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:185:  kill orphans in chroot /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root
+DEBUG util.py:558:  Executing command: ['btrfs', 'subv', 'list', '/var/lib/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:185:  kill orphans in chroot /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 INFO buildroot.py:605:  Mock Version: 5.6
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
 DEBUG file_util.py:21:  created dir: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/results
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/results
 INFO buildroot.py:284:  calling preinit hooks
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/cache/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root_cache/
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/cache/mock/rocky-CIQ-LTS92-x86_64-bootstrap/yum_cache
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/cache/mock/rocky-CIQ-LTS92-x86_64-bootstrap/dnf_cache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/cache/mock/rocky-9-x86_64_ciqshim-bootstrap/root_cache/
+DEBUG file_util.py:18:  ensuring that dir exists: /var/cache/mock/rocky-9-x86_64_ciqshim-bootstrap/yum_cache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/cache/mock/rocky-9-x86_64_ciqshim-bootstrap/dnf_cache
 DEBUG buildroot.py:661:  create skeleton dirs
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/lib/rpm
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/lib/yum
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/lib/dbus
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/log
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/cache/dnf
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/cache/yum
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/rpm
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/tmp
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/tmp/ccache
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/tmp
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/dnf
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/dnf/vars
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/yum.repos.d
-DEBUG file_util.py:21:  created dir: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/yum.repos.d
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/yum
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/proc
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/sys
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/run/lock
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/dev/pts
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/dev/shm
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/dev/mapper
-DEBUG file_util.py:21:  created dir: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/dev/mapper
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/lib/rpm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/lib/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/lib/dbus
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/log
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/cache/dnf
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/cache/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/rpm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/tmp
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/tmp/ccache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/tmp
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/dnf
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/dnf/vars
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/yum.repos.d
+DEBUG file_util.py:21:  created dir: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/yum.repos.d
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/proc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/sys
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/run/lock
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/dev/pts
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/dev/shm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/dev/mapper
+DEBUG file_util.py:21:  created dir: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/dev/mapper
 DEBUG buildroot.py:805:  kernel version == 6.1.92-1.el9.elrepo.x86_64
-DEBUG file_util.py:30:  touching file: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/fstab
-DEBUG file_util.py:30:  touching file: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/yum/yum.conf
-DEBUG file_util.py:30:  touching file: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/dnf/dnf.conf
-DEBUG file_util.py:30:  touching file: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/log/yum.log
-DEBUG buildroot.py:298:  rootdir = /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root
-DEBUG buildroot.py:299:  resultdir = /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/results
+DEBUG file_util.py:30:  touching file: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/fstab
+DEBUG file_util.py:30:  touching file: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/yum/yum.conf
+DEBUG file_util.py:30:  touching file: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/dnf/dnf.conf
+DEBUG file_util.py:30:  touching file: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/log/yum.log
+DEBUG buildroot.py:298:  rootdir = /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root
+DEBUG buildroot.py:299:  resultdir = /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/results
 DEBUG package_manager.py:56:  searching for 'dnf' package manager or alternatives
 INFO buildroot.py:174:  Package manager dnf detected and used (fallback)
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/pki/mock
-DEBUG file_util.py:158:  Updating files in /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/pki/ca-trust with files from /etc/pki/ca-trust
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/pki/ca-trust
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/pki/ca-trust/./extracted
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/pki/ca-trust/./source
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/pki/ca-trust/extracted/edk2
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/pki/ca-trust/extracted/java
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/pki/ca-trust/extracted/openssl
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/pki/ca-trust/extracted/pem
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/pki/ca-trust/source/anchors
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/pki/ca-trust/source/blocklist
-DEBUG file_util.py:158:  Updating files in /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/usr/share/pki/ca-trust-source with files from /usr/share/pki/ca-trust-source
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/usr/share/pki/ca-trust-source
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/usr/share/pki/ca-trust-source/./anchors
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/usr/share/pki/ca-trust-source/./blocklist
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/usr/share
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/pki/mock
+DEBUG file_util.py:158:  Updating files in /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust with files from /etc/pki/ca-trust
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/./extracted
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/./source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/extracted/edk2
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/extracted/java
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/extracted/openssl
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/extracted/pem
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/source/anchors
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/source/blocklist
+DEBUG file_util.py:158:  Updating files in /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/usr/share/pki/ca-trust-source with files from /usr/share/pki/ca-trust-source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/usr/share/pki/ca-trust-source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/usr/share/pki/ca-trust-source/./anchors
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/usr/share/pki/ca-trust-source/./blocklist
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/usr/share
 DEBUG package_manager.py:382:  Copying /usr/share/distribution-gpg-keys to the bootstrap chroot
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['cp', '-a', '/usr/share/distribution-gpg-keys', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/usr/share'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['cp', '-a', '/usr/share/distribution-gpg-keys', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/usr/share'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc/dnf
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc/dnf
 DEBUG package_manager.py:683:  configure DNF vars
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/proc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/proc
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/proc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/proc
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/proc', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:610:  Child return code was: 0
-DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/sys
-DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/sys
-DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/sys', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/proc', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/dev/shm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/sys
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/dev/pts
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/sys
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/sys', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.waz6mlne', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/sys/fs/selinux
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/dev/shm
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/cache/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/dev/pts
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/home/jrodriguez/mock/cache/mock/rocky-CIQ-LTS92-x86_64-bootstrap/yum_cache', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/cache/dnf
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/home/jrodriguez/mock/cache/mock/rocky-CIQ-LTS92-x86_64-bootstrap/dnf_cache', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.jusyhlr7', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/etc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/sys/fs/selinux
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/cache/yum
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/rocky-9-x86_64_ciqshim-bootstrap/yum_cache', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/cache/dnf
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/rocky-9-x86_64_ciqshim-bootstrap/dnf_cache', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/etc
 DEBUG buildroot.py:38:  method _cleanup_homedir skipped in bootstrap
 DEBUG buildroot.py:38:  method _setup_build_dirs skipped in bootstrap
 DEBUG buildroot.py:38:  method _make_users skipped in bootstrap
-DEBUG file_util.py:30:  touching file: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/.initialized
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64
+DEBUG file_util.py:30:  touching file: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/.initialized
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res
 INFO buildroot.py:284:  calling preinit hooks
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/cache/mock/rocky-CIQ-LTS92-x86_64/root_cache/
+DEBUG file_util.py:18:  ensuring that dir exists: /var/cache/mock/rocky-9-x86_64_ciqshim/root_cache/
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/tar', '--use-compress-program', 'pigz', '-xf', '/home/jrodriguez/mock/cache/mock/rocky-CIQ-LTS92-x86_64/root_cache/cache.tar.gz', '-C', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/tar', '--use-compress-program', 'pigz', '-xf', '/var/cache/mock/rocky-9-x86_64_ciqshim/root_cache/cache.tar.gz', '-C', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/./proc
 DEBUG file_util.py:21:  created dir: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/./proc
@@ -1017,8 +1018,8 @@ DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/sh
 DEBUG file_util.py:21:  created dir: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/./var/cache/dnf
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/./var/log
 DEBUG file_util.py:21:  created dir: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/./var/log
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/cache/mock/rocky-CIQ-LTS92-x86_64/yum_cache
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/cache/mock/rocky-CIQ-LTS92-x86_64/dnf_cache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/cache/mock/rocky-9-x86_64_ciqshim/yum_cache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/cache/mock/rocky-9-x86_64_ciqshim/dnf_cache
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/usr/bin/lscpu'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:463:  Architecture:                         x86_64
@@ -1035,7 +1036,7 @@ DEBUG util.py:463:  Thread(s) per core:                   2
 DEBUG util.py:463:  Core(s) per socket:                   14
 DEBUG util.py:463:  Socket(s):                            1
 DEBUG util.py:463:  Stepping:                             3
-DEBUG util.py:463:  CPU(s) scaling MHz:                   42%
+DEBUG util.py:463:  CPU(s) scaling MHz:                   36%
 DEBUG util.py:463:  CPU max MHz:                          4700.0000
 DEBUG util.py:463:  CPU min MHz:                          400.0000
 DEBUG util.py:463:  BogoMIPS:                             5376.00
@@ -1065,14 +1066,14 @@ DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/bin/free'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:463:                 total        used        free      shared  buff/cache   available
-DEBUG util.py:463:  Mem:        65240436    35970444     1273684    12066208    40804304    29269992
+DEBUG util.py:463:  Mem:        65240436    35839040     1024624    12120252    41226020    29401396
 DEBUG util.py:463:  Swap:       32821244      691712    32129532
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/df', '-H', '-T', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock', '/home/jrodriguez/mock/cache/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/df', '-H', '-T', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock', '/var/cache/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:463:  Filesystem          Type  Size  Used Avail Use% Mounted on
 DEBUG util.py:463:  /dev/mapper/rl-home xfs   1.5T  868G  534G  62% /home
-DEBUG util.py:463:  /dev/mapper/rl-home xfs   1.5T  868G  534G  62% /home
+DEBUG util.py:463:  /dev/mapper/rl-root xfs    76G   62G   14G  82% /
 DEBUG util.py:610:  Child return code was: 0
 DEBUG buildroot.py:661:  create skeleton dirs
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/var/lib/rpm
@@ -1154,7 +1155,7 @@ DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.8bznc93i', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.mqeozvgl', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/sys/fs/selinux
 DEBUG util.py:636:  child environment: None
@@ -1162,11 +1163,11 @@ DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpf
 DEBUG util.py:610:  Child return code was: 0
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/var/cache/yum
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/home/jrodriguez/mock/cache/mock/rocky-CIQ-LTS92-x86_64/yum_cache', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/rocky-9-x86_64_ciqshim/yum_cache', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/var/cache/dnf
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/home/jrodriguez/mock/cache/mock/rocky-CIQ-LTS92-x86_64/dnf_cache', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/rocky-9-x86_64_ciqshim/dnf_cache', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['rpm', '-q', 'rpm', 'rpm-sequoia', 'python3-dnf', 'python3-dnf-plugins-core', 'yum', 'yum-utils', 'dnf5', 'dnf5-plugins'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
@@ -1174,15 +1175,16 @@ DEBUG util.py:463:  rpm-4.16.1.3-29.el9.x86_64
 DEBUG util.py:463:  package rpm-sequoia is not installed
 DEBUG util.py:463:  python3-dnf-4.14.0-9.el9.noarch
 DEBUG util.py:463:  python3-dnf-plugins-core-4.3.0-5.el9_2.noarch
-DEBUG util.py:463:  package yum is not installed
+DEBUG util.py:463:  yum-4.14.0-9.el9.noarch
 DEBUG util.py:463:  package yum-utils is not installed
 DEBUG util.py:463:  package dnf5 is not installed
 DEBUG util.py:463:  package dnf5-plugins is not installed
-DEBUG util.py:610:  Child return code was: 5
+DEBUG util.py:610:  Child return code was: 4
 INFO package_manager.py:195:  Buildroot is handled by package management downloaded with a bootstrap image:
   rpm-4.16.1.3-29.el9.x86_64
   python3-dnf-4.14.0-9.el9.noarch
   python3-dnf-plugins-core-4.3.0-5.el9_2.noarch
+  yum-4.14.0-9.el9.noarch
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/builddir/build
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/builddir/build/RPMS
 DEBUG file_util.py:21:  created dir: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/builddir/build/RPMS
@@ -1215,12 +1217,12 @@ DEBUG util.py:461:  Creating mailbox file: File exists
 DEBUG util.py:610:  Child return code was: 0
 DEBUG file_util.py:30:  touching file: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/.initialized
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/rpm', '-Uvh', '--nodeps', '/builddir/build/originals/shim-unsigned-x64-15.8-0.el9_2.ciqlts.src.rpm'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/rpm', '-Uvh', '--nodeps', '/builddir/build/originals/shim-unsigned-x64-15.8-0.el9.src.rpm'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:463:  Updating / installing...
-DEBUG util.py:463:  shim-unsigned-x64-15.8-0.el9_2.ciqlts ########################################
+DEBUG util.py:463:  shim-unsigned-x64-15.8-0.el9          ########################################
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/rpm', '-qpl', '/builddir/build/originals/shim-unsigned-x64-15.8-0.el9_2.ciqlts.src.rpm'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/rpm', '-qpl', '/builddir/build/originals/shim-unsigned-x64-15.8-0.el9.src.rpm'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:463:  ciq_sb_ca.der
 DEBUG util.py:463:  sbat.ciq.csv
 DEBUG util.py:463:  shim-15.8.tar.bz2
@@ -1232,234 +1234,234 @@ DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: case $(rpmbuild --help) in *--noclean*) exit 0; esac; exit 1 with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell True
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'private,mode=0755', 'tmpfs', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'private,mode=0755', 'tmpfs', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '--target', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '--target', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/installation-homedir
-DEBUG package_manager.py:289:  ['/usr/bin/dnf-3', 'builddep', '--installroot', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/', '--releasever', '9', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock//builddir/build/SRPMS/shim-unsigned-x64-15.8-0.el9_2.ciqlts.src.rpm']
+DEBUG package_manager.py:289:  ['/usr/bin/dnf-3', 'builddep', '--installroot', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/', '--releasever', '9', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock//builddir/build/SRPMS/shim-unsigned-x64-15.8-0.el9.src.rpm']
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/usr/bin/dnf-3', 'builddep', '--installroot', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/', '--releasever', '9', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock//builddir/build/SRPMS/shim-unsigned-x64-15.8-0.el9_2.ciqlts.src.rpm', '--setopt=tsflags=nocontexts'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/usr/bin/dnf-3', 'builddep', '--installroot', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/', '--releasever', '9', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock//builddir/build/SRPMS/shim-unsigned-x64-15.8-0.el9.src.rpm', '--setopt=tsflags=nocontexts'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8'} and shell False
 DEBUG util.py:461:  No matches found for the following disable plugin patterns: local, spacewalk, versionlock
-DEBUG util.py:463:  Rocky Linux 9 - BaseOS                                                                                           20 kB/s | 4.1 kB     00:00    
-DEBUG util.py:463:  Rocky Linux 9 - AppStream                                                                                        84 kB/s | 4.5 kB     00:00    
-DEBUG util.py:463:  Rocky Linux 9 - CodeReadyBuilder                                                                                 91 kB/s | 4.5 kB     00:00    
-DEBUG util.py:463:  Rocky Linux 9 - Extras                                                                                           63 kB/s | 2.9 kB     00:00    
-DEBUG util.py:463:  Rocky Linux 9 - Devel (WARNING: UNSUPPORTED - FOR BUILDROOT USE ONLY!)                                          105 kB/s | 3.4 kB     00:00    
+DEBUG util.py:463:  Rocky Linux 9 - BaseOS                                                                                            37 kB/s | 4.1 kB     00:00    
+DEBUG util.py:463:  Rocky Linux 9 - AppStream                                                                                         73 kB/s | 4.5 kB     00:00    
+DEBUG util.py:463:  Rocky Linux 9 - CodeReadyBuilder                                                                                  83 kB/s | 4.5 kB     00:00    
+DEBUG util.py:463:  Rocky Linux 9 - Extras                                                                                            49 kB/s | 2.9 kB     00:00    
+DEBUG util.py:463:  Rocky Linux 9 - Devel (WARNING: UNSUPPORTED - FOR BUILDROOT USE ONLY!)                                           128 kB/s | 3.4 kB     00:00    
 DEBUG util.py:463:  Package findutils-1:4.8.0-5.el9.x86_64 is already installed.
 DEBUG util.py:463:  Package gcc-11.3.1-4.3.el9.x86_64 is already installed.
 DEBUG util.py:463:  Package make-1:4.3-7.el9.x86_64 is already installed.
 DEBUG util.py:463:  Package openssl-1:3.0.7-17.el9_2.x86_64 is already installed.
 DEBUG util.py:463:  Dependencies resolved.
-DEBUG util.py:463:  ================================================================================================================================================
-DEBUG util.py:463:   Package                                  Architecture           Version                                        Repository                 Size
-DEBUG util.py:463:  ================================================================================================================================================
+DEBUG util.py:463:  =================================================================================================================================================
+DEBUG util.py:463:   Package                                  Architecture           Version                                         Repository                 Size
+DEBUG util.py:463:  =================================================================================================================================================
 DEBUG util.py:463:  Installing:
-DEBUG util.py:463:   dos2unix                                 x86_64                 7.4.2-4.el9                                    baseos                    235 k
-DEBUG util.py:463:   elfutils-libelf-devel                    x86_64                 0.188-3.el9                                    appstream                  22 k
-DEBUG util.py:463:   git                                      x86_64                 2.39.3-1.el9_2                                 appstream                  61 k
-DEBUG util.py:463:   openssl-devel                            x86_64                 1:3.0.7-17.el9_2                               appstream                 3.0 M
-DEBUG util.py:463:   pesign                                   x86_64                 115-6.el9_1.rocky.2                            appstream                 171 k
+DEBUG util.py:463:   dos2unix                                 x86_64                 7.4.2-4.el9                                     baseos                    235 k
+DEBUG util.py:463:   elfutils-libelf-devel                    x86_64                 0.188-3.el9                                     appstream                  22 k
+DEBUG util.py:463:   git                                      x86_64                 2.39.3-1.el9_2                                  appstream                  61 k
+DEBUG util.py:463:   openssl-devel                            x86_64                 1:3.0.7-17.el9_2                                appstream                 3.0 M
+DEBUG util.py:463:   pesign                                   x86_64                 115-6.el9_1.rocky.2                             appstream                 171 k
 DEBUG util.py:463:  Installing dependencies:
-DEBUG util.py:463:   crypto-policies-scripts                  noarch                 20221215-1.git9a18988.el9_2.1                  baseos                     78 k
-DEBUG util.py:463:   efivar-libs                              x86_64                 38-3.el9                                       baseos                    120 k
-DEBUG util.py:463:   emacs-filesystem                         noarch                 1:27.2-8.el9_2.1                               appstream                 7.9 k
-DEBUG util.py:463:   expat                                    x86_64                 2.5.0-1.el9                                    baseos                    116 k
-DEBUG util.py:463:   git-core                                 x86_64                 2.39.3-1.el9_2                                 appstream                 4.2 M
-DEBUG util.py:463:   git-core-doc                             noarch                 2.39.3-1.el9_2                                 appstream                 2.6 M
-DEBUG util.py:463:   less                                     x86_64                 590-2.el9_2                                    baseos                    160 k
-DEBUG util.py:463:   libcbor                                  x86_64                 0.7.0-5.el9                                    baseos                     56 k
-DEBUG util.py:463:   libfido2                                 x86_64                 1.6.0-7.el9                                    baseos                     70 k
-DEBUG util.py:463:   nspr                                     x86_64                 4.35.0-3.el9_2                                 appstream                 134 k
-DEBUG util.py:463:   nss                                      x86_64                 3.90.0-3.el9_2                                 appstream                 704 k
-DEBUG util.py:463:   nss-softokn                              x86_64                 3.90.0-3.el9_2                                 appstream                 380 k
-DEBUG util.py:463:   nss-softokn-freebl                       x86_64                 3.90.0-3.el9_2                                 appstream                 326 k
-DEBUG util.py:463:   nss-sysinit                              x86_64                 3.90.0-3.el9_2                                 appstream                  19 k
-DEBUG util.py:463:   nss-tools                                x86_64                 3.90.0-3.el9_2                                 appstream                 429 k
-DEBUG util.py:463:   nss-util                                 x86_64                 3.90.0-3.el9_2                                 appstream                  88 k
-DEBUG util.py:463:   openssh                                  x86_64                 8.7p1-30.el9_2                                 baseos                    452 k
-DEBUG util.py:463:   openssh-clients                          x86_64                 8.7p1-30.el9_2                                 baseos                    700 k
-DEBUG util.py:463:   perl-DynaLoader                          x86_64                 1.47-480.el9                                   appstream                  26 k
-DEBUG util.py:463:   perl-Error                               noarch                 1:0.17029-7.el9                                appstream                  41 k
-DEBUG util.py:463:   perl-File-Find                           noarch                 1.37-480.el9                                   appstream                  26 k
-DEBUG util.py:463:   perl-Git                                 noarch                 2.39.3-1.el9_2                                 appstream                  37 k
-DEBUG util.py:463:   perl-TermReadKey                         x86_64                 2.38-11.el9                                    appstream                  36 k
-DEBUG util.py:463:   perl-lib                                 x86_64                 0.65-480.el9                                   appstream                  15 k
-DEBUG util.py:463:   python3                                  x86_64                 3.9.16-1.el9_2.2                               baseos                     25 k
-DEBUG util.py:463:   python3-libs                             x86_64                 3.9.16-1.el9_2.2                               baseos                    7.3 M
-DEBUG util.py:463:   python3-pip-wheel                        noarch                 21.2.3-6.el9                                   baseos                    1.1 M
-DEBUG util.py:463:   python3-setuptools-wheel                 noarch                 53.0.0-12.el9                                  baseos                    469 k
-DEBUG util.py:463:   zlib-devel                               x86_64                 1.2.11-39.el9                                  appstream                  44 k
+DEBUG util.py:463:   crypto-policies-scripts                  noarch                 20221215-1.git9a18988.el9_2.1                   baseos                     78 k
+DEBUG util.py:463:   efivar-libs                              x86_64                 38-3.el9                                        baseos                    120 k
+DEBUG util.py:463:   emacs-filesystem                         noarch                 1:27.2-8.el9_2.1                                appstream                 7.9 k
+DEBUG util.py:463:   expat                                    x86_64                 2.5.0-1.el9                                     baseos                    116 k
+DEBUG util.py:463:   git-core                                 x86_64                 2.39.3-1.el9_2                                  appstream                 4.2 M
+DEBUG util.py:463:   git-core-doc                             noarch                 2.39.3-1.el9_2                                  appstream                 2.6 M
+DEBUG util.py:463:   less                                     x86_64                 590-2.el9_2                                     baseos                    160 k
+DEBUG util.py:463:   libcbor                                  x86_64                 0.7.0-5.el9                                     baseos                     56 k
+DEBUG util.py:463:   libfido2                                 x86_64                 1.6.0-7.el9                                     baseos                     70 k
+DEBUG util.py:463:   nspr                                     x86_64                 4.35.0-3.el9_2                                  appstream                 134 k
+DEBUG util.py:463:   nss                                      x86_64                 3.90.0-3.el9_2                                  appstream                 704 k
+DEBUG util.py:463:   nss-softokn                              x86_64                 3.90.0-3.el9_2                                  appstream                 380 k
+DEBUG util.py:463:   nss-softokn-freebl                       x86_64                 3.90.0-3.el9_2                                  appstream                 326 k
+DEBUG util.py:463:   nss-sysinit                              x86_64                 3.90.0-3.el9_2                                  appstream                  19 k
+DEBUG util.py:463:   nss-tools                                x86_64                 3.90.0-3.el9_2                                  appstream                 429 k
+DEBUG util.py:463:   nss-util                                 x86_64                 3.90.0-3.el9_2                                  appstream                  88 k
+DEBUG util.py:463:   openssh                                  x86_64                 8.7p1-30.el9_2                                  baseos                    452 k
+DEBUG util.py:463:   openssh-clients                          x86_64                 8.7p1-30.el9_2                                  baseos                    700 k
+DEBUG util.py:463:   perl-DynaLoader                          x86_64                 1.47-480.el9                                    appstream                  26 k
+DEBUG util.py:463:   perl-Error                               noarch                 1:0.17029-7.el9                                 appstream                  41 k
+DEBUG util.py:463:   perl-File-Find                           noarch                 1.37-480.el9                                    appstream                  26 k
+DEBUG util.py:463:   perl-Git                                 noarch                 2.39.3-1.el9_2                                  appstream                  37 k
+DEBUG util.py:463:   perl-TermReadKey                         x86_64                 2.38-11.el9                                     appstream                  36 k
+DEBUG util.py:463:   perl-lib                                 x86_64                 0.65-480.el9                                    appstream                  15 k
+DEBUG util.py:463:   python3                                  x86_64                 3.9.16-1.el9_2.2                                baseos                     25 k
+DEBUG util.py:463:   python3-libs                             x86_64                 3.9.16-1.el9_2.2                                baseos                    7.3 M
+DEBUG util.py:463:   python3-pip-wheel                        noarch                 21.2.3-6.el9                                    baseos                    1.1 M
+DEBUG util.py:463:   python3-setuptools-wheel                 noarch                 53.0.0-12.el9                                   baseos                    469 k
+DEBUG util.py:463:   zlib-devel                               x86_64                 1.2.11-39.el9                                   appstream                  44 k
 DEBUG util.py:463:  Transaction Summary
-DEBUG util.py:463:  ================================================================================================================================================
+DEBUG util.py:463:  =================================================================================================================================================
 DEBUG util.py:463:  Install  34 Packages
 DEBUG util.py:463:  Total download size: 23 M
 DEBUG util.py:463:  Installed size: 86 M
 DEBUG util.py:463:  Downloading Packages:
-DEBUG util.py:463:  (1/34): efivar-libs-38-3.el9.x86_64.rpm                                                                         936 kB/s | 120 kB     00:00    
-DEBUG util.py:463:  (2/34): crypto-policies-scripts-20221215-1.git9a18988.el9_2.1.noarch.rpm                                        528 kB/s |  78 kB     00:00    
-DEBUG util.py:463:  (3/34): python3-setuptools-wheel-53.0.0-12.el9.noarch.rpm                                                       5.4 MB/s | 469 kB     00:00    
-DEBUG util.py:463:  (4/34): python3-pip-wheel-21.2.3-6.el9.noarch.rpm                                                               9.7 MB/s | 1.1 MB     00:00    
-DEBUG util.py:463:  (5/34): libfido2-1.6.0-7.el9.x86_64.rpm                                                                         2.6 MB/s |  70 kB     00:00    
-DEBUG util.py:463:  (6/34): dos2unix-7.4.2-4.el9.x86_64.rpm                                                                         2.6 MB/s | 235 kB     00:00    
-DEBUG util.py:463:  (7/34): expat-2.5.0-1.el9.x86_64.rpm                                                                            333 kB/s | 116 kB     00:00    
-DEBUG util.py:463:  (8/34): python3-3.9.16-1.el9_2.2.x86_64.rpm                                                                     786 kB/s |  25 kB     00:00    
-DEBUG util.py:463:  (9/34): libcbor-0.7.0-5.el9.x86_64.rpm                                                                          1.8 MB/s |  56 kB     00:00    
-DEBUG util.py:463:  (10/34): openssh-clients-8.7p1-30.el9_2.x86_64.rpm                                                              7.4 MB/s | 700 kB     00:00    
-DEBUG util.py:463:  (11/34): openssh-8.7p1-30.el9_2.x86_64.rpm                                                                      4.2 MB/s | 452 kB     00:00    
-DEBUG util.py:463:  (12/34): less-590-2.el9_2.x86_64.rpm                                                                            401 kB/s | 160 kB     00:00    
-DEBUG util.py:463:  (13/34): perl-Error-0.17029-7.el9.noarch.rpm                                                                    521 kB/s |  41 kB     00:00    
-DEBUG util.py:463:  (14/34): python3-libs-3.9.16-1.el9_2.2.x86_64.rpm                                                                17 MB/s | 7.3 MB     00:00    
-DEBUG util.py:463:  (15/34): pesign-115-6.el9_1.rocky.2.x86_64.rpm                                                                  2.0 MB/s | 171 kB     00:00    
-DEBUG util.py:463:  (16/34): perl-lib-0.65-480.el9.x86_64.rpm                                                                       216 kB/s |  15 kB     00:00    
-DEBUG util.py:463:  (17/34): openssl-devel-3.0.7-17.el9_2.x86_64.rpm                                                                 13 MB/s | 3.0 MB     00:00    
-DEBUG util.py:463:  (18/34): perl-DynaLoader-1.47-480.el9.x86_64.rpm                                                                948 kB/s |  26 kB     00:00    
-DEBUG util.py:463:  (19/34): nss-util-3.90.0-3.el9_2.x86_64.rpm                                                                     1.9 MB/s |  88 kB     00:00    
-DEBUG util.py:463:  (20/34): perl-File-Find-1.37-480.el9.noarch.rpm                                                                 358 kB/s |  26 kB     00:00    
-DEBUG util.py:463:  (21/34): elfutils-libelf-devel-0.188-3.el9.x86_64.rpm                                                           311 kB/s |  22 kB     00:00    
-DEBUG util.py:463:  (22/34): nss-sysinit-3.90.0-3.el9_2.x86_64.rpm                                                                  728 kB/s |  19 kB     00:00    
-DEBUG util.py:463:  (23/34): nss-tools-3.90.0-3.el9_2.x86_64.rpm                                                                    8.0 MB/s | 429 kB     00:00    
-DEBUG util.py:463:  (24/34): nss-softokn-freebl-3.90.0-3.el9_2.x86_64.rpm                                                           6.9 MB/s | 326 kB     00:00    
-DEBUG util.py:463:  (25/34): nss-softokn-3.90.0-3.el9_2.x86_64.rpm                                                                  5.9 MB/s | 380 kB     00:00    
-DEBUG util.py:463:  (26/34): nss-3.90.0-3.el9_2.x86_64.rpm                                                                           10 MB/s | 704 kB     00:00    
-DEBUG util.py:463:  (27/34): emacs-filesystem-27.2-8.el9_2.1.noarch.rpm                                                             217 kB/s | 7.9 kB     00:00    
-DEBUG util.py:463:  (28/34): nspr-4.35.0-3.el9_2.x86_64.rpm                                                                         1.8 MB/s | 134 kB     00:00    
-DEBUG util.py:463:  (29/34): perl-TermReadKey-2.38-11.el9.x86_64.rpm                                                                1.3 MB/s |  36 kB     00:00    
-DEBUG util.py:463:  (30/34): perl-Git-2.39.3-1.el9_2.noarch.rpm                                                                     1.3 MB/s |  37 kB     00:00    
-DEBUG util.py:463:  (31/34): zlib-devel-1.2.11-39.el9.x86_64.rpm                                                                    1.0 MB/s |  44 kB     00:00    
-DEBUG util.py:463:  (32/34): git-2.39.3-1.el9_2.x86_64.rpm                                                                          1.7 MB/s |  61 kB     00:00    
-DEBUG util.py:463:  (33/34): git-core-doc-2.39.3-1.el9_2.noarch.rpm                                                                  18 MB/s | 2.6 MB     00:00    
-DEBUG util.py:463:  (34/34): git-core-2.39.3-1.el9_2.x86_64.rpm                                                                      13 MB/s | 4.2 MB     00:00    
-DEBUG util.py:463:  ------------------------------------------------------------------------------------------------------------------------------------------------
-DEBUG util.py:463:  Total                                                                                                            17 MB/s |  23 MB     00:01     
+DEBUG util.py:463:  (1/34): crypto-policies-scripts-20221215-1.git9a18988.el9_2.1.noarch.rpm                                         952 kB/s |  78 kB     00:00    
+DEBUG util.py:463:  (2/34): efivar-libs-38-3.el9.x86_64.rpm                                                                          1.3 MB/s | 120 kB     00:00    
+DEBUG util.py:463:  (3/34): expat-2.5.0-1.el9.x86_64.rpm                                                                             1.1 MB/s | 116 kB     00:00    
+DEBUG util.py:463:  (4/34): libfido2-1.6.0-7.el9.x86_64.rpm                                                                          518 kB/s |  70 kB     00:00    
+DEBUG util.py:463:  (5/34): python3-setuptools-wheel-53.0.0-12.el9.noarch.rpm                                                        3.1 MB/s | 469 kB     00:00    
+DEBUG util.py:463:  (6/34): python3-pip-wheel-21.2.3-6.el9.noarch.rpm                                                                7.1 MB/s | 1.1 MB     00:00    
+DEBUG util.py:463:  (7/34): dos2unix-7.4.2-4.el9.x86_64.rpm                                                                          5.0 MB/s | 235 kB     00:00    
+DEBUG util.py:463:  (8/34): less-590-2.el9_2.x86_64.rpm                                                                              1.9 MB/s | 160 kB     00:00    
+DEBUG util.py:463:  (9/34): python3-3.9.16-1.el9_2.2.x86_64.rpm                                                                      280 kB/s |  25 kB     00:00    
+DEBUG util.py:463:  (10/34): libcbor-0.7.0-5.el9.x86_64.rpm                                                                          428 kB/s |  56 kB     00:00    
+DEBUG util.py:463:  (11/34): openssh-clients-8.7p1-30.el9_2.x86_64.rpm                                                               2.4 MB/s | 700 kB     00:00    
+DEBUG util.py:463:  (12/34): openssh-8.7p1-30.el9_2.x86_64.rpm                                                                       1.9 MB/s | 452 kB     00:00    
+DEBUG util.py:463:  (13/34): perl-Error-0.17029-7.el9.noarch.rpm                                                                     280 kB/s |  41 kB     00:00    
+DEBUG util.py:463:  (14/34): pesign-115-6.el9_1.rocky.2.x86_64.rpm                                                                   1.8 MB/s | 171 kB     00:00    
+DEBUG util.py:463:  (15/34): perl-lib-0.65-480.el9.x86_64.rpm                                                                        223 kB/s |  15 kB     00:00    
+DEBUG util.py:463:  (16/34): python3-libs-3.9.16-1.el9_2.2.x86_64.rpm                                                                8.9 MB/s | 7.3 MB     00:00    
+DEBUG util.py:463:  (17/34): openssl-devel-3.0.7-17.el9_2.x86_64.rpm                                                                 7.2 MB/s | 3.0 MB     00:00    
+DEBUG util.py:463:  (18/34): perl-DynaLoader-1.47-480.el9.x86_64.rpm                                                                 327 kB/s |  26 kB     00:00    
+DEBUG util.py:463:  (19/34): perl-File-Find-1.37-480.el9.noarch.rpm                                                                  1.1 MB/s |  26 kB     00:00    
+DEBUG util.py:463:  (20/34): nss-util-3.90.0-3.el9_2.x86_64.rpm                                                                      3.5 MB/s |  88 kB     00:00    
+DEBUG util.py:463:  (21/34): elfutils-libelf-devel-0.188-3.el9.x86_64.rpm                                                            852 kB/s |  22 kB     00:00    
+DEBUG util.py:463:  (22/34): nss-tools-3.90.0-3.el9_2.x86_64.rpm                                                                      12 MB/s | 429 kB     00:00    
+DEBUG util.py:463:  (23/34): nss-sysinit-3.90.0-3.el9_2.x86_64.rpm                                                                   700 kB/s |  19 kB     00:00    
+DEBUG util.py:463:  (24/34): nss-softokn-freebl-3.90.0-3.el9_2.x86_64.rpm                                                            8.3 MB/s | 326 kB     00:00    
+DEBUG util.py:463:  (25/34): nss-softokn-3.90.0-3.el9_2.x86_64.rpm                                                                   4.7 MB/s | 380 kB     00:00    
+DEBUG util.py:463:  (26/34): nss-3.90.0-3.el9_2.x86_64.rpm                                                                           8.6 MB/s | 704 kB     00:00    
+DEBUG util.py:463:  (27/34): nspr-4.35.0-3.el9_2.x86_64.rpm                                                                          1.8 MB/s | 134 kB     00:00    
+DEBUG util.py:463:  (28/34): emacs-filesystem-27.2-8.el9_2.1.noarch.rpm                                                              151 kB/s | 7.9 kB     00:00    
+DEBUG util.py:463:  (29/34): perl-Git-2.39.3-1.el9_2.noarch.rpm                                                                      746 kB/s |  37 kB     00:00    
+DEBUG util.py:463:  (30/34): perl-TermReadKey-2.38-11.el9.x86_64.rpm                                                                 633 kB/s |  36 kB     00:00    
+DEBUG util.py:463:  (31/34): zlib-devel-1.2.11-39.el9.x86_64.rpm                                                                     672 kB/s |  44 kB     00:00    
+DEBUG util.py:463:  (32/34): git-2.39.3-1.el9_2.x86_64.rpm                                                                           695 kB/s |  61 kB     00:00    
+DEBUG util.py:463:  (33/34): git-core-doc-2.39.3-1.el9_2.noarch.rpm                                                                   10 MB/s | 2.6 MB     00:00    
+DEBUG util.py:463:  (34/34): git-core-2.39.3-1.el9_2.x86_64.rpm                                                                       13 MB/s | 4.2 MB     00:00    
+DEBUG util.py:463:  -------------------------------------------------------------------------------------------------------------------------------------------------
+DEBUG util.py:463:  Total                                                                                                             15 MB/s |  23 MB     00:01     
 DEBUG util.py:463:  Running transaction check
 DEBUG util.py:463:  Transaction check succeeded.
 DEBUG util.py:463:  Running transaction test
 DEBUG util.py:463:  Transaction test succeeded.
 DEBUG util.py:463:  Running transaction
-DEBUG util.py:463:    Preparing        :                                                                                                                        1/1 
-DEBUG util.py:463:    Installing       : nspr-4.35.0-3.el9_2.x86_64                                                                                            1/34 
-DEBUG util.py:463:    Installing       : nss-util-3.90.0-3.el9_2.x86_64                                                                                        2/34 
-DEBUG util.py:463:    Installing       : expat-2.5.0-1.el9.x86_64                                                                                              3/34 
-DEBUG util.py:463:    Installing       : nss-softokn-freebl-3.90.0-3.el9_2.x86_64                                                                              4/34 
-DEBUG util.py:463:    Installing       : nss-softokn-3.90.0-3.el9_2.x86_64                                                                                     5/34 
-DEBUG util.py:463:    Installing       : zlib-devel-1.2.11-39.el9.x86_64                                                                                       6/34 
-DEBUG util.py:463:    Installing       : emacs-filesystem-1:27.2-8.el9_2.1.noarch                                                                              7/34 
-DEBUG util.py:463:    Installing       : perl-File-Find-1.37-480.el9.noarch                                                                                    8/34 
-DEBUG util.py:463:    Installing       : perl-DynaLoader-1.47-480.el9.x86_64                                                                                   9/34 
-DEBUG util.py:463:    Installing       : perl-TermReadKey-2.38-11.el9.x86_64                                                                                  10/34 
-DEBUG util.py:463:    Installing       : perl-lib-0.65-480.el9.x86_64                                                                                         11/34 
-DEBUG util.py:463:    Installing       : perl-Error-1:0.17029-7.el9.noarch                                                                                    12/34 
-DEBUG util.py:463:    Running scriptlet: openssh-8.7p1-30.el9_2.x86_64                                                                                        13/34 
-DEBUG util.py:463:    Installing       : openssh-8.7p1-30.el9_2.x86_64                                                                                        13/34 
-DEBUG util.py:463:    Installing       : libcbor-0.7.0-5.el9.x86_64                                                                                           14/34 
-DEBUG util.py:463:    Installing       : libfido2-1.6.0-7.el9.x86_64                                                                                          15/34 
-DEBUG util.py:463:    Installing       : openssh-clients-8.7p1-30.el9_2.x86_64                                                                                16/34 
-DEBUG util.py:463:    Running scriptlet: openssh-clients-8.7p1-30.el9_2.x86_64                                                                                16/34 
-DEBUG util.py:463:    Installing       : less-590-2.el9_2.x86_64                                                                                              17/34 
-DEBUG util.py:463:    Installing       : git-core-2.39.3-1.el9_2.x86_64                                                                                       18/34 
-DEBUG util.py:463:    Installing       : git-core-doc-2.39.3-1.el9_2.noarch                                                                                   19/34 
-DEBUG util.py:463:    Installing       : perl-Git-2.39.3-1.el9_2.noarch                                                                                       20/34 
-DEBUG util.py:463:    Installing       : git-2.39.3-1.el9_2.x86_64                                                                                            21/34 
-DEBUG util.py:463:    Installing       : python3-setuptools-wheel-53.0.0-12.el9.noarch                                                                        22/34 
-DEBUG util.py:463:    Installing       : python3-pip-wheel-21.2.3-6.el9.noarch                                                                                23/34 
-DEBUG util.py:463:    Installing       : python3-3.9.16-1.el9_2.2.x86_64                                                                                      24/34 
-DEBUG util.py:463:    Installing       : python3-libs-3.9.16-1.el9_2.2.x86_64                                                                                 25/34 
-DEBUG util.py:463:    Installing       : crypto-policies-scripts-20221215-1.git9a18988.el9_2.1.noarch                                                         26/34 
-DEBUG util.py:463:    Installing       : nss-sysinit-3.90.0-3.el9_2.x86_64                                                                                    27/34 
-DEBUG util.py:463:    Installing       : nss-3.90.0-3.el9_2.x86_64                                                                                            28/34 
-DEBUG util.py:463:    Running scriptlet: nss-3.90.0-3.el9_2.x86_64                                                                                            28/34 
-DEBUG util.py:463:    Installing       : nss-tools-3.90.0-3.el9_2.x86_64                                                                                      29/34 
-DEBUG util.py:463:    Installing       : efivar-libs-38-3.el9.x86_64                                                                                          30/34 
-DEBUG util.py:463:    Running scriptlet: pesign-115-6.el9_1.rocky.2.x86_64                                                                                    31/34 
-DEBUG util.py:463:    Installing       : pesign-115-6.el9_1.rocky.2.x86_64                                                                                    31/34 
-DEBUG util.py:463:    Running scriptlet: pesign-115-6.el9_1.rocky.2.x86_64                                                                                    31/34 
-DEBUG util.py:463:    Installing       : elfutils-libelf-devel-0.188-3.el9.x86_64                                                                             32/34 
-DEBUG util.py:463:    Installing       : openssl-devel-1:3.0.7-17.el9_2.x86_64                                                                                33/34 
-DEBUG util.py:463:    Installing       : dos2unix-7.4.2-4.el9.x86_64                                                                                          34/34 
-DEBUG util.py:463:    Running scriptlet: crypto-policies-scripts-20221215-1.git9a18988.el9_2.1.noarch                                                         34/34 
-DEBUG util.py:463:    Running scriptlet: nss-3.90.0-3.el9_2.x86_64                                                                                            34/34 
-DEBUG util.py:463:    Running scriptlet: pesign-115-6.el9_1.rocky.2.x86_64                                                                                    34/34 
-DEBUG util.py:463:    Running scriptlet: dos2unix-7.4.2-4.el9.x86_64                                                                                          34/34 
-DEBUG util.py:463:    Verifying        : crypto-policies-scripts-20221215-1.git9a18988.el9_2.1.noarch                                                          1/34 
-DEBUG util.py:463:    Verifying        : efivar-libs-38-3.el9.x86_64                                                                                           2/34 
-DEBUG util.py:463:    Verifying        : expat-2.5.0-1.el9.x86_64                                                                                              3/34 
-DEBUG util.py:463:    Verifying        : python3-pip-wheel-21.2.3-6.el9.noarch                                                                                 4/34 
-DEBUG util.py:463:    Verifying        : python3-setuptools-wheel-53.0.0-12.el9.noarch                                                                         5/34 
-DEBUG util.py:463:    Verifying        : libfido2-1.6.0-7.el9.x86_64                                                                                           6/34 
-DEBUG util.py:463:    Verifying        : dos2unix-7.4.2-4.el9.x86_64                                                                                           7/34 
-DEBUG util.py:463:    Verifying        : less-590-2.el9_2.x86_64                                                                                               8/34 
-DEBUG util.py:463:    Verifying        : python3-libs-3.9.16-1.el9_2.2.x86_64                                                                                  9/34 
-DEBUG util.py:463:    Verifying        : python3-3.9.16-1.el9_2.2.x86_64                                                                                      10/34 
-DEBUG util.py:463:    Verifying        : libcbor-0.7.0-5.el9.x86_64                                                                                           11/34 
-DEBUG util.py:463:    Verifying        : openssh-clients-8.7p1-30.el9_2.x86_64                                                                                12/34 
-DEBUG util.py:463:    Verifying        : openssh-8.7p1-30.el9_2.x86_64                                                                                        13/34 
-DEBUG util.py:463:    Verifying        : openssl-devel-1:3.0.7-17.el9_2.x86_64                                                                                14/34 
-DEBUG util.py:463:    Verifying        : perl-Error-1:0.17029-7.el9.noarch                                                                                    15/34 
-DEBUG util.py:463:    Verifying        : pesign-115-6.el9_1.rocky.2.x86_64                                                                                    16/34 
-DEBUG util.py:463:    Verifying        : perl-lib-0.65-480.el9.x86_64                                                                                         17/34 
-DEBUG util.py:463:    Verifying        : perl-DynaLoader-1.47-480.el9.x86_64                                                                                  18/34 
-DEBUG util.py:463:    Verifying        : perl-File-Find-1.37-480.el9.noarch                                                                                   19/34 
-DEBUG util.py:463:    Verifying        : elfutils-libelf-devel-0.188-3.el9.x86_64                                                                             20/34 
-DEBUG util.py:463:    Verifying        : nss-util-3.90.0-3.el9_2.x86_64                                                                                       21/34 
-DEBUG util.py:463:    Verifying        : nss-tools-3.90.0-3.el9_2.x86_64                                                                                      22/34 
-DEBUG util.py:463:    Verifying        : nss-sysinit-3.90.0-3.el9_2.x86_64                                                                                    23/34 
-DEBUG util.py:463:    Verifying        : nss-softokn-freebl-3.90.0-3.el9_2.x86_64                                                                             24/34 
-DEBUG util.py:463:    Verifying        : nss-softokn-3.90.0-3.el9_2.x86_64                                                                                    25/34 
-DEBUG util.py:463:    Verifying        : nss-3.90.0-3.el9_2.x86_64                                                                                            26/34 
-DEBUG util.py:463:    Verifying        : nspr-4.35.0-3.el9_2.x86_64                                                                                           27/34 
-DEBUG util.py:463:    Verifying        : emacs-filesystem-1:27.2-8.el9_2.1.noarch                                                                             28/34 
-DEBUG util.py:463:    Verifying        : perl-TermReadKey-2.38-11.el9.x86_64                                                                                  29/34 
-DEBUG util.py:463:    Verifying        : perl-Git-2.39.3-1.el9_2.noarch                                                                                       30/34 
-DEBUG util.py:463:    Verifying        : git-core-doc-2.39.3-1.el9_2.noarch                                                                                   31/34 
-DEBUG util.py:463:    Verifying        : zlib-devel-1.2.11-39.el9.x86_64                                                                                      32/34 
-DEBUG util.py:463:    Verifying        : git-core-2.39.3-1.el9_2.x86_64                                                                                       33/34 
-DEBUG util.py:463:    Verifying        : git-2.39.3-1.el9_2.x86_64                                                                                            34/34 
+DEBUG util.py:463:    Preparing        :                                                                                                                         1/1 
+DEBUG util.py:463:    Installing       : nspr-4.35.0-3.el9_2.x86_64                                                                                             1/34 
+DEBUG util.py:463:    Installing       : nss-util-3.90.0-3.el9_2.x86_64                                                                                         2/34 
+DEBUG util.py:463:    Installing       : expat-2.5.0-1.el9.x86_64                                                                                               3/34 
+DEBUG util.py:463:    Installing       : nss-softokn-freebl-3.90.0-3.el9_2.x86_64                                                                               4/34 
+DEBUG util.py:463:    Installing       : nss-softokn-3.90.0-3.el9_2.x86_64                                                                                      5/34 
+DEBUG util.py:463:    Installing       : zlib-devel-1.2.11-39.el9.x86_64                                                                                        6/34 
+DEBUG util.py:463:    Installing       : emacs-filesystem-1:27.2-8.el9_2.1.noarch                                                                               7/34 
+DEBUG util.py:463:    Installing       : perl-File-Find-1.37-480.el9.noarch                                                                                     8/34 
+DEBUG util.py:463:    Installing       : perl-DynaLoader-1.47-480.el9.x86_64                                                                                    9/34 
+DEBUG util.py:463:    Installing       : perl-TermReadKey-2.38-11.el9.x86_64                                                                                   10/34 
+DEBUG util.py:463:    Installing       : perl-lib-0.65-480.el9.x86_64                                                                                          11/34 
+DEBUG util.py:463:    Installing       : perl-Error-1:0.17029-7.el9.noarch                                                                                     12/34 
+DEBUG util.py:463:    Running scriptlet: openssh-8.7p1-30.el9_2.x86_64                                                                                         13/34 
+DEBUG util.py:463:    Installing       : openssh-8.7p1-30.el9_2.x86_64                                                                                         13/34 
+DEBUG util.py:463:    Installing       : libcbor-0.7.0-5.el9.x86_64                                                                                            14/34 
+DEBUG util.py:463:    Installing       : libfido2-1.6.0-7.el9.x86_64                                                                                           15/34 
+DEBUG util.py:463:    Installing       : openssh-clients-8.7p1-30.el9_2.x86_64                                                                                 16/34 
+DEBUG util.py:463:    Running scriptlet: openssh-clients-8.7p1-30.el9_2.x86_64                                                                                 16/34 
+DEBUG util.py:463:    Installing       : less-590-2.el9_2.x86_64                                                                                               17/34 
+DEBUG util.py:463:    Installing       : git-core-2.39.3-1.el9_2.x86_64                                                                                        18/34 
+DEBUG util.py:463:    Installing       : git-core-doc-2.39.3-1.el9_2.noarch                                                                                    19/34 
+DEBUG util.py:463:    Installing       : perl-Git-2.39.3-1.el9_2.noarch                                                                                        20/34 
+DEBUG util.py:463:    Installing       : git-2.39.3-1.el9_2.x86_64                                                                                             21/34 
+DEBUG util.py:463:    Installing       : python3-setuptools-wheel-53.0.0-12.el9.noarch                                                                         22/34 
+DEBUG util.py:463:    Installing       : python3-pip-wheel-21.2.3-6.el9.noarch                                                                                 23/34 
+DEBUG util.py:463:    Installing       : python3-3.9.16-1.el9_2.2.x86_64                                                                                       24/34 
+DEBUG util.py:463:    Installing       : python3-libs-3.9.16-1.el9_2.2.x86_64                                                                                  25/34 
+DEBUG util.py:463:    Installing       : crypto-policies-scripts-20221215-1.git9a18988.el9_2.1.noarch                                                          26/34 
+DEBUG util.py:463:    Installing       : nss-sysinit-3.90.0-3.el9_2.x86_64                                                                                     27/34 
+DEBUG util.py:463:    Installing       : nss-3.90.0-3.el9_2.x86_64                                                                                             28/34 
+DEBUG util.py:463:    Running scriptlet: nss-3.90.0-3.el9_2.x86_64                                                                                             28/34 
+DEBUG util.py:463:    Installing       : nss-tools-3.90.0-3.el9_2.x86_64                                                                                       29/34 
+DEBUG util.py:463:    Installing       : efivar-libs-38-3.el9.x86_64                                                                                           30/34 
+DEBUG util.py:463:    Running scriptlet: pesign-115-6.el9_1.rocky.2.x86_64                                                                                     31/34 
+DEBUG util.py:463:    Installing       : pesign-115-6.el9_1.rocky.2.x86_64                                                                                     31/34 
+DEBUG util.py:463:    Running scriptlet: pesign-115-6.el9_1.rocky.2.x86_64                                                                                     31/34 
+DEBUG util.py:463:    Installing       : elfutils-libelf-devel-0.188-3.el9.x86_64                                                                              32/34 
+DEBUG util.py:463:    Installing       : openssl-devel-1:3.0.7-17.el9_2.x86_64                                                                                 33/34 
+DEBUG util.py:463:    Installing       : dos2unix-7.4.2-4.el9.x86_64                                                                                           34/34 
+DEBUG util.py:463:    Running scriptlet: crypto-policies-scripts-20221215-1.git9a18988.el9_2.1.noarch                                                          34/34 
+DEBUG util.py:463:    Running scriptlet: nss-3.90.0-3.el9_2.x86_64                                                                                             34/34 
+DEBUG util.py:463:    Running scriptlet: pesign-115-6.el9_1.rocky.2.x86_64                                                                                     34/34 
+DEBUG util.py:463:    Running scriptlet: dos2unix-7.4.2-4.el9.x86_64                                                                                           34/34 
+DEBUG util.py:463:    Verifying        : crypto-policies-scripts-20221215-1.git9a18988.el9_2.1.noarch                                                           1/34 
+DEBUG util.py:463:    Verifying        : efivar-libs-38-3.el9.x86_64                                                                                            2/34 
+DEBUG util.py:463:    Verifying        : expat-2.5.0-1.el9.x86_64                                                                                               3/34 
+DEBUG util.py:463:    Verifying        : python3-pip-wheel-21.2.3-6.el9.noarch                                                                                  4/34 
+DEBUG util.py:463:    Verifying        : python3-setuptools-wheel-53.0.0-12.el9.noarch                                                                          5/34 
+DEBUG util.py:463:    Verifying        : libfido2-1.6.0-7.el9.x86_64                                                                                            6/34 
+DEBUG util.py:463:    Verifying        : dos2unix-7.4.2-4.el9.x86_64                                                                                            7/34 
+DEBUG util.py:463:    Verifying        : less-590-2.el9_2.x86_64                                                                                                8/34 
+DEBUG util.py:463:    Verifying        : python3-libs-3.9.16-1.el9_2.2.x86_64                                                                                   9/34 
+DEBUG util.py:463:    Verifying        : python3-3.9.16-1.el9_2.2.x86_64                                                                                       10/34 
+DEBUG util.py:463:    Verifying        : libcbor-0.7.0-5.el9.x86_64                                                                                            11/34 
+DEBUG util.py:463:    Verifying        : openssh-clients-8.7p1-30.el9_2.x86_64                                                                                 12/34 
+DEBUG util.py:463:    Verifying        : openssh-8.7p1-30.el9_2.x86_64                                                                                         13/34 
+DEBUG util.py:463:    Verifying        : openssl-devel-1:3.0.7-17.el9_2.x86_64                                                                                 14/34 
+DEBUG util.py:463:    Verifying        : perl-Error-1:0.17029-7.el9.noarch                                                                                     15/34 
+DEBUG util.py:463:    Verifying        : pesign-115-6.el9_1.rocky.2.x86_64                                                                                     16/34 
+DEBUG util.py:463:    Verifying        : perl-lib-0.65-480.el9.x86_64                                                                                          17/34 
+DEBUG util.py:463:    Verifying        : perl-DynaLoader-1.47-480.el9.x86_64                                                                                   18/34 
+DEBUG util.py:463:    Verifying        : perl-File-Find-1.37-480.el9.noarch                                                                                    19/34 
+DEBUG util.py:463:    Verifying        : elfutils-libelf-devel-0.188-3.el9.x86_64                                                                              20/34 
+DEBUG util.py:463:    Verifying        : nss-util-3.90.0-3.el9_2.x86_64                                                                                        21/34 
+DEBUG util.py:463:    Verifying        : nss-tools-3.90.0-3.el9_2.x86_64                                                                                       22/34 
+DEBUG util.py:463:    Verifying        : nss-sysinit-3.90.0-3.el9_2.x86_64                                                                                     23/34 
+DEBUG util.py:463:    Verifying        : nss-softokn-freebl-3.90.0-3.el9_2.x86_64                                                                              24/34 
+DEBUG util.py:463:    Verifying        : nss-softokn-3.90.0-3.el9_2.x86_64                                                                                     25/34 
+DEBUG util.py:463:    Verifying        : nss-3.90.0-3.el9_2.x86_64                                                                                             26/34 
+DEBUG util.py:463:    Verifying        : nspr-4.35.0-3.el9_2.x86_64                                                                                            27/34 
+DEBUG util.py:463:    Verifying        : emacs-filesystem-1:27.2-8.el9_2.1.noarch                                                                              28/34 
+DEBUG util.py:463:    Verifying        : perl-TermReadKey-2.38-11.el9.x86_64                                                                                   29/34 
+DEBUG util.py:463:    Verifying        : perl-Git-2.39.3-1.el9_2.noarch                                                                                        30/34 
+DEBUG util.py:463:    Verifying        : git-core-doc-2.39.3-1.el9_2.noarch                                                                                    31/34 
+DEBUG util.py:463:    Verifying        : zlib-devel-1.2.11-39.el9.x86_64                                                                                       32/34 
+DEBUG util.py:463:    Verifying        : git-core-2.39.3-1.el9_2.x86_64                                                                                        33/34 
+DEBUG util.py:463:    Verifying        : git-2.39.3-1.el9_2.x86_64                                                                                             34/34 
 DEBUG util.py:463:  Installed:
-DEBUG util.py:463:    crypto-policies-scripts-20221215-1.git9a18988.el9_2.1.noarch                     dos2unix-7.4.2-4.el9.x86_64                                 
-DEBUG util.py:463:    efivar-libs-38-3.el9.x86_64                                                      elfutils-libelf-devel-0.188-3.el9.x86_64                    
-DEBUG util.py:463:    emacs-filesystem-1:27.2-8.el9_2.1.noarch                                         expat-2.5.0-1.el9.x86_64                                    
-DEBUG util.py:463:    git-2.39.3-1.el9_2.x86_64                                                        git-core-2.39.3-1.el9_2.x86_64                              
-DEBUG util.py:463:    git-core-doc-2.39.3-1.el9_2.noarch                                               less-590-2.el9_2.x86_64                                     
-DEBUG util.py:463:    libcbor-0.7.0-5.el9.x86_64                                                       libfido2-1.6.0-7.el9.x86_64                                 
-DEBUG util.py:463:    nspr-4.35.0-3.el9_2.x86_64                                                       nss-3.90.0-3.el9_2.x86_64                                   
-DEBUG util.py:463:    nss-softokn-3.90.0-3.el9_2.x86_64                                                nss-softokn-freebl-3.90.0-3.el9_2.x86_64                    
-DEBUG util.py:463:    nss-sysinit-3.90.0-3.el9_2.x86_64                                                nss-tools-3.90.0-3.el9_2.x86_64                             
-DEBUG util.py:463:    nss-util-3.90.0-3.el9_2.x86_64                                                   openssh-8.7p1-30.el9_2.x86_64                               
-DEBUG util.py:463:    openssh-clients-8.7p1-30.el9_2.x86_64                                            openssl-devel-1:3.0.7-17.el9_2.x86_64                       
-DEBUG util.py:463:    perl-DynaLoader-1.47-480.el9.x86_64                                              perl-Error-1:0.17029-7.el9.noarch                           
-DEBUG util.py:463:    perl-File-Find-1.37-480.el9.noarch                                               perl-Git-2.39.3-1.el9_2.noarch                              
-DEBUG util.py:463:    perl-TermReadKey-2.38-11.el9.x86_64                                              perl-lib-0.65-480.el9.x86_64                                
-DEBUG util.py:463:    pesign-115-6.el9_1.rocky.2.x86_64                                                python3-3.9.16-1.el9_2.2.x86_64                             
-DEBUG util.py:463:    python3-libs-3.9.16-1.el9_2.2.x86_64                                             python3-pip-wheel-21.2.3-6.el9.noarch                       
-DEBUG util.py:463:    python3-setuptools-wheel-53.0.0-12.el9.noarch                                    zlib-devel-1.2.11-39.el9.x86_64                             
+DEBUG util.py:463:    crypto-policies-scripts-20221215-1.git9a18988.el9_2.1.noarch                      dos2unix-7.4.2-4.el9.x86_64                                  
+DEBUG util.py:463:    efivar-libs-38-3.el9.x86_64                                                       elfutils-libelf-devel-0.188-3.el9.x86_64                     
+DEBUG util.py:463:    emacs-filesystem-1:27.2-8.el9_2.1.noarch                                          expat-2.5.0-1.el9.x86_64                                     
+DEBUG util.py:463:    git-2.39.3-1.el9_2.x86_64                                                         git-core-2.39.3-1.el9_2.x86_64                               
+DEBUG util.py:463:    git-core-doc-2.39.3-1.el9_2.noarch                                                less-590-2.el9_2.x86_64                                      
+DEBUG util.py:463:    libcbor-0.7.0-5.el9.x86_64                                                        libfido2-1.6.0-7.el9.x86_64                                  
+DEBUG util.py:463:    nspr-4.35.0-3.el9_2.x86_64                                                        nss-3.90.0-3.el9_2.x86_64                                    
+DEBUG util.py:463:    nss-softokn-3.90.0-3.el9_2.x86_64                                                 nss-softokn-freebl-3.90.0-3.el9_2.x86_64                     
+DEBUG util.py:463:    nss-sysinit-3.90.0-3.el9_2.x86_64                                                 nss-tools-3.90.0-3.el9_2.x86_64                              
+DEBUG util.py:463:    nss-util-3.90.0-3.el9_2.x86_64                                                    openssh-8.7p1-30.el9_2.x86_64                                
+DEBUG util.py:463:    openssh-clients-8.7p1-30.el9_2.x86_64                                             openssl-devel-1:3.0.7-17.el9_2.x86_64                        
+DEBUG util.py:463:    perl-DynaLoader-1.47-480.el9.x86_64                                               perl-Error-1:0.17029-7.el9.noarch                            
+DEBUG util.py:463:    perl-File-Find-1.37-480.el9.noarch                                                perl-Git-2.39.3-1.el9_2.noarch                               
+DEBUG util.py:463:    perl-TermReadKey-2.38-11.el9.x86_64                                               perl-lib-0.65-480.el9.x86_64                                 
+DEBUG util.py:463:    pesign-115-6.el9_1.rocky.2.x86_64                                                 python3-3.9.16-1.el9_2.2.x86_64                              
+DEBUG util.py:463:    python3-libs-3.9.16-1.el9_2.2.x86_64                                              python3-pip-wheel-21.2.3-6.el9.noarch                        
+DEBUG util.py:463:    python3-setuptools-wheel-53.0.0-12.el9.noarch                                     zlib-devel-1.2.11-39.el9.x86_64                              
 DEBUG util.py:463:  Complete!
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:185:  kill orphans in chroot /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
-DEBUG util.py:185:  kill orphans in chroot /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
+DEBUG util.py:185:  kill orphans in chroot /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'private,mode=0755', 'tmpfs', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'private,mode=0755', 'tmpfs', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '--target', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '--target', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: rpm -qa --root '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock' --qf '%{nevra} %{buildtime} %{size} %{pkgid} installed\n' with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell True
@@ -1699,12 +1701,12 @@ DEBUG util.py:463:  openssl-devel-1:3.0.7-17.el9_2.x86_64 1690927837 4880528 da7
 DEBUG util.py:463:  dos2unix-7.4.2-4.el9.x86_64 1652703907 708167 357d3d476cb6ee76d0a1456b5784e190 installed
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:185:  kill orphans in chroot /home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
-DEBUG util.py:185:  kill orphans in chroot /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
+DEBUG util.py:185:  kill orphans in chroot /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
 DEBUG backend.py:821:  Copying packages to result dir
@@ -1739,34 +1741,34 @@ DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/9.2/builder/sb/ciq-shim-build/shim-unsigned-x64-15.8-0.el9-res/mock/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG util.py:185:  kill orphans in chroot /home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root
+DEBUG util.py:185:  kill orphans in chroot /var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/mock/lib/mock/rocky-CIQ-LTS92-x86_64-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0

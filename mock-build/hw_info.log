@@ -13,7 +13,7 @@ Thread(s) per core:                   2
 Core(s) per socket:                   14
 Socket(s):                            1
 Stepping:                             3
-CPU(s) scaling MHz:                   42%
+CPU(s) scaling MHz:                   36%
 CPU max MHz:                          4700.0000
 CPU min MHz:                          400.0000
 BogoMIPS:                             5376.00
@@ -43,11 +43,11 @@ Vulnerability Tsx async abort:        Not affected
 
 Memory:
                total        used        free      shared  buff/cache   available
-Mem:        65240436    35970444     1273684    12066208    40804304    29269992
+Mem:        65240436    35839040     1024624    12120252    41226020    29401396
 Swap:       32821244      691712    32129532
 
 
 Storage (chroot, cache_topdir):
 Filesystem          Type  Size  Used Avail Use% Mounted on
 /dev/mapper/rl-home xfs   1.5T  868G  534G  62% /home
-/dev/mapper/rl-home xfs   1.5T  868G  534G  62% /home
+/dev/mapper/rl-root xfs    76G   62G   14G  82% /
