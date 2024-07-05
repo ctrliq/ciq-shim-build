@@ -1,22 +1,22 @@
 Mock Version: 5.6
-ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bs  --target x86_64 --nodeps /builddir/build/SPECS/shim-unsigned-x64.spec'], chrootPath='/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0x7f35291f6220>timeout=0uid=1000gid=135user='mockbuild'nspawn_args=[]unshare_net=TrueprintOutput=True)
+ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bs  --target x86_64 --nodeps /builddir/build/SPECS/shim-unsigned-x64.spec'], chrootPath='/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0x7f0e210c1820>timeout=0uid=1000gid=135user='mockbuild'nspawn_args=[]unshare_net=TrueprintOutput=True)
 Executing command: ['bash', '--login', '-c', '/usr/bin/rpmbuild -bs  --target x86_64 --nodeps /builddir/build/SPECS/shim-unsigned-x64.spec'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
 Building target platforms: x86_64
 Building for target x86_64
 Wrote: /builddir/build/SRPMS/shim-unsigned-x64-15.8-0.el7.src.rpm
 Child return code was: 0
 Mock Version: 5.6
-ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bs --noclean --target x86_64 --nodeps /builddir/build/SPECS/shim-unsigned-x64.spec'], chrootPath='/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0x7f010c575220>timeout=0uid=1000gid=135user='mockbuild'nspawn_args=[]unshare_net=TrueprintOutput=True)
+ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bs --noclean --target x86_64 --nodeps /builddir/build/SPECS/shim-unsigned-x64.spec'], chrootPath='/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0x7f78ff571820>timeout=0uid=1000gid=135user='mockbuild'nspawn_args=[]unshare_net=TrueprintOutput=True)
 Executing command: ['bash', '--login', '-c', '/usr/bin/rpmbuild -bs --noclean --target x86_64 --nodeps /builddir/build/SPECS/shim-unsigned-x64.spec'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
 Building target platforms: x86_64
 Building for target x86_64
 Wrote: /builddir/build/SRPMS/shim-unsigned-x64-15.8-0.el7.src.rpm
 Child return code was: 0
-ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bb --noclean --target x86_64 --nodeps /builddir/build/SPECS/shim-unsigned-x64.spec'], chrootPath='/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0x7f010c575220>timeout=0uid=1000gid=135user='mockbuild'nspawn_args=[]unshare_net=TrueprintOutput=True)
+ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bb --noclean --target x86_64 --nodeps /builddir/build/SPECS/shim-unsigned-x64.spec'], chrootPath='/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0x7f78ff571820>timeout=0uid=1000gid=135user='mockbuild'nspawn_args=[]unshare_net=TrueprintOutput=True)
 Executing command: ['bash', '--login', '-c', '/usr/bin/rpmbuild -bb --noclean --target x86_64 --nodeps /builddir/build/SPECS/shim-unsigned-x64.spec'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
 Building target platforms: x86_64
 Building for target x86_64
-Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.48qw5H
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.9xdUYg
 + umask 022
 + cd /builddir/build/BUILD
 + cd /builddir/build/BUILD
@@ -32,15 +32,15 @@ Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.48qw5H
 + /usr/bin/git config user.email '<rpm-build>'
 + /usr/bin/git add .
 + /usr/bin/git commit -q -a --author 'rpm-build <rpm-build>' -m 'shim-unsigned-x64-15.8 base'
-+ /usr/bin/git am -q
 + /usr/bin/cat /builddir/build/SOURCES/0001-dos2unix-fix-flags-for-RHEL-7.patch
++ /usr/bin/git am -q
 + git config --unset user.email
 + git config --unset user.name
 + mkdir build-x64
 + mkdir build-ia32
 + cp /builddir/build/SOURCES/sbat.ciq.csv data/
 + exit 0
-Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.q4SK9j
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.QvY3aA
 + umask 022
 + cd /builddir/build/BUILD
 + cd shim-15.8
@@ -559,11 +559,11 @@ mkdir -p /builddir/build/BUILD/shim-15.8/build-x64/gnu-efi/x86_64/inc
 make -C /builddir/build/BUILD/shim-15.8/build-x64/gnu-efi/x86_64/lib -f /builddir/build/BUILD/shim-15.8/gnu-efi//lib/Makefile SRCDIR=/builddir/build/BUILD/shim-15.8/gnu-efi//lib ARCH=x86_64
 make -C /builddir/build/BUILD/shim-15.8/build-x64/gnu-efi/x86_64/inc -f /builddir/build/BUILD/shim-15.8/gnu-efi//inc/Makefile SRCDIR=/builddir/build/BUILD/shim-15.8/gnu-efi//inc ARCH=x86_64
 make[2]: Entering directory `/builddir/build/BUILD/shim-15.8/build-x64/gnu-efi/x86_64/lib'
+gcc -I/builddir/build/BUILD/shim-15.8/gnu-efi//lib -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/x86_64 -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/protocol -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /builddir/build/BUILD/shim-15.8/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -fno-merge-all-constants -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /builddir/build/BUILD/shim-15.8/gnu-efi//lib/boxdraw.c -o boxdraw.o
+gcc -I/builddir/build/BUILD/shim-15.8/gnu-efi//lib -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/x86_64 -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/protocol -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /builddir/build/BUILD/shim-15.8/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -fno-merge-all-constants -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /builddir/build/BUILD/shim-15.8/gnu-efi//lib/smbios.c -o smbios.o
 make[2]: Entering directory `/builddir/build/BUILD/shim-15.8/build-x64/gnu-efi/x86_64/inc'
 make[2]: Nothing to be done for `all'.
 make[2]: Leaving directory `/builddir/build/BUILD/shim-15.8/build-x64/gnu-efi/x86_64/inc'
-gcc -I/builddir/build/BUILD/shim-15.8/gnu-efi//lib -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/x86_64 -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/protocol -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /builddir/build/BUILD/shim-15.8/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -fno-merge-all-constants -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /builddir/build/BUILD/shim-15.8/gnu-efi//lib/boxdraw.c -o boxdraw.o
-gcc -I/builddir/build/BUILD/shim-15.8/gnu-efi//lib -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/x86_64 -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/protocol -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /builddir/build/BUILD/shim-15.8/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -fno-merge-all-constants -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /builddir/build/BUILD/shim-15.8/gnu-efi//lib/smbios.c -o smbios.o
 gcc -I/builddir/build/BUILD/shim-15.8/gnu-efi//lib -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/x86_64 -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/protocol -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /builddir/build/BUILD/shim-15.8/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -fno-merge-all-constants -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /builddir/build/BUILD/shim-15.8/gnu-efi//lib/console.c -o console.o
 gcc -I/builddir/build/BUILD/shim-15.8/gnu-efi//lib -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/x86_64 -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/protocol -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /builddir/build/BUILD/shim-15.8/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -fno-merge-all-constants -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /builddir/build/BUILD/shim-15.8/gnu-efi//lib/crc.c -o crc.o
 gcc -I/builddir/build/BUILD/shim-15.8/gnu-efi//lib -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/x86_64 -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/protocol -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /builddir/build/BUILD/shim-15.8/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -fno-merge-all-constants -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /builddir/build/BUILD/shim-15.8/gnu-efi//lib/data.c -o data.o
@@ -1206,10 +1206,10 @@ mkdir -p /builddir/build/BUILD/shim-15.8/build-ia32/gnu-efi/ia32/lib
 mkdir -p /builddir/build/BUILD/shim-15.8/build-ia32/gnu-efi/ia32/inc
 make -C /builddir/build/BUILD/shim-15.8/build-ia32/gnu-efi/ia32/lib -f /builddir/build/BUILD/shim-15.8/gnu-efi//lib/Makefile SRCDIR=/builddir/build/BUILD/shim-15.8/gnu-efi//lib ARCH=ia32
 make -C /builddir/build/BUILD/shim-15.8/build-ia32/gnu-efi/ia32/inc -f /builddir/build/BUILD/shim-15.8/gnu-efi//inc/Makefile SRCDIR=/builddir/build/BUILD/shim-15.8/gnu-efi//inc ARCH=ia32
+make[2]: Entering directory `/builddir/build/BUILD/shim-15.8/build-ia32/gnu-efi/ia32/lib'
 make[2]: Entering directory `/builddir/build/BUILD/shim-15.8/build-ia32/gnu-efi/ia32/inc'
 make[2]: Nothing to be done for `all'.
 make[2]: Leaving directory `/builddir/build/BUILD/shim-15.8/build-ia32/gnu-efi/ia32/inc'
-make[2]: Entering directory `/builddir/build/BUILD/shim-15.8/build-ia32/gnu-efi/ia32/lib'
 gcc -I/builddir/build/BUILD/shim-15.8/gnu-efi//lib -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/ia32 -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/protocol -Wno-error=pragmas -mno-mmx -mno-sse -mno-avx -fpic -m32 -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /builddir/build/BUILD/shim-15.8/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -fno-merge-all-constants -DCONFIG_ia32 -c /builddir/build/BUILD/shim-15.8/gnu-efi//lib/boxdraw.c -o boxdraw.o
 gcc -I/builddir/build/BUILD/shim-15.8/gnu-efi//lib -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/ia32 -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/protocol -Wno-error=pragmas -mno-mmx -mno-sse -mno-avx -fpic -m32 -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /builddir/build/BUILD/shim-15.8/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -fno-merge-all-constants -DCONFIG_ia32 -c /builddir/build/BUILD/shim-15.8/gnu-efi//lib/smbios.c -o smbios.o
 gcc -I/builddir/build/BUILD/shim-15.8/gnu-efi//lib -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/ia32 -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/protocol -Wno-error=pragmas -mno-mmx -mno-sse -mno-avx -fpic -m32 -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /builddir/build/BUILD/shim-15.8/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -fno-merge-all-constants -DCONFIG_ia32 -c /builddir/build/BUILD/shim-15.8/gnu-efi//lib/console.c -o console.o
@@ -1345,7 +1345,7 @@ fix_timestamp():375: Updating timestamp from 0x0000004b to 0
 fix_checksum():413: Updating checksum from 0x0001b223 to 0x0001b1d8
 + cd ..
 + exit 0
-Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.UPYLcn
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.Z8QSQk
 + umask 022
 + cd /builddir/build/BUILD
 + '[' /builddir/build/BUILDROOT/shim-unsigned-x64-15.8-0.el7.x86_64 '!=' / ']'
@@ -1413,7 +1413,7 @@ done
 + /usr/lib/rpm/redhat/brp-python-hardlink
 + /usr/lib/rpm/redhat/brp-java-repack-jars
 Processing files: shim-unsigned-x64-15.8-0.el7.x86_64
-Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.MaKMaF
+Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.ywOkTj
 + umask 022
 + cd /builddir/build/BUILD
 + cd shim-15.8
@@ -1425,7 +1425,7 @@ Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.MaKMaF
 Provides: bundled(openssl) = 1.0.2j shim-unsigned-x64 = 15.8-0.el7 shim-unsigned-x64(x86-64) = 15.8-0.el7
 Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
 Processing files: shim-unsigned-ia32-15.8-0.el7.x86_64
-Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.YtJDaX
+Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.n0gHXi
 + umask 022
 + cd /builddir/build/BUILD
 + cd shim-15.8

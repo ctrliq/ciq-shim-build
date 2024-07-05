@@ -1,128 +1,128 @@
 INFO buildroot.py:605:  Mock Version: 5.6
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
 DEBUG file_util.py:21:  created dir: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/results
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/results
 INFO buildroot.py:284:  calling preinit hooks
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/cache/mock/centos-7-x86_64-bootstrap/root_cache/
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/cache/mock/centos-7-x86_64-bootstrap/yum_cache
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/cache/mock/centos-7-x86_64-bootstrap/dnf_cache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/cache/mock/centos-7-x86_64_ciqshim-bootstrap/root_cache/
+DEBUG file_util.py:18:  ensuring that dir exists: /var/cache/mock/centos-7-x86_64_ciqshim-bootstrap/yum_cache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/cache/mock/centos-7-x86_64_ciqshim-bootstrap/dnf_cache
 DEBUG buildroot.py:661:  create skeleton dirs
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/lib/rpm
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/lib/yum
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/lib/dbus
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/log
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/cache/dnf
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/cache/yum
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/rpm
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/tmp
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/tmp/ccache
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/tmp
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/dnf
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/dnf/vars
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/yum.repos.d
-DEBUG file_util.py:21:  created dir: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/yum.repos.d
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/yum
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/proc
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/sys
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/dev/pts
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/dev/shm
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/dev/mapper
-DEBUG file_util.py:21:  created dir: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/dev/mapper
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/lib/rpm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/lib/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/lib/dbus
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/log
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/cache/dnf
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/cache/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/rpm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/tmp
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/tmp/ccache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/tmp
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/dnf
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/dnf/vars
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/yum.repos.d
+DEBUG file_util.py:21:  created dir: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/yum.repos.d
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/proc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/sys
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/dev/pts
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/dev/shm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/dev/mapper
+DEBUG file_util.py:21:  created dir: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/dev/mapper
 DEBUG buildroot.py:805:  kernel version == 6.1.92-1.el9.elrepo.x86_64
-DEBUG file_util.py:30:  touching file: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/fstab
-DEBUG file_util.py:30:  touching file: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/yum/yum.conf
-DEBUG file_util.py:30:  touching file: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/dnf/dnf.conf
-DEBUG file_util.py:30:  touching file: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/log/yum.log
-DEBUG buildroot.py:298:  rootdir = /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root
-DEBUG buildroot.py:299:  resultdir = /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/results
+DEBUG file_util.py:30:  touching file: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/fstab
+DEBUG file_util.py:30:  touching file: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/yum/yum.conf
+DEBUG file_util.py:30:  touching file: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/dnf/dnf.conf
+DEBUG file_util.py:30:  touching file: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/log/yum.log
+DEBUG buildroot.py:298:  rootdir = /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root
+DEBUG buildroot.py:299:  resultdir = /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/results
 DEBUG package_manager.py:56:  searching for 'yum' package manager or alternatives
 INFO buildroot.py:174:  Package manager yum detected and used (fallback)
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/pki/mock
-DEBUG file_util.py:158:  Updating files in /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/pki/ca-trust with files from /etc/pki/ca-trust
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/pki/ca-trust
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/pki/ca-trust/./extracted
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/pki/ca-trust/./source
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/pki/ca-trust/extracted/edk2
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/pki/ca-trust/extracted/java
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/pki/ca-trust/extracted/openssl
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/pki/ca-trust/extracted/pem
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/pki/ca-trust/source/anchors
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/pki/ca-trust/source/blocklist
-DEBUG file_util.py:158:  Updating files in /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/usr/share/pki/ca-trust-source with files from /usr/share/pki/ca-trust-source
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/usr/share/pki/ca-trust-source
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/usr/share/pki/ca-trust-source/./anchors
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/usr/share/pki/ca-trust-source/./blocklist
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/usr/share
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/pki/mock
+DEBUG file_util.py:158:  Updating files in /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust with files from /etc/pki/ca-trust
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/./extracted
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/./source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/extracted/edk2
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/extracted/java
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/extracted/openssl
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/extracted/pem
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/source/anchors
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/source/blocklist
+DEBUG file_util.py:158:  Updating files in /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/usr/share/pki/ca-trust-source with files from /usr/share/pki/ca-trust-source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/usr/share/pki/ca-trust-source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/usr/share/pki/ca-trust-source/./anchors
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/usr/share/pki/ca-trust-source/./blocklist
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/usr/share
 DEBUG package_manager.py:382:  Copying /usr/share/distribution-gpg-keys to the bootstrap chroot
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['cp', '-a', '/usr/share/distribution-gpg-keys', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/usr/share'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['cp', '-a', '/usr/share/distribution-gpg-keys', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/usr/share'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/yum/pluginconf.d
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/yum/pluginconf.d
 DEBUG package_manager.py:623:  configure yum
 DEBUG package_manager.py:635:  configure yum priorities
 DEBUG package_manager.py:637:  configure yum rhnplugin
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/proc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/proc
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/proc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/proc
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/proc', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:610:  Child return code was: 0
-DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/sys
-DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/sys
-DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/sys', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/proc', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/dev/shm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/sys
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/dev/pts
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/sys
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/sys', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.lyfac3wv', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/sys/fs/selinux
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/dev/shm
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/cache/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/dev/pts
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/home/jrodriguez/automation/share/EL7/mock/cache/mock/centos-7-x86_64-bootstrap/yum_cache', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/cache/dnf
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/home/jrodriguez/automation/share/EL7/mock/cache/mock/centos-7-x86_64-bootstrap/dnf_cache', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.2gl4bpyd', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/sys/fs/selinux
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/cache/yum
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/centos-7-x86_64_ciqshim-bootstrap/yum_cache', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/cache/dnf
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/centos-7-x86_64_ciqshim-bootstrap/dnf_cache', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc
 DEBUG buildroot.py:38:  method _cleanup_homedir skipped in bootstrap
 DEBUG buildroot.py:38:  method _setup_build_dirs skipped in bootstrap
 DEBUG buildroot.py:38:  method _make_users skipped in bootstrap
-DEBUG file_util.py:30:  touching file: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/.initialized
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64
+DEBUG file_util.py:30:  touching file: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/.initialized
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res
 INFO buildroot.py:284:  calling preinit hooks
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/cache/mock/centos-7-x86_64/root_cache/
+DEBUG file_util.py:18:  ensuring that dir exists: /var/cache/mock/centos-7-x86_64_ciqshim/root_cache/
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/tar', '--use-compress-program', 'pigz', '-xf', '/home/jrodriguez/automation/share/EL7/mock/cache/mock/centos-7-x86_64/root_cache/cache.tar.gz', '-C', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/tar', '--use-compress-program', 'pigz', '-xf', '/var/cache/mock/centos-7-x86_64_ciqshim/root_cache/cache.tar.gz', '-C', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/./proc
 DEBUG file_util.py:21:  created dir: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/./proc
@@ -138,8 +138,8 @@ DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/sh
 DEBUG file_util.py:21:  created dir: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/./var/cache/dnf
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/./var/log
 DEBUG file_util.py:21:  created dir: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/./var/log
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/cache/mock/centos-7-x86_64/yum_cache
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/cache/mock/centos-7-x86_64/dnf_cache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/cache/mock/centos-7-x86_64_ciqshim/yum_cache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/cache/mock/centos-7-x86_64_ciqshim/dnf_cache
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/usr/bin/lscpu'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:463:  Architecture:                         x86_64
@@ -156,7 +156,7 @@ DEBUG util.py:463:  Thread(s) per core:                   2
 DEBUG util.py:463:  Core(s) per socket:                   14
 DEBUG util.py:463:  Socket(s):                            1
 DEBUG util.py:463:  Stepping:                             3
-DEBUG util.py:463:  CPU(s) scaling MHz:                   51%
+DEBUG util.py:463:  CPU(s) scaling MHz:                   44%
 DEBUG util.py:463:  CPU max MHz:                          4700.0000
 DEBUG util.py:463:  CPU min MHz:                          400.0000
 DEBUG util.py:463:  BogoMIPS:                             5376.00
@@ -186,14 +186,14 @@ DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/bin/free'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:463:                 total        used        free      shared  buff/cache   available
-DEBUG util.py:463:  Mem:        65240436    35986980     1681376    12101000    40402196    29253456
+DEBUG util.py:463:  Mem:        65240436    35856868     1099188    12054068    41075760    29383568
 DEBUG util.py:463:  Swap:       32821244      691712    32129532
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/df', '-H', '-T', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock', '/home/jrodriguez/automation/share/EL7/mock/cache/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/df', '-H', '-T', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock', '/var/cache/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:463:  Filesystem          Type  Size  Used Avail Use% Mounted on
-DEBUG util.py:463:  /dev/mapper/rl-home xfs   1.5T  870G  532G  63% /home
-DEBUG util.py:463:  /dev/mapper/rl-home xfs   1.5T  870G  532G  63% /home
+DEBUG util.py:463:  /dev/mapper/rl-home xfs   1.5T  869G  534G  62% /home
+DEBUG util.py:463:  /dev/mapper/rl-root xfs    76G   61G   15G  81% /
 DEBUG util.py:610:  Child return code was: 0
 DEBUG buildroot.py:661:  create skeleton dirs
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/var/lib/rpm
@@ -276,7 +276,7 @@ DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.u0dn7iil', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.0a4devrh', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/sys/fs/selinux
 DEBUG util.py:636:  child environment: None
@@ -284,11 +284,11 @@ DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpf
 DEBUG util.py:610:  Child return code was: 0
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/var/cache/yum
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/home/jrodriguez/automation/share/EL7/mock/cache/mock/centos-7-x86_64/yum_cache', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/centos-7-x86_64_ciqshim/yum_cache', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/var/cache/dnf
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/home/jrodriguez/automation/share/EL7/mock/cache/mock/centos-7-x86_64/dnf_cache', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/centos-7-x86_64_ciqshim/dnf_cache', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['rpm', '-q', 'rpm', 'rpm-sequoia', 'python3-dnf', 'python3-dnf-plugins-core', 'yum', 'yum-utils', 'dnf5', 'dnf5-plugins'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
@@ -305,21 +305,22 @@ INFO package_manager.py:195:  Buildroot is handled by package management downloa
   rpm-4.11.3-45.el7.x86_64
   yum-3.4.3-168.el7.centos.noarch
   yum-utils-1.1.31-54.el7_8.noarch
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
+DEBUG file_util.py:21:  created dir: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'private,mode=0755', 'tmpfs', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'private,mode=0755', 'tmpfs', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '--target', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '--target', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG buildroot.py:624:  removing 3 rpm db files
-DEBUG buildroot.py:629:  nuke_rpm_db: removing /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/lib/rpm/__db.001
-DEBUG buildroot.py:629:  nuke_rpm_db: removing /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/lib/rpm/__db.002
-DEBUG buildroot.py:629:  nuke_rpm_db: removing /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/lib/rpm/__db.003
+DEBUG buildroot.py:629:  nuke_rpm_db: removing /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/lib/rpm/__db.001
+DEBUG buildroot.py:629:  nuke_rpm_db: removing /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/lib/rpm/__db.002
+DEBUG buildroot.py:629:  nuke_rpm_db: removing /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/lib/rpm/__db.003
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/bin/rpm', '-qa', '--root', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:463:  libgcc-4.8.5-44.el7.x86_64
@@ -497,23 +498,23 @@ DEBUG util.py:463:  gcc-c++-4.8.5-44.el7.x86_64
 DEBUG util.py:463:  make-3.82-24.el7.x86_64
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:185:  kill orphans in chroot /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
-DEBUG util.py:185:  kill orphans in chroot /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
+DEBUG util.py:185:  kill orphans in chroot /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'private,mode=0755', 'tmpfs', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'private,mode=0755', 'tmpfs', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '--target', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '--target', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/installation-homedir
 DEBUG package_manager.py:289:  ['/usr/bin/yum', '--installroot', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/', '-y', '--releasever', '7', 'update']
@@ -526,23 +527,23 @@ DEBUG util.py:463:  updates                                                     
 DEBUG util.py:463:  No packages marked for update
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:185:  kill orphans in chroot /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
-DEBUG util.py:185:  kill orphans in chroot /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
+DEBUG util.py:185:  kill orphans in chroot /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'private,mode=0755', 'tmpfs', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'private,mode=0755', 'tmpfs', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '--target', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '--target', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/bin/rpm', '-qa', '--root', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
@@ -721,12 +722,12 @@ DEBUG util.py:463:  gcc-c++-4.8.5-44.el7.x86_64
 DEBUG util.py:463:  make-3.82-24.el7.x86_64
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:185:  kill orphans in chroot /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
-DEBUG util.py:185:  kill orphans in chroot /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
+DEBUG util.py:185:  kill orphans in chroot /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/builddir/build
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/builddir/build/RPMS
@@ -793,163 +794,163 @@ DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['btrfs', 'subv', 'list', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:185:  kill orphans in chroot /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root
+DEBUG util.py:558:  Executing command: ['btrfs', 'subv', 'list', '/var/lib/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:185:  kill orphans in chroot /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 INFO buildroot.py:605:  Mock Version: 5.6
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
 DEBUG file_util.py:21:  created dir: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/results
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/results
 INFO buildroot.py:284:  calling preinit hooks
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/cache/mock/centos-7-x86_64-bootstrap/root_cache/
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/cache/mock/centos-7-x86_64-bootstrap/yum_cache
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/cache/mock/centos-7-x86_64-bootstrap/dnf_cache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/cache/mock/centos-7-x86_64_ciqshim-bootstrap/root_cache/
+DEBUG file_util.py:18:  ensuring that dir exists: /var/cache/mock/centos-7-x86_64_ciqshim-bootstrap/yum_cache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/cache/mock/centos-7-x86_64_ciqshim-bootstrap/dnf_cache
 DEBUG buildroot.py:661:  create skeleton dirs
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/lib/rpm
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/lib/yum
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/lib/dbus
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/log
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/cache/dnf
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/cache/yum
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/rpm
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/tmp
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/tmp/ccache
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/tmp
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/dnf
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/dnf/vars
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/yum.repos.d
-DEBUG file_util.py:21:  created dir: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/yum.repos.d
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/yum
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/proc
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/sys
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/dev/pts
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/dev/shm
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/dev/mapper
-DEBUG file_util.py:21:  created dir: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/dev/mapper
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/lib/rpm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/lib/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/lib/dbus
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/log
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/cache/dnf
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/cache/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/rpm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/tmp
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/tmp/ccache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/tmp
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/dnf
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/dnf/vars
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/yum.repos.d
+DEBUG file_util.py:21:  created dir: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/yum.repos.d
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/proc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/sys
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/dev/pts
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/dev/shm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/dev/mapper
+DEBUG file_util.py:21:  created dir: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/dev/mapper
 DEBUG buildroot.py:805:  kernel version == 6.1.92-1.el9.elrepo.x86_64
-DEBUG file_util.py:30:  touching file: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/fstab
-DEBUG file_util.py:30:  touching file: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/yum/yum.conf
-DEBUG file_util.py:30:  touching file: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/dnf/dnf.conf
-DEBUG file_util.py:30:  touching file: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/log/yum.log
-DEBUG buildroot.py:298:  rootdir = /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root
-DEBUG buildroot.py:299:  resultdir = /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/results
+DEBUG file_util.py:30:  touching file: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/fstab
+DEBUG file_util.py:30:  touching file: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/yum/yum.conf
+DEBUG file_util.py:30:  touching file: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/dnf/dnf.conf
+DEBUG file_util.py:30:  touching file: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/log/yum.log
+DEBUG buildroot.py:298:  rootdir = /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root
+DEBUG buildroot.py:299:  resultdir = /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/results
 DEBUG package_manager.py:56:  searching for 'yum' package manager or alternatives
 INFO buildroot.py:174:  Package manager yum detected and used (fallback)
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/pki/mock
-DEBUG file_util.py:158:  Updating files in /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/pki/ca-trust with files from /etc/pki/ca-trust
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/pki/ca-trust
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/pki/ca-trust/./extracted
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/pki/ca-trust/./source
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/pki/ca-trust/extracted/edk2
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/pki/ca-trust/extracted/java
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/pki/ca-trust/extracted/openssl
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/pki/ca-trust/extracted/pem
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/pki/ca-trust/source/anchors
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/pki/ca-trust/source/blocklist
-DEBUG file_util.py:158:  Updating files in /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/usr/share/pki/ca-trust-source with files from /usr/share/pki/ca-trust-source
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/usr/share/pki/ca-trust-source
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/usr/share/pki/ca-trust-source/./anchors
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/usr/share/pki/ca-trust-source/./blocklist
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/usr/share
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/pki/mock
+DEBUG file_util.py:158:  Updating files in /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust with files from /etc/pki/ca-trust
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/./extracted
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/./source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/extracted/edk2
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/extracted/java
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/extracted/openssl
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/extracted/pem
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/source/anchors
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/pki/ca-trust/source/blocklist
+DEBUG file_util.py:158:  Updating files in /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/usr/share/pki/ca-trust-source with files from /usr/share/pki/ca-trust-source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/usr/share/pki/ca-trust-source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/usr/share/pki/ca-trust-source/./anchors
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/usr/share/pki/ca-trust-source/./blocklist
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/usr/share
 DEBUG package_manager.py:382:  Copying /usr/share/distribution-gpg-keys to the bootstrap chroot
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['cp', '-a', '/usr/share/distribution-gpg-keys', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/usr/share'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['cp', '-a', '/usr/share/distribution-gpg-keys', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/usr/share'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc/yum/pluginconf.d
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc/yum/pluginconf.d
 DEBUG package_manager.py:623:  configure yum
 DEBUG package_manager.py:635:  configure yum priorities
 DEBUG package_manager.py:637:  configure yum rhnplugin
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/proc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/proc
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/proc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/proc
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/proc', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:610:  Child return code was: 0
-DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/sys
-DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/sys
-DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/sys', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/proc', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/dev/shm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/sys
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/dev/pts
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/sys
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/sys', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.ezpb6blw', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/sys/fs/selinux
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/dev/shm
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/cache/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/dev/pts
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/home/jrodriguez/automation/share/EL7/mock/cache/mock/centos-7-x86_64-bootstrap/yum_cache', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/cache/dnf
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/home/jrodriguez/automation/share/EL7/mock/cache/mock/centos-7-x86_64-bootstrap/dnf_cache', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.tn8ke60e', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/etc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/sys/fs/selinux
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/cache/yum
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/centos-7-x86_64_ciqshim-bootstrap/yum_cache', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/cache/dnf
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/centos-7-x86_64_ciqshim-bootstrap/dnf_cache', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/etc
 DEBUG buildroot.py:38:  method _cleanup_homedir skipped in bootstrap
 DEBUG buildroot.py:38:  method _setup_build_dirs skipped in bootstrap
 DEBUG buildroot.py:38:  method _make_users skipped in bootstrap
-DEBUG file_util.py:30:  touching file: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/.initialized
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64
+DEBUG file_util.py:30:  touching file: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/.initialized
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res
 INFO buildroot.py:284:  calling preinit hooks
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/cache/mock/centos-7-x86_64/root_cache/
+DEBUG file_util.py:18:  ensuring that dir exists: /var/cache/mock/centos-7-x86_64_ciqshim/root_cache/
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/tar', '--use-compress-program', 'pigz', '-xf', '/home/jrodriguez/automation/share/EL7/mock/cache/mock/centos-7-x86_64/root_cache/cache.tar.gz', '-C', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/tar', '--use-compress-program', 'pigz', '-xf', '/var/cache/mock/centos-7-x86_64_ciqshim/root_cache/cache.tar.gz', '-C', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/./proc
 DEBUG file_util.py:21:  created dir: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/./proc
@@ -965,8 +966,8 @@ DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/sh
 DEBUG file_util.py:21:  created dir: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/./var/cache/dnf
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/./var/log
 DEBUG file_util.py:21:  created dir: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/./var/log
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/cache/mock/centos-7-x86_64/yum_cache
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/cache/mock/centos-7-x86_64/dnf_cache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/cache/mock/centos-7-x86_64_ciqshim/yum_cache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/cache/mock/centos-7-x86_64_ciqshim/dnf_cache
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/usr/bin/lscpu'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:463:  Architecture:                         x86_64
@@ -983,7 +984,7 @@ DEBUG util.py:463:  Thread(s) per core:                   2
 DEBUG util.py:463:  Core(s) per socket:                   14
 DEBUG util.py:463:  Socket(s):                            1
 DEBUG util.py:463:  Stepping:                             3
-DEBUG util.py:463:  CPU(s) scaling MHz:                   49%
+DEBUG util.py:463:  CPU(s) scaling MHz:                   55%
 DEBUG util.py:463:  CPU max MHz:                          4700.0000
 DEBUG util.py:463:  CPU min MHz:                          400.0000
 DEBUG util.py:463:  BogoMIPS:                             5376.00
@@ -1013,14 +1014,14 @@ DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/bin/free'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:463:                 total        used        free      shared  buff/cache   available
-DEBUG util.py:463:  Mem:        65240436    36009248     1656364    12125192    40429444    29231188
+DEBUG util.py:463:  Mem:        65240436    35838660     1124928    12029876    41035832    29401776
 DEBUG util.py:463:  Swap:       32821244      691712    32129532
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/df', '-H', '-T', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock', '/home/jrodriguez/automation/share/EL7/mock/cache/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/df', '-H', '-T', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock', '/var/cache/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:463:  Filesystem          Type  Size  Used Avail Use% Mounted on
-DEBUG util.py:463:  /dev/mapper/rl-home xfs   1.5T  871G  532G  63% /home
-DEBUG util.py:463:  /dev/mapper/rl-home xfs   1.5T  871G  532G  63% /home
+DEBUG util.py:463:  /dev/mapper/rl-home xfs   1.5T  869G  534G  62% /home
+DEBUG util.py:463:  /dev/mapper/rl-root xfs    76G   61G   15G  81% /
 DEBUG util.py:610:  Child return code was: 0
 DEBUG buildroot.py:661:  create skeleton dirs
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/var/lib/rpm
@@ -1103,7 +1104,7 @@ DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.4sg9zspy', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.s1ixb2va', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/sys/fs/selinux
 DEBUG util.py:636:  child environment: None
@@ -1111,11 +1112,11 @@ DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpf
 DEBUG util.py:610:  Child return code was: 0
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/var/cache/yum
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/home/jrodriguez/automation/share/EL7/mock/cache/mock/centos-7-x86_64/yum_cache', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/centos-7-x86_64_ciqshim/yum_cache', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/var/cache/dnf
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/home/jrodriguez/automation/share/EL7/mock/cache/mock/centos-7-x86_64/dnf_cache', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/centos-7-x86_64_ciqshim/dnf_cache', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['rpm', '-q', 'rpm', 'rpm-sequoia', 'python3-dnf', 'python3-dnf-plugins-core', 'yum', 'yum-utils', 'dnf5', 'dnf5-plugins'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
@@ -1183,16 +1184,16 @@ DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: case $(rpmbuild --help) in *--noclean*) exit 0; esac; exit 1 with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell True
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'private,mode=0755', 'tmpfs', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'private,mode=0755', 'tmpfs', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '--target', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '--target', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/installation-homedir
 DEBUG package_manager.py:289:  ['/usr/bin/yum-builddep', '--installroot', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/', '--releasever', '7', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock//builddir/build/SRPMS/shim-unsigned-x64-15.8-0.el7.src.rpm']
@@ -1336,9 +1337,49 @@ DEBUG util.py:463:   zlib-devel                              x86_64             
 DEBUG util.py:463:  Transaction Summary
 DEBUG util.py:463:  ============================================================================================================================================
 DEBUG util.py:463:  Install  11 Packages (+27 Dependent packages)
-DEBUG util.py:463:  Total size: 18 M
+DEBUG util.py:463:  Total download size: 18 M
 DEBUG util.py:463:  Installed size: 63 M
 DEBUG util.py:463:  Downloading packages:
+DEBUG util.py:463:  (1/38): dos2unix-6.0.3-7.el7.x86_64.rpm                                                                              |  74 kB  00:00:00     
+DEBUG util.py:463:  (2/38): coolkey-1.1.0-40.el7.x86_64.rpm                                                                              | 116 kB  00:00:00     
+DEBUG util.py:463:  (3/38): efivar-devel-36-12.el7.x86_64.rpm                                                                            |  27 kB  00:00:00     
+DEBUG util.py:463:  (4/38): efivar-libs-36-12.el7.x86_64.rpm                                                                             |  88 kB  00:00:00     
+DEBUG util.py:463:  (5/38): elfutils-libelf-devel-0.176-5.el7.x86_64.rpm                                                                 |  40 kB  00:00:00     
+DEBUG util.py:463:  (6/38): fipscheck-1.4.1-6.el7.x86_64.rpm                                                                             |  21 kB  00:00:00     
+DEBUG util.py:463:  (7/38): fipscheck-lib-1.4.1-6.el7.x86_64.rpm                                                                         |  11 kB  00:00:00     
+DEBUG util.py:463:  (8/38): gnu-efi-3.0.8-2.el7.x86_64.rpm                                                                               |  66 kB  00:00:00     
+DEBUG util.py:463:  (9/38): gnu-efi-devel-3.0.8-2.el7.x86_64.rpm                                                                         | 109 kB  00:00:00     
+DEBUG util.py:463:  (10/38): keyutils-libs-devel-1.5.8-3.el7.x86_64.rpm                                                                  |  37 kB  00:00:00     
+DEBUG util.py:463:  (11/38): krb5-devel-1.15.1-55.el7_9.x86_64.rpm                                                                       | 273 kB  00:00:00     
+DEBUG util.py:463:  (12/38): less-458-10.el7_9.x86_64.rpm                                                                                | 120 kB  00:00:00     
+DEBUG util.py:463:  (13/38): libcom_err-devel-1.42.9-19.el7.x86_64.rpm                                                                   |  32 kB  00:00:00     
+DEBUG util.py:463:  (14/38): libkadm5-1.15.1-55.el7_9.x86_64.rpm                                                                         | 180 kB  00:00:00     
+DEBUG util.py:463:  (15/38): libselinux-devel-2.5-15.el7.x86_64.rpm                                                                      | 187 kB  00:00:00     
+DEBUG util.py:463:  (16/38): libsepol-devel-2.5-10.el7.x86_64.rpm                                                                        |  77 kB  00:00:00     
+DEBUG util.py:463:  (17/38): libedit-3.0-12.20121213cvs.el7.x86_64.rpm                                                                   |  92 kB  00:00:00     
+DEBUG util.py:463:  (18/38): libusbx-1.0.21-1.el7.x86_64.rpm                                                                             |  61 kB  00:00:00     
+DEBUG util.py:463:  (19/38): libverto-devel-0.2.5-4.el7.x86_64.rpm                                                                       |  12 kB  00:00:00     
+DEBUG util.py:463:  (20/38): git-1.8.3.1-25.el7_9.x86_64.rpm                                                                             | 4.4 MB  00:00:00     
+DEBUG util.py:463:  (21/38): openssh-7.4p1-23.el7_9.x86_64.rpm                                                                           | 510 kB  00:00:00     
+DEBUG util.py:463:  (22/38): opensc-0.19.0-4.el7_9.x86_64.rpm                                                                            | 1.1 MB  00:00:00     
+DEBUG util.py:463:  (23/38): openssh-clients-7.4p1-23.el7_9.x86_64.rpm                                                                   | 655 kB  00:00:00     
+DEBUG util.py:463:  (24/38): openssl-1.0.2k-26.el7_9.x86_64.rpm                                                                          | 494 kB  00:00:00     
+DEBUG util.py:463:  (25/38): pcsc-lite-1.8.8-8.el7.x86_64.rpm                                                                            | 190 kB  00:00:00     
+DEBUG util.py:463:  (26/38): pcre-devel-8.32-17.el7.x86_64.rpm                                                                           | 480 kB  00:00:00     
+DEBUG util.py:463:  (27/38): pcsc-lite-libs-1.8.8-8.el7.x86_64.rpm                                                                       |  34 kB  00:00:00     
+DEBUG util.py:463:  (28/38): perl-Error-0.17020-2.el7.noarch.rpm                                                                         |  32 kB  00:00:00     
+DEBUG util.py:463:  (29/38): perl-TermReadKey-2.30-20.el7.x86_64.rpm                                                                     |  31 kB  00:00:00     
+DEBUG util.py:463:  (30/38): openssl-devel-1.0.2k-26.el7_9.x86_64.rpm                                                                    | 1.5 MB  00:00:00     
+DEBUG util.py:463:  (31/38): pesign-0.109-11.el7_9.x86_64.rpm                                                                            |  89 kB  00:00:00     
+DEBUG util.py:463:  (32/38): perl-Git-1.8.3.1-25.el7_9.noarch.rpm                                                                        |  56 kB  00:00:00     
+DEBUG util.py:463:  (33/38): python-2.7.5-94.el7_9.x86_64.rpm                                                                            |  97 kB  00:00:00     
+DEBUG util.py:463:  (34/38): pcsc-lite-ccid-1.4.10-15.el7.x86_64.rpm                                                                     | 160 kB  00:00:00     
+DEBUG util.py:463:  (35/38): rsync-3.1.2-12.el7_9.x86_64.rpm                                                                             | 408 kB  00:00:00     
+DEBUG util.py:463:  (36/38): vim-filesystem-7.4.629-8.el7_9.x86_64.rpm                                                                   |  11 kB  00:00:00     
+DEBUG util.py:463:  (37/38): zlib-devel-1.2.7-21.el7_9.x86_64.rpm                                                                        |  50 kB  00:00:00     
+DEBUG util.py:463:  (38/38): vim-common-7.4.629-8.el7_9.x86_64.rpm                                                                       | 5.9 MB  00:00:01     
+DEBUG util.py:463:  --------------------------------------------------------------------------------------------------------------------------------------------
+DEBUG util.py:463:  Total                                                                                                       4.6 MB/s |  18 MB  00:00:03     
 DEBUG util.py:463:  Running transaction check
 DEBUG util.py:463:  Running transaction test
 DEBUG util.py:463:  Transaction test succeeded
@@ -1437,28 +1478,28 @@ DEBUG util.py:463:    rsync.x86_64 0:3.1.2-12.el7_9                   vim-filesy
 DEBUG util.py:463:  Complete!
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:185:  kill orphans in chroot /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
-DEBUG util.py:185:  kill orphans in chroot /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
+DEBUG util.py:185:  kill orphans in chroot /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'private,mode=0755', 'tmpfs', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'private,mode=0755', 'tmpfs', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '--target', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '--target', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG buildroot.py:624:  removing 3 rpm db files
-DEBUG buildroot.py:629:  nuke_rpm_db: removing /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/lib/rpm/__db.001
-DEBUG buildroot.py:629:  nuke_rpm_db: removing /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/lib/rpm/__db.002
-DEBUG buildroot.py:629:  nuke_rpm_db: removing /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/lib/rpm/__db.003
+DEBUG buildroot.py:629:  nuke_rpm_db: removing /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/lib/rpm/__db.001
+DEBUG buildroot.py:629:  nuke_rpm_db: removing /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/lib/rpm/__db.002
+DEBUG buildroot.py:629:  nuke_rpm_db: removing /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/lib/rpm/__db.003
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: rpm -qa --root '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock' --qf '%{nevra} %{buildtime} %{size} %{pkgid} installed\n' with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell True
 DEBUG util.py:463:  libgcc-4.8.5-44.el7.x86_64 1601433759 179272 e4efbc19aadbde022dd8a1eb4b585087 installed
@@ -1674,12 +1715,12 @@ DEBUG util.py:463:  elfutils-libelf-devel-0.176-5.el7.x86_64 1601569823 32750 2e
 DEBUG util.py:463:  dos2unix-6.0.3-7.el7.x86_64 1501720806 194352 92e1f05ebc39e3f70d2d26fdf0a7e0ec installed
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:185:  kill orphans in chroot /home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
-DEBUG util.py:185:  kill orphans in chroot /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
+DEBUG util.py:185:  kill orphans in chroot /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
 DEBUG backend.py:821:  Copying packages to result dir
@@ -1714,34 +1755,34 @@ DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/shim-unsigned-x64-15.8-0.el7-res/mock/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG util.py:185:  kill orphans in chroot /home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root
+DEBUG util.py:185:  kill orphans in chroot /var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/home/jrodriguez/automation/share/EL7/mock/lib/mock/centos-7-x86_64-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64_ciqshim-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
