@@ -342,9 +342,7 @@ We currently use the same version as Centos - 2.02-0.87.el7.14 .  Subject to min
 *******************************************************************************
 ### If your SHIM launches any other components, please provide further details on what is launched.
 *******************************************************************************
-We have successfully packaged and tested a CentosLinux version of certwrapper (formerly certmule).  That is, a certwrapper package signed by us, but containing the Centos Linux CA.
-
-This seems perfect for our use-case, as the default Centos grub2 + fwupate upstream packages could be used by customers as-is without the need for recompilation or re-signing.
+N/a, at one point we considered using certwrapper, but decided against it considering the CentOS 7 CA is expiring and the upstream components are receiving no new updates.
 
 
 *******************************************************************************
@@ -385,4 +383,4 @@ Jason Rodriguez has contributed to the review process of other submissions, he s
 *******************************************************************************
 ### Add any additional information you think we may need to validate this shim signing application.
 *******************************************************************************
-No extra info, just some questions about using certwrapper to trust upstream distro components - hoping others look into this really useful tool as well.
+N/a
