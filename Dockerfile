@@ -2,7 +2,7 @@
 #
 # It inserts a static repo for buildtime deps, then performs the rpmbuild/compilation, then outputs a comparison of binaries
 # 
-# Build and tag locally with:   docker build --tag ciq-shim-review:8 ./
+# Build and tag locally with:   docker build --tag ciq-shim-review:9 ./
 #
 
 FROM --platform=linux/arm64 rockylinux/rockylinux:9.2 AS arm64
