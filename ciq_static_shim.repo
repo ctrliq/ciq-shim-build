@@ -1,20 +1,20 @@
-[rocky-appstream-86]
-name=Rocky Linux 8.6 AppStream
-baseurl=https://dl.rockylinux.org/vault/rocky/8.6/AppStream/aarch64/os/
+[rocky-appstream-88]
+name=Rocky Linux 8.8 AppStream
+baseurl=https://dl.rockylinux.org/vault/rocky/8.8/AppStream/aarch64/os/
 gpgcheck=1
 enabled=1
 gpgkey=https://dl.rockylinux.org/pub/rocky/RPM-GPG-KEY-Rocky-8
 
-[rocky-baseos-86]
-name=Rocky Linux 8.6 BaseOS
-baseurl=https://dl.rockylinux.org/vault/rocky/8.6/BaseOS/aarch64/os/
+[rocky-baseos-88]
+name=Rocky Linux 8.8 BaseOS
+baseurl=https://dl.rockylinux.org/vault/rocky/8.8/BaseOS/aarch64/os/
 gpgcheck=1
 enabled=1
 gpgkey=https://dl.rockylinux.org/pub/rocky/RPM-GPG-KEY-Rocky-8
 
-[rocky-crb-86]
-name=Rocky Linux 8.6 CRB
-baseurl=https://dl.rockylinux.org/vault/rocky/8.6/CRB/aarch64/os/
+[rocky-PowerTools-88]
+name=Rocky Linux 8.8 PowerTools
+baseurl=https://dl.rockylinux.org/vault/rocky/8.8/PowerTools/aarch64/os/
 gpgcheck=1
 enabled=1
 gpgkey=https://dl.rockylinux.org/pub/rocky/RPM-GPG-KEY-Rocky-8
