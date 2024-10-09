@@ -5,7 +5,7 @@
 # Build and tag locally with:   docker build --tag ciq-shim-review:8 ./
 #
 
-FROM --platform=linux/arm64 quay.io/rockylinux/rockylinux:9.3.20231119 AS arm64
+FROM --platform=linux/arm64 rockylinux/rockylinux:9.2 AS arm64
 ENV EL_PLATFORM el9
 ENV shim_release 15.8-0.$EL_PLATFORM
 

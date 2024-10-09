@@ -1,20 +1,21 @@
-[kickstartBaseOS]
-name=kickstart_base_os
-baseurl=https://dl.rockylinux.org/pub/rocky/$releasever/BaseOS/$basearch/kickstart/
+[rocky-appstream-92]
+name=Rocky Linux 9.2 AppStream
+baseurl=https://dl.rockylinux.org/vault/rocky/9.2/AppStream/aarch64/os/
 gpgcheck=1
 enabled=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Rocky-9
+gpgkey=https://dl.rockylinux.org/pub/rocky/RPM-GPG-KEY-Rocky-9
 
-[kickstartAppStream]
-name=kickstart_appstream
-baseurl=https://dl.rockylinux.org/pub/rocky/$releasever/AppStream/$basearch/kickstart/
+[rocky-baseos-92]
+name=Rocky Linux 9.2 BaseOS
+baseurl=https://dl.rockylinux.org/vault/rocky/9.2/BaseOS/aarch64/os/
 gpgcheck=1
 enabled=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Rocky-9
+gpgkey=https://dl.rockylinux.org/pub/rocky/RPM-GPG-KEY-Rocky-9
 
-[kickstartCRB]
-name=kickstart_CRB
-baseurl=https://dl.rockylinux.org/pub/rocky/$releasever/CRB/$basearch/kickstart/
+[rocky-crb-92]
+name=Rocky Linux 9.2 CRB
+baseurl=https://dl.rockylinux.org/vault/rocky/9.2/CRB/aarch64/os/
 gpgcheck=1
 enabled=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Rocky-9
+gpgkey=https://dl.rockylinux.org/pub/rocky/RPM-GPG-KEY-Rocky-9
+
