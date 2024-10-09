@@ -5,9 +5,9 @@
 # Build and tag locally with:   docker build --tag ciq-shim-review:8 ./
 #
 
-FROM --platform=linux/arm64 quay.io/rockylinux/rockylinux:9.3.20231119 AS arm64
-ENV EL_PLATFORM el9
-ENV shim_release 15.8-0.$EL_PLATFORM
+FROM --platform=linux/arm64 rockylinux/rockylinux:8.8.20230518 AS arm64
+
+ENV shim_release 15.8-0.el8
 
 # Copy and extract src rpm and macros, modify setarch in spec file because 32-bit mod is not allowed inside containers:
 COPY rpmmacros  /root/.rpmmacros

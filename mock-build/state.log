@@ -1,40 +1,63 @@
-2024-10-08 17:42:08,782 - Mock Version: 5.6
-2024-10-08 17:42:08,785 - Start(bootstrap): chroot init
-2024-10-08 17:42:08,802 - Start(bootstrap): cleaning package manager metadata
-2024-10-08 17:42:08,802 - Finish(bootstrap): cleaning package manager metadata
-2024-10-08 17:42:08,922 - Finish(bootstrap): chroot init
-2024-10-08 17:42:08,923 - Start: chroot init
-2024-10-08 17:42:08,928 - Start: unpacking root cache
-2024-10-08 17:42:11,013 - Finish: unpacking root cache
-2024-10-08 17:42:11,014 - Start: cleaning package manager metadata
-2024-10-08 17:42:11,015 - Finish: cleaning package manager metadata
-2024-10-08 17:42:11,141 - Start: dnf update
-2024-10-08 17:42:11,832 - Finish: dnf update
-2024-10-08 17:42:11,924 - Finish: chroot init
-2024-10-08 17:42:11,925 - Start: buildsrpm
-2024-10-08 17:42:11,926 - Start: rpmbuild -bs
-2024-10-08 17:42:12,001 - Finish: rpmbuild -bs
-2024-10-08 17:42:12,002 - Finish: buildsrpm
-2024-10-08 17:42:12,003 - Start: clean chroot
-2024-10-08 17:42:12,739 - Finish: clean chroot
-2024-10-08 17:42:12,740 - Finish: run
-2024-10-08 17:42:12,989 - Mock Version: 5.6
-2024-10-08 17:42:12,992 - Start(bootstrap): chroot init
-2024-10-08 17:42:13,008 - Start(bootstrap): cleaning package manager metadata
-2024-10-08 17:42:13,009 - Finish(bootstrap): cleaning package manager metadata
-2024-10-08 17:42:13,128 - Finish(bootstrap): chroot init
-2024-10-08 17:42:13,129 - Start: chroot init
-2024-10-08 17:42:13,134 - Start: unpacking root cache
-2024-10-08 17:42:15,172 - Finish: unpacking root cache
-2024-10-08 17:42:15,174 - Start: cleaning package manager metadata
-2024-10-08 17:42:15,174 - Finish: cleaning package manager metadata
-2024-10-08 17:42:15,391 - Finish: chroot init
-2024-10-08 17:42:15,391 - Start: build phase for shim-unsigned-aarch64-15.8-0.el9.src.rpm
-2024-10-08 17:42:15,392 - Start: build setup for shim-unsigned-aarch64-15.8-0.el9.src.rpm
-2024-10-08 17:42:17,221 - Finish: build setup for shim-unsigned-aarch64-15.8-0.el9.src.rpm
-2024-10-08 17:42:17,221 - Start: Outputting list of installed packages
-2024-10-08 17:42:17,293 - Finish: Outputting list of installed packages
-2024-10-08 17:42:17,293 - Start: rpmbuild shim-unsigned-aarch64-15.8-0.el9.src.rpm
-2024-10-08 17:42:25,949 - Finish: rpmbuild shim-unsigned-aarch64-15.8-0.el9.src.rpm
-2024-10-08 17:42:25,951 - Finish: build phase for shim-unsigned-aarch64-15.8-0.el9.src.rpm
-2024-10-08 17:42:25,953 - Finish: run
+2024-10-09 17:32:36,816 - Mock Version: 5.6
+2024-10-09 17:32:36,818 - Start: chroot init
+2024-10-09 17:32:36,823 - Start: unpacking root cache
+2024-10-09 17:32:39,387 - Finish: unpacking root cache
+2024-10-09 17:32:39,388 - Start: cleaning package manager metadata
+2024-10-09 17:32:39,389 - Finish: cleaning package manager metadata
+2024-10-09 17:32:39,517 - Start: dnf update
+2024-10-09 17:32:40,503 - Finish: dnf update
+2024-10-09 17:32:40,591 - Finish: chroot init
+2024-10-09 17:32:40,592 - Start: buildsrpm
+2024-10-09 17:32:40,594 - Start: rpmbuild -bs
+2024-10-09 17:32:40,666 - Finish: rpmbuild -bs
+2024-10-09 17:32:40,667 - Finish: buildsrpm
+2024-10-09 17:32:40,668 - Start: clean chroot
+2024-10-09 17:32:41,408 - Finish: clean chroot
+2024-10-09 17:32:41,409 - Finish: run
+2024-10-09 17:32:41,597 - Mock Version: 5.6
+2024-10-09 17:32:41,600 - Start: chroot init
+2024-10-09 17:32:41,605 - Start: unpacking root cache
+2024-10-09 17:32:44,144 - Finish: unpacking root cache
+2024-10-09 17:32:44,145 - Start: cleaning package manager metadata
+2024-10-09 17:32:44,146 - Finish: cleaning package manager metadata
+2024-10-09 17:32:44,411 - Finish: chroot init
+2024-10-09 17:32:44,411 - Start: build phase for shim-unsigned-aarch64-15.8-0.el8.src.rpm
+2024-10-09 17:32:44,412 - Start: build setup for shim-unsigned-aarch64-15.8-0.el8.src.rpm
+2024-10-09 17:32:49,797 - Finish: build setup for shim-unsigned-aarch64-15.8-0.el8.src.rpm
+2024-10-09 17:32:49,797 - Start: Outputting list of installed packages
+2024-10-09 17:32:49,864 - Finish: Outputting list of installed packages
+2024-10-09 17:32:49,865 - Start: rpmbuild shim-unsigned-aarch64-15.8-0.el8.src.rpm
+2024-10-09 17:32:54,227 - Finish: rpmbuild shim-unsigned-aarch64-15.8-0.el8.src.rpm
+2024-10-09 17:32:54,227 - Finish: build phase for shim-unsigned-aarch64-15.8-0.el8.src.rpm
+2024-10-09 17:46:08,374 - Mock Version: 5.6
+2024-10-09 17:46:08,376 - Start: chroot init
+2024-10-09 17:46:08,382 - Start: unpacking root cache
+2024-10-09 17:46:11,010 - Finish: unpacking root cache
+2024-10-09 17:46:11,012 - Start: cleaning package manager metadata
+2024-10-09 17:46:11,013 - Finish: cleaning package manager metadata
+2024-10-09 17:46:11,139 - Start: dnf update
+2024-10-09 17:46:12,078 - Finish: dnf update
+2024-10-09 17:46:12,167 - Finish: chroot init
+2024-10-09 17:46:12,168 - Start: buildsrpm
+2024-10-09 17:46:12,170 - Start: rpmbuild -bs
+2024-10-09 17:46:12,244 - Finish: rpmbuild -bs
+2024-10-09 17:46:12,245 - Finish: buildsrpm
+2024-10-09 17:46:12,246 - Start: clean chroot
+2024-10-09 17:46:12,986 - Finish: clean chroot
+2024-10-09 17:46:12,987 - Finish: run
+2024-10-09 17:46:13,177 - Mock Version: 5.6
+2024-10-09 17:46:13,179 - Start: chroot init
+2024-10-09 17:46:13,185 - Start: unpacking root cache
+2024-10-09 17:46:15,713 - Finish: unpacking root cache
+2024-10-09 17:46:15,714 - Start: cleaning package manager metadata
+2024-10-09 17:46:15,715 - Finish: cleaning package manager metadata
+2024-10-09 17:46:16,001 - Finish: chroot init
+2024-10-09 17:46:16,002 - Start: build phase for shim-unsigned-aarch64-15.8-0.el8.src.rpm
+2024-10-09 17:46:16,003 - Start: build setup for shim-unsigned-aarch64-15.8-0.el8.src.rpm
+2024-10-09 17:46:22,034 - Finish: build setup for shim-unsigned-aarch64-15.8-0.el8.src.rpm
+2024-10-09 17:46:22,034 - Start: Outputting list of installed packages
+2024-10-09 17:46:22,107 - Finish: Outputting list of installed packages
+2024-10-09 17:46:22,107 - Start: rpmbuild shim-unsigned-aarch64-15.8-0.el8.src.rpm
+2024-10-09 17:46:30,769 - Finish: rpmbuild shim-unsigned-aarch64-15.8-0.el8.src.rpm
+2024-10-09 17:46:30,771 - Finish: build phase for shim-unsigned-aarch64-15.8-0.el8.src.rpm
+2024-10-09 17:46:30,773 - Finish: run
