@@ -6,8 +6,8 @@
 #
 
 FROM --platform=linux/arm64 quay.io/rockylinux/rockylinux:9.3.20231119 AS arm64
-ENV EL_PLATFORM el9_2
-ENV shim_release 15.8-0.$EL_PLATFORM.ciqlts
+ENV EL_PLATFORM el9
+ENV shim_release 15.8-0.$EL_PLATFORM
 
 # Copy and extract src rpm and macros, modify setarch in spec file because 32-bit mod is not allowed inside containers:
 COPY rpmmacros  /root/.rpmmacros
@@ -29,7 +29,7 @@ RUN rpmbuild -bb /builddir/build/SPECS/shim-unsigned-aarch64.spec
 
 # Put resulting RPM in a temp folder (optionally mounted on host system for extraction)
 RUN mkdir -p /shim_result
-RUN rpm2cpio /builddir/build/RPMS/x86_64/shim-unsigned-aarch64-$shim_release.aarch64.rpm | cpio -diu -D /shim_result
+RUN rpm2cpio /builddir/build/RPMS/aarch64/shim-unsigned-aarch64-$shim_release.aarch64.rpm | cpio -diu -D /shim_result
 
 
 
