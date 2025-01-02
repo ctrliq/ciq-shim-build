@@ -1,5 +1,5 @@
 Mock Version: 5.6
-ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bs  --target aarch64 --nodeps /builddir/build/SPECS/shim-unsigned-aarch64.spec'], chrootPath='/home/testuser/shim-unsigned-aarch64-15.8-0.el9-res/mock'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0xffffab5240d0>timeout=0uid=1000gid=135user='mockbuild'nspawn_args=[]unshare_net=TrueprintOutput=True)
+ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bs  --target aarch64 --nodeps /builddir/build/SPECS/shim-unsigned-aarch64.spec'], chrootPath='/home/testuser/review/shim-unsigned-aarch64-15.8-0.el9-res/mock'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0xffff7c5be0d0>timeout=0uid=1000gid=135user='mockbuild'nspawn_args=[]unshare_net=TrueprintOutput=True)
 Executing command: ['bash', '--login', '-c', '/usr/bin/rpmbuild -bs  --target aarch64 --nodeps /builddir/build/SPECS/shim-unsigned-aarch64.spec'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
 Building target platforms: aarch64
 Building for target aarch64
@@ -7,19 +7,19 @@ setting SOURCE_DATE_EPOCH=1705968000
 Wrote: /builddir/build/SRPMS/shim-unsigned-aarch64-15.8-0.el9.src.rpm
 Child return code was: 0
 Mock Version: 5.6
-ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bs --noclean --target aarch64 --nodeps /builddir/build/SPECS/shim-unsigned-aarch64.spec'], chrootPath='/home/testuser/shim-unsigned-aarch64-15.8-0.el9-res/mock'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0xffff99fa60d0>timeout=0uid=1000gid=135user='mockbuild'nspawn_args=[]unshare_net=TrueprintOutput=True)
+ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bs --noclean --target aarch64 --nodeps /builddir/build/SPECS/shim-unsigned-aarch64.spec'], chrootPath='/home/testuser/review/shim-unsigned-aarch64-15.8-0.el9-res/mock'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0xffff91ff20d0>timeout=0uid=1000gid=135user='mockbuild'nspawn_args=[]unshare_net=TrueprintOutput=True)
 Executing command: ['bash', '--login', '-c', '/usr/bin/rpmbuild -bs --noclean --target aarch64 --nodeps /builddir/build/SPECS/shim-unsigned-aarch64.spec'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
 Building target platforms: aarch64
 Building for target aarch64
 setting SOURCE_DATE_EPOCH=1705968000
 Wrote: /builddir/build/SRPMS/shim-unsigned-aarch64-15.8-0.el9.src.rpm
 Child return code was: 0
-ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bb --noclean --target aarch64 --nodeps /builddir/build/SPECS/shim-unsigned-aarch64.spec'], chrootPath='/home/testuser/shim-unsigned-aarch64-15.8-0.el9-res/mock'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0xffff99fa60d0>timeout=0uid=1000gid=135user='mockbuild'nspawn_args=[]unshare_net=TrueprintOutput=True)
+ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bb --noclean --target aarch64 --nodeps /builddir/build/SPECS/shim-unsigned-aarch64.spec'], chrootPath='/home/testuser/review/shim-unsigned-aarch64-15.8-0.el9-res/mock'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0xffff91ff20d0>timeout=0uid=1000gid=135user='mockbuild'nspawn_args=[]unshare_net=TrueprintOutput=True)
 Executing command: ['bash', '--login', '-c', '/usr/bin/rpmbuild -bb --noclean --target aarch64 --nodeps /builddir/build/SPECS/shim-unsigned-aarch64.spec'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
 Building target platforms: aarch64
 Building for target aarch64
 setting SOURCE_DATE_EPOCH=1705968000
-Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.yWn57P
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.8MhlOq
 + umask 022
 + cd /builddir/build/BUILD
 + cd /builddir/build/BUILD
@@ -43,7 +43,7 @@ Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.yWn57P
 + RPM_EC=0
 ++ jobs -p
 + exit 0
-Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.pWRpKy
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.bFwevx
 + umask 022
 + cd /builddir/build/BUILD
 + cd shim-15.8
@@ -695,7 +695,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 + RPM_EC=0
 ++ jobs -p
 + exit 0
-Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.aJOHjt
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.77eLUI
 + umask 022
 + cd /builddir/build/BUILD
 + '[' /builddir/build/BUILDROOT/shim-unsigned-aarch64-15.8-0.el9.aarch64 '!=' / ']'
@@ -740,7 +740,7 @@ done
 + /usr/lib/rpm/brp-python-hardlink
 + /usr/lib/rpm/redhat/brp-mangle-shebangs
 Processing files: shim-unsigned-aarch64-15.8-0.el9.aarch64
-Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.VC5oUz
+Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.4AH15x
 + umask 022
 + cd /builddir/build/BUILD
 + cd shim-15.8

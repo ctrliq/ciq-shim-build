@@ -7,7 +7,7 @@ This repo is for review of requests for signing shim.  To create a request for r
 - add any additional binaries/certificates/SHA256 hashes that may be needed
 - commit all of that
 - tag it with a tag of the form "myorg-shim-arch-YYYYMMDD"
-- push that to github
+- push it to GitHub
 - file an issue at https://github.com/rhboot/shim-review/issues with a link to your tag
 - approval is ready when the "accepted" label is added to your issue
 
@@ -15,8 +15,7 @@ Note that we really only have experience with using GRUB2 or systemd-boot on Lin
 asking us to endorse anything else for signing is going to require some convincing on
 your part.
 
-Check the docs directory in this repo for guidance on submission and
-getting your shim signed.
+Check the docs directory in this repo for guidance on submission and getting your shim signed.
 
 Here's the template:
 
@@ -33,7 +32,8 @@ CIQ provides enhancements to, and customizations around Rocky Linux for our cust
 *******************************************************************************
 ### What's the justification that this really does need to be signed for the whole world to be able to boot it?
 *******************************************************************************
-Our customers use a variety of hardware platforms.  Many of them have policies in place, or are contractually obligated in some way to use the default EFI firmware with no customized secureboot/MOK key injection.  At the same time, many customers require some modification from the stock Rocky / RHEL kernel, mostly around the area of security backports (supporting older minor versions), or customized options for their workload.
+
+Our customers use a variety of hardware platforms.  Many of them have policies in place, or are contractually obligated in some way to use the default EFI firmware with no customized secureboot/MOK key injection.  At the same time, many customers require security backports for their workload.
 
 *******************************************************************************
 ### Why are you unable to reuse shim from another distro that is already signed?
@@ -168,9 +168,9 @@ Our grub2 follows our upstream (Rocky linux), Rocky has not updated grub and is 
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,3,Free Software Foundation,grub,2.06,https//www.gnu.org/software/grub/
-grub.rh,2,Red Hat,grub2,2.06-77.el9_0,mailto:secalert@redhat.com
-grub.rocky,2,Rocky Linux,grub2,2.06-77.el9_0,mailto:security@rockylinux.org
-grub.ciq_rocky9,1,Rocky Linux 9 (CIQ build),grub2,2.06-77.el9_2.92ciq_lts,mailto:secureboot@ciq.com
+grub.rh,2,Red Hat,grub2,2.06-92.el9,mailto:secalert@redhat.com
+grub.rocky,2,Rocky Linux,grub2,2.06-92.el9,mailto:security@rockylinux.org
+grub.ciq_rocky9,1,Rocky Linux 9 (CIQ build),grub2,2.06-92.el9_2.92ciq_lts,mailto:secureboot@ciq.com
 ```
 *******************************************************************************
 ### Were old shims hashes provided to Microsoft for verification and to be added to future DBX updates?
@@ -238,12 +238,12 @@ shim_rpmbuild.log contains a log of the docker build run.  This includes depende
 ### What changes were made in the distro's secure boot chain since your SHIM was last signed?
 For example, signing new kernel's variants, UKI, systemd-boot, new certs, new CA, etc..
 *******************************************************************************
-Nothing has changed since our el8 https://github.com/rhboot/shim-review/issues/339 submission
+Nothing has changed since our el9 https://github.com/rhboot/shim-review/issues/339 submission
 
 *******************************************************************************
 ### What is the SHA256 hash of your final SHIM binary?
 *******************************************************************************
-* SHA256 (shimx64.efi) = f67bf3bb333d1e8ecfbb372f93ad7056e12c43c4eedc335e235c66b7af9fa940
+* SHA256 (shimx64.efi) = ed9b5480c2dfd2dfd7b476565c1503da9ac1ebd57e761a8dbd025576dd0c33c9
 
 *******************************************************************************
 ### How do you manage and protect the keys used in your SHIM?
@@ -270,23 +270,22 @@ and only append your own. More information on how SBAT works can be found
 *******************************************************************************
 
 ```
-objcopy --only-section .sbat -O binary grubx64.efi /dev/stdout
+objcopy --only-section .sbat -O binary grubaa64.efi /dev/stdout
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,3,Free Software Foundation,grub,2.06,https//www.gnu.org/software/grub/
-grub.rh,2,Red Hat,grub2,2.06-77.el9_0,mailto:secalert@redhat.com
-grub.rocky,2,Rocky Linux,grub2,2.06-77.el9_0,mailto:security@rockylinux.org
-grub.ciq_rocky9,1,Rocky Linux 9 (CIQ build),grub2,2.06-77.el9_2.92ciq_lts,mailto:secureboot@ciq.com
+grub.rh,2,Red Hat,grub2,2.06-92.el9,mailto:secalert@redhat.com
+grub.rocky,2,Rocky Linux,grub2,2.06-92.el9,mailto:security@rockylinux.org
+grub.ciq_rocky9,1,Rocky Linux 9 (CIQ build),grub2,2.06-92.el9_2.92ciq_lts,mailto:secureboot@ciq.com
 
-objcopy --only-section .sbat -O binary fwupdx64.efi /dev/stdout 
+objcopy --only-section .sbat -O binary fwupdaa64.efi /dev/stdout
 sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 fwupd-efi,1,Firmware update daemon,fwupd-efi,1.4,https://github.com/fwupd/fwupd-efi
-fwupd-efi.rhel,1,Red Hat Enterprise Linux,fwupd,1.8.10,mail:secalert@redhat.com
-fwupd-efi.rocky,1,Rocky Linux,fwupd,1.8.10,mail:security@rockylinux.org
-fwupd-efi.ciq_rocky9,1,Rocky Linux 9 (CIQ build),fwupd,1.8.10,mailto:secureboot@ciq.com
+fwupd-efi.rhel,1,Red Hat Enterprise Linux,fwupd,1.9.13,mail:secalert@redhat.com
+fwupd-efi.rocky,1,Rocky Linux (CIQ modified),fwupd,1.9.13,mail:secureboot@ciq.com
 
-objcopy --only-section .sbat -O binary  shimx64.efi /dev/stdout 
-sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
+objcopy --only-section .sbat -O binary shimaa64.efi /dev/stdout
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md 
+shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim 
 shim.ciq,1,Ctrl IQ Inc,shim,15.8,mail:it_security@ciq.com
 ```
 
@@ -294,25 +293,18 @@ shim.ciq,1,Ctrl IQ Inc,shim,15.8,mail:it_security@ciq.com
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader, which modules are built into your signed GRUB2 image?
 *******************************************************************************
-Rocky 9 / Grub 2.06-77 :
+Rocky 9 / Grub 2.06-92 :
 ```
 efi_netfs efifwsetup efinet lsefi lsefimmap connectefi
-backtrace chain tpm usb usbserial_common usbserial_pl2303
-usbserial_ftdi usbserial_usbdebug keylayouts at_keyboard 
-all_video boot blscfg
-cat configfile cryptodisk
-echo ext2 f2fs fat font
-gcry_rijndael gcry_rsa gcry_serpent
-gcry_sha256 gcry_twofish gcry_whirlpool
-gfxmenu gfxterm gzio
-halt http increment iso9660
-jpeg loadenv loopback linux lvm luks
-luks2 mdraid09 mdraid1x minicmd net
-normal part_apple part_msdos part_gpt
-password_pbkdf2 pgp png reboot regexp
-search search_fs_uuid search_fs_file
-search_label serial sleep syslinuxcfg
-test tftp version video xfs zstd 
+all_video boot blscfg cat configfile cryptodisk echo 
+ext2 f2fs fat font gcry_rijndael gcry_rsa gcry_serpent
+gcry_sha256 gcry_twofish gcry_whirlpool gfxmenu gfxterm 
+gzio halt http increment iso9660 jpeg loadenv loopback
+linux lvm luks luks2 mdraid09 mdraid1x minicmd net 
+normal part_apple part_msdos part_gpt password_pbkdf2
+pgp png reboot regexp search search_fs_uuid search_fs_file
+search_label serial sleep syslinuxcfg test tftp version
+video xfs zstd 
 ```
 *******************************************************************************
 ### If you are using systemd-boot on arm64 or riscv, is the fix for [unverified Devicetree Blob loading](https://github.com/systemd/systemd/security/advisories/GHSA-6m6p-rjcq-334c) included?
@@ -322,7 +314,7 @@ N/a
 *******************************************************************************
 ### What is the origin and full version number of your bootloader (GRUB2 or systemd-boot or other)?
 *******************************************************************************
-We use the same version as Rocky - Grub 2.06-77
+We use the same version as Rocky - Grub 2.06-92
 
 *******************************************************************************
 ### If your SHIM launches any other components, please provide further details on what is launched.
@@ -351,7 +343,7 @@ In the case of Grub + Fwupd, we will be running the same Rocky/RHEL versions unm
 *******************************************************************************
 ### Does your SHIM load any loaders that support loading unsigned kernels (e.g. GRUB2)?
 *******************************************************************************
-Grub2 will only load unsigned code if the secureboot feature is turned off.  Otherwise booting signed code is always enforced, same as the upstream Rocky/RHEL/CentOS loaders.
+Grub2 will only load unsigned code if the secureboot feature is turned off.  Otherwise booting signed code is always enforced, same as the upstream Rocky/RHEL loaders.
 
 *******************************************************************************
 ### What kernel are you using? Which patches does it includes to enforce Secure Boot?
@@ -363,8 +355,16 @@ We are also building and packaging supported upstream kernels designed for use o
 I understand that these all enforce secure boot "out of the box".
 
 *******************************************************************************
-### Add any additional information you think we may need to validate this shim.
+### What contributions have you made to help us review the applications of other applicants?
+The reviewing process is meant to be a peer-review effort and the best way to have your application reviewed faster is to help with reviewing others. We are in most cases volunteers working on this venue in our free time, rather than being employed and paid to review the applications during our business hours. 
+
+A reasonable timeframe of waiting for a review can reach 2-3 months. Helping us is the best way to shorten this period. The more help we get, the faster and the smoother things will go.
+
+For newcomers, the applications labeled as [*easy to review*](https://github.com/rhboot/shim-review/issues?q=is%3Aopen+is%3Aissue+label%3A%22easy+to+review%22) are recommended to start the contribution process.
+*******************************************************************************
+Jason Rodriguez has contributed to the review process of other submissions, he should do a lot more to invest in the process.
+
+*******************************************************************************
+### Add any additional information you think we may need to validate this shim signing application.
 *******************************************************************************
 N/A
-
-

@@ -31,11 +31,11 @@ Vulnerability Tsx async abort:      Not affected
 
 Memory:
                total        used        free      shared  buff/cache   available
-Mem:        13953408     1602492     7141508       35700     5479408    12350916
-Swap:        6713340           0     6713340
+Mem:        13953408     2124872      453072      137464    11747108    11828536
+Swap:        6713340        1292     6712048
 
 
 Storage (chroot, cache_topdir):
 Filesystem          Type  Size  Used Avail Use% Mounted on
-/dev/mapper/rl-home xfs    20G  1.1G   19G   6% /home
-/dev/mapper/rl-root xfs    41G   11G   30G  28% /
+/dev/mapper/rl-home xfs    20G  6.3G   14G  32% /home
+/dev/mapper/rl-root xfs    41G   13G   28G  32% /
