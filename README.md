@@ -84,13 +84,13 @@ Yes. no other patches are applied
 *******************************************************************************
 ### URL for a repo that contains the exact code which was built to get this binary:
 *******************************************************************************
-CIQ shim-unsigned-x64 RPM repository:  [https://www.github.com/ctrliq/shim-unsigned-x64/src/ciq9/](https://github.com/ctrliq/shim-unsigned-x64/tree/ciq9)
+CIQ shim-unsigned-x64 RPM repository:  [https://github.com/ctrliq/shim-unsigned-aa64/tree/ciq9](hhttps://github.com/ctrliq/shim-unsigned-aa64/tree/ciq9)
 
 This code is a combination of:  https://github.com/rhboot/shim/releases/download/15.8/shim-15.8.tar.bz2 and an RPM spec file derived from the Rocky (and in turn RHEL) one.
 The Build uses archives of Rocky 9.2 dependencies: 
-baseurl=https://dl.rockylinux.org/vault/rocky/9.2/AppStream/x86_64/os/
-baseurl=https://dl.rockylinux.org/vault/rocky/9.2/BaseOS/x86_64/os/
-baseurl=https://dl.rockylinux.org/vault/rocky/9.2/CRB/x86_64/os/
+baseurl=https://dl.rockylinux.org/vault/rocky/9.2/AppStream/aarch64/os/
+baseurl=https://dl.rockylinux.org/vault/rocky/9.2/BaseOS/aarch64/os/
+baseurl=https://dl.rockylinux.org/vault/rocky/9.2/CRB/aarch64/os/
 
 
 *******************************************************************************
@@ -176,7 +176,7 @@ grub.ciq_rocky9,1,Rocky Linux 9 (CIQ build),grub2,2.06-92.el9_2.92ciq_lts,mailto
 ### Were old shims hashes provided to Microsoft for verification and to be added to future DBX updates?
 ### Does your new chain of trust disallow booting old GRUB2 builds affected by the CVEs?
 *******************************************************************************
-This is our first EL9 submission, we do not have old GRUB2 builds affected by CVEs.
+Our [x64](https://github.com/rhboot/shim-review/issues/420) shim submission has been prevously approved for EL9, we do not have old GRUB2 builds affected by CVEs.
 
 *******************************************************************************
 ### If your boot chain of trust includes a Linux kernel:
@@ -243,7 +243,7 @@ Nothing has changed since our el9 https://github.com/rhboot/shim-review/issues/3
 *******************************************************************************
 ### What is the SHA256 hash of your final SHIM binary?
 *******************************************************************************
-* SHA256 (shimx64.efi) = ed9b5480c2dfd2dfd7b476565c1503da9ac1ebd57e761a8dbd025576dd0c33c9
+* SHA256 (shimaa64.efi) = ed9b5480c2dfd2dfd7b476565c1503da9ac1ebd57e761a8dbd025576dd0c33c9
 
 *******************************************************************************
 ### How do you manage and protect the keys used in your SHIM?
@@ -350,7 +350,7 @@ Grub2 will only load unsigned code if the secureboot feature is turned off.  Oth
 *******************************************************************************
 We are using our RHEL upstream variant 5.14 with minor patches (on top of the many patches from Red Hat and others).
 
-We are also building and packaging supported upstream kernels designed for use on Rocky and enterprise-Linux variants.  These include supported LT versions (5.4, 5.10, 5.15, 6.1), as well as the rollling latest-stable version.
+We are also building and packaging supported upstream kernels designed for use on Rocky and enterprise-Linux variants.  These include supported LT versions (5.4, 5.10, 5.15, 6.1), as well as the rolling latest-stable version.
 
 I understand that these all enforce secure boot "out of the box".
 
