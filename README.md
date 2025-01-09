@@ -84,7 +84,7 @@ Yes. no other patches are applied
 *******************************************************************************
 ### URL for a repo that contains the exact code which was built to get this binary:
 *******************************************************************************
-CIQ shim-unsigned-x64 RPM repository:  [https://github.com/ctrliq/shim-unsigned-aa64/tree/ciq9](hhttps://github.com/ctrliq/shim-unsigned-aa64/tree/ciq9)
+CIQ shim-unsigned-aa64 RPM repository:  [https://github.com/ctrliq/shim-unsigned-aa64/tree/ciq9](hhttps://github.com/ctrliq/shim-unsigned-aa64/tree/ciq9)
 
 This code is a combination of:  https://github.com/rhboot/shim/releases/download/15.8/shim-15.8.tar.bz2 and an RPM spec file derived from the Rocky (and in turn RHEL) one.
 The Build uses archives of Rocky 9.2 dependencies: 
@@ -199,7 +199,7 @@ Generally we'll be performing 2 sorts of mofifications:
 ### Do you use an ephemeral key for signing kernel modules?
 ### If not, please describe how you ensure that one kernel build does not load modules built for another kernel.
 *******************************************************************************
-A temporary ephemral key is used to sign kernel modules
+A temporary ephemeral key is used to sign kernel modules
 
 
 *******************************************************************************
