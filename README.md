@@ -176,7 +176,7 @@ grub.ciq_rocky9,1,Rocky Linux 9 (CIQ build),grub2,2.06-92.el9_2.92ciq_lts,mailto
 ### Were old shims hashes provided to Microsoft for verification and to be added to future DBX updates?
 ### Does your new chain of trust disallow booting old GRUB2 builds affected by the CVEs?
 *******************************************************************************
-Our [x64](https://github.com/rhboot/shim-review/issues/420) shim submission has been prevously approved for EL9, we do not have old GRUB2 builds affected by CVEs.
+Our [Rocky EL9 x64](https://github.com/rhboot/shim-review/issues/420) shim submission has been prevously approved for EL9, we do not have old GRUB2 builds affected by CVEs.
 
 *******************************************************************************
 ### If your boot chain of trust includes a Linux kernel:
