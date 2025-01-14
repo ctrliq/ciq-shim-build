@@ -48,7 +48,7 @@ An authorized reviewer will initiate contact verification by sending each securi
 You will be asked to post the contents of these mails in your `shim-review` issue to prove ownership of the email addresses and PGP keys.
 *******************************************************************************
 - Name: Jason Rodriguez
-- Position: Engineer
+- Position: Sr Principal Software Engineer
 - Email address: jrodriguez@ciq.com
 - PGP key fingerprint: 0310 CFD4 0447 4D14 5072 D3E1 EAFF ECB3 C3AB C924
 - PGP key available on keys.openpgp.org
@@ -62,7 +62,7 @@ well known in the Linux community.)
 ### Who is the secondary contact for security updates, etc.?
 *******************************************************************************
 - Name: Michael Young
-- Position: Information Technology Director
+- Position: Principal Systems Engineer
 - Email address: myoung@ciq.com
 - PGP key fingerprint:  CD82 9808 7BCA C022 B5EC  84FA D84A 6A59 1392 6D2B
 - http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xcd8298087bcac022b5ec84fad84a6a5913926d2b
@@ -153,7 +153,7 @@ We intend to use the Rocky 9 (based on RHEL 9) GRUB2 source code unmodified, as 
   * CVE-2023-4693
   * CVE-2023-4692
 *******************************************************************************
-We are a new vendor for EL9, but I can confirm that our grub2 builds will not be affected by any of those, as they've all been fixed in our upstream:
+I can confirm that our grub2 builds will not be affected by any of those, as they've all been fixed in our upstream:
 
 https://git.rockylinux.org/staging/rpms/grub2/-/blob/r9/SPECS/grub2.spec#L536
 
@@ -244,7 +244,7 @@ Nothing has changed since our el9 https://github.com/rhboot/shim-review/issues/3
 *******************************************************************************
 ### What is the SHA256 hash of your final SHIM binary?
 *******************************************************************************
-* SHA256 (shimaa64.efi) = 84bcfab030a44df9fbadaced43f80f92f67661b6dbadfdf38f468415fe971a5a
+* SHA256 (shimaa64.efi) = 6f6c85adeef3fb3945525618927fa543c39e430bf9b7b2eacb381d3d697b098a
 
 *******************************************************************************
 ### How do you manage and protect the keys used in your SHIM?
@@ -364,7 +364,7 @@ A reasonable timeframe of waiting for a review can reach 2-3 months. Helping us 
 
 For newcomers, the applications labeled as [*easy to review*](https://github.com/rhboot/shim-review/issues?q=is%3Aopen+is%3Aissue+label%3A%22easy+to+review%22) are recommended to start the contribution process.
 *******************************************************************************
-Jason Rodriguez has contributed to the review process of other submissions, he should do a lot more to invest in the process.
+Jason Rodriguez has contributed to the review process of other submissions
 
 *******************************************************************************
 ### Add any additional information you think we may need to validate this shim signing application.
