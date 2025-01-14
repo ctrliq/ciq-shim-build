@@ -1,16 +1,16 @@
 Emulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.
 STEP 1/15: FROM rockylinux/rockylinux:9.2 AS arm64
 STEP 2/15: ENV EL_PLATFORM el9
---> 8ae908b4e5b0
+--> 4b7096fc83d4
 STEP 3/15: ENV shim_release 15.8-0.$EL_PLATFORM
---> ad7af98cadcf
+--> 55e212b16759
 STEP 4/15: COPY rpmmacros  /root/.rpmmacros
---> 0b970d038ef7
+--> ac95521bb659
 STEP 5/15: COPY shim-unsigned-aarch64-$shim_release.src.rpm /root
---> 939db284ccfe
+--> b9661de765bd
 STEP 6/15: RUN rpm -ivh /root/shim-unsigned-aarch64-$shim_release.src.rpm
 Updating / installing...
-shim-unsigned-aarch64-15.8-0.el9_2.ciqwarning: user mockbuild does not exist - using root
+shim-unsigned-aarch64-15.8-0.el9      warning: user mockbuild does not exist - using root
 warning: group mock does not exist - using root
 warning: user mockbuild does not exist - using root
 warning: group mock does not exist - using root
@@ -23,17 +23,17 @@ warning: user mockbuild does not exist - using root
 warning: group mock does not exist - using root
 warning: user mockbuild does not exist - using root
 warning: group mock does not exist - using root
---> 1a2d1fc21e2e
+--> 2679263d40e2
 STEP 7/15: COPY shimaa64.efi /
---> 738e8aebc4b3
+--> debc725183a6
 STEP 8/15: RUN rm -f /etc/yum.repos.d/*.repo
---> 41a81ddf83b4
+--> 9699135e1951
 STEP 9/15: COPY ciq_static_shim.repo  /etc/yum.repos.d/
---> 2d209c15ed1a
+--> c3f177f8b26b
 STEP 10/15: RUN dnf -y install dnf-plugins-core rpm-build;  dnf -y  builddep /builddir/build/SPECS/shim-unsigned-aarch64.spec
-Rocky Linux 9.2 AppStream                        22 MB/s | 6.2 MB     00:00    
-Rocky Linux 9.2 BaseOS                          8.4 MB/s | 2.1 MB     00:00    
-Rocky Linux 9.2 CRB                             8.7 MB/s | 1.8 MB     00:00    
+Rocky Linux 9.2 AppStream                       9.1 MB/s | 6.2 MB     00:00    
+Rocky Linux 9.2 BaseOS                           11 MB/s | 2.1 MB     00:00    
+Rocky Linux 9.2 CRB                             9.2 MB/s | 1.8 MB     00:00    
 Dependencies resolved.
 ================================================================================
  Package                  Arch    Version              Repository          Size
@@ -154,113 +154,113 @@ Upgrade    4 Packages
 
 Total download size: 19 M
 Downloading Packages:
-(1/104): perl-Text-ParseWords-3.30-460.el9.noar 238 kB/s |  16 kB     00:00    
-(2/104): perl-Exporter-5.74-461.el9.noarch.rpm  393 kB/s |  31 kB     00:00    
-(3/104): ghc-srpm-macros-1.5.0-6.el9.noarch.rpm  95 kB/s | 7.8 kB     00:00    
-(4/104): perl-Pod-Simple-3.42-4.el9.noarch.rpm  4.1 MB/s | 215 kB     00:00    
-(5/104): rust-srpm-macros-17-4.el9.noarch.rpm   261 kB/s | 9.3 kB     00:00    
-(6/104): python-srpm-macros-3.9-52.el9.noarch.r 381 kB/s |  22 kB     00:00    
-(7/104): perl-File-Path-2.18-4.el9.noarch.rpm   1.2 MB/s |  35 kB     00:00    
-(8/104): perl-Pod-Perldoc-3.28.01-461.el9.noarc 2.3 MB/s |  83 kB     00:00    
-(9/104): perl-Getopt-Long-2.52-4.el9.noarch.rpm 1.7 MB/s |  60 kB     00:00    
-(10/104): perl-Pod-Usage-2.01-4.el9.noarch.rpm  1.3 MB/s |  40 kB     00:00    
-(11/104): perl-IO-Socket-IP-0.41-5.el9.noarch.r 1.3 MB/s |  42 kB     00:00    
-(12/104): perl-Time-Local-1.300-7.el9.noarch.rp 2.2 MB/s |  33 kB     00:00    
-(13/104): perl-libnet-3.13-4.el9.noarch.rpm     3.2 MB/s | 125 kB     00:00    
-(14/104): fonts-srpm-macros-2.0.5-7.el9.1.noarc 899 kB/s |  27 kB     00:00    
-(15/104): efi-srpm-macros-6-2.el9_0.noarch.rpm  590 kB/s |  22 kB     00:00    
-(16/104): go-srpm-macros-3.2.0-1.el9.noarch.rpm 1.1 MB/s |  26 kB     00:00    
-(17/104): kernel-srpm-macros-1.0-12.el9.noarch. 213 kB/s |  15 kB     00:00    
-(18/104): lua-srpm-macros-1-6.el9.noarch.rpm    139 kB/s | 8.5 kB     00:00    
-(19/104): openblas-srpm-macros-2-11.el9.noarch. 239 kB/s | 7.3 kB     00:00    
-(20/104): perl-Carp-1.50-460.el9.noarch.rpm     1.0 MB/s |  29 kB     00:00    
+(1/104): perl-Exporter-5.74-461.el9.noarch.rpm  492 kB/s |  31 kB     00:00    
+(2/104): ghc-srpm-macros-1.5.0-6.el9.noarch.rpm 112 kB/s | 7.8 kB     00:00    
+(3/104): python-srpm-macros-3.9-52.el9.noarch.r 775 kB/s |  22 kB     00:00    
+(4/104): perl-Text-ParseWords-3.30-460.el9.noar 136 kB/s |  16 kB     00:00    
+(5/104): perl-Pod-Simple-3.42-4.el9.noarch.rpm  3.7 MB/s | 215 kB     00:00    
+(6/104): rust-srpm-macros-17-4.el9.noarch.rpm   439 kB/s | 9.3 kB     00:00    
+(7/104): perl-File-Path-2.18-4.el9.noarch.rpm   1.3 MB/s |  35 kB     00:00    
+(8/104): perl-Getopt-Long-2.52-4.el9.noarch.rpm 2.5 MB/s |  60 kB     00:00    
+(9/104): perl-Pod-Perldoc-3.28.01-461.el9.noarc 3.2 MB/s |  83 kB     00:00    
+(10/104): perl-Time-Local-1.300-7.el9.noarch.rp 2.4 MB/s |  33 kB     00:00    
+(11/104): perl-Pod-Usage-2.01-4.el9.noarch.rpm  1.5 MB/s |  40 kB     00:00    
+(12/104): perl-IO-Socket-IP-0.41-5.el9.noarch.r 1.3 MB/s |  42 kB     00:00    
+(13/104): perl-libnet-3.13-4.el9.noarch.rpm     4.5 MB/s | 125 kB     00:00    
+(14/104): efi-srpm-macros-6-2.el9_0.noarch.rpm  788 kB/s |  22 kB     00:00    
+(15/104): fonts-srpm-macros-2.0.5-7.el9.1.noarc 1.1 MB/s |  27 kB     00:00    
+(16/104): go-srpm-macros-3.2.0-1.el9.noarch.rpm 1.4 MB/s |  26 kB     00:00    
+(17/104): lua-srpm-macros-1-6.el9.noarch.rpm    481 kB/s | 8.5 kB     00:00    
+(18/104): kernel-srpm-macros-1.0-12.el9.noarch. 572 kB/s |  15 kB     00:00    
+(19/104): perl-Carp-1.50-460.el9.noarch.rpm     1.4 MB/s |  29 kB     00:00    
+(20/104): openblas-srpm-macros-2-11.el9.noarch. 314 kB/s | 7.3 kB     00:00    
 (21/104): perl-podlators-4.14-460.el9.noarch.rp 3.2 MB/s | 111 kB     00:00    
-(22/104): perl-Term-Cap-1.17-460.el9.noarch.rpm 742 kB/s |  22 kB     00:00    
-(23/104): perl-HTTP-Tiny-0.076-460.el9.noarch.r 2.4 MB/s |  54 kB     00:00    
-(24/104): gdb-minimal-10.2-10.el9.0.1.aarch64.r  19 MB/s | 3.1 MB     00:00    
-(25/104): perl-Term-ANSIColor-5.01-461.el9.noar 1.2 MB/s |  48 kB     00:00    
-(26/104): perl-Digest-1.19-4.el9.noarch.rpm     1.2 MB/s |  25 kB     00:00    
-(27/104): perl-constant-1.33-461.el9.noarch.rpm 705 kB/s |  23 kB     00:00    
-(28/104): perl-URI-5.09-3.el9.noarch.rpm        1.8 MB/s | 108 kB     00:00    
-(29/104): redhat-rpm-config-199-1.el9.noarch.rp 2.1 MB/s |  66 kB     00:00    
-(30/104): perl-Data-Dumper-2.174-462.el9.aarch6 1.2 MB/s |  54 kB     00:00    
-(31/104): perl-srpm-macros-1-41.el9.noarch.rpm  304 kB/s | 8.2 kB     00:00    
-(32/104): perl-Encode-3.08-462.el9.aarch64.rpm   15 MB/s | 1.7 MB     00:00    
-(33/104): perl-Scalar-List-Utils-1.56-461.el9.a 2.0 MB/s |  70 kB     00:00    
-(34/104): rpm-build-4.16.1.3-22.el9.aarch64.rpm 2.1 MB/s |  90 kB     00:00    
-(35/104): perl-IO-Socket-SSL-2.073-1.el9.noarch 6.7 MB/s | 217 kB     00:00    
-(36/104): perl-PathTools-3.78-461.el9.aarch64.r 2.2 MB/s |  85 kB     00:00    
-(37/104): perl-Mozilla-CA-20200520-6.el9.noarch 508 kB/s |  12 kB     00:00    
-(38/104): perl-Text-Tabs+Wrap-2013.0523-460.el9 771 kB/s |  23 kB     00:00    
-(39/104): patch-2.7.6-16.el9.aarch64.rpm        5.8 MB/s | 123 kB     00:00    
-(40/104): perl-Digest-MD5-2.58-4.el9.aarch64.rp 748 kB/s |  36 kB     00:00    
-(41/104): perl-Storable-3.21-460.el9.aarch64.rp 903 kB/s |  93 kB     00:00    
-(42/104): ocaml-srpm-macros-6-6.el9.noarch.rpm  426 kB/s | 7.8 kB     00:00    
-(43/104): perl-MIME-Base64-3.16-4.el9.aarch64.r 1.0 MB/s |  30 kB     00:00    
-(44/104): perl-Pod-Escapes-1.07-460.el9.noarch. 625 kB/s |  20 kB     00:00    
+(22/104): perl-Term-Cap-1.17-460.el9.noarch.rpm 682 kB/s |  22 kB     00:00    
+(23/104): perl-HTTP-Tiny-0.076-460.el9.noarch.r 3.8 MB/s |  54 kB     00:00    
+(24/104): perl-Term-ANSIColor-5.01-461.el9.noar 1.4 MB/s |  48 kB     00:00    
+(25/104): perl-URI-5.09-3.el9.noarch.rpm        4.7 MB/s | 108 kB     00:00    
+(26/104): perl-Digest-1.19-4.el9.noarch.rpm     579 kB/s |  25 kB     00:00    
+(27/104): gdb-minimal-10.2-10.el9.0.1.aarch64.r  21 MB/s | 3.1 MB     00:00    
+(28/104): perl-constant-1.33-461.el9.noarch.rpm 703 kB/s |  23 kB     00:00    
+(29/104): redhat-rpm-config-199-1.el9.noarch.rp 1.5 MB/s |  66 kB     00:00    
+(30/104): perl-srpm-macros-1-41.el9.noarch.rpm  479 kB/s | 8.2 kB     00:00    
+(31/104): perl-Data-Dumper-2.174-462.el9.aarch6 1.3 MB/s |  54 kB     00:00    
+(32/104): perl-Encode-3.08-462.el9.aarch64.rpm   23 MB/s | 1.7 MB     00:00    
+(33/104): perl-Scalar-List-Utils-1.56-461.el9.a 2.6 MB/s |  70 kB     00:00    
+(34/104): rpm-build-4.16.1.3-22.el9.aarch64.rpm 3.3 MB/s |  90 kB     00:00    
+(35/104): perl-IO-Socket-SSL-2.073-1.el9.noarch 6.1 MB/s | 217 kB     00:00    
+(36/104): perl-Storable-3.21-460.el9.aarch64.rp 5.7 MB/s |  93 kB     00:00    
+(37/104): perl-PathTools-3.78-461.el9.aarch64.r 2.7 MB/s |  85 kB     00:00    
+(38/104): perl-Mozilla-CA-20200520-6.el9.noarch 576 kB/s |  12 kB     00:00    
+(39/104): perl-Digest-MD5-2.58-4.el9.aarch64.rp 2.3 MB/s |  36 kB     00:00    
+(40/104): perl-Text-Tabs+Wrap-2013.0523-460.el9 658 kB/s |  23 kB     00:00    
+(41/104): patch-2.7.6-16.el9.aarch64.rpm        6.2 MB/s | 123 kB     00:00    
+(42/104): perl-Pod-Escapes-1.07-460.el9.noarch. 1.4 MB/s |  20 kB     00:00    
+(43/104): perl-MIME-Base64-3.16-4.el9.aarch64.r 1.4 MB/s |  30 kB     00:00    
+(44/104): ocaml-srpm-macros-6-6.el9.noarch.rpm  287 kB/s | 7.8 kB     00:00    
 (45/104): perl-File-Temp-0.231.100-4.el9.noarch 2.0 MB/s |  59 kB     00:00    
-(46/104): perl-Socket-2.031-4.el9.aarch64.rpm   1.6 MB/s |  54 kB     00:00    
-(47/104): dwz-0.14-3.el9.aarch64.rpm            3.3 MB/s | 125 kB     00:00    
-(48/104): perl-vars-1.05-480.el9.noarch.rpm     445 kB/s |  13 kB     00:00    
-(49/104): perl-subs-1.03-480.el9.noarch.rpm     479 kB/s |  12 kB     00:00    
-(50/104): perl-overloading-0.02-480.el9.noarch. 396 kB/s |  13 kB     00:00    
-(51/104): perl-mro-1.23-480.el9.aarch64.rpm     1.5 MB/s |  28 kB     00:00    
-(52/104): perl-overload-1.31-480.el9.noarch.rpm 1.2 MB/s |  46 kB     00:00    
-(53/104): perl-interpreter-5.32.1-480.el9.aarch 809 kB/s |  71 kB     00:00    
-(54/104): perl-if-0.60.800-480.el9.noarch.rpm   163 kB/s |  14 kB     00:00    
-(55/104): perl-base-2.27-480.el9.noarch.rpm     960 kB/s |  16 kB     00:00    
-(56/104): perl-libs-5.32.1-480.el9.aarch64.rpm   16 MB/s | 2.0 MB     00:00    
-(57/104): perl-SelectSaver-1.02-480.el9.noarch. 689 kB/s |  12 kB     00:00    
-(58/104): perl-Symbol-1.08-480.el9.noarch.rpm   582 kB/s |  14 kB     00:00    
-(59/104): perl-NDBM_File-1.15-480.el9.aarch64.r 1.1 MB/s |  22 kB     00:00    
-(60/104): perl-IPC-Open3-1.21-480.el9.noarch.rp 701 kB/s |  23 kB     00:00    
-(61/104): perl-POSIX-1.94-480.el9.aarch64.rpm   1.9 MB/s |  97 kB     00:00    
-(62/104): perl-Getopt-Std-1.12-480.el9.noarch.r 928 kB/s |  16 kB     00:00    
-(63/104): perl-IO-1.43-480.el9.aarch64.rpm      2.2 MB/s |  86 kB     00:00    
-(64/104): perl-File-stat-1.09-480.el9.noarch.rp 927 kB/s |  17 kB     00:00    
-(65/104): perl-FileHandle-2.03-480.el9.noarch.r 447 kB/s |  16 kB     00:00    
-(66/104): perl-Fcntl-1.13-480.el9.aarch64.rpm   1.1 MB/s |  20 kB     00:00    
-(67/104): perl-File-Basename-2.85-480.el9.noarc 531 kB/s |  17 kB     00:00    
-(68/104): perl-Errno-1.30-480.el9.aarch64.rpm   577 kB/s |  15 kB     00:00    
-(69/104): perl-B-1.80-480.el9.aarch64.rpm       4.6 MB/s | 180 kB     00:00    
-(70/104): perl-AutoLoader-5.74-480.el9.noarch.r 697 kB/s |  21 kB     00:00    
-(71/104): perl-Class-Struct-0.66-480.el9.noarch 408 kB/s |  22 kB     00:00    
-(72/104): perl-Net-SSLeay-1.92-2.el9.aarch64.rp  14 MB/s | 366 kB     00:00    
-(73/104): qt5-srpm-macros-5.15.3-1.el9.noarch.r 396 kB/s | 8.7 kB     00:00    
-(74/104): perl-parent-0.238-460.el9.noarch.rpm  442 kB/s |  14 kB     00:00    
-(75/104): pyproject-srpm-macros-1.6.2-1.el9.noa 431 kB/s |  14 kB     00:00    
-(76/104): python3-six-1.15.0-9.el9.noarch.rpm   962 kB/s |  36 kB     00:00    
-(77/104): zip-3.0-35.el9.aarch64.rpm            5.7 MB/s | 257 kB     00:00    
-(78/104): bzip2-1.0.8-8.el9.aarch64.rpm         1.1 MB/s |  51 kB     00:00    
-(79/104): file-5.39-12.1.el9_2.aarch64.rpm      1.2 MB/s |  48 kB     00:00    
-(80/104): groff-base-1.22.4-10.el9.aarch64.rpm   21 MB/s | 1.0 MB     00:00    
-(81/104): python3-dnf-plugins-core-4.3.0-5.el9_ 5.8 MB/s | 245 kB     00:00    
-(82/104): dnf-plugins-core-4.3.0-5.el9_2.noarch 698 kB/s |  36 kB     00:00    
-(83/104): python3-dateutil-2.8.1-6.el9.noarch.r 7.0 MB/s | 288 kB     00:00    
+(46/104): perl-vars-1.05-480.el9.noarch.rpm     815 kB/s |  13 kB     00:00    
+(47/104): dwz-0.14-3.el9.aarch64.rpm            3.2 MB/s | 125 kB     00:00    
+(48/104): perl-Socket-2.031-4.el9.aarch64.rpm   1.7 MB/s |  54 kB     00:00    
+(49/104): perl-overloading-0.02-480.el9.noarch. 1.0 MB/s |  13 kB     00:00    
+(50/104): perl-overload-1.31-480.el9.noarch.rpm 1.7 MB/s |  46 kB     00:00    
+(51/104): perl-mro-1.23-480.el9.aarch64.rpm     1.6 MB/s |  28 kB     00:00    
+(52/104): perl-subs-1.03-480.el9.noarch.rpm     202 kB/s |  12 kB     00:00    
+(53/104): perl-interpreter-5.32.1-480.el9.aarch 2.7 MB/s |  71 kB     00:00    
+(54/104): perl-base-2.27-480.el9.noarch.rpm     520 kB/s |  16 kB     00:00    
+(55/104): perl-if-0.60.800-480.el9.noarch.rpm   407 kB/s |  14 kB     00:00    
+(56/104): perl-SelectSaver-1.02-480.el9.noarch. 803 kB/s |  12 kB     00:00    
+(57/104): perl-libs-5.32.1-480.el9.aarch64.rpm   23 MB/s | 2.0 MB     00:00    
+(58/104): perl-Symbol-1.08-480.el9.noarch.rpm   558 kB/s |  14 kB     00:00    
+(59/104): perl-NDBM_File-1.15-480.el9.aarch64.r 1.3 MB/s |  22 kB     00:00    
+(60/104): perl-IPC-Open3-1.21-480.el9.noarch.rp 951 kB/s |  23 kB     00:00    
+(61/104): perl-POSIX-1.94-480.el9.aarch64.rpm   1.8 MB/s |  97 kB     00:00    
+(62/104): perl-Getopt-Std-1.12-480.el9.noarch.r 730 kB/s |  16 kB     00:00    
+(63/104): perl-IO-1.43-480.el9.aarch64.rpm      2.5 MB/s |  86 kB     00:00    
+(64/104): perl-FileHandle-2.03-480.el9.noarch.r 568 kB/s |  16 kB     00:00    
+(65/104): perl-File-Basename-2.85-480.el9.noarc 647 kB/s |  17 kB     00:00    
+(66/104): perl-File-stat-1.09-480.el9.noarch.rp 567 kB/s |  17 kB     00:00    
+(67/104): perl-Errno-1.30-480.el9.aarch64.rpm   488 kB/s |  15 kB     00:00    
+(68/104): perl-Fcntl-1.13-480.el9.aarch64.rpm   426 kB/s |  20 kB     00:00    
+(69/104): perl-Class-Struct-0.66-480.el9.noarch 513 kB/s |  22 kB     00:00    
+(70/104): perl-B-1.80-480.el9.aarch64.rpm       6.2 MB/s | 180 kB     00:00    
+(71/104): perl-AutoLoader-5.74-480.el9.noarch.r 742 kB/s |  21 kB     00:00    
+(72/104): perl-Net-SSLeay-1.92-2.el9.aarch64.rp  10 MB/s | 366 kB     00:00    
+(73/104): perl-parent-0.238-460.el9.noarch.rpm  419 kB/s |  14 kB     00:00    
+(74/104): pyproject-srpm-macros-1.6.2-1.el9.noa 512 kB/s |  14 kB     00:00    
+(75/104): python3-six-1.15.0-9.el9.noarch.rpm   2.1 MB/s |  36 kB     00:00    
+(76/104): qt5-srpm-macros-5.15.3-1.el9.noarch.r 242 kB/s | 8.7 kB     00:00    
+(77/104): file-5.39-12.1.el9_2.aarch64.rpm      1.6 MB/s |  48 kB     00:00    
+(78/104): bzip2-1.0.8-8.el9.aarch64.rpm         1.4 MB/s |  51 kB     00:00    
+(79/104): zip-3.0-35.el9.aarch64.rpm            6.1 MB/s | 257 kB     00:00    
+(80/104): groff-base-1.22.4-10.el9.aarch64.rpm   35 MB/s | 1.0 MB     00:00    
+(81/104): dnf-plugins-core-4.3.0-5.el9_2.noarch 1.8 MB/s |  36 kB     00:00    
+(82/104): python3-dnf-plugins-core-4.3.0-5.el9_ 6.0 MB/s | 245 kB     00:00    
+(83/104): python3-dateutil-2.8.1-6.el9.noarch.r 6.7 MB/s | 288 kB     00:00    
 (84/104): info-6.7-15.el9.aarch64.rpm           5.1 MB/s | 220 kB     00:00    
-(85/104): pkgconf-pkg-config-1.7.3-10.el9.aarch 630 kB/s |  10 kB     00:00    
-(86/104): pkgconf-1.7.3-10.el9.aarch64.rpm      1.4 MB/s |  39 kB     00:00    
-(87/104): libpkgconf-1.7.3-10.el9.aarch64.rpm   1.0 MB/s |  35 kB     00:00    
-(88/104): cpio-2.13-16.el9.aarch64.rpm          3.9 MB/s | 268 kB     00:00    
-(89/104): pkgconf-m4-1.7.3-10.el9.noarch.rpm    446 kB/s |  14 kB     00:00    
-(90/104): xz-5.2.5-8.el9_0.aarch64.rpm          7.5 MB/s | 214 kB     00:00    
-(91/104): ed-1.14.2-12.el9.aarch64.rpm          3.4 MB/s |  73 kB     00:00    
-(92/104): python3-systemd-234-18.el9.aarch64.rp 2.5 MB/s |  82 kB     00:00    
-(93/104): unzip-6.0-56.el9.aarch64.rpm          3.7 MB/s | 177 kB     00:00    
-(94/104): diffutils-3.7-12.el9.aarch64.rpm       13 MB/s | 383 kB     00:00    
-(95/104): dbus-libs-1.12.20-7.el9_2.1.aarch64.r 4.3 MB/s | 149 kB     00:00    
-(96/104): ncurses-6.2-8.20210508.el9.aarch64.rp 7.6 MB/s | 400 kB     00:00    
-(97/104): zstd-1.5.1-2.el9.aarch64.rpm          7.5 MB/s | 386 kB     00:00    
-(98/104): elfutils-0.188-3.el9.aarch64.rpm       10 MB/s | 513 kB     00:00    
-(99/104): python3-dbus-1.2.18-2.el9.aarch64.rpm 4.2 MB/s | 131 kB     00:00    
-(100/104): glibc-minimal-langpack-2.34-60.el9_2 1.7 MB/s |  33 kB     00:00    
-(101/104): file-libs-5.39-12.1.el9_2.aarch64.rp  17 MB/s | 586 kB     00:00    
-(102/104): glibc-common-2.34-60.el9_2.7.aarch64 7.9 MB/s | 294 kB     00:00    
-(103/104): glibc-gconv-extra-2.34-60.el9_2.7.aa  18 MB/s | 1.6 MB     00:00    
+(85/104): cpio-2.13-16.el9.aarch64.rpm          7.1 MB/s | 268 kB     00:00    
+(86/104): libpkgconf-1.7.3-10.el9.aarch64.rpm   1.3 MB/s |  35 kB     00:00    
+(87/104): pkgconf-pkg-config-1.7.3-10.el9.aarch 257 kB/s |  10 kB     00:00    
+(88/104): pkgconf-m4-1.7.3-10.el9.noarch.rpm    418 kB/s |  14 kB     00:00    
+(89/104): pkgconf-1.7.3-10.el9.aarch64.rpm      479 kB/s |  39 kB     00:00    
+(90/104): xz-5.2.5-8.el9_0.aarch64.rpm          3.0 MB/s | 214 kB     00:00    
+(91/104): unzip-6.0-56.el9.aarch64.rpm          4.3 MB/s | 177 kB     00:00    
+(92/104): python3-systemd-234-18.el9.aarch64.rp 2.7 MB/s |  82 kB     00:00    
+(93/104): ed-1.14.2-12.el9.aarch64.rpm          1.9 MB/s |  73 kB     00:00    
+(94/104): diffutils-3.7-12.el9.aarch64.rpm       10 MB/s | 383 kB     00:00    
+(95/104): dbus-libs-1.12.20-7.el9_2.1.aarch64.r 3.7 MB/s | 149 kB     00:00    
+(96/104): zstd-1.5.1-2.el9.aarch64.rpm           13 MB/s | 386 kB     00:00    
+(97/104): elfutils-0.188-3.el9.aarch64.rpm       13 MB/s | 513 kB     00:00    
+(98/104): ncurses-6.2-8.20210508.el9.aarch64.rp 8.4 MB/s | 400 kB     00:00    
+(99/104): python3-dbus-1.2.18-2.el9.aarch64.rpm 5.6 MB/s | 131 kB     00:00    
+(100/104): file-libs-5.39-12.1.el9_2.aarch64.rp  22 MB/s | 586 kB     00:00    
+(101/104): glibc-minimal-langpack-2.34-60.el9_2 1.1 MB/s |  33 kB     00:00    
+(102/104): glibc-gconv-extra-2.34-60.el9_2.7.aa  24 MB/s | 1.6 MB     00:00    
+(103/104): glibc-common-2.34-60.el9_2.7.aarch64 7.1 MB/s | 294 kB     00:00    
 (104/104): glibc-2.34-60.el9_2.7.aarch64.rpm     19 MB/s | 1.7 MB     00:00    
 --------------------------------------------------------------------------------
-Total                                            13 MB/s |  19 MB     00:01     
-Rocky Linux 9.2 AppStream                        30 kB/s | 1.7 kB     00:00    
+Total                                            15 MB/s |  19 MB     00:01     
+Rocky Linux 9.2 AppStream                        25 kB/s | 1.7 kB     00:00    
 Importing GPG key 0x350D275D:
  Userid     : "Rocky Enterprise Software Foundation - Release key 2022 <releng@rockylinux.org>"
  Fingerprint: 21CB 256A E16F C54C 6E65 2949 702D 426D 350D 275D
@@ -603,227 +603,325 @@ Installed:
   zstd-1.5.1-2.el9.aarch64                                                      
 
 Complete!
-Last metadata expiration check: 0:00:03 ago on Thu Jan  2 22:46:49 2025.
+Last metadata expiration check: 0:00:03 ago on Tue Jan 14 20:59:29 2025.
 Package findutils-1:4.8.0-5.el9.aarch64 is already installed.
 Package openssl-1:3.0.7-6.el9_2.aarch64 is already installed.
 Dependencies resolved.
-================================================================================
- Package               Arch    Version                 Repository          Size
-================================================================================
+=========================================================================================
+ Package                        Arch     Version                Repository           Size
+=========================================================================================
 Installing:
- dos2unix              aarch64 7.4.2-4.el9             rocky-baseos-92    234 k
- elfutils-libelf-devel aarch64 0.188-3.el9             rocky-appstream-92  22 k
- gcc                   aarch64 11.3.1-4.3.el9          rocky-appstream-92  30 M
- git                   aarch64 2.39.3-1.el9_2          rocky-appstream-92  61 k
- make                  aarch64 1:4.3-7.el9             rocky-baseos-92    528 k
- openssl-devel         aarch64 1:3.0.7-17.el9_2        rocky-appstream-92 3.0 M
- pesign                aarch64 115-6.el9_1.rocky.2     rocky-appstream-92 173 k
+ dos2unix                       aarch64  7.4.2-4.el9            rocky-baseos-92     234 k
+ elfutils-libelf-devel          aarch64  0.188-3.el9            rocky-appstream-92   22 k
+ gcc                            aarch64  11.3.1-4.3.el9         rocky-appstream-92   30 M
+ gcc-toolset-12-binutils        aarch64  2.38-17.el9_2.1        rocky-appstream-92  5.8 M
+ git                            aarch64  2.39.3-1.el9_2         rocky-appstream-92   61 k
+ make                           aarch64  1:4.3-7.el9            rocky-baseos-92     528 k
+ openssl-devel                  aarch64  1:3.0.7-17.el9_2       rocky-appstream-92  3.0 M
+ pesign                         aarch64  115-6.el9_1.rocky.2    rocky-appstream-92  173 k
 Upgrading:
- openssl               aarch64 1:3.0.7-17.el9_2        rocky-baseos-92    1.1 M
- openssl-libs          aarch64 1:3.0.7-17.el9_2        rocky-baseos-92    2.0 M
+ openssl                        aarch64  1:3.0.7-17.el9_2       rocky-baseos-92     1.1 M
+ openssl-libs                   aarch64  1:3.0.7-17.el9_2       rocky-baseos-92     2.0 M
 Installing dependencies:
- annobin               aarch64 11.05-1.el9             rocky-appstream-92 972 k
- cpp                   aarch64 11.3.1-4.3.el9          rocky-appstream-92  10 M
- efivar-libs           aarch64 38-3.el9                rocky-baseos-92    116 k
- emacs-filesystem      noarch  1:27.2-8.el9_2.1        rocky-appstream-92 7.9 k
- gcc-plugin-annobin    aarch64 11.3.1-4.3.el9          rocky-appstream-92  62 k
- git-core              aarch64 2.39.3-1.el9_2          rocky-appstream-92 4.3 M
- git-core-doc          noarch  2.39.3-1.el9_2          rocky-appstream-92 2.6 M
- glibc-devel           aarch64 2.34-60.el9_2.7         rocky-appstream-92 456 k
- kernel-headers        aarch64 5.14.0-284.30.1.el9_2   rocky-appstream-92 4.8 M
- libasan               aarch64 11.3.1-4.3.el9          rocky-appstream-92 429 k
- libcbor               aarch64 0.7.0-5.el9             rocky-baseos-92     55 k
- libedit               aarch64 3.1-37.20210216cvs.el9  rocky-baseos-92    102 k
- libfido2              aarch64 1.6.0-7.el9             rocky-baseos-92     68 k
- libmpc                aarch64 1.2.1-4.el9             rocky-appstream-92  62 k
- libubsan              aarch64 11.3.1-4.3.el9          rocky-appstream-92 202 k
- libxcrypt-devel       aarch64 4.4.18-3.el9            rocky-appstream-92  28 k
- llvm-libs             aarch64 15.0.7-1.el9            rocky-appstream-92  20 M
- nspr                  aarch64 4.35.0-3.el9_2          rocky-appstream-92 131 k
- nss                   aarch64 3.90.0-3.el9_2          rocky-appstream-92 681 k
- nss-softokn           aarch64 3.90.0-3.el9_2          rocky-appstream-92 374 k
- nss-softokn-freebl    aarch64 3.90.0-3.el9_2          rocky-appstream-92 315 k
- nss-sysinit           aarch64 3.90.0-3.el9_2          rocky-appstream-92  19 k
- nss-tools             aarch64 3.90.0-3.el9_2          rocky-appstream-92 422 k
- nss-util              aarch64 3.90.0-3.el9_2          rocky-appstream-92  85 k
- openssh               aarch64 8.7p1-30.el9_2          rocky-baseos-92    443 k
- openssh-clients       aarch64 8.7p1-30.el9_2          rocky-baseos-92    672 k
- perl-DynaLoader       aarch64 1.47-480.el9            rocky-appstream-92  26 k
- perl-Error            noarch  1:0.17029-7.el9         rocky-appstream-92  41 k
- perl-File-Find        noarch  1.37-480.el9            rocky-appstream-92  26 k
- perl-Git              noarch  2.39.3-1.el9_2          rocky-appstream-92  37 k
- perl-TermReadKey      aarch64 2.38-11.el9             rocky-appstream-92  35 k
- perl-lib              aarch64 0.65-480.el9            rocky-appstream-92  15 k
- zlib-devel            aarch64 1.2.11-39.el9           rocky-appstream-92  44 k
+ annobin                        aarch64  11.05-1.el9            rocky-appstream-92  972 k
+ checkpolicy                    aarch64  3.5-1.el9              rocky-appstream-92  340 k
+ cpp                            aarch64  11.3.1-4.3.el9         rocky-appstream-92   10 M
+ efivar-libs                    aarch64  38-3.el9               rocky-baseos-92     116 k
+ emacs-filesystem               noarch   1:27.2-8.el9_2.1       rocky-appstream-92  7.9 k
+ environment-modules            aarch64  5.0.1-2.el9            rocky-baseos-92     480 k
+ gcc-plugin-annobin             aarch64  11.3.1-4.3.el9         rocky-appstream-92   62 k
+ gcc-toolset-12-binutils-gold   aarch64  2.38-17.el9_2.1        rocky-appstream-92  912 k
+ gcc-toolset-12-runtime         aarch64  12.0-6.el9             rocky-appstream-92   27 k
+ git-core                       aarch64  2.39.3-1.el9_2         rocky-appstream-92  4.3 M
+ git-core-doc                   noarch   2.39.3-1.el9_2         rocky-appstream-92  2.6 M
+ glibc-devel                    aarch64  2.34-60.el9_2.7        rocky-appstream-92  456 k
+ kernel-headers                 aarch64  5.14.0-284.30.1.el9_2  rocky-appstream-92  4.8 M
+ libasan                        aarch64  11.3.1-4.3.el9         rocky-appstream-92  429 k
+ libcbor                        aarch64  0.7.0-5.el9            rocky-baseos-92      55 k
+ libedit                        aarch64  3.1-37.20210216cvs.el9 rocky-baseos-92     102 k
+ libfido2                       aarch64  1.6.0-7.el9            rocky-baseos-92      68 k
+ libmpc                         aarch64  1.2.1-4.el9            rocky-appstream-92   62 k
+ libpipeline                    aarch64  1.5.3-4.el9            rocky-baseos-92      47 k
+ libselinux-utils               aarch64  3.5-1.el9              rocky-baseos-92     158 k
+ libubsan                       aarch64  11.3.1-4.3.el9         rocky-appstream-92  202 k
+ libxcrypt-devel                aarch64  4.4.18-3.el9           rocky-appstream-92   28 k
+ llvm-libs                      aarch64  15.0.7-1.el9           rocky-appstream-92   20 M
+ man-db                         aarch64  2.9.3-7.el9            rocky-baseos-92     1.1 M
+ nspr                           aarch64  4.35.0-3.el9_2         rocky-appstream-92  131 k
+ nss                            aarch64  3.90.0-3.el9_2         rocky-appstream-92  681 k
+ nss-softokn                    aarch64  3.90.0-3.el9_2         rocky-appstream-92  374 k
+ nss-softokn-freebl             aarch64  3.90.0-3.el9_2         rocky-appstream-92  315 k
+ nss-sysinit                    aarch64  3.90.0-3.el9_2         rocky-appstream-92   19 k
+ nss-tools                      aarch64  3.90.0-3.el9_2         rocky-appstream-92  422 k
+ nss-util                       aarch64  3.90.0-3.el9_2         rocky-appstream-92   85 k
+ openssh                        aarch64  8.7p1-30.el9_2         rocky-baseos-92     443 k
+ openssh-clients                aarch64  8.7p1-30.el9_2         rocky-baseos-92     672 k
+ perl-DynaLoader                aarch64  1.47-480.el9           rocky-appstream-92   26 k
+ perl-Error                     noarch   1:0.17029-7.el9        rocky-appstream-92   41 k
+ perl-File-Find                 noarch   1.37-480.el9           rocky-appstream-92   26 k
+ perl-Git                       noarch   2.39.3-1.el9_2         rocky-appstream-92   37 k
+ perl-TermReadKey               aarch64  2.38-11.el9            rocky-appstream-92   35 k
+ perl-lib                       aarch64  0.65-480.el9           rocky-appstream-92   15 k
+ policycoreutils                aarch64  3.5-1.el9              rocky-baseos-92     205 k
+ policycoreutils-python-utils   noarch   3.5-1.el9              rocky-appstream-92   71 k
+ procps-ng                      aarch64  3.3.17-11.el9          rocky-baseos-92     332 k
+ python3-audit                  aarch64  3.0.7-103.el9          rocky-appstream-92   83 k
+ python3-distro                 noarch   1.5.0-7.el9            rocky-appstream-92   36 k
+ python3-libselinux             aarch64  3.5-1.el9              rocky-appstream-92  182 k
+ python3-libsemanage            aarch64  3.5-1.el9              rocky-appstream-92   78 k
+ python3-policycoreutils        noarch   3.5-1.el9              rocky-appstream-92  2.0 M
+ python3-setools                aarch64  4.4.1-1.el9            rocky-baseos-92     534 k
+ python3-setuptools             noarch   53.0.0-12.el9          rocky-baseos-92     839 k
+ scl-utils                      aarch64  1:2.0.3-4.el9          rocky-appstream-92   36 k
+ tcl                            aarch64  1:8.6.10-7.el9         rocky-baseos-92     1.0 M
+ vim-filesystem                 noarch   2:8.2.2637-20.el9_1    rocky-baseos-92      14 k
+ zlib-devel                     aarch64  1.2.11-39.el9          rocky-appstream-92   44 k
 
 Transaction Summary
-================================================================================
-Install  40 Packages
+=========================================================================================
+Install  61 Packages
 Upgrade   2 Packages
 
-Total download size: 85 M
+Total download size: 99 M
 Downloading Packages:
-(1/42): perl-Error-0.17029-7.el9.noarch.rpm     529 kB/s |  41 kB     00:00    
-(2/42): pesign-115-6.el9_1.rocky.2.aarch64.rpm  1.8 MB/s | 173 kB     00:00    
-(3/42): annobin-11.05-1.el9.aarch64.rpm          20 MB/s | 972 kB     00:00    
-(4/42): libmpc-1.2.1-4.el9.aarch64.rpm          1.4 MB/s |  62 kB     00:00    
-(5/42): libxcrypt-devel-4.4.18-3.el9.aarch64.rp 1.2 MB/s |  28 kB     00:00    
-(6/42): perl-lib-0.65-480.el9.aarch64.rpm       519 kB/s |  15 kB     00:00    
-(7/42): openssl-devel-3.0.7-17.el9_2.aarch64.rp  16 MB/s | 3.0 MB     00:00    
-(8/42): perl-File-Find-1.37-480.el9.noarch.rpm  794 kB/s |  26 kB     00:00    
-(9/42): perl-DynaLoader-1.47-480.el9.aarch64.rp 1.0 MB/s |  26 kB     00:00    
-(10/42): nss-util-3.90.0-3.el9_2.aarch64.rpm    3.8 MB/s |  85 kB     00:00    
-(11/42): elfutils-libelf-devel-0.188-3.el9.aarc 690 kB/s |  22 kB     00:00    
-(12/42): nss-tools-3.90.0-3.el9_2.aarch64.rpm    12 MB/s | 422 kB     00:00    
-(13/42): nss-sysinit-3.90.0-3.el9_2.aarch64.rpm 582 kB/s |  19 kB     00:00    
-(14/42): nss-softokn-freebl-3.90.0-3.el9_2.aarc 8.6 MB/s | 315 kB     00:00    
-(15/42): nss-3.90.0-3.el9_2.aarch64.rpm          13 MB/s | 681 kB     00:00    
-(16/42): nss-softokn-3.90.0-3.el9_2.aarch64.rpm 6.4 MB/s | 374 kB     00:00    
-(17/42): nspr-4.35.0-3.el9_2.aarch64.rpm        3.1 MB/s | 131 kB     00:00    
-(18/42): perl-Git-2.39.3-1.el9_2.noarch.rpm     2.1 MB/s |  37 kB     00:00    
-(19/42): emacs-filesystem-27.2-8.el9_2.1.noarch 246 kB/s | 7.9 kB     00:00    
-(20/42): git-core-doc-2.39.3-1.el9_2.noarch.rpm  16 MB/s | 2.6 MB     00:00    
-(21/42): git-2.39.3-1.el9_2.aarch64.rpm         922 kB/s |  61 kB     00:00    
-(22/42): libubsan-11.3.1-4.3.el9.aarch64.rpm    5.8 MB/s | 202 kB     00:00    
-(23/42): git-core-2.39.3-1.el9_2.aarch64.rpm     16 MB/s | 4.3 MB     00:00    
-(24/42): gcc-plugin-annobin-11.3.1-4.3.el9.aarc 891 kB/s |  62 kB     00:00    
-(25/42): libasan-11.3.1-4.3.el9.aarch64.rpm     4.2 MB/s | 429 kB     00:00    
-(26/42): cpp-11.3.1-4.3.el9.aarch64.rpm          24 MB/s |  10 MB     00:00    
-(27/42): glibc-devel-2.34-60.el9_2.7.aarch64.rp 9.3 MB/s | 456 kB     00:00    
-(28/42): llvm-libs-15.0.7-1.el9.aarch64.rpm      22 MB/s |  20 MB     00:00    
-(29/42): zlib-devel-1.2.11-39.el9.aarch64.rpm   1.2 MB/s |  44 kB     00:00    
-(30/42): perl-TermReadKey-2.38-11.el9.aarch64.r 1.5 MB/s |  35 kB     00:00    
-(31/42): efivar-libs-38-3.el9.aarch64.rpm       5.0 MB/s | 116 kB     00:00    
-(32/42): libfido2-1.6.0-7.el9.aarch64.rpm       1.9 MB/s |  68 kB     00:00    
-(33/42): dos2unix-7.4.2-4.el9.aarch64.rpm       5.3 MB/s | 234 kB     00:00    
-(34/42): libedit-3.1-37.20210216cvs.el9.aarch64 2.6 MB/s | 102 kB     00:00    
-(35/42): libcbor-0.7.0-5.el9.aarch64.rpm        1.6 MB/s |  55 kB     00:00    
-(36/42): kernel-headers-5.14.0-284.30.1.el9_2.a  21 MB/s | 4.8 MB     00:00    
-(37/42): openssh-clients-8.7p1-30.el9_2.aarch64  12 MB/s | 672 kB     00:00    
-(38/42): openssh-8.7p1-30.el9_2.aarch64.rpm      15 MB/s | 443 kB     00:00    
-(39/42): make-4.3-7.el9.aarch64.rpm              10 MB/s | 528 kB     00:00    
-(40/42): openssl-libs-3.0.7-17.el9_2.aarch64.rp  19 MB/s | 2.0 MB     00:00    
-(41/42): openssl-3.0.7-17.el9_2.aarch64.rpm      16 MB/s | 1.1 MB     00:00    
-(42/42): gcc-11.3.1-4.3.el9.aarch64.rpm          28 MB/s |  30 MB     00:01    
+(1/63): checkpolicy-3.5-1.el9.aarch64.rpm       2.3 MB/s | 340 kB     00:00    
+(2/63): python3-policycoreutils-3.5-1.el9.noarc  12 MB/s | 2.0 MB     00:00    
+(3/63): policycoreutils-python-utils-3.5-1.el9. 2.3 MB/s |  71 kB     00:00    
+(4/63): python3-distro-1.5.0-7.el9.noarch.rpm   188 kB/s |  36 kB     00:00    
+(5/63): perl-Error-0.17029-7.el9.noarch.rpm     1.0 MB/s |  41 kB     00:00    
+(6/63): pesign-115-6.el9_1.rocky.2.aarch64.rpm  4.1 MB/s | 173 kB     00:00    
+(7/63): python3-libsemanage-3.5-1.el9.aarch64.r 3.3 MB/s |  78 kB     00:00    
+(8/63): annobin-11.05-1.el9.aarch64.rpm          16 MB/s | 972 kB     00:00    
+(9/63): python3-libselinux-3.5-1.el9.aarch64.rp 4.4 MB/s | 182 kB     00:00    
+(10/63): openssl-devel-3.0.7-17.el9_2.aarch64.r  19 MB/s | 3.0 MB     00:00    
+(11/63): libmpc-1.2.1-4.el9.aarch64.rpm         1.2 MB/s |  62 kB     00:00    
+(12/63): libxcrypt-devel-4.4.18-3.el9.aarch64.r 940 kB/s |  28 kB     00:00    
+(13/63): perl-File-Find-1.37-480.el9.noarch.rpm 1.9 MB/s |  26 kB     00:00    
+(14/63): perl-lib-0.65-480.el9.aarch64.rpm      597 kB/s |  15 kB     00:00    
+(15/63): perl-DynaLoader-1.47-480.el9.aarch64.r 972 kB/s |  26 kB     00:00    
+(16/63): scl-utils-2.0.3-4.el9.aarch64.rpm      1.2 MB/s |  36 kB     00:00    
+(17/63): elfutils-libelf-devel-0.188-3.el9.aarc 824 kB/s |  22 kB     00:00    
+(18/63): nss-util-3.90.0-3.el9_2.aarch64.rpm    2.4 MB/s |  85 kB     00:00    
+(19/63): nss-sysinit-3.90.0-3.el9_2.aarch64.rpm 604 kB/s |  19 kB     00:00    
+(20/63): nss-tools-3.90.0-3.el9_2.aarch64.rpm   9.0 MB/s | 422 kB     00:00    
+(21/63): nss-softokn-freebl-3.90.0-3.el9_2.aarc  10 MB/s | 315 kB     00:00    
+(22/63): nss-softokn-3.90.0-3.el9_2.aarch64.rpm  10 MB/s | 374 kB     00:00    
+(23/63): nspr-4.35.0-3.el9_2.aarch64.rpm        3.7 MB/s | 131 kB     00:00    
+(24/63): nss-3.90.0-3.el9_2.aarch64.rpm          16 MB/s | 681 kB     00:00    
+(25/63): emacs-filesystem-27.2-8.el9_2.1.noarch 629 kB/s | 7.9 kB     00:00    
+(26/63): perl-Git-2.39.3-1.el9_2.noarch.rpm     2.3 MB/s |  37 kB     00:00    
+(27/63): git-core-doc-2.39.3-1.el9_2.noarch.rpm  17 MB/s | 2.6 MB     00:00    
+(28/63): git-2.39.3-1.el9_2.aarch64.rpm         1.8 MB/s |  61 kB     00:00    
+(29/63): git-core-2.39.3-1.el9_2.aarch64.rpm     24 MB/s | 4.3 MB     00:00    
+(30/63): libubsan-11.3.1-4.3.el9.aarch64.rpm    5.8 MB/s | 202 kB     00:00    
+(31/63): libasan-11.3.1-4.3.el9.aarch64.rpm     8.9 MB/s | 429 kB     00:00    
+(32/63): gcc-plugin-annobin-11.3.1-4.3.el9.aarc 2.0 MB/s |  62 kB     00:00    
+(33/63): llvm-libs-15.0.7-1.el9.aarch64.rpm      26 MB/s |  20 MB     00:00    
+(34/63): cpp-11.3.1-4.3.el9.aarch64.rpm          19 MB/s |  10 MB     00:00    
+(35/63): zlib-devel-1.2.11-39.el9.aarch64.rpm   2.9 MB/s |  44 kB     00:00    
+(36/63): glibc-devel-2.34-60.el9_2.7.aarch64.rp 5.3 MB/s | 456 kB     00:00    
+(37/63): python3-audit-3.0.7-103.el9.aarch64.rp 2.3 MB/s |  83 kB     00:00    
+(38/63): gcc-toolset-12-runtime-12.0-6.el9.aarc 795 kB/s |  27 kB     00:00    
+(39/63): perl-TermReadKey-2.38-11.el9.aarch64.r 977 kB/s |  35 kB     00:00    
+(40/63): gcc-toolset-12-binutils-gold-2.38-17.e  15 MB/s | 912 kB     00:00    
+(41/63): gcc-toolset-12-binutils-2.38-17.el9_2.  24 MB/s | 5.8 MB     00:00    
+(42/63): efivar-libs-38-3.el9.aarch64.rpm       2.6 MB/s | 116 kB     00:00    
+(43/63): kernel-headers-5.14.0-284.30.1.el9_2.a  21 MB/s | 4.8 MB     00:00    
+(44/63): gcc-11.3.1-4.3.el9.aarch64.rpm          30 MB/s |  30 MB     00:00    
+(45/63): man-db-2.9.3-7.el9.aarch64.rpm          18 MB/s | 1.1 MB     00:00    
+(46/63): python3-setuptools-53.0.0-12.el9.noarc  10 MB/s | 839 kB     00:00    
+(47/63): libfido2-1.6.0-7.el9.aarch64.rpm       2.1 MB/s |  68 kB     00:00    
+(48/63): dos2unix-7.4.2-4.el9.aarch64.rpm        10 MB/s | 234 kB     00:00    
+(49/63): libpipeline-1.5.3-4.el9.aarch64.rpm    4.1 MB/s |  47 kB     00:00    
+(50/63): environment-modules-5.0.1-2.el9.aarch6  25 MB/s | 480 kB     00:00    
+(51/63): procps-ng-3.3.17-11.el9.aarch64.rpm    9.0 MB/s | 332 kB     00:00    
+(52/63): libedit-3.1-37.20210216cvs.el9.aarch64 3.2 MB/s | 102 kB     00:00    
+(53/63): libselinux-utils-3.5-1.el9.aarch64.rpm  11 MB/s | 158 kB     00:00    
+(54/63): openssh-8.7p1-30.el9_2.aarch64.rpm      13 MB/s | 443 kB     00:00    
+(55/63): openssh-clients-8.7p1-30.el9_2.aarch64  19 MB/s | 672 kB     00:00    
+(56/63): libcbor-0.7.0-5.el9.aarch64.rpm        1.3 MB/s |  55 kB     00:00    
+(57/63): make-4.3-7.el9.aarch64.rpm              23 MB/s | 528 kB     00:00    
+(58/63): python3-setools-4.4.1-1.el9.aarch64.rp  10 MB/s | 534 kB     00:00    
+(59/63): tcl-8.6.10-7.el9.aarch64.rpm            20 MB/s | 1.0 MB     00:00    
+(60/63): policycoreutils-3.5-1.el9.aarch64.rpm  6.2 MB/s | 205 kB     00:00    
+(61/63): vim-filesystem-8.2.2637-20.el9_1.noarc 288 kB/s |  14 kB     00:00    
+(62/63): openssl-3.0.7-17.el9_2.aarch64.rpm      25 MB/s | 1.1 MB     00:00    
+(63/63): openssl-libs-3.0.7-17.el9_2.aarch64.rp  25 MB/s | 2.0 MB     00:00    
 --------------------------------------------------------------------------------
-Total                                            49 MB/s |  85 MB     00:01     
+Total                                            51 MB/s |  99 MB     00:01     
 Running transaction check
 Transaction check succeeded.
 Running transaction test
 Transaction test succeeded.
 Running transaction
   Preparing        :                                                        1/1 
-  Installing       : nspr-4.35.0-3.el9_2.aarch64                           1/44 
-  Installing       : nss-util-3.90.0-3.el9_2.aarch64                       2/44 
-  Upgrading        : openssl-libs-1:3.0.7-17.el9_2.aarch64                 3/44 
-  Installing       : libedit-3.1-37.20210216cvs.el9.aarch64                4/44 
-  Installing       : libmpc-1.2.1-4.el9.aarch64                            5/44 
-  Installing       : cpp-11.3.1-4.3.el9.aarch64                            6/44 
-  Installing       : llvm-libs-15.0.7-1.el9.aarch64                        7/44 
-  Running scriptlet: openssh-8.7p1-30.el9_2.aarch64                        8/44 
-  Installing       : openssh-8.7p1-30.el9_2.aarch64                        8/44 
-  Installing       : nss-softokn-freebl-3.90.0-3.el9_2.aarch64             9/44 
-  Installing       : nss-softokn-3.90.0-3.el9_2.aarch64                   10/44 
-  Installing       : nss-sysinit-3.90.0-3.el9_2.aarch64                   11/44 
-  Installing       : nss-3.90.0-3.el9_2.aarch64                           12/44 
-  Running scriptlet: nss-3.90.0-3.el9_2.aarch64                           12/44 
-  Installing       : nss-tools-3.90.0-3.el9_2.aarch64                     13/44 
-  Installing       : make-1:4.3-7.el9.aarch64                             14/44 
-  Installing       : libcbor-0.7.0-5.el9.aarch64                          15/44 
-  Installing       : libfido2-1.6.0-7.el9.aarch64                         16/44 
-  Installing       : openssh-clients-8.7p1-30.el9_2.aarch64               17/44 
-  Running scriptlet: openssh-clients-8.7p1-30.el9_2.aarch64               17/44 
-  Installing       : git-core-2.39.3-1.el9_2.aarch64                      18/44 
-  Installing       : git-core-doc-2.39.3-1.el9_2.noarch                   19/44 
-  Installing       : efivar-libs-38-3.el9.aarch64                         20/44 
-  Installing       : kernel-headers-5.14.0-284.30.1.el9_2.aarch64         21/44 
-  Installing       : glibc-devel-2.34-60.el9_2.7.aarch64                  22/44 
-  Installing       : libxcrypt-devel-4.4.18-3.el9.aarch64                 23/44 
-  Installing       : zlib-devel-1.2.11-39.el9.aarch64                     24/44 
-  Installing       : libasan-11.3.1-4.3.el9.aarch64                       25/44 
-  Installing       : libubsan-11.3.1-4.3.el9.aarch64                      26/44 
-  Installing       : gcc-11.3.1-4.3.el9.aarch64                           27/44 
-  Running scriptlet: gcc-11.3.1-4.3.el9.aarch64                           27/44 
-  Installing       : emacs-filesystem-1:27.2-8.el9_2.1.noarch             28/44 
-  Installing       : perl-DynaLoader-1.47-480.el9.aarch64                 29/44 
-  Installing       : perl-TermReadKey-2.38-11.el9.aarch64                 30/44 
-  Installing       : perl-File-Find-1.37-480.el9.noarch                   31/44 
-  Installing       : perl-lib-0.65-480.el9.aarch64                        32/44 
-  Installing       : perl-Error-1:0.17029-7.el9.noarch                    33/44 
-  Installing       : git-2.39.3-1.el9_2.aarch64                           34/44 
-  Installing       : perl-Git-2.39.3-1.el9_2.noarch                       35/44 
-  Installing       : annobin-11.05-1.el9.aarch64                          36/44 
-  Running scriptlet: annobin-11.05-1.el9.aarch64                          36/44 
-  Installing       : gcc-plugin-annobin-11.3.1-4.3.el9.aarch64            37/44 
-  Running scriptlet: gcc-plugin-annobin-11.3.1-4.3.el9.aarch64            37/44 
-  Installing       : elfutils-libelf-devel-0.188-3.el9.aarch64            38/44 
-  Running scriptlet: pesign-115-6.el9_1.rocky.2.aarch64                   39/44 
-  Installing       : pesign-115-6.el9_1.rocky.2.aarch64                   39/44 
-  Running scriptlet: pesign-115-6.el9_1.rocky.2.aarch64                   39/44 
-  Installing       : openssl-devel-1:3.0.7-17.el9_2.aarch64               40/44 
-  Upgrading        : openssl-1:3.0.7-17.el9_2.aarch64                     41/44 
-  Installing       : dos2unix-7.4.2-4.el9.aarch64                         42/44 
-  Cleanup          : openssl-1:3.0.7-6.el9_2.aarch64                      43/44 
-  Cleanup          : openssl-libs-1:3.0.7-6.el9_2.aarch64                 44/44 
-  Running scriptlet: nss-3.90.0-3.el9_2.aarch64                           44/44 
-  Running scriptlet: pesign-115-6.el9_1.rocky.2.aarch64                   44/44 
-  Running scriptlet: openssl-libs-1:3.0.7-6.el9_2.aarch64                 44/44 
-  Verifying        : openssl-devel-1:3.0.7-17.el9_2.aarch64                1/44 
-  Verifying        : perl-Error-1:0.17029-7.el9.noarch                     2/44 
-  Verifying        : pesign-115-6.el9_1.rocky.2.aarch64                    3/44 
-  Verifying        : annobin-11.05-1.el9.aarch64                           4/44 
-  Verifying        : libmpc-1.2.1-4.el9.aarch64                            5/44 
-  Verifying        : libxcrypt-devel-4.4.18-3.el9.aarch64                  6/44 
-  Verifying        : perl-lib-0.65-480.el9.aarch64                         7/44 
-  Verifying        : perl-File-Find-1.37-480.el9.noarch                    8/44 
-  Verifying        : perl-DynaLoader-1.47-480.el9.aarch64                  9/44 
-  Verifying        : elfutils-libelf-devel-0.188-3.el9.aarch64            10/44 
-  Verifying        : nss-util-3.90.0-3.el9_2.aarch64                      11/44 
-  Verifying        : nss-tools-3.90.0-3.el9_2.aarch64                     12/44 
-  Verifying        : nss-sysinit-3.90.0-3.el9_2.aarch64                   13/44 
-  Verifying        : nss-softokn-freebl-3.90.0-3.el9_2.aarch64            14/44 
-  Verifying        : nss-softokn-3.90.0-3.el9_2.aarch64                   15/44 
-  Verifying        : nss-3.90.0-3.el9_2.aarch64                           16/44 
-  Verifying        : nspr-4.35.0-3.el9_2.aarch64                          17/44 
-  Verifying        : emacs-filesystem-1:27.2-8.el9_2.1.noarch             18/44 
-  Verifying        : llvm-libs-15.0.7-1.el9.aarch64                       19/44 
-  Verifying        : perl-Git-2.39.3-1.el9_2.noarch                       20/44 
-  Verifying        : git-core-doc-2.39.3-1.el9_2.noarch                   21/44 
-  Verifying        : git-core-2.39.3-1.el9_2.aarch64                      22/44 
-  Verifying        : git-2.39.3-1.el9_2.aarch64                           23/44 
-  Verifying        : libubsan-11.3.1-4.3.el9.aarch64                      24/44 
-  Verifying        : libasan-11.3.1-4.3.el9.aarch64                       25/44 
-  Verifying        : gcc-plugin-annobin-11.3.1-4.3.el9.aarch64            26/44 
-  Verifying        : gcc-11.3.1-4.3.el9.aarch64                           27/44 
-  Verifying        : cpp-11.3.1-4.3.el9.aarch64                           28/44 
-  Verifying        : glibc-devel-2.34-60.el9_2.7.aarch64                  29/44 
-  Verifying        : zlib-devel-1.2.11-39.el9.aarch64                     30/44 
-  Verifying        : perl-TermReadKey-2.38-11.el9.aarch64                 31/44 
-  Verifying        : kernel-headers-5.14.0-284.30.1.el9_2.aarch64         32/44 
-  Verifying        : efivar-libs-38-3.el9.aarch64                         33/44 
-  Verifying        : libfido2-1.6.0-7.el9.aarch64                         34/44 
-  Verifying        : dos2unix-7.4.2-4.el9.aarch64                         35/44 
-  Verifying        : libedit-3.1-37.20210216cvs.el9.aarch64               36/44 
-  Verifying        : libcbor-0.7.0-5.el9.aarch64                          37/44 
-  Verifying        : openssh-clients-8.7p1-30.el9_2.aarch64               38/44 
-  Verifying        : openssh-8.7p1-30.el9_2.aarch64                       39/44 
-  Verifying        : make-1:4.3-7.el9.aarch64                             40/44 
-  Verifying        : openssl-libs-1:3.0.7-17.el9_2.aarch64                41/44 
-  Verifying        : openssl-libs-1:3.0.7-6.el9_2.aarch64                 42/44 
-  Verifying        : openssl-1:3.0.7-17.el9_2.aarch64                     43/44 
-  Verifying        : openssl-1:3.0.7-6.el9_2.aarch64                      44/44 
+  Installing       : nspr-4.35.0-3.el9_2.aarch64                           1/65 
+  Installing       : nss-util-3.90.0-3.el9_2.aarch64                       2/65 
+  Upgrading        : openssl-libs-1:3.0.7-17.el9_2.aarch64                 3/65 
+  Installing       : libedit-3.1-37.20210216cvs.el9.aarch64                4/65 
+  Installing       : python3-setuptools-53.0.0-12.el9.noarch               5/65 
+  Installing       : libmpc-1.2.1-4.el9.aarch64                            6/65 
+  Installing       : python3-libselinux-3.5-1.el9.aarch64                  7/65 
+  Installing       : python3-libsemanage-3.5-1.el9.aarch64                 8/65 
+  Installing       : cpp-11.3.1-4.3.el9.aarch64                            9/65 
+  Installing       : python3-distro-1.5.0-7.el9.noarch                    10/65 
+  Installing       : python3-setools-4.4.1-1.el9.aarch64                  11/65 
+  Installing       : llvm-libs-15.0.7-1.el9.aarch64                       12/65 
+  Running scriptlet: openssh-8.7p1-30.el9_2.aarch64                       13/65 
+  Installing       : openssh-8.7p1-30.el9_2.aarch64                       13/65 
+  Installing       : nss-softokn-freebl-3.90.0-3.el9_2.aarch64            14/65 
+  Installing       : nss-softokn-3.90.0-3.el9_2.aarch64                   15/65 
+  Installing       : nss-sysinit-3.90.0-3.el9_2.aarch64                   16/65 
+  Installing       : nss-3.90.0-3.el9_2.aarch64                           17/65 
+  Running scriptlet: nss-3.90.0-3.el9_2.aarch64                           17/65 
+  Installing       : nss-tools-3.90.0-3.el9_2.aarch64                     18/65 
+  Installing       : vim-filesystem-2:8.2.2637-20.el9_1.noarch            19/65 
+  Installing       : make-1:4.3-7.el9.aarch64                             20/65 
+  Installing       : tcl-1:8.6.10-7.el9.aarch64                           21/65 
+  Installing       : libcbor-0.7.0-5.el9.aarch64                          22/65 
+  Installing       : libfido2-1.6.0-7.el9.aarch64                         23/65 
+  Installing       : openssh-clients-8.7p1-30.el9_2.aarch64               24/65 
+  Running scriptlet: openssh-clients-8.7p1-30.el9_2.aarch64               24/65 
+  Installing       : git-core-2.39.3-1.el9_2.aarch64                      25/65 
+  Installing       : git-core-doc-2.39.3-1.el9_2.noarch                   26/65 
+  Installing       : libselinux-utils-3.5-1.el9.aarch64                   27/65 
+  Installing       : policycoreutils-3.5-1.el9.aarch64                    28/65 
+  Running scriptlet: policycoreutils-3.5-1.el9.aarch64                    28/65 
+  Installing       : libpipeline-1.5.3-4.el9.aarch64                      29/65 
+  Running scriptlet: man-db-2.9.3-7.el9.aarch64                           30/65 
+  Installing       : man-db-2.9.3-7.el9.aarch64                           30/65 
+  Running scriptlet: man-db-2.9.3-7.el9.aarch64                           30/65 
+  Installing       : procps-ng-3.3.17-11.el9.aarch64                      31/65 
+  Installing       : environment-modules-5.0.1-2.el9.aarch64              32/65 
+  Running scriptlet: environment-modules-5.0.1-2.el9.aarch64              32/65 
+  Installing       : scl-utils-1:2.0.3-4.el9.aarch64                      33/65 
+  Installing       : efivar-libs-38-3.el9.aarch64                         34/65 
+  Installing       : kernel-headers-5.14.0-284.30.1.el9_2.aarch64         35/65 
+  Installing       : glibc-devel-2.34-60.el9_2.7.aarch64                  36/65 
+  Installing       : libxcrypt-devel-4.4.18-3.el9.aarch64                 37/65 
+  Installing       : python3-audit-3.0.7-103.el9.aarch64                  38/65 
+  Installing       : zlib-devel-1.2.11-39.el9.aarch64                     39/65 
+  Installing       : libasan-11.3.1-4.3.el9.aarch64                       40/65 
+  Installing       : libubsan-11.3.1-4.3.el9.aarch64                      41/65 
+  Installing       : gcc-11.3.1-4.3.el9.aarch64                           42/65 
+  Running scriptlet: gcc-11.3.1-4.3.el9.aarch64                           42/65 
+  Installing       : emacs-filesystem-1:27.2-8.el9_2.1.noarch             43/65 
+  Installing       : perl-DynaLoader-1.47-480.el9.aarch64                 44/65 
+  Installing       : perl-TermReadKey-2.38-11.el9.aarch64                 45/65 
+  Installing       : perl-File-Find-1.37-480.el9.noarch                   46/65 
+  Installing       : perl-lib-0.65-480.el9.aarch64                        47/65 
+  Installing       : perl-Error-1:0.17029-7.el9.noarch                    48/65 
+  Installing       : git-2.39.3-1.el9_2.aarch64                           49/65 
+  Installing       : perl-Git-2.39.3-1.el9_2.noarch                       50/65 
+  Installing       : checkpolicy-3.5-1.el9.aarch64                        51/65 
+  Installing       : python3-policycoreutils-3.5-1.el9.noarch             52/65 
+  Installing       : policycoreutils-python-utils-3.5-1.el9.noarch        53/65 
+  Installing       : gcc-toolset-12-runtime-12.0-6.el9.aarch64            54/65 
+  Running scriptlet: gcc-toolset-12-runtime-12.0-6.el9.aarch64            54/65 
+ValueError: SELinux policy is not managed or store cannot be accessed.
+
+  Installing       : gcc-toolset-12-binutils-gold-2.38-17.el9_2.1.aarch   55/65 
+  Running scriptlet: gcc-toolset-12-binutils-gold-2.38-17.el9_2.1.aarch   55/65 
+  Installing       : gcc-toolset-12-binutils-2.38-17.el9_2.1.aarch64      56/65 
+  Running scriptlet: gcc-toolset-12-binutils-2.38-17.el9_2.1.aarch64      56/65 
+  Installing       : annobin-11.05-1.el9.aarch64                          57/65 
+  Running scriptlet: annobin-11.05-1.el9.aarch64                          57/65 
+  Installing       : gcc-plugin-annobin-11.3.1-4.3.el9.aarch64            58/65 
+  Running scriptlet: gcc-plugin-annobin-11.3.1-4.3.el9.aarch64            58/65 
+  Installing       : elfutils-libelf-devel-0.188-3.el9.aarch64            59/65 
+  Running scriptlet: pesign-115-6.el9_1.rocky.2.aarch64                   60/65 
+  Installing       : pesign-115-6.el9_1.rocky.2.aarch64                   60/65 
+  Running scriptlet: pesign-115-6.el9_1.rocky.2.aarch64                   60/65 
+  Installing       : openssl-devel-1:3.0.7-17.el9_2.aarch64               61/65 
+  Upgrading        : openssl-1:3.0.7-17.el9_2.aarch64                     62/65 
+  Installing       : dos2unix-7.4.2-4.el9.aarch64                         63/65 
+  Cleanup          : openssl-1:3.0.7-6.el9_2.aarch64                      64/65 
+  Cleanup          : openssl-libs-1:3.0.7-6.el9_2.aarch64                 65/65 
+  Running scriptlet: nss-3.90.0-3.el9_2.aarch64                           65/65 
+  Running scriptlet: pesign-115-6.el9_1.rocky.2.aarch64                   65/65 
+  Running scriptlet: openssl-libs-1:3.0.7-6.el9_2.aarch64                 65/65 
+  Verifying        : python3-distro-1.5.0-7.el9.noarch                     1/65 
+  Verifying        : checkpolicy-3.5-1.el9.aarch64                         2/65 
+  Verifying        : python3-policycoreutils-3.5-1.el9.noarch              3/65 
+  Verifying        : policycoreutils-python-utils-3.5-1.el9.noarch         4/65 
+  Verifying        : openssl-devel-1:3.0.7-17.el9_2.aarch64                5/65 
+  Verifying        : perl-Error-1:0.17029-7.el9.noarch                     6/65 
+  Verifying        : pesign-115-6.el9_1.rocky.2.aarch64                    7/65 
+  Verifying        : annobin-11.05-1.el9.aarch64                           8/65 
+  Verifying        : python3-libsemanage-3.5-1.el9.aarch64                 9/65 
+  Verifying        : python3-libselinux-3.5-1.el9.aarch64                 10/65 
+  Verifying        : libmpc-1.2.1-4.el9.aarch64                           11/65 
+  Verifying        : libxcrypt-devel-4.4.18-3.el9.aarch64                 12/65 
+  Verifying        : perl-lib-0.65-480.el9.aarch64                        13/65 
+  Verifying        : perl-File-Find-1.37-480.el9.noarch                   14/65 
+  Verifying        : perl-DynaLoader-1.47-480.el9.aarch64                 15/65 
+  Verifying        : scl-utils-1:2.0.3-4.el9.aarch64                      16/65 
+  Verifying        : elfutils-libelf-devel-0.188-3.el9.aarch64            17/65 
+  Verifying        : nss-util-3.90.0-3.el9_2.aarch64                      18/65 
+  Verifying        : nss-tools-3.90.0-3.el9_2.aarch64                     19/65 
+  Verifying        : nss-sysinit-3.90.0-3.el9_2.aarch64                   20/65 
+  Verifying        : nss-softokn-freebl-3.90.0-3.el9_2.aarch64            21/65 
+  Verifying        : nss-softokn-3.90.0-3.el9_2.aarch64                   22/65 
+  Verifying        : nss-3.90.0-3.el9_2.aarch64                           23/65 
+  Verifying        : nspr-4.35.0-3.el9_2.aarch64                          24/65 
+  Verifying        : emacs-filesystem-1:27.2-8.el9_2.1.noarch             25/65 
+  Verifying        : llvm-libs-15.0.7-1.el9.aarch64                       26/65 
+  Verifying        : perl-Git-2.39.3-1.el9_2.noarch                       27/65 
+  Verifying        : git-core-doc-2.39.3-1.el9_2.noarch                   28/65 
+  Verifying        : git-core-2.39.3-1.el9_2.aarch64                      29/65 
+  Verifying        : git-2.39.3-1.el9_2.aarch64                           30/65 
+  Verifying        : libubsan-11.3.1-4.3.el9.aarch64                      31/65 
+  Verifying        : libasan-11.3.1-4.3.el9.aarch64                       32/65 
+  Verifying        : gcc-plugin-annobin-11.3.1-4.3.el9.aarch64            33/65 
+  Verifying        : gcc-11.3.1-4.3.el9.aarch64                           34/65 
+  Verifying        : cpp-11.3.1-4.3.el9.aarch64                           35/65 
+  Verifying        : glibc-devel-2.34-60.el9_2.7.aarch64                  36/65 
+  Verifying        : zlib-devel-1.2.11-39.el9.aarch64                     37/65 
+  Verifying        : python3-audit-3.0.7-103.el9.aarch64                  38/65 
+  Verifying        : perl-TermReadKey-2.38-11.el9.aarch64                 39/65 
+  Verifying        : gcc-toolset-12-runtime-12.0-6.el9.aarch64            40/65 
+  Verifying        : gcc-toolset-12-binutils-gold-2.38-17.el9_2.1.aarch   41/65 
+  Verifying        : gcc-toolset-12-binutils-2.38-17.el9_2.1.aarch64      42/65 
+  Verifying        : kernel-headers-5.14.0-284.30.1.el9_2.aarch64         43/65 
+  Verifying        : efivar-libs-38-3.el9.aarch64                         44/65 
+  Verifying        : python3-setuptools-53.0.0-12.el9.noarch              45/65 
+  Verifying        : man-db-2.9.3-7.el9.aarch64                           46/65 
+  Verifying        : libfido2-1.6.0-7.el9.aarch64                         47/65 
+  Verifying        : dos2unix-7.4.2-4.el9.aarch64                         48/65 
+  Verifying        : procps-ng-3.3.17-11.el9.aarch64                      49/65 
+  Verifying        : libpipeline-1.5.3-4.el9.aarch64                      50/65 
+  Verifying        : environment-modules-5.0.1-2.el9.aarch64              51/65 
+  Verifying        : libedit-3.1-37.20210216cvs.el9.aarch64               52/65 
+  Verifying        : libselinux-utils-3.5-1.el9.aarch64                   53/65 
+  Verifying        : libcbor-0.7.0-5.el9.aarch64                          54/65 
+  Verifying        : openssh-clients-8.7p1-30.el9_2.aarch64               55/65 
+  Verifying        : openssh-8.7p1-30.el9_2.aarch64                       56/65 
+  Verifying        : python3-setools-4.4.1-1.el9.aarch64                  57/65 
+  Verifying        : tcl-1:8.6.10-7.el9.aarch64                           58/65 
+  Verifying        : make-1:4.3-7.el9.aarch64                             59/65 
+  Verifying        : policycoreutils-3.5-1.el9.aarch64                    60/65 
+  Verifying        : vim-filesystem-2:8.2.2637-20.el9_1.noarch            61/65 
+  Verifying        : openssl-libs-1:3.0.7-17.el9_2.aarch64                62/65 
+  Verifying        : openssl-libs-1:3.0.7-6.el9_2.aarch64                 63/65 
+  Verifying        : openssl-1:3.0.7-17.el9_2.aarch64                     64/65 
+  Verifying        : openssl-1:3.0.7-6.el9_2.aarch64                      65/65 
 
 Upgraded:
   openssl-1:3.0.7-17.el9_2.aarch64     openssl-libs-1:3.0.7-17.el9_2.aarch64    
 Installed:
   annobin-11.05-1.el9.aarch64                                                   
+  checkpolicy-3.5-1.el9.aarch64                                                 
   cpp-11.3.1-4.3.el9.aarch64                                                    
   dos2unix-7.4.2-4.el9.aarch64                                                  
   efivar-libs-38-3.el9.aarch64                                                  
   elfutils-libelf-devel-0.188-3.el9.aarch64                                     
   emacs-filesystem-1:27.2-8.el9_2.1.noarch                                      
+  environment-modules-5.0.1-2.el9.aarch64                                       
   gcc-11.3.1-4.3.el9.aarch64                                                    
   gcc-plugin-annobin-11.3.1-4.3.el9.aarch64                                     
+  gcc-toolset-12-binutils-2.38-17.el9_2.1.aarch64                               
+  gcc-toolset-12-binutils-gold-2.38-17.el9_2.1.aarch64                          
+  gcc-toolset-12-runtime-12.0-6.el9.aarch64                                     
   git-2.39.3-1.el9_2.aarch64                                                    
   git-core-2.39.3-1.el9_2.aarch64                                               
   git-core-doc-2.39.3-1.el9_2.noarch                                            
@@ -834,10 +932,13 @@ Installed:
   libedit-3.1-37.20210216cvs.el9.aarch64                                        
   libfido2-1.6.0-7.el9.aarch64                                                  
   libmpc-1.2.1-4.el9.aarch64                                                    
+  libpipeline-1.5.3-4.el9.aarch64                                               
+  libselinux-utils-3.5-1.el9.aarch64                                            
   libubsan-11.3.1-4.3.el9.aarch64                                               
   libxcrypt-devel-4.4.18-3.el9.aarch64                                          
   llvm-libs-15.0.7-1.el9.aarch64                                                
   make-1:4.3-7.el9.aarch64                                                      
+  man-db-2.9.3-7.el9.aarch64                                                    
   nspr-4.35.0-3.el9_2.aarch64                                                   
   nss-3.90.0-3.el9_2.aarch64                                                    
   nss-softokn-3.90.0-3.el9_2.aarch64                                            
@@ -855,13 +956,26 @@ Installed:
   perl-TermReadKey-2.38-11.el9.aarch64                                          
   perl-lib-0.65-480.el9.aarch64                                                 
   pesign-115-6.el9_1.rocky.2.aarch64                                            
+  policycoreutils-3.5-1.el9.aarch64                                             
+  policycoreutils-python-utils-3.5-1.el9.noarch                                 
+  procps-ng-3.3.17-11.el9.aarch64                                               
+  python3-audit-3.0.7-103.el9.aarch64                                           
+  python3-distro-1.5.0-7.el9.noarch                                             
+  python3-libselinux-3.5-1.el9.aarch64                                          
+  python3-libsemanage-3.5-1.el9.aarch64                                         
+  python3-policycoreutils-3.5-1.el9.noarch                                      
+  python3-setools-4.4.1-1.el9.aarch64                                           
+  python3-setuptools-53.0.0-12.el9.noarch                                       
+  scl-utils-1:2.0.3-4.el9.aarch64                                               
+  tcl-1:8.6.10-7.el9.aarch64                                                    
+  vim-filesystem-2:8.2.2637-20.el9_1.noarch                                     
   zlib-devel-1.2.11-39.el9.aarch64                                              
 
 Complete!
---> f3d204a8a2a5
+--> dd2a1bf62d65
 STEP 11/15: RUN rpmbuild -bb /builddir/build/SPECS/shim-unsigned-aarch64.spec
 setting SOURCE_DATE_EPOCH=1705968000
-Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.95akkO
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.KCuxeu
 + umask 022
 + cd /builddir/build//BUILD
 + cd /builddir/build/BUILD
@@ -878,6 +992,62 @@ Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.95akkO
 + /usr/bin/git config gc.auto 0
 + /usr/bin/git add --force .
 + /usr/bin/git commit -q --allow-empty -a --author 'rpm-build <rpm-build>' -m 'shim-unsigned-aarch64-15.8 base'
++ source scl_source enable gcc-toolset-12
+++ _scl_source_help='Usage: source scl_source <action> [<collection> ...]
+
+Don'\''t use this script outside of SCL scriptlets!
+
+Options:
+    -h, --help    display this help and exit'
+++ '[' 2 -eq 0 -o enable = -h -o enable = --help ']'
+++ '[' -z '' ']'
+++ _recursion=false
+++ '[' -z '' ']'
+++ _scl_scriptlet_name=enable
+++ shift 1
+++ '[' -z '' ']'
+++ _scl_dir=/etc/scl/conf
+++ '[' '!' -e /etc/scl/conf ']'
+++ for arg in "$@"
+++ _scl_prefix_file=/etc/scl/conf/gcc-toolset-12
++++ cat /etc/scl/conf/gcc-toolset-12
+++ _scl_prefix=/opt/rh
+++ '[' 0 -ne 0 ']'
+++ /usr/bin/scl_enabled gcc-toolset-12
+++ _scls+=("$arg")
+++ _scl_prefixes+=("$_scl_prefix")
+++ '[' false == false ']'
+++ _i=0
+++ _recursion=true
+++ '[' 0 -lt 1 ']'
+++ _scl_scriptlet_path=/opt/rh/gcc-toolset-12/enable
+++ source /opt/rh/gcc-toolset-12/enable
++++ export PATH=/opt/rh/gcc-toolset-12/root/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ PATH=/opt/rh/gcc-toolset-12/root/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export MANPATH=/opt/rh/gcc-toolset-12/root/usr/share/man
++++ MANPATH=/opt/rh/gcc-toolset-12/root/usr/share/man
++++ export INFOPATH=/opt/rh/gcc-toolset-12/root/usr/share/info
++++ INFOPATH=/opt/rh/gcc-toolset-12/root/usr/share/info
++++ export PCP_DIR=/opt/rh/gcc-toolset-12/root
++++ PCP_DIR=/opt/rh/gcc-toolset-12/root
+++++ rpm --eval '%{_libdir}'
++++ rpmlibdir=/usr/lib64
++++ '[' /usr/lib64 '!=' /usr/ ']'
++++ rpmlibdir32=:/opt/rh/gcc-toolset-12/root/usr/lib
++++ rpmlibdir64=
++++ export LD_LIBRARY_PATH=/opt/rh/gcc-toolset-12/root/usr/lib64:/opt/rh/gcc-toolset-12/root/usr/lib
++++ LD_LIBRARY_PATH=/opt/rh/gcc-toolset-12/root/usr/lib64:/opt/rh/gcc-toolset-12/root/usr/lib
++++ export PKG_CONFIG_PATH=/opt/rh/gcc-toolset-12/root/usr/lib64/pkgconfig::/usr/lib64/pkgconfig:/usr/share/pkgconfig
++++ PKG_CONFIG_PATH=/opt/rh/gcc-toolset-12/root/usr/lib64/pkgconfig::/usr/lib64/pkgconfig:/usr/share/pkgconfig
+++ '[' 0 -ne 0 ']'
+++ export 'X_SCLS=gcc-toolset-12 '
+++ X_SCLS='gcc-toolset-12 '
+++ _i=1
+++ '[' 1 -lt 1 ']'
+++ _scls=()
+++ _scl_prefixes=()
+++ _scl_scriptlet_name=
+++ _recursion=false
 + git config --unset user.email
 + git config --unset user.name
 + mkdir build-aa64
@@ -885,10 +1055,66 @@ Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.95akkO
 + RPM_EC=0
 ++ jobs -p
 + exit 0
-Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.YdbHLJ
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.NeNfQc
 + umask 022
 + cd /builddir/build//BUILD
 + cd shim-15.8
++ source scl_source enable gcc-toolset-12
+++ _scl_source_help='Usage: source scl_source <action> [<collection> ...]
+
+Don'\''t use this script outside of SCL scriptlets!
+
+Options:
+    -h, --help    display this help and exit'
+++ '[' 2 -eq 0 -o enable = -h -o enable = --help ']'
+++ '[' -z '' ']'
+++ _recursion=false
+++ '[' -z '' ']'
+++ _scl_scriptlet_name=enable
+++ shift 1
+++ '[' -z '' ']'
+++ _scl_dir=/etc/scl/conf
+++ '[' '!' -e /etc/scl/conf ']'
+++ for arg in "$@"
+++ _scl_prefix_file=/etc/scl/conf/gcc-toolset-12
++++ cat /etc/scl/conf/gcc-toolset-12
+++ _scl_prefix=/opt/rh
+++ '[' 0 -ne 0 ']'
+++ /usr/bin/scl_enabled gcc-toolset-12
+++ _scls+=("$arg")
+++ _scl_prefixes+=("$_scl_prefix")
+++ '[' false == false ']'
+++ _i=0
+++ _recursion=true
+++ '[' 0 -lt 1 ']'
+++ _scl_scriptlet_path=/opt/rh/gcc-toolset-12/enable
+++ source /opt/rh/gcc-toolset-12/enable
++++ export PATH=/opt/rh/gcc-toolset-12/root/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ PATH=/opt/rh/gcc-toolset-12/root/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export MANPATH=/opt/rh/gcc-toolset-12/root/usr/share/man
++++ MANPATH=/opt/rh/gcc-toolset-12/root/usr/share/man
++++ export INFOPATH=/opt/rh/gcc-toolset-12/root/usr/share/info
++++ INFOPATH=/opt/rh/gcc-toolset-12/root/usr/share/info
++++ export PCP_DIR=/opt/rh/gcc-toolset-12/root
++++ PCP_DIR=/opt/rh/gcc-toolset-12/root
+++++ rpm --eval '%{_libdir}'
++++ rpmlibdir=/usr/lib64
++++ '[' /usr/lib64 '!=' /usr/ ']'
++++ rpmlibdir32=:/opt/rh/gcc-toolset-12/root/usr/lib
++++ rpmlibdir64=
++++ export LD_LIBRARY_PATH=/opt/rh/gcc-toolset-12/root/usr/lib64:/opt/rh/gcc-toolset-12/root/usr/lib
++++ LD_LIBRARY_PATH=/opt/rh/gcc-toolset-12/root/usr/lib64:/opt/rh/gcc-toolset-12/root/usr/lib
++++ export PKG_CONFIG_PATH=/opt/rh/gcc-toolset-12/root/usr/lib64/pkgconfig::/usr/lib64/pkgconfig:/usr/share/pkgconfig
++++ PKG_CONFIG_PATH=/opt/rh/gcc-toolset-12/root/usr/lib64/pkgconfig::/usr/lib64/pkgconfig:/usr/share/pkgconfig
+++ '[' 0 -ne 0 ']'
+++ export 'X_SCLS=gcc-toolset-12 '
+++ X_SCLS='gcc-toolset-12 '
+++ _i=1
+++ '[' 1 -lt 1 ']'
+++ _scls=()
+++ _scl_prefixes=()
+++ _scl_scriptlet_name=
+++ _recursion=false
 ++ cat commit
 + COMMITID=5914984a1ffeab841f482c791426d7ca9935a5e6
 + MAKEFLAGS='TOPDIR=.. -f ../Makefile COMMITID=5914984a1ffeab841f482c791426d7ca9935a5e6 '
@@ -1434,7 +1660,7 @@ gcc -I/builddir/build/BUILD/shim-15.8/gnu-efi//lib -I/builddir/build/BUILD/shim-
 /builddir/build/BUILD/shim-15.8/gnu-efi//lib/aarch64/setjmp.S: Assembler messages:
 /builddir/build/BUILD/shim-15.8/gnu-efi//lib/aarch64/setjmp.S:61: Warning: setting incorrect section attributes for .note.GNU-stack
 gcc-ar rv -U libefi.a boxdraw.o smbios.o console.o crc.o data.o debug.o dpath.o error.o event.o exit.o guid.o hand.o hw.o init.o lock.o misc.o pause.o print.o sread.o str.o cmdline.o runtime/rtlock.o runtime/efirtlib.o runtime/rtstr.o runtime/vm.o runtime/rtdata.o aarch64/initplat.o aarch64/math.o aarch64/setjmp.o
-/usr/bin/ar: creating libefi.a
+/opt/rh/gcc-toolset-12/root/usr/bin/ar: creating libefi.a
 a - boxdraw.o
 a - smbios.o
 a - console.o
@@ -1473,7 +1699,7 @@ gcc -I/builddir/build/BUILD/shim-15.8/gnu-efi//gnuefi -I/builddir/build/BUILD/sh
 /builddir/build/BUILD/shim-15.8/gnu-efi//gnuefi/crt0-efi-aarch64.S:54: Warning: setting incorrect section attributes for .note.GNU-stack
 gcc -I/builddir/build/BUILD/shim-15.8/gnu-efi//gnuefi -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/aarch64 -I/builddir/build/BUILD/shim-15.8/gnu-efi/inc/protocol -Wno-error=pragmas -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /builddir/build/BUILD/shim-15.8/gnu-efi/../include/system -isystem /usr/lib/gcc/aarch64-redhat-linux/11/include -fno-merge-all-constants -fno-jump-tables -DCONFIG_aarch64 -c /builddir/build/BUILD/shim-15.8/gnu-efi//gnuefi/reloc_aarch64.c -o reloc_aarch64.o
 gcc-ar rv -U libgnuefi.a reloc_aarch64.o
-/usr/bin/ar: creating libgnuefi.a
+/opt/rh/gcc-toolset-12/root/usr/bin/ar: creating libgnuefi.a
 a - reloc_aarch64.o
 make[2]: Leaving directory '/builddir/build/BUILD/shim-15.8/build-aa64/gnu-efi/aarch64/gnuefi'
 mkdir -p /builddir/build/BUILD/shim-15.8/build-aa64/gnu-efi/aarch64/inc
@@ -1537,7 +1763,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 + RPM_EC=0
 ++ jobs -p
 + exit 0
-Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.emgeJz
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.9So8vp
 + umask 022
 + cd /builddir/build//BUILD
 + '[' /builddir/build/BUILDROOT/shim-unsigned-aarch64-15.8-0.el9.aarch64 '!=' / ']'
@@ -1546,6 +1772,62 @@ Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.emgeJz
 + mkdir -p /builddir/build/BUILDROOT
 + mkdir /builddir/build/BUILDROOT/shim-unsigned-aarch64-15.8-0.el9.aarch64
 + cd shim-15.8
++ source scl_source enable gcc-toolset-12
+++ _scl_source_help='Usage: source scl_source <action> [<collection> ...]
+
+Don'\''t use this script outside of SCL scriptlets!
+
+Options:
+    -h, --help    display this help and exit'
+++ '[' 2 -eq 0 -o enable = -h -o enable = --help ']'
+++ '[' -z '' ']'
+++ _recursion=false
+++ '[' -z '' ']'
+++ _scl_scriptlet_name=enable
+++ shift 1
+++ '[' -z '' ']'
+++ _scl_dir=/etc/scl/conf
+++ '[' '!' -e /etc/scl/conf ']'
+++ for arg in "$@"
+++ _scl_prefix_file=/etc/scl/conf/gcc-toolset-12
++++ cat /etc/scl/conf/gcc-toolset-12
+++ _scl_prefix=/opt/rh
+++ '[' 0 -ne 0 ']'
+++ /usr/bin/scl_enabled gcc-toolset-12
+++ _scls+=("$arg")
+++ _scl_prefixes+=("$_scl_prefix")
+++ '[' false == false ']'
+++ _i=0
+++ _recursion=true
+++ '[' 0 -lt 1 ']'
+++ _scl_scriptlet_path=/opt/rh/gcc-toolset-12/enable
+++ source /opt/rh/gcc-toolset-12/enable
++++ export PATH=/opt/rh/gcc-toolset-12/root/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ PATH=/opt/rh/gcc-toolset-12/root/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export MANPATH=/opt/rh/gcc-toolset-12/root/usr/share/man
++++ MANPATH=/opt/rh/gcc-toolset-12/root/usr/share/man
++++ export INFOPATH=/opt/rh/gcc-toolset-12/root/usr/share/info
++++ INFOPATH=/opt/rh/gcc-toolset-12/root/usr/share/info
++++ export PCP_DIR=/opt/rh/gcc-toolset-12/root
++++ PCP_DIR=/opt/rh/gcc-toolset-12/root
+++++ rpm --eval '%{_libdir}'
++++ rpmlibdir=/usr/lib64
++++ '[' /usr/lib64 '!=' /usr/ ']'
++++ rpmlibdir32=:/opt/rh/gcc-toolset-12/root/usr/lib
++++ rpmlibdir64=
++++ export LD_LIBRARY_PATH=/opt/rh/gcc-toolset-12/root/usr/lib64:/opt/rh/gcc-toolset-12/root/usr/lib
++++ LD_LIBRARY_PATH=/opt/rh/gcc-toolset-12/root/usr/lib64:/opt/rh/gcc-toolset-12/root/usr/lib
++++ export PKG_CONFIG_PATH=/opt/rh/gcc-toolset-12/root/usr/lib64/pkgconfig::/usr/lib64/pkgconfig:/usr/share/pkgconfig
++++ PKG_CONFIG_PATH=/opt/rh/gcc-toolset-12/root/usr/lib64/pkgconfig::/usr/lib64/pkgconfig:/usr/share/pkgconfig
+++ '[' 0 -ne 0 ']'
+++ export 'X_SCLS=gcc-toolset-12 '
+++ X_SCLS='gcc-toolset-12 '
+++ _i=1
+++ '[' 1 -lt 1 ']'
+++ _scls=()
+++ _scl_prefixes=()
+++ _scl_scriptlet_name=
+++ _recursion=false
 ++ cat commit
 + COMMITID=5914984a1ffeab841f482c791426d7ca9935a5e6
 + MAKEFLAGS='TOPDIR=.. -f ../Makefile COMMITID=5914984a1ffeab841f482c791426d7ca9935a5e6 '
@@ -1582,7 +1864,7 @@ done
 + /usr/lib/rpm/brp-python-hardlink
 + /usr/lib/rpm/redhat/brp-mangle-shebangs
 Processing files: shim-unsigned-aarch64-15.8-0.el9.aarch64
-Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.b20pPv
+Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.ZdE5Lh
 + umask 022
 + cd /builddir/build//BUILD
 + cd shim-15.8
@@ -1608,7 +1890,7 @@ Checking for unpackaged file(s): /usr/lib/rpm/check-files /builddir/build/BUILDR
 Wrote: /builddir/build/RPMS/aarch64/shim-unsigned-aarch64-15.8-0.el9.aarch64.rpm
 Wrote: /builddir/build/RPMS/noarch/shim-unsigned-aarch64-debuginfo-15.8-0.el9.noarch.rpm
 Wrote: /builddir/build/RPMS/noarch/shim-unsigned-aarch64-debugsource-15.8-0.el9.noarch.rpm
-Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.jioZWk
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.IwqH6E
 + umask 022
 + cd /builddir/build//BUILD
 + cd shim-15.8
@@ -1616,31 +1898,31 @@ Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.jioZWk
 + RPM_EC=0
 ++ jobs -p
 + exit 0
---> de950f50682c
+--> 87f3bb89a412
 STEP 12/15: RUN mkdir -p /shim_result
---> 4ea8ba2d0550
+--> 4a754c027d16
 STEP 13/15: RUN rpm2cpio /builddir/build/RPMS/aarch64/shim-unsigned-aarch64-$shim_release.aarch64.rpm | cpio -diu -D /shim_result
 3838 blocks
---> b8b203a02bec
+--> 0926574c9b43
 STEP 14/15: COPY shim-compare.sh  /root
---> db78059795af
+--> b172ae41a092
 STEP 15/15: RUN chmod 0755 /root/shim-compare.sh;  /root/shim-compare.sh
 
 Shim Comparison, original binary vs. freshly built binaries:
 
 SHA256 sums ::
-ed9b5480c2dfd2dfd7b476565c1503da9ac1ebd57e761a8dbd025576dd0c33c9  /shimaa64.efi
-ed9b5480c2dfd2dfd7b476565c1503da9ac1ebd57e761a8dbd025576dd0c33c9  /shim_result/usr/share/shim/15.8-0.el9/aa64/shimaa64.efi
+6f6c85adeef3fb3945525618927fa543c39e430bf9b7b2eacb381d3d697b098a  /shimaa64.efi
+6f6c85adeef3fb3945525618927fa543c39e430bf9b7b2eacb381d3d697b098a  /shim_result/usr/share/shim/15.8-0.el9/aa64/shimaa64.efi
 
 Binary compare (blank output means binaries are the same) ::
 
 
 
 Pesign checks ::
-/shim_result/usr/share/shim/15.8-0.el9/aa64/shimaa64.efi adf7b3dcebe853cf342e01ddf7b7c8c135a7b7fe31fafdac120c1a13cc0ec75c
-/shimaa64.efi adf7b3dcebe853cf342e01ddf7b7c8c135a7b7fe31fafdac120c1a13cc0ec75c
+/shim_result/usr/share/shim/15.8-0.el9/aa64/shimaa64.efi 8b5d3c48b1332ffdfd5b7ae6b74afb8578b8d8a76df7c0fdcf72d51837acce11
+/shimaa64.efi 8b5d3c48b1332ffdfd5b7ae6b74afb8578b8d8a76df7c0fdcf72d51837acce11
 
 COMMIT shim
---> 744b5f10d7b9
+--> 2a2f08408a9e
 Successfully tagged localhost/shim:latest
-744b5f10d7b914319dc457c336ca09e37ec8c44db2cd5ee20fd528f163e8471b
+2a2f08408a9e0b0f58c20a5524c7984b4aac39fe0004c67009f80346dd822a21

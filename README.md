@@ -166,6 +166,7 @@ The entry should look similar to: `grub,4,Free Software Foundation,grub,GRUB_UPS
 Our grub2 follows our upstream (Rocky linux), Rocky has not updated grub and is still on generation level 3.
 
 ```
+objcopy --only-section .sbat -O binary grubaa64.efi /dev/stdout
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,3,Free Software Foundation,grub,2.06,https//www.gnu.org/software/grub/
 grub.rh,2,Red Hat,grub2,2.06-92.el9,mailto:secalert@redhat.com
@@ -243,7 +244,7 @@ Nothing has changed since our el9 https://github.com/rhboot/shim-review/issues/3
 *******************************************************************************
 ### What is the SHA256 hash of your final SHIM binary?
 *******************************************************************************
-* SHA256 (shimaa64.efi) = ed9b5480c2dfd2dfd7b476565c1503da9ac1ebd57e761a8dbd025576dd0c33c9
+* SHA256 (shimaa64.efi) = 84bcfab030a44df9fbadaced43f80f92f67661b6dbadfdf38f468415fe971a5a
 
 *******************************************************************************
 ### How do you manage and protect the keys used in your SHIM?
@@ -270,6 +271,7 @@ and only append your own. More information on how SBAT works can be found
 *******************************************************************************
 
 ```
+objcopy --only-section .sbat -O binary grubaa64.efi /dev/stdout
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,3,Free Software Foundation,grub,2.06,https//www.gnu.org/software/grub/
 grub.rh,2,Red Hat,grub2,2.06-92.el9,mailto:secalert@redhat.com
@@ -284,9 +286,9 @@ fwupd-efi.rocky,1,Rocky Linux,fwupd,1.9.13,mail:security@rockylinux.org
 fwupd-efi.ciq_rocky,1,Rocky Linux (CIQ modified),fwupd,1.9.13,mail:secureboot@ciq.com
 
 objcopy --only-section .sbat -O binary shimaa64.efi /dev/stdout
-sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md 
-shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim 
-shim.ciq,1,Ctrl IQ Inc,shim,15.8,mail:it_security@ciq.com
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
+shim.ciq_rocky,1,CIQ,shim,15.8,mail:secureboot@ciq.com
 ```
 
 
