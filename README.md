@@ -170,7 +170,7 @@ sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,3,Free Software Foundation,grub,2.06,https//www.gnu.org/software/grub/
 grub.rh,2,Red Hat,grub2,2.06-92.el9,mailto:secalert@redhat.com
 grub.rocky,2,Rocky Linux,grub2,2.06-92.el9,mailto:security@rockylinux.org
-grub.ciq_rocky9,1,Rocky Linux 9 (CIQ build),grub2,2.06-92.el9_2.92ciq_lts,mailto:secureboot@ciq.com
+grub.ciq_rocky,1,Rocky Linux (CIQ modified),grub2,2.06-92.el9_2.92ciq_lts,mailto:secureboot@ciq.com
 ```
 *******************************************************************************
 ### Were old shims hashes provided to Microsoft for verification and to be added to future DBX updates?
@@ -270,18 +270,18 @@ and only append your own. More information on how SBAT works can be found
 *******************************************************************************
 
 ```
-objcopy --only-section .sbat -O binary grubaa64.efi /dev/stdout
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,3,Free Software Foundation,grub,2.06,https//www.gnu.org/software/grub/
 grub.rh,2,Red Hat,grub2,2.06-92.el9,mailto:secalert@redhat.com
 grub.rocky,2,Rocky Linux,grub2,2.06-92.el9,mailto:security@rockylinux.org
-grub.ciq_rocky9,1,Rocky Linux 9 (CIQ build),grub2,2.06-92.el9_2.92ciq_lts,mailto:secureboot@ciq.com
+grub.ciq_rocky,1,Rocky Linux (CIQ modified),grub2,2.06-92.el9_2.92ciq_lts,mailto:secureboot@ciq.com
 
 objcopy --only-section .sbat -O binary fwupdaa64.efi /dev/stdout
 sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 fwupd-efi,1,Firmware update daemon,fwupd-efi,1.4,https://github.com/fwupd/fwupd-efi
 fwupd-efi.rhel,1,Red Hat Enterprise Linux,fwupd,1.9.13,mail:secalert@redhat.com
-fwupd-efi.rocky,1,Rocky Linux (CIQ modified),fwupd,1.9.13,mail:secureboot@ciq.com
+fwupd-efi.rocky,1,Rocky Linux,fwupd,1.9.13,mail:security@rockylinux.org
+fwupd-efi.ciq_rocky,1,Rocky Linux (CIQ modified),fwupd,1.9.13,mail:secureboot@ciq.com
 
 objcopy --only-section .sbat -O binary shimaa64.efi /dev/stdout
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md 
