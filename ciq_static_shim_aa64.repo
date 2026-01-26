@@ -1,0 +1,35 @@
+# Rocky Linux 8.8 vault repositories for aarch64 shim builds
+# Frozen repositories for reproducible builds
+# Using vault ensures packages don't change between builds
+
+[baseos-8.8-aarch64]
+name=Rocky Linux 8.8 - BaseOS (aarch64)
+baseurl=https://dl.rockylinux.org/vault/rocky/8.8/BaseOS/aarch64/os/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
+priority=1
+
+[appstream-8.8-aarch64]
+name=Rocky Linux 8.8 - AppStream (aarch64)
+baseurl=https://dl.rockylinux.org/vault/rocky/8.8/AppStream/aarch64/os/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
+priority=1
+
+[powertools-8.8-aarch64]
+name=Rocky Linux 8.8 - PowerTools (aarch64)
+baseurl=https://dl.rockylinux.org/vault/rocky/8.8/PowerTools/aarch64/os/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
+priority=1
+
+[devel-8.8-aarch64]
+name=Rocky Linux 8.8 - Devel (aarch64)
+baseurl=https://dl.rockylinux.org/vault/rocky/8.8/devel/aarch64/os/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
+priority=1
