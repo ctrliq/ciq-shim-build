@@ -117,7 +117,8 @@
   },
   "security": {
     "key_management": "We use a managed PKI solution that meets all industry standards and requirements for issuing, protecting, backing up and securing code signing certs.\nThere is a Private Root CA and a Private Issuing CA.  The Private Issuing CA was used for issuing of the private code signing certs that are found in the SHIM.\nThose issued certs are then stored on a physical HSM.  That HSM is installed within a FIPS environment.  All access to that environment is strictly controlled with physical and logical controls in place, with no outside access permitted.  The servers are in a locked environment and within a secure data center with proper physical access controls in place at that location for security purposes.",
-    "ev_certificate": "No, only the CIQ secureboot CA (PKI) is embedded in our Shim"
+    "ev_certificate": "No, only the CIQ secureboot CA (PKI) is embedded in our Shim",
+    "ca_reuse_strategy": "We are using a previously used (currently active) CA from our past Rocky Linux 8-based submission.\n\nThere are no built GRUB2 binaries exposed to the listed CVEs that we have released, as our previous submission was relatively recent."
   },
   "boot_chain": {
     "launched_components": "We have successfully packaged and tested a RockyLinux version of certwrapper (formerly certmule).  That is, a certmule package signed by us, but containing the Rocky Linux CA.\nThis seems perfect for our use-case, as the Rocky grub2 + fwupd upstream packages could be used as-is without the need for recompilation or re-signing.  While keenly interested in kernel modifications, we don't have as much cause to update fwupd or grub2, and would prefer to use our upstream whenever feasible.\nI want to inquire about signing this wrapper efi and making it available to users.\nThe certmule package in question (with the embedded Rocky CA) is located at:  https://github.com/ctrliq/certmule-rocky/",

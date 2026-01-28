@@ -262,7 +262,9 @@ This ensures that your new shim+GRUB2 can no longer chainload those older GRUB2 
 
 If this is your first application or you're using a new CA certificate, please say so here.
 *******************************************************************************
-[TODO: CA_REUSE_STRATEGY - needs manual completion]
+We are using a previously used (currently active) CA from our past Rocky Linux 8-based submission.
+
+There are no built GRUB2 binaries exposed to the listed CVEs that we have released, as our previous submission was relatively recent.
 
 *******************************************************************************
 ### Is the Dockerfile in your repository the recipe for reproducing the building of your shim binary?
