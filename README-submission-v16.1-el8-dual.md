@@ -214,13 +214,14 @@ Skip this, if you're not using GRUB2, otherwise do you have an entry in your GRU
 *******************************************************************************
 Our grub2 follows our upstream (Rocky linux), Rocky has not updated grub and is still on generation level 3
 
-<!--SHIM:SBAT_GRUB_X64-->```
+<!--SHIM:SBAT_GRUB_X64-->
+```
 objcopy --only-section .sbat -O binary grubx64.efi /dev/stdout
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
-grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-167.el8_10,mailto:secalert@redhat.com
-grub.rocky8,2,Rocky Linux 8,grub2,2.02-167.el8_10.rocky.0.1.2,mailto:security@rockylinux.org
-grub.ciq_rocky8,1,Rocky Linux 8 (CIQ build),grub2,2.02-167.el8_6.ciqlts.ciq.0.1.2,mailto:secureboot@ciq.com
+grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-169.el8_10,mailto:secalert@redhat.com
+grub.rocky8,2,Rocky Linux 8,grub2,2.02-169.el8_10.rocky.0.1,mailto:security@rockylinux.org
+grub.ciq_rocky8,1,Rocky Linux 8 (CIQ build),grub2,2.02-169.el8.ciq.0.1,mailto:secureboot@ciq.com
 ```
 <!--/SHIM-->
 
@@ -385,17 +386,19 @@ Hint: run `objcopy --only-section .sbat -O binary YOUR_EFI_BINARY /dev/stdout` t
 *******************************************************************************
 
 **x64 architecture:**
-<!--SHIM:SBAT_GRUB_X64-->```
+<!--SHIM:SBAT_GRUB_X64-->
+```
 objcopy --only-section .sbat -O binary grubx64.efi /dev/stdout
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
-grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-167.el8_10,mailto:secalert@redhat.com
-grub.rocky8,2,Rocky Linux 8,grub2,2.02-167.el8_10.rocky.0.1.2,mailto:security@rockylinux.org
-grub.ciq_rocky8,1,Rocky Linux 8 (CIQ build),grub2,2.02-167.el8_6.ciqlts.ciq.0.1.2,mailto:secureboot@ciq.com
+grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-169.el8_10,mailto:secalert@redhat.com
+grub.rocky8,2,Rocky Linux 8,grub2,2.02-169.el8_10.rocky.0.1,mailto:security@rockylinux.org
+grub.ciq_rocky8,1,Rocky Linux 8 (CIQ build),grub2,2.02-169.el8.ciq.0.1,mailto:secureboot@ciq.com
 ```
 <!--/SHIM-->
 
-<!--SHIM:SBAT_FWUPD_X64-->```
+<!--SHIM:SBAT_FWUPD_X64-->
+```
 objcopy --only-section .sbat -O binary fwupdx64.efi /dev/stdout
 sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 fwupd-efi,1,Firmware update daemon,fwupd-efi,1.3,https://github.com/fwupd/fwupd-efi
@@ -404,7 +407,8 @@ fwupd-efi.rocky,1,Rocky Linux (CIQ modified),fwupd,1.7.8,mail:secureboot@ciq.co
 ```
 <!--/SHIM-->
 
-<!--SHIM:SBAT_SHIM_X64-->```
+<!--SHIM:SBAT_SHIM_X64-->
+```
 objcopy --only-section .sbat -O binary shimx64.efi /dev/stdout
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
@@ -413,13 +417,14 @@ shim.ciq,3,Ctrl IQ Inc,shim,16.1,mail:it_security@ciq.com
 <!--/SHIM-->
 
 **ia32 architecture:**
-<!--SHIM:SBAT_GRUB_IA32-->```
+<!--SHIM:SBAT_GRUB_IA32-->
+```
 objcopy --only-section .sbat -O binary grubia32.efi /dev/stdout
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
-grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-167.el8_10,mailto:secalert@redhat.com
-grub.rocky8,2,Rocky Linux 8,grub2,2.02-167.el8_10.rocky.0.1.2,mailto:security@rockylinux.org
-grub.ciq_rocky8,1,Rocky Linux 8 (CIQ build),grub2,2.02-167.el8_6.ciqlts.ciq.0.1.2,mailto:secureboot@ciq.com
+grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-169.el8_10,mailto:secalert@redhat.com
+grub.rocky8,2,Rocky Linux 8,grub2,2.02-169.el8_10.rocky.0.1,mailto:security@rockylinux.org
+grub.ciq_rocky8,1,Rocky Linux 8 (CIQ build),grub2,2.02-169.el8.ciq.0.1,mailto:secureboot@ciq.com
 ```
 <!--/SHIM-->
 
@@ -430,7 +435,8 @@ N/A - fwupd does not support 32-bit architectures
 ```
 <!--/SHIM-->
 
-<!--SHIM:SBAT_SHIM_IA32-->```
+<!--SHIM:SBAT_SHIM_IA32-->
+```
 objcopy --only-section .sbat -O binary shimia32.efi /dev/stdout
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
@@ -439,20 +445,28 @@ shim.ciq,3,Ctrl IQ Inc,shim,16.1,mail:it_security@ciq.com
 <!--/SHIM-->
 
 **aa64 architecture:**
-<!--SHIM:SBAT_GRUB_AA64-->```
+<!--SHIM:SBAT_GRUB_AA64-->
+```
 objcopy --only-section .sbat -O binary grubaa64.efi /dev/stdout
-
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
+grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-169.el8_10,mailto:secalert@redhat.com
+grub.rocky8,2,Rocky Linux 8,grub2,2.02-169.el8_10.rocky.0.1,mailto:security@rockylinux.org
+grub.ciq_rocky8,1,Rocky Linux 8 (CIQ build),grub2,2.02-169.el8.ciq.0.1,mailto:secureboot@ciq.com
 ```
 <!--/SHIM-->
 
 <!--SHIM:SBAT_FWUPD_AA64-->
 ```
 objcopy --only-section .sbat -O binary fwupdaa64.efi /dev/stdout
-N/A - fwupd not built for this architecture
+fwupd-efi,1,Firmware update daemon,fwupd-efi,1.3,https://github.com/fwupd/fwupd-efi
+fwupd-efi.rhel,1,Red Hat Enterprise Linux,fwupd,1.7.8,mail:secalert@redhat.com
+fwupd-efi.rocky,1,Rocky Linux (CIQ modified),fwupd,1.7.8,mail:secureboot@ciq.co
 ```
 <!--/SHIM-->
 
-<!--SHIM:SBAT_SHIM_AA64-->```
+<!--SHIM:SBAT_SHIM_AA64-->
+```
 objcopy --only-section .sbat -O binary shimaa64.efi /dev/stdout
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
@@ -481,7 +495,7 @@ Currently, we are not providing signed systemd-boot.
 *******************************************************************************
 ### What is the origin and full version number of your bootloader (GRUB2 or systemd-boot or other)?
 *******************************************************************************
-We use <!--SHIM:GRUB_UPSTREAM-->Rocky Linux<!--/SHIM--> - GRUB <!--SHIM:GRUB2_VERSION-->2.02-167.el8_6.ciqlts.ciq.0.1.2<!--/SHIM-->
+We use <!--SHIM:GRUB_UPSTREAM-->Rocky Linux<!--/SHIM--> - GRUB <!--SHIM:GRUB2_VERSION-->2.02-169.el8.ciq.0.1<!--/SHIM-->
 
 *******************************************************************************
 ### If your shim launches any other components apart from your bootloader, please provide further details on what is launched.
