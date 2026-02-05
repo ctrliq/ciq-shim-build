@@ -136,7 +136,7 @@ Hint: If you attach all the patches and modifications that are being used to you
 You can also point to your custom git servers, where the code is hosted.
 *******************************************************************************
 - x64: <!--SHIM:REPO_X64-->https://github.com/ctrliq/shim-unsigned-x64<!--/SHIM-->
-- ia32: <!--SHIM:REPO_IA32-->https://github.com/ctrliq/shim-unsigned-x64"  # ia32 built from same x64 repo<!--/SHIM-->
+- ia32: <!--SHIM:REPO_IA32-->https://github.com/ctrliq/shim-unsigned-x64<!--/SHIM-->
 - aa64: <!--SHIM:REPO_AA64-->https://github.com/ctrliq/shim-unsigned-aarch64<!--/SHIM-->
 - Build scripts: <!--SHIM:BUILD_REPO_URL-->https://github.com/ctrliq/ciq-shim-build<!--/SHIM-->
 
