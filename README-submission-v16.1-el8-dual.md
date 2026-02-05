@@ -320,7 +320,7 @@ Current reproducible shim build location:  https://github.com/ctrliq/ciq-shim-bu
 ### Which files in this repo are the logs for your build?
 This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 *******************************************************************************
-<!--SHIM:BUILD_LOG_FILENAME-->[TODO: BUILD_LOG_FILENAME - Build log filename needs manual completion]<!--/SHIM--> contains a log of the docker build run. This includes dependency install, compilation, hash comparison, etc.
+<!--SHIM:BUILD_LOG_FILENAME-->shim_rpmbuild.log<!--/SHIM--> contains a log of the docker build run. This includes dependency install, compilation, hash comparison, etc.
 
 *******************************************************************************
 ### What changes were made in the distro's secure boot chain since your SHIM was last signed?

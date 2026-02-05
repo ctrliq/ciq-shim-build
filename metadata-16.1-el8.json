@@ -79,6 +79,7 @@
     "architecture": "amd64",
     "build_method": "mock",
     "build_timestamp": "2026-01-25T01:13:47Z",
+    "build_log": "shim_rpmbuild.log",
     "reproducibility": "This is built on Rocky Linux 8.8.20230518. The Dockerfile in this repository can be used to launch an identical buildroot.\n\n```bash\ndocker build .\n```\n\nThe Dockerfile was customized to:\n- Build for RHEL/Rocky Linux ecosystems using RPM-based toolchain (`rpmbuild`)\n- Support three architectures (shimx64.efi, shimia32.efi, shimaa64.efi) in a single multi-stage build\n- Use frozen package repositories to ensure reproducible builds with pinned toolchain versions\n\nThe Dockerfile uses static Rocky Linux 8.8 repositories defined in ciq_static_shim.repo and ciq_static_shim_aa64.repo to prevent toolchain updates that could change binary checksums.\n\nCurrent reproducible shim build location: https://github.com/ctrliq/ciq-shim-build/tree/r8",
     "description": "This build is all Rocky 8.8 dependencies, using rpmbuild.\n\nTo ensure reproducibility, are using Rocky 8.8 packages from a frozen vault.\nUsing a tagged container base plus the rocky vault should ensure binaries are 100% reproducible.\n\nCurrent reproducible shim build location:  https://github.com/ctrliq/ciq-shim-build/tree/r8"
   },
