@@ -12,6 +12,9 @@ output/
 # Docker build logs (these go in mock-build-*/, not tracked)
 mock-build-*/docker-build-*.log
 
+# Mock build RPMs (artifacts from mock builds, not needed)
+mock-build-*/*.rpm
+
 # Python cache
 __pycache__/
 *.pyc
