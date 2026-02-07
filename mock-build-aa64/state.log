@@ -1,0 +1,27 @@
+2026-02-06 23:04:11,289 - Mock Version: 6.6
+2026-02-06 23:04:11,294 - Start: chroot init
+2026-02-06 23:04:11,313 - Start: cleaning package manager metadata
+2026-02-06 23:04:11,313 - Finish: cleaning package manager metadata
+2026-02-06 23:04:11,556 - Start: installing minimal buildroot with dnf
+2026-02-06 23:04:26,684 - Start: clean chroot
+2026-02-06 23:04:26,756 - Finish: clean chroot
+2026-02-06 23:13:53,293 - Mock Version: 6.6
+2026-02-06 23:13:53,298 - Start: chroot init
+2026-02-06 23:13:53,318 - Start: cleaning package manager metadata
+2026-02-06 23:13:53,318 - Finish: cleaning package manager metadata
+2026-02-06 23:13:53,584 - Start: installing minimal buildroot with dnf
+2026-02-06 23:14:09,969 - Finish: installing minimal buildroot with dnf
+2026-02-06 23:14:10,101 - Start: creating root cache
+2026-02-06 23:14:14,924 - Finish: creating root cache
+2026-02-06 23:14:14,925 - Finish: chroot init
+2026-02-06 23:14:15,026 - Start: build phase for shim-unsigned-aarch64-16.1-1.el8.src.rpm
+2026-02-06 23:14:15,027 - Start: build setup for shim-unsigned-aarch64-16.1-1.el8.src.rpm
+2026-02-06 23:14:29,780 - Finish: build setup for shim-unsigned-aarch64-16.1-1.el8.src.rpm
+2026-02-06 23:14:29,780 - Start: rpmbuild shim-unsigned-aarch64-16.1-1.el8.src.rpm
+2026-02-06 23:14:29,783 - Start: Outputting list of installed packages
+2026-02-06 23:14:29,880 - Finish: Outputting list of installed packages
+2026-02-06 23:14:46,592 - Finish: rpmbuild shim-unsigned-aarch64-16.1-1.el8.src.rpm
+2026-02-06 23:14:46,598 - Finish: build phase for shim-unsigned-aarch64-16.1-1.el8.src.rpm
+2026-02-06 23:14:46,603 - Start: clean chroot
+2026-02-06 23:14:50,521 - Finish: clean chroot
+2026-02-06 23:14:50,522 - Finish: run
