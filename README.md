@@ -58,7 +58,7 @@ Subject: C=XX, O=MyCompany, Inc., CN=MyCompany, Inc.
 *******************************************************************************
 ### What's the justification that this really does need to be signed for the whole world to be able to boot it?
 *******************************************************************************
-<!--SHIM:JUSTIFICATION-->We need these customized kernels to boot properly on stock hardware.  This is not possible with the default Rocky Linux (or RHEL) shim binary.<!--/SHIM-->
+<!--SHIM:JUSTIFICATION-->Our customers use a variety of hardware platforms.  Many of them have policies in place, or are contractually obligated in some way to use the default EFI firmware with no customized secureboot/MOK key injection.  At the same time, many customers require some modification from the stock Rocky / RHEL kernel, mostly around the area of security backports (supporting older minor versions), or customized options for their workload.<!--/SHIM-->
 
 *******************************************************************************
 ### Why are you unable to reuse shim from another distro that is already signed?
@@ -73,9 +73,9 @@ An authorized reviewer will initiate contact verification by sending each securi
 You will be asked to post the contents of these mails in your `shim-review` issue to prove ownership of the email addresses and PGP keys.
 *******************************************************************************
 - Name: <!--SHIM:PRIMARY_NAME-->Jason Rodriguez<!--/SHIM-->
-- Position: <!--SHIM:PRIMARY_POSITION-->Sr Principal Software Engineer<!--/SHIM-->
+- Position: <!--SHIM:PRIMARY_POSITION-->Engineer<!--/SHIM-->
 - Email address: <!--SHIM:PRIMARY_EMAIL-->jrodriguez@ciq.com<!--/SHIM-->
-- PGP key fingerprint: <!--SHIM:PRIMARY_PGP-->0310 CFD4 0447 4D14 5072 D3E1 EAFF ECB3 C3AB C924<!--/SHIM-->
+- PGP key fingerprint: <!--SHIM:PRIMARY_PGP-->0310 CFD4 0447 4D14 5072 D3E1 EAFF ECB3 C3AB C924 - PGP key available on keys.openpgp.org<!--/SHIM-->
 - PGP key URL: <!--SHIM:PRIMARY_PGP_URL-->https://keys.openpgp.org/vks/v1/by-fingerprint/0310CFD404474D145072D3E1EAFFECB3C3ABC924<!--/SHIM-->
 
 (Key should be signed by the other security contacts, pushed to a keyserver
@@ -86,9 +86,9 @@ well known in the Linux community.)
 ### Who is the secondary contact for security updates, etc.?
 *******************************************************************************
 - Name: <!--SHIM:SECONDARY_NAME-->Michael Young<!--/SHIM-->
-- Position: <!--SHIM:SECONDARY_POSITION-->Principal Systems Engineer<!--/SHIM-->
+- Position: <!--SHIM:SECONDARY_POSITION-->Information Technology Director<!--/SHIM-->
 - Email address: <!--SHIM:SECONDARY_EMAIL-->myoung@ciq.com<!--/SHIM-->
-- PGP key fingerprint: <!--SHIM:SECONDARY_PGP-->CD82 9808 7BCA C022 B5EC  84FA D84A 6A59 1392 6D2B<!--/SHIM-->
+- PGP key fingerprint: <!--SHIM:SECONDARY_PGP-->CD82 9808 7BCA C022 B5EC 84FA D84A 6A59 1392 6D2B<!--/SHIM-->
 - PGP key URL: <!--SHIM:SECONDARY_PGP_URL-->http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xcd8298087bcac022b5ec84fad84a6a5913926d2b<!--/SHIM-->
 
 (Key should be signed by the other security contacts, pushed to a keyserver
@@ -217,11 +217,10 @@ Our grub2 follows our upstream (Rocky linux), Rocky has not updated grub and is 
 <!--SHIM:SBAT_GRUB_X64-->
 ```
 objcopy --only-section .sbat -O binary grubx64.efi /dev/stdout
-sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
-grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-169.el8_10,mailto:secalert@redhat.com
-grub.rocky8,2,Rocky Linux 8,grub2,2.02-169.el8_10.rocky.0.1,mailto:security@rockylinux.org
-grub.ciq_rocky8,1,Rocky Linux 8 (CIQ build),grub2,2.02-169.el8.ciq.0.1,mailto:secureboot@ciq.com
+grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-150.el8_8,mailto:secalert@redhat.com
+grub.rocky8,2,Rocky Linux 8,grub2,2.02-150.el8_8.rocky.0.1,mailto:security@rockylinux.org
+grub.ciq_rocky8,1,Rocky Linux 8 (CIQ build),grub2,2.02-150.el8.ciq.0.1,mailto:secureboot@ciq.com
 ```
 <!--/SHIM-->
 
@@ -259,10 +258,9 @@ The kernel enforces lockdown out of the box when Secure Boot is enabled.
 *******************************************************************************
 ### Do you build your signed kernel with additional local patches? What do they do?
 *******************************************************************************
-<!--SHIM:KERNEL_LOCAL_PATCHES-->Generally we'll be performing 2 sorts of mofifications:
-
-- Fixes and enhancements (especially security updates) to continue long-term support of a previous Rocky Linux release.  For example, further backports to the Rocky/RHEL 9.2 kernel (kernel-5.14.0-284) to keep it updated for customers, or FIPS enhancements/restrictions for those that require compliance.
-
+<!--SHIM:KERNEL_LOCAL_PATCHES-->
+Generally we'll be performing 2 sorts of mofifications:
+- Fixes and enhancements (especially security updates) to continue long-term support of a previous Rocky Linux release.  For example, further backports to the Rocky/RHEL 8.6 kernel (kernel-4.18.0-372) to keep it updated for customers, or FIPS enhancements/restrictions for those that require compliance.
 - Builds of recent mainline (ML) and longterm (LT) upstream kernel releases designed for installation on Rocky Linux.  Different variants are planned with compile-time configuration tweaks, especially around enhancing high performance computing (HPC) applications.
 <!--/SHIM-->
 
@@ -296,24 +294,34 @@ Hint: Prefer using *frozen* packages for your toolchain, since an update to GCC,
 
 If your shim binaries can't be reproduced using the provided Dockerfile, please explain why that's the case, what the differences would be and what build environment (OS and toolchain) is being used to reproduce this build? In this case please write a detailed guide, how to setup this build environment from scratch.
 *******************************************************************************
-<!--SHIM:BUILD_REPRODUCIBILITY-->This build is all Rocky 9.2 dependencies, using rpmbuild.
+<!--SHIM:BUILD_REPRODUCIBILITY-->
+This is built on Rocky Linux 8.8.20230518. The Dockerfile in this repository can be used to launch an identical buildroot.
 
-To ensure reproducibility, are using Rocky 9.2 packages from a frozen vault.
-Using a tagged container base plus the rocky vault should ensure binaries are 100% reproducible.
+```bash
+docker build .
+```
 
-Current reproducible shim build location:  https://github.com/ctrliq/ciq-shim-build/tree/r9
+The Dockerfile was customized to:
+- Build for RHEL/Rocky Linux ecosystems using RPM-based toolchain (`rpmbuild`)
+- Support three architectures (shimx64.efi, shimia32.efi, shimaa64.efi) in a single multi-stage build
+- Use frozen package repositories to ensure reproducible builds with pinned toolchain versions
+
+The Dockerfile uses static Rocky Linux 8.8 repositories defined in ciq_static_shim.repo and ciq_static_shim_aa64.repo to prevent toolchain updates that could change binary checksums.
+
+Current reproducible shim build location: https://github.com/ctrliq/ciq-shim-build/tree/r8
 <!--/SHIM-->
 
 *******************************************************************************
 ### What OS and toolchain must we use to reproduce this build?
 Include where to find it, etc. We're going to try to reproduce your build as closely as possible to verify that it's really a build of the source tree you tell us it is, so these need to be fairly thorough. At the very least include the specific versions of gcc, binutils, and gnu-efi which were used, and where to find those binaries.
 *******************************************************************************
-<!--SHIM:BUILD_ENVIRONMENT_DESC-->This build is all Rocky 9.2 dependencies, using rpmbuild.
+<!--SHIM:BUILD_ENVIRONMENT_DESC-->
+This build is all Rocky 8.8 dependencies, using rpmbuild.
 
-To ensure reproducibility, are using Rocky 9.2 packages from a frozen vault.
+To ensure reproducibility, are using Rocky 8.8 packages from a frozen vault.
 Using a tagged container base plus the rocky vault should ensure binaries are 100% reproducible.
 
-Current reproducible shim build location:  https://github.com/ctrliq/ciq-shim-build/tree/r9
+Current reproducible shim build location:  https://github.com/ctrliq/ciq-shim-build/tree/r8
 <!--/SHIM-->
 
 *******************************************************************************
@@ -352,11 +360,11 @@ Skip this, if this is your first application for having shim signed.
 ### How do you manage and protect the keys used in your shim?
 Describe the security strategy that is used for key protection. This can range from using hardware tokens like HSMs or Smartcards, air-gapped vaults, physical safes to other good practices.
 *******************************************************************************
-<!--SHIM:KEY_MANAGEMENT-->We use a managed PKI solution that meets all industry standards and requirements for issuing, protecting, backing up and securing code signing certs.
-
+<!--SHIM:KEY_MANAGEMENT-->
+We use a managed PKI solution that meets all industry standards and requirements for issuing, protecting, backing up and securing code signing certs.
 There is a Private Root CA and a Private Issuing CA.  The Private Issuing CA was used for issuing of the private code signing certs that are found in the SHIM.
-
-Those issued certs are then stored on a physical HSM.  That HSM is installed within a FIPS environment.  All access to that environment is strictly controlled with physical and logical controls in place, with no outside access permitted.  The servers are in a locked environment and within a secure data center with proper physical access controls in place at that location for security purposes.<!--/SHIM-->
+Those issued certs are then stored on a physical HSM.  That HSM is installed within a FIPS environment.  All access to that environment is strictly controlled with physical and logical controls in place, with no outside access permitted.  The servers are in a locked environment and within a secure data center with proper physical access controls in place at that location for security purposes.
+<!--/SHIM-->
 
 *******************************************************************************
 ### Do you use EV certificates as embedded certificates in the shim?
@@ -389,11 +397,10 @@ Hint: run `objcopy --only-section .sbat -O binary YOUR_EFI_BINARY /dev/stdout` t
 <!--SHIM:SBAT_GRUB_X64-->
 ```
 objcopy --only-section .sbat -O binary grubx64.efi /dev/stdout
-sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
-grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-169.el8_10,mailto:secalert@redhat.com
-grub.rocky8,2,Rocky Linux 8,grub2,2.02-169.el8_10.rocky.0.1,mailto:security@rockylinux.org
-grub.ciq_rocky8,1,Rocky Linux 8 (CIQ build),grub2,2.02-169.el8.ciq.0.1,mailto:secureboot@ciq.com
+grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-150.el8_8,mailto:secalert@redhat.com
+grub.rocky8,2,Rocky Linux 8,grub2,2.02-150.el8_8.rocky.0.1,mailto:security@rockylinux.org
+grub.ciq_rocky8,1,Rocky Linux 8 (CIQ build),grub2,2.02-150.el8.ciq.0.1,mailto:secureboot@ciq.com
 ```
 <!--/SHIM-->
 
@@ -420,11 +427,10 @@ shim.ciq,3,Ctrl IQ Inc,shim,16.1,mail:it_security@ciq.com
 <!--SHIM:SBAT_GRUB_IA32-->
 ```
 objcopy --only-section .sbat -O binary grubia32.efi /dev/stdout
-sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
-grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-169.el8_10,mailto:secalert@redhat.com
-grub.rocky8,2,Rocky Linux 8,grub2,2.02-169.el8_10.rocky.0.1,mailto:security@rockylinux.org
-grub.ciq_rocky8,1,Rocky Linux 8 (CIQ build),grub2,2.02-169.el8.ciq.0.1,mailto:secureboot@ciq.com
+grub.rh,2,Red Hat Enterprise Linux 8,grub2,2.02-150.el8_8,mailto:secalert@redhat.com
+grub.rocky8,2,Rocky Linux 8,grub2,2.02-150.el8_8.rocky.0.1,mailto:security@rockylinux.org
+grub.ciq_rocky8,1,Rocky Linux 8 (CIQ build),grub2,2.02-150.el8.ciq.0.1,mailto:secureboot@ciq.com
 ```
 <!--/SHIM-->
 
@@ -459,9 +465,7 @@ grub.ciq_rocky8,1,Rocky Linux 8 (CIQ build),grub2,2.02-169.el8.ciq.0.1,mailto:se
 <!--SHIM:SBAT_FWUPD_AA64-->
 ```
 objcopy --only-section .sbat -O binary fwupdaa64.efi /dev/stdout
-fwupd-efi,1,Firmware update daemon,fwupd-efi,1.3,https://github.com/fwupd/fwupd-efi
-fwupd-efi.rhel,1,Red Hat Enterprise Linux,fwupd,1.7.8,mail:secalert@redhat.com
-fwupd-efi.rocky,1,Rocky Linux (CIQ modified),fwupd,1.7.8,mail:secureboot@ciq.co
+N/A - fwupd not built for this architecture
 ```
 <!--/SHIM-->
 
@@ -483,7 +487,14 @@ Hint: this is about those modules that are in the binary itself, not the `.mod` 
 <!--SHIM:GRUB_UPSTREAM-->Rocky Linux<!--/SHIM--> / GRUB <!--SHIM:GRUB2_BASE_VERSION-->2.02<!--/SHIM-->:
 <!--SHIM:GRUB2_MODULES-->
 ```
-all_video at_keyboard backtrace blscfg boot cat chain configfile connectefi cryptodisk echo efifwsetup efinet efi_netfs ext2 fat font gcry_rijndael gcry_rsa gcry_serpent gcry_sha256 gcry_twofish gcry_whirlpool gfxmenu gfxterm gzio halt http increment iso9660 jpeg keylayouts linux loadenv loopback lsefi lsefimmap luks lvm mdraid09 mdraid1x minicmd net normal part_apple part_gpt part_msdos password_pbkdf2 png reboot regexp search search_fs_file search_fs_uuid search_label serial sleep syslinuxcfg test tftp usb usbserial_common usbserial_ftdi usbserial_pl2303 usbserial_usbdebug video xfs
+efi_netfs efifwsetup efinet lsefi lsefimmap connectefi backtrace chain usb
+usbserial_common usbserial_pl2303 usbserial_ftdi usbserial_usbdebug keylayouts
+at_keyboard all_video boot blscfg cat configfile cryptodisk echo ext2 fat font
+gcry_rijndael gcry_rsa gcry_serpent gcry_sha256 gcry_twofish gcry_whirlpool
+gfxmenu gfxterm gzio halt http increment iso9660 jpeg loadenv loopback linux lvm
+luks mdraid09 mdraid1x minicmd net normal part_apple part_msdos part_gpt
+password_pbkdf2 png reboot regexp search search_fs_uuid search_fs_file
+search_label serial sleep syslinuxcfg test tftp video xfs
 ```
 <!--/SHIM-->
 
@@ -495,18 +506,17 @@ Currently, we are not providing signed systemd-boot.
 *******************************************************************************
 ### What is the origin and full version number of your bootloader (GRUB2 or systemd-boot or other)?
 *******************************************************************************
-We use <!--SHIM:GRUB_UPSTREAM-->Rocky Linux<!--/SHIM--> - GRUB <!--SHIM:GRUB2_VERSION-->2.02-169.el8.ciq.0.1<!--/SHIM-->
+We use <!--SHIM:GRUB_UPSTREAM-->Rocky Linux<!--/SHIM--> - GRUB <!--SHIM:GRUB2_VERSION-->2.02-150<!--/SHIM-->
 
 *******************************************************************************
 ### If your shim launches any other components apart from your bootloader, please provide further details on what is launched.
 Hint: The most common case here will be a firmware updater like fwupd.
 *******************************************************************************
-<!--SHIM:LAUNCHED_COMPONENTS-->This build is all Rocky 9.2 dependencies, using rpmbuild.
-
-To ensure reproducibility, are using Rocky 9.2 packages from a frozen vault.
-Using a tagged container base plus the rocky vault should ensure binaries are 100% reproducible.
-
-Current reproducible shim build location:  https://github.com/ctrliq/ciq-shim-build/tree/r9
+<!--SHIM:LAUNCHED_COMPONENTS-->
+We have successfully packaged and tested a RockyLinux version of certwrapper (formerly certmule).  That is, a certmule package signed by us, but containing the Rocky Linux CA.
+This seems perfect for our use-case, as the Rocky grub2 + fwupd upstream packages could be used as-is without the need for recompilation or re-signing.  While keenly interested in kernel modifications, we don't have as much cause to update fwupd or grub2, and would prefer to use our upstream whenever feasible.
+I want to inquire about signing this wrapper efi and making it available to users.
+The certmule package in question (with the embedded Rocky CA) is located at:  https://github.com/ctrliq/certmule-rocky/
 <!--/SHIM-->
 
 *******************************************************************************
@@ -519,23 +529,24 @@ Skip this, if you're not using GRUB2 or systemd-boot.
 ### How do the launched components prevent execution of unauthenticated code?
 Summarize in one or two sentences, how your secure bootchain works on higher level.
 *******************************************************************************
-<!--SHIM:PREVENT_UNAUTH-->In the case of the kernel, both the RHEL variant and the upstream ("new") variants prevent this by default, and we do not want to change that.
-
-In the case of Grub + Fwupd, we will be running the same Rocky/RHEL versions unmodified, which also do not execute unauthenticated code by default.<!--/SHIM-->
+<!--SHIM:PREVENT_UNAUTH-->
+In the case of the kernel, both the RHEL variant and the upstream ("new") variants prevent this by default, and we do not want to change that.
+In the case of Grub + Fwupd, we will be running the same Rocky/RHEL versions unmodified, which also do not execute unauthenticated code by default.
+<!--/SHIM-->
 
 *******************************************************************************
 ### Does your shim load any loaders that support loading unsigned kernels (e.g. certain GRUB2 configurations)?
 *******************************************************************************
-<!--SHIM:LOAD_UNSIGNED-->Grub2 will only load unsigned code if the secureboot feature is turned off.  Otherwise booting signed code is always enforced, same as the upstream Rocky/RHEL loaders.<!--/SHIM-->
+<!--SHIM:LOAD_UNSIGNED-->Grub2 will only load unsigned code if the secureboot feature is turned off  load unsigned kernels, but only with secureboot mode turned off on an end-user's system.<!--/SHIM-->
 
 *******************************************************************************
 ### What kernel are you using? Which patches and configuration does it include to enforce Secure Boot?
 *******************************************************************************
-<!--SHIM:KERNEL_DESCRIPTION-->We are using our RHEL upstream variant 5.14 with minor patches (on top of the many patches from Red Hat and others).
-
-We are also building and packaging supported upstream kernels designed for use on Rocky and enterprise-Linux variants.  These include supported LT versions (5.4, 5.10, 5.15, 6.1), as well as the rolling latest-stable version.
-
-I understand that these all enforce secure boot "out of the box".<!--/SHIM-->
+<!--SHIM:KERNEL_DESCRIPTION-->
+We are using our RHEL upstream variants: 4.18 and 5.14 with minor patches (on top of the many patches from Red Hat and others).
+We are also building and packaging supported upstream kernels designed for use on Rocky and enterprise-Linux variants.  These include supported LT versions (5.4, 5.10, 5.15, 6.1), as well as the rollling latest-stable version.
+I understand that these all enforce secure boot "out of the box".
+<!--/SHIM-->
 
 *******************************************************************************
 ### What contributions have you made to help us review the applications of other applicants?
