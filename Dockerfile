@@ -1,41 +1,77 @@
-# Container to build CIQ's patched shim in a reproducible way
+# Multi-platform CIQ shim build for x86_64 (with ia32) and aarch64
+# Following proven reproducibility verification pattern
 #
-# It inserts a static repo for buildtime deps, then performs the rpmbuild/compilation, then outputs a comparison of binaries
-# 
-# Build and tag locally with:   docker build --tag ciq-shim-review:8 ./
-#
+# Build with: docker buildx build --platform linux/amd64 --tag ciq-shim-review:16.1 --load .
 
-FROM rockylinux/rockylinux:9.2
+# Stage 1: Build x64 + ia32 on AMD64 platform
+FROM --platform=linux/amd64 rockylinux:9.2.20230513 AS amd64
+ARG SHIM_VERSION=16.1-1.el9
 
-ENV shim_release 15.8-0.el9
+# Copy build configuration
+COPY rpmmacros /root/.rpmmacros
+COPY shim-unsigned-x64-.src.rpm /root
+RUN rpm -ivh /root/shim-unsigned-x64-.src.rpm
 
-# Copy and extract src rpm and macros, modify setarch in spec file because 32-bit mod is not allowed inside containers:
-COPY rpmmacros  /root/.rpmmacros
-COPY shim-unsigned-x64-$shim_release.src.rpm  /root
-RUN rpm -ivh /root/shim-unsigned-x64-$shim_release.src.rpm
+# Fix spec file for container builds
+RUN sed -i 's/linux32 -B/linux32/g' /builddir/build/SPECS/shim-unsigned-x64.spec
 
-# already-built shim binaries for comparison:
-COPY shimx64.efi  /
+# Copy control binaries to root (proven location)
+COPY shimx64.efi /
+COPY shimia32.efi /
 
-# Remove all repos, and point *only* to our static one with the necessary BuildRequires
-# We don't want to contaminate the build with anything different - it must be reproducible
+# Remove default repos and add static repo
 RUN rm -f /etc/yum.repos.d/*.repo
-COPY ciq_static_shim.repo  /etc/yum.repos.d/
+COPY ciq_static_shim.repo /etc/yum.repos.d/
 
-# Install necessary packages, and run the build:
-RUN dnf -y install dnf-plugins-core rpm-build;  dnf -y  builddep /builddir/build/SPECS/shim-unsigned-x64.spec
+# Install and build
+RUN dnf -y install dnf-plugins-core rpm-build cpio &&     dnf -y builddep /builddir/build/SPECS/shim-unsigned-x64.spec
 RUN rpmbuild -bb /builddir/build/SPECS/shim-unsigned-x64.spec
 
-
-# Put resulting RPM in a temp folder (optionally mounted on host system for extraction)
+# Extract built RPMs to /shim_result (proven pattern)
 RUN mkdir -p /shim_result
-RUN rpm2cpio /builddir/build/RPMS/x86_64/shim-unsigned-x64-$shim_release.x86_64.rpm | cpio -diu -D /shim_result
+RUN rpm2cpio /builddir/build/RPMS/x86_64/shim-unsigned-x64-.x86_64.rpm | cpio -diu -D /shim_result
+RUN rpm2cpio /builddir/build/RPMS/x86_64/shim-unsigned-ia32-.x86_64.rpm | cpio -diu -D /shim_result
 
+# Stage 2: Build aa64 on ARM64 platform
+FROM --platform=linux/arm64 rockylinux:9.2.20230513 AS arm64
+ARG SHIM_VERSION=16.1-1.el9
 
+# Copy build configuration
+COPY rpmmacros /root/.rpmmacros
+COPY shim-unsigned-aarch64-.src.rpm /root
+RUN rpm -ivh /root/shim-unsigned-aarch64-.src.rpm
 
-# Insert shim-compare.sh script and run
-COPY shim-compare.sh  /root
-RUN chmod 0755 /root/shim-compare.sh;  /root/shim-compare.sh
+# Copy control binary to root
+COPY shimaa64.efi /
 
+# Remove default repos and add static aa64 repo (required for reproducible builds)
+RUN rm -f /etc/yum.repos.d/*.repo
+COPY ciq_static_shim_aa64.repo /etc/yum.repos.d/
 
+# Install and build
+RUN dnf -y install dnf-plugins-core rpm-build cpio &&     dnf -y builddep /builddir/build/SPECS/shim-unsigned-aarch64.spec
+RUN rpmbuild -bb /builddir/build/SPECS/shim-unsigned-aarch64.spec
 
+# Extract built RPM to /shim_result
+RUN mkdir -p /shim_result
+RUN rpm2cpio /builddir/build/RPMS/aarch64/shim-unsigned-aarch64-.aarch64.rpm | cpio -diu -D /shim_result
+
+# Final Stage: Aggregate and run reproducibility verification
+FROM --platform=linux/amd64 rockylinux:9.2.20230513
+ARG SHIM_VERSION=16.1-1.el9
+
+# Install pesign and diffutils for verification (diffutils provides cmp command)
+RUN dnf install -y pesign diffutils
+
+# Copy control binaries from build context
+COPY shimx64.efi /
+COPY shimia32.efi /
+COPY shimaa64.efi /
+
+# Copy built binaries from both stages to /shim_result
+COPY --from=amd64 /shim_result/ /shim_result/
+COPY --from=arm64 /shim_result/ /shim_result/
+
+# Copy and run comparison script (proven verification)
+COPY shim-compare.sh /root/
+RUN chmod 0755 /root/shim-compare.sh && /root/shim-compare.sh
