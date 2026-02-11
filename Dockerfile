@@ -17,7 +17,6 @@ RUN sed -i 's/linux32 -B/linux32/g' /builddir/build/SPECS/shim-unsigned-x64.spec
 
 # Copy control binaries to root (proven location)
 COPY shimx64.efi /
-COPY shimia32.efi /
 
 # Remove default repos and add static repo
 RUN rm -f /etc/yum.repos.d/*.repo
@@ -30,7 +29,6 @@ RUN rpmbuild -bb /builddir/build/SPECS/shim-unsigned-x64.spec
 # Extract built RPMs to /shim_result (proven pattern)
 RUN mkdir -p /shim_result
 RUN rpm2cpio /builddir/build/RPMS/x86_64/shim-unsigned-x64-${SHIM_VERSION}.x86_64.rpm | cpio -diu -D /shim_result
-RUN rpm2cpio /builddir/build/RPMS/x86_64/shim-unsigned-ia32-${SHIM_VERSION}.x86_64.rpm | cpio -diu -D /shim_result
 
 # Stage 2: Build aa64 on ARM64 platform
 FROM --platform=linux/arm64 rockylinux:9.2.20230513 AS arm64
@@ -65,7 +63,6 @@ RUN dnf install -y pesign diffutils
 
 # Copy control binaries from build context
 COPY shimx64.efi /
-COPY shimia32.efi /
 COPY shimaa64.efi /
 
 # Copy built binaries from both stages to /shim_result
