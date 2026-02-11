@@ -9,7 +9,7 @@ ARG SHIM_VERSION=16.1-1.el9
 
 # Copy build configuration
 COPY rpmmacros /root/.rpmmacros
-COPY shim-unsigned-x64-${SHIM_VERSION}.src.rpm /root
+COPY shim-unsigned-x64.src.rpm /root/shim-unsigned-x64-${SHIM_VERSION}.src.rpm
 RUN rpm -ivh /root/shim-unsigned-x64-${SHIM_VERSION}.src.rpm
 
 # Fix spec file for container builds
@@ -36,7 +36,7 @@ ARG SHIM_VERSION=16.1-1.el9
 
 # Copy build configuration
 COPY rpmmacros /root/.rpmmacros
-COPY shim-unsigned-aarch64-${SHIM_VERSION}.src.rpm /root
+COPY shim-unsigned-aarch64.src.rpm /root/shim-unsigned-aarch64-${SHIM_VERSION}.src.rpm
 RUN rpm -ivh /root/shim-unsigned-aarch64-${SHIM_VERSION}.src.rpm
 
 # Copy control binary to root
