@@ -4,8 +4,8 @@
 # Build with: docker buildx build --platform linux/amd64 --tag ciq-shim-review:16.1 --load .
 
 # Stage 1: Build x64 + ia32 on AMD64 platform
-FROM --platform=linux/amd64 rockylinux:8.8.20230518 AS amd64
-ARG SHIM_VERSION=16.1-1.el8
+FROM --platform=linux/amd64 rockylinux:9.4 AS amd64
+ARG SHIM_VERSION=16.1-1.el9
 
 # Copy build configuration
 COPY rpmmacros /root/.rpmmacros
@@ -34,8 +34,8 @@ RUN rpm2cpio /builddir/build/RPMS/x86_64/shim-unsigned-x64-${SHIM_VERSION}.x86_6
 RUN rpm2cpio /builddir/build/RPMS/x86_64/shim-unsigned-ia32-${SHIM_VERSION}.x86_64.rpm | cpio -diu -D /shim_result
 
 # Stage 2: Build aa64 on ARM64 platform
-FROM --platform=linux/arm64 rockylinux:8.8.20230518 AS arm64
-ARG SHIM_VERSION=16.1-1.el8
+FROM --platform=linux/arm64 rockylinux:9.4 AS arm64
+ARG SHIM_VERSION=16.1-1.el9
 
 # Copy build configuration
 COPY rpmmacros /root/.rpmmacros
@@ -59,8 +59,8 @@ RUN mkdir -p /shim_result
 RUN rpm2cpio /builddir/build/RPMS/aarch64/shim-unsigned-aarch64-${SHIM_VERSION}.aarch64.rpm | cpio -diu -D /shim_result
 
 # Final Stage: Aggregate and run reproducibility verification
-FROM --platform=linux/amd64 rockylinux:8.8.20230518
-ARG SHIM_VERSION=16.1-1.el8
+FROM --platform=linux/amd64 rockylinux:9.4
+ARG SHIM_VERSION=16.1-1.el9
 
 # Install pesign and diffutils for verification (diffutils provides cmp command)
 RUN dnf install -y pesign diffutils
