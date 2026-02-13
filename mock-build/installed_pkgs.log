@@ -1,281 +1,234 @@
-alternatives-1.20-2.el9.x86_64
-annobin-11.05-1.el9.x86_64
-audit-libs-3.0.7-103.el9.x86_64
-basesystem-11-13.el9.noarch
-bash-5.1.8-6.el9_1.x86_64
-binutils-2.35.2-37.el9.x86_64
-binutils-gold-2.35.2-37.el9.x86_64
-bzip2-1.0.8-8.el9.x86_64
-bzip2-libs-1.0.8-8.el9.x86_64
-ca-certificates-2022.2.54-90.2.el9.noarch
-coreutils-single-8.32-34.el9.x86_64
-cpio-2.13-16.el9.x86_64
-cpp-11.3.1-4.3.el9.x86_64
-cracklib-2.9.6-27.el9.x86_64
-cracklib-dicts-2.9.6-27.el9.x86_64
-crypto-policies-20221215-1.git9a18988.el9.noarch
-crypto-policies-scripts-20221215-1.git9a18988.el9.noarch
-curl-minimal-7.76.1-23.el9_2.1.x86_64
-cyrus-sasl-lib-2.1.27-21.el9.x86_64
-dbus-libs-1.12.20-7.el9_2.1.x86_64
-diffutils-3.7-12.el9.x86_64
-dnf-4.14.0-5.el9_2.noarch
-dnf-data-4.14.0-5.el9_2.noarch
-dnf-plugins-core-4.3.0-5.el9_2.noarch
-dos2unix-7.4.2-4.el9.x86_64
-dwz-0.14-3.el9.x86_64
-ed-1.14.2-12.el9.x86_64
-efi-srpm-macros-6-2.el9_0.noarch
-efivar-libs-38-3.el9.x86_64
-elfutils-0.188-3.el9.x86_64
-elfutils-debuginfod-client-0.188-3.el9.x86_64
-elfutils-default-yama-scope-0.188-3.el9.noarch
-elfutils-libelf-0.188-3.el9.x86_64
-elfutils-libelf-devel-0.188-3.el9.x86_64
-elfutils-libs-0.188-3.el9.x86_64
-emacs-filesystem-27.2-8.el9_2.1.noarch
-expat-2.5.0-1.el9.x86_64
-file-5.39-12.1.el9_2.x86_64
-file-libs-5.39-12.1.el9_2.x86_64
-filesystem-3.16-2.el9.x86_64
-findutils-4.8.0-5.el9.x86_64
-fonts-srpm-macros-2.0.5-7.el9.1.noarch
-gawk-5.1.0-6.el9.x86_64
-gcc-11.3.1-4.3.el9.x86_64
-gcc-plugin-annobin-11.3.1-4.3.el9.x86_64
-gdb-minimal-10.2-10.el9.0.1.x86_64
-gdbm-libs-1.19-4.el9.x86_64
-ghc-srpm-macros-1.5.0-6.el9.noarch
-git-2.39.3-1.el9_2.x86_64
-git-core-2.39.3-1.el9_2.x86_64
-git-core-doc-2.39.3-1.el9_2.noarch
-glib2-2.68.4-6.el9.x86_64
-glibc-2.34-60.el9_2.7.x86_64
-glibc-common-2.34-60.el9_2.7.x86_64
-glibc-devel-2.34-60.el9_2.7.x86_64
-glibc-gconv-extra-2.34-60.el9_2.7.x86_64
-glibc-headers-2.34-60.el9_2.7.x86_64
-glibc-minimal-langpack-2.34-60.el9_2.7.x86_64
-gmp-6.2.0-10.el9.x86_64
-gnupg2-2.3.3-2.el9_0.x86_64
-gnutls-3.7.6-20.el9_2.x86_64
-go-srpm-macros-3.2.0-1.el9.noarch
-gpg-pubkey-350d275d-6279464b
-gpgme-1.15.1-6.el9.x86_64
-grep-3.6-5.el9.x86_64
-groff-base-1.22.4-10.el9.x86_64
-gzip-1.12-1.el9.x86_64
-hostname-3.23-6.el9.x86_64
-ima-evm-utils-1.4-4.el9.x86_64
-info-6.7-15.el9.x86_64
-json-c-0.14-11.el9.x86_64
-kernel-headers-5.14.0-284.30.1.el9_2.x86_64
-kernel-srpm-macros-1.0-12.el9.noarch
-keyutils-libs-1.6.3-1.el9.x86_64
-krb5-libs-1.20.1-8.el9.x86_64
-less-590-1.el9_0.x86_64
-libacl-2.3.1-3.el9.x86_64
-libarchive-3.5.3-4.el9.x86_64
-libassuan-2.5.5-3.el9.x86_64
-libattr-2.5.1-3.el9.x86_64
-libblkid-2.37.4-11.el9_2.x86_64
-libcap-2.48-8.el9.x86_64
-libcap-ng-0.8.2-7.el9.x86_64
-libcbor-0.7.0-5.el9.x86_64
-libcom_err-1.46.5-3.el9.x86_64
-libcomps-0.1.18-1.el9.x86_64
-libcurl-minimal-7.76.1-23.el9_2.1.x86_64
-libdb-5.3.28-53.el9.x86_64
-libdnf-0.69.0-3.el9_2.x86_64
-libeconf-0.4.1-2.el9.x86_64
-libedit-3.1-37.20210216cvs.el9.x86_64
-libevent-2.1.12-6.el9.x86_64
-libfdisk-2.37.4-11.el9_2.x86_64
-libffi-3.4.2-7.el9.x86_64
-libfido2-1.6.0-7.el9.x86_64
-libgcc-11.3.1-4.3.el9.x86_64
-libgcrypt-1.10.0-10.el9_2.x86_64
-libgomp-11.3.1-4.3.el9.x86_64
-libgpg-error-1.42-5.el9.x86_64
-libidn2-2.3.0-7.el9.x86_64
-libksba-1.5.1-6.el9_1.x86_64
-libmodulemd-2.13.0-2.el9.x86_64
-libmount-2.37.4-11.el9_2.x86_64
-libmpc-1.2.1-4.el9.x86_64
-libnghttp2-1.43.0-5.el9.x86_64
-libpkgconf-1.7.3-10.el9.x86_64
-libpwquality-1.4.4-8.el9.x86_64
-librepo-1.14.5-1.el9.x86_64
-libreport-filesystem-2.15.2-6.el9.rocky.0.2.noarch
-libselinux-3.5-1.el9.x86_64
-libsemanage-3.5-1.el9.x86_64
-libsepol-3.5-1.el9.x86_64
-libsigsegv-2.13-4.el9.x86_64
-libsmartcols-2.37.4-11.el9_2.x86_64
-libsolv-0.7.22-4.el9.x86_64
-libstdc++-11.3.1-4.3.el9.x86_64
-libtasn1-4.16.0-8.el9_1.x86_64
-libunistring-0.9.10-15.el9.x86_64
-libusbx-1.0.26-1.el9.x86_64
-libuser-0.63-12.el9.x86_64
-libutempter-1.2.1-6.el9.x86_64
-libuuid-2.37.4-11.el9_2.x86_64
-libverto-0.3.2-3.el9.x86_64
-libxcrypt-4.4.18-3.el9.x86_64
-libxcrypt-devel-4.4.18-3.el9.x86_64
-libxml2-2.9.13-3.el9_1.x86_64
-libyaml-0.2.5-7.el9.x86_64
-libzstd-1.5.1-2.el9.x86_64
-llvm-libs-15.0.7-1.el9.x86_64
-lua-libs-5.4.4-3.el9.x86_64
-lua-srpm-macros-1-6.el9.noarch
-lz4-libs-1.9.3-5.el9.x86_64
-make-4.3-7.el9.x86_64
-mpfr-4.1.0-7.el9.x86_64
-ncurses-6.2-8.20210508.el9.x86_64
-ncurses-base-6.2-8.20210508.el9.noarch
-ncurses-libs-6.2-8.20210508.el9.x86_64
-nettle-3.8-3.el9_0.x86_64
-npth-1.6-8.el9.x86_64
-nspr-4.35.0-3.el9_2.x86_64
-nss-3.90.0-3.el9_2.x86_64
-nss-softokn-3.90.0-3.el9_2.x86_64
-nss-softokn-freebl-3.90.0-3.el9_2.x86_64
-nss-sysinit-3.90.0-3.el9_2.x86_64
-nss-tools-3.90.0-3.el9_2.x86_64
-nss-util-3.90.0-3.el9_2.x86_64
-ocaml-srpm-macros-6-6.el9.noarch
-openblas-srpm-macros-2-11.el9.noarch
-openldap-2.6.2-3.el9.x86_64
-openssh-8.7p1-30.el9_2.x86_64
-openssh-clients-8.7p1-30.el9_2.x86_64
-openssl-3.0.7-17.el9_2.x86_64
-openssl-devel-3.0.7-17.el9_2.x86_64
-openssl-libs-3.0.7-17.el9_2.x86_64
-p11-kit-0.24.1-2.el9.x86_64
-p11-kit-trust-0.24.1-2.el9.x86_64
-pam-1.5.1-14.el9.x86_64
-passwd-0.80-12.el9.x86_64
-patch-2.7.6-16.el9.x86_64
-pcre-8.44-3.el9.3.x86_64
-pcre2-10.40-2.el9.x86_64
-pcre2-syntax-10.40-2.el9.noarch
-perl-AutoLoader-5.74-480.el9.noarch
-perl-B-1.80-480.el9.x86_64
-perl-Carp-1.50-460.el9.noarch
-perl-Class-Struct-0.66-480.el9.noarch
-perl-Data-Dumper-2.174-462.el9.x86_64
-perl-Digest-1.19-4.el9.noarch
-perl-Digest-MD5-2.58-4.el9.x86_64
-perl-DynaLoader-1.47-480.el9.x86_64
-perl-Encode-3.08-462.el9.x86_64
-perl-Errno-1.30-480.el9.x86_64
-perl-Error-0.17029-7.el9.noarch
-perl-Exporter-5.74-461.el9.noarch
-perl-Fcntl-1.13-480.el9.x86_64
-perl-File-Basename-2.85-480.el9.noarch
-perl-File-Find-1.37-480.el9.noarch
-perl-File-Path-2.18-4.el9.noarch
-perl-File-Temp-0.231.100-4.el9.noarch
-perl-File-stat-1.09-480.el9.noarch
-perl-FileHandle-2.03-480.el9.noarch
-perl-Getopt-Long-2.52-4.el9.noarch
-perl-Getopt-Std-1.12-480.el9.noarch
-perl-Git-2.39.3-1.el9_2.noarch
-perl-HTTP-Tiny-0.076-460.el9.noarch
-perl-IO-1.43-480.el9.x86_64
-perl-IO-Socket-IP-0.41-5.el9.noarch
-perl-IO-Socket-SSL-2.073-1.el9.noarch
-perl-IPC-Open3-1.21-480.el9.noarch
-perl-MIME-Base64-3.16-4.el9.x86_64
-perl-Mozilla-CA-20200520-6.el9.noarch
-perl-NDBM_File-1.15-480.el9.x86_64
-perl-Net-SSLeay-1.92-2.el9.x86_64
-perl-POSIX-1.94-480.el9.x86_64
-perl-PathTools-3.78-461.el9.x86_64
-perl-Pod-Escapes-1.07-460.el9.noarch
-perl-Pod-Perldoc-3.28.01-461.el9.noarch
-perl-Pod-Simple-3.42-4.el9.noarch
-perl-Pod-Usage-2.01-4.el9.noarch
-perl-Scalar-List-Utils-1.56-461.el9.x86_64
-perl-SelectSaver-1.02-480.el9.noarch
-perl-Socket-2.031-4.el9.x86_64
-perl-Storable-3.21-460.el9.x86_64
-perl-Symbol-1.08-480.el9.noarch
-perl-Term-ANSIColor-5.01-461.el9.noarch
-perl-Term-Cap-1.17-460.el9.noarch
-perl-TermReadKey-2.38-11.el9.x86_64
-perl-Text-ParseWords-3.30-460.el9.noarch
-perl-Text-Tabs+Wrap-2013.0523-460.el9.noarch
-perl-Time-Local-1.300-7.el9.noarch
-perl-URI-5.09-3.el9.noarch
-perl-base-2.27-480.el9.noarch
-perl-constant-1.33-461.el9.noarch
-perl-if-0.60.800-480.el9.noarch
-perl-interpreter-5.32.1-480.el9.x86_64
-perl-lib-0.65-480.el9.x86_64
-perl-libnet-3.13-4.el9.noarch
-perl-libs-5.32.1-480.el9.x86_64
-perl-mro-1.23-480.el9.x86_64
-perl-overload-1.31-480.el9.noarch
-perl-overloading-0.02-480.el9.noarch
-perl-parent-0.238-460.el9.noarch
-perl-podlators-4.14-460.el9.noarch
-perl-srpm-macros-1-41.el9.noarch
-perl-subs-1.03-480.el9.noarch
-perl-vars-1.05-480.el9.noarch
-pesign-115-6.el9_1.rocky.2.x86_64
-pkgconf-1.7.3-10.el9.x86_64
-pkgconf-m4-1.7.3-10.el9.noarch
-pkgconf-pkg-config-1.7.3-10.el9.x86_64
-popt-1.18-8.el9.x86_64
-pyproject-srpm-macros-1.6.2-1.el9.noarch
-python-srpm-macros-3.9-52.el9.noarch
-python3-3.9.16-1.el9.x86_64
-python3-dateutil-2.8.1-6.el9.noarch
-python3-dbus-1.2.18-2.el9.x86_64
-python3-dnf-4.14.0-5.el9_2.noarch
-python3-dnf-plugins-core-4.3.0-5.el9_2.noarch
-python3-gpg-1.15.1-6.el9.x86_64
-python3-hawkey-0.69.0-3.el9_2.x86_64
-python3-libcomps-0.1.18-1.el9.x86_64
-python3-libdnf-0.69.0-3.el9_2.x86_64
-python3-libs-3.9.16-1.el9.x86_64
-python3-pip-wheel-21.2.3-6.el9.noarch
-python3-rpm-4.16.1.3-22.el9.x86_64
-python3-setuptools-wheel-53.0.0-12.el9.noarch
-python3-six-1.15.0-9.el9.noarch
-python3-systemd-234-18.el9.x86_64
-qt5-srpm-macros-5.15.3-1.el9.noarch
-readline-8.1-4.el9.x86_64
-redhat-rpm-config-199-1.el9.noarch
-rocky-gpg-keys-9.2-1.4.el9.noarch
-rocky-release-9.2-1.4.el9.noarch
-rocky-repos-9.2-1.4.el9.noarch
-rootfiles-8.1-31.el9.noarch
-rpm-4.16.1.3-22.el9.x86_64
-rpm-build-4.16.1.3-22.el9.x86_64
-rpm-build-libs-4.16.1.3-22.el9.x86_64
-rpm-libs-4.16.1.3-22.el9.x86_64
-rpm-sign-libs-4.16.1.3-22.el9.x86_64
-rust-srpm-macros-17-4.el9.noarch
-sed-4.8-9.el9.x86_64
-setup-2.13.7-9.el9.noarch
-shadow-utils-4.9-6.el9.x86_64
-sqlite-libs-3.34.1-6.el9_1.x86_64
-systemd-libs-252-13.el9_2.x86_64
-tar-1.34-6.el9_1.x86_64
-tpm2-tss-3.0.3-8.el9.x86_64
-tzdata-2023c-1.el9.noarch
-unzip-6.0-56.el9.x86_64
-usermode-1.114-4.el9.x86_64
-util-linux-2.37.4-11.el9_2.x86_64
-util-linux-core-2.37.4-11.el9_2.x86_64
-vim-minimal-8.2.2637-20.el9_1.x86_64
-xz-5.2.5-8.el9_0.x86_64
-xz-libs-5.2.5-8.el9_0.x86_64
-yum-4.14.0-5.el9_2.noarch
-zip-3.0-35.el9.x86_64
-zlib-1.2.11-39.el9.x86_64
-zlib-devel-1.2.11-39.el9.x86_64
-zstd-1.5.1-2.el9.x86_64
+gpg-pubkey-350d275d-6279464b 1652115019 0 (none) installed
+libgcc-11.3.1-4.3.el9.x86_64 1681093488 198764 fccb7d4be92c7559a04c4573fcd02128 installed
+crypto-policies-20221215-1.git9a18988.el9_2.1.noarch 1694573529 85220 c0c7fd4962eb9994f0c8dd00ab9e8238 installed
+pyproject-srpm-macros-1.6.2-1.el9.noarch 1681091764 1512 ac9a01ea350636900d090f44d61cf6be installed
+qt5-srpm-macros-5.15.3-1.el9.noarch 1666804385 492 a2850318d53d4b4f421a70f9054486ff installed
+kernel-headers-5.14.0-284.30.1.el9_2.x86_64 1694857237 5924016 3b4b6c315ac645d5b22c63b9a17a939b installed
+ocaml-srpm-macros-6-6.el9.noarch 1652800868 745 73be47bd06ff2934c420576ab4426d56 installed
+perl-srpm-macros-1-41.el9.noarch 1652557781 862 52f1bf91c8b58cea8094d6e3be4c7f0e installed
+openblas-srpm-macros-2-11.el9.noarch 1652484909 104 d4f8d1073512b1b0c44f95a04285ce97 installed
+rust-srpm-macros-17-4.el9.noarch 1652267604 2447 f473eb960de326eea8285ce84d1e7972 installed
+ghc-srpm-macros-1.5.0-6.el9.noarch 1652267567 535 71fed58726c9a4e11b4ca5eeec6adfe4 installed
+rocky-gpg-keys-9.2-1.6.el9.noarch 1686432608 4909 25afd6f2f9d8cfc1815635eb683a4ecf installed
+rocky-release-9.2-1.6.el9.noarch 1686432608 21452 d45473faa8cc4971d48e641217a93473 installed
+rocky-repos-9.2-1.6.el9.noarch 1686432608 15763 28360823090e67b68de42cb65c536430 installed
+setup-2.13.7-9.el9.noarch 1682131311 725907 9c862c5c59f3ee7a366165f2000a6676 installed
+filesystem-3.16-2.el9.x86_64 1652704127 106 23b5096f815b73dcdfb4fbececc45994 installed
+basesystem-11-13.el9.noarch 1652267550 0 1e84df7870e25521bc4b1abba9c14ec5 installed
+libssh-config-0.10.4-8.el9.noarch 1682439066 277 bc0eed1e4aea3be365af911f3d533529 installed
+ncurses-base-6.2-8.20210508.el9.noarch 1653576260 307293 35e262a7ff00c0603bf6341813d42306 installed
+coreutils-common-8.32-34.el9.x86_64 1682292345 10880498 947f3444ce5ec77beee4eaf4644e9329 installed
+pkgconf-m4-1.7.3-10.el9.noarch 1681536714 14187 12b061c94e3a733e9c1e8921ea590501 installed
+tzdata-2023c-1.el9.noarch 1680188751 1712614 afb53e41ded87d71c56bb333bea308d1 installed
+bash-5.1.8-6.el9_1.x86_64 1674513826 7738634 7ca89c28bb96473a475eff319ce1bdac installed
+ncurses-libs-6.2-8.20210508.el9.x86_64 1653576260 997503 0b903cdc87ef9e62ada77473afc28037 installed
+glibc-minimal-langpack-2.34-60.el9_2.7.x86_64 1696521514 0 0982f80d401fc91ff83df75e61bed5a1 installed
+glibc-gconv-extra-2.34-60.el9_2.7.x86_64 1696521514 8123100 907eb3449b6117d8b6a7ce5854a9fd8e installed
+glibc-common-2.34-60.el9_2.7.x86_64 1696521514 1081377 c22c64d11c65411874906f6c400b983b installed
+glibc-2.34-60.el9_2.7.x86_64 1696521514 6201867 5d16213a0806b45982397afe7e25f679 installed
+zlib-1.2.11-39.el9.x86_64 1681591979 202921 19b33ac596e5f8a08c6fb691c7411144 installed
+libstdc++-11.3.1-4.3.el9.x86_64 1681093488 2524409 3219baa7f7a28cf3e1097eddfd69a344 installed
+xz-libs-5.2.5-8.el9_0.x86_64 1655269093 181573 078cdcb6e241d5bae897e8ffbe5abc12 installed
+bzip2-libs-1.0.8-8.el9.x86_64 1652703093 78748 56ccd1295a53fb6b17467ce62e1967c6 installed
+libzstd-1.5.1-2.el9.x86_64 1653582655 902059 ca2132c1b2abfc412f104f2e81b8973c installed
+gmp-1:6.2.0-10.el9.x86_64 1653509725 818020 782d914839e686f54269a572e0c82b55 installed
+libxcrypt-4.4.18-3.el9.x86_64 1653510262 270716 009b94ca2e493d96aa69f2cf33ea75bc installed
+mpfr-4.1.0-7.el9.x86_64 1653510195 802587 74619be075ab6bbc6f6f3eb27869ac7e installed
+elfutils-libelf-0.188-3.el9.x86_64 1681593018 1027560 d98f660586299cfc36614636e5088228 installed
+libuuid-2.37.4-11.el9_2.x86_64 1683655339 33909 27f0f0fb89a5fc7dab2af27ea23e4d0e installed
+popt-1.18-8.el9.x86_64 1652704144 130376 c6ee753abf2608135eef84c6543c4713 installed
+libattr-2.5.1-3.el9.x86_64 1653510145 29445 1592052a48688a467ac8c10809b4c1e9 installed
+libacl-2.3.1-3.el9.x86_64 1652266119 41194 ed230ce685c08312d434e99874a25be9 installed
+libcap-2.48-9.el9_2.x86_64 1695148324 177463 b9b4a15cb629f218f5289b0d23d818f9 installed
+libmpc-1.2.1-4.el9.x86_64 1652484974 138637 9d370c48a81c56b99bdb7c4d0aae607e installed
+lz4-libs-1.9.3-5.el9.x86_64 1652703415 145507 cfdb2734e4e037ef811fa970b2a41ddd installed
+libcom_err-1.46.5-3.el9.x86_64 1667181053 69041 3bf7c36e1755d084d5ee57d39483bbff installed
+readline-8.1-4.el9.x86_64 1652703611 492900 66ec97b30c4ebb8b6e3cd340d919dcd3 installed
+unzip-6.0-56.el9.x86_64 1652703687 401059 e1a16f9b8f7307d3782d38e312e199dc installed
+file-libs-5.39-12.1.el9_2.x86_64 1690937505 8086659 0eeea0dd2c103903f06bcb71b99a2875 installed
+file-5.39-12.1.el9_2.x86_64 1690937505 102544 c17de8fb5d834009aebc1b878830c292 installed
+sqlite-libs-3.34.1-6.el9_1.x86_64 1674516594 1310968 f66b699bed450877680b8c5e58a01676 installed
+alternatives-1.20-2.el9.x86_64 1652446486 63872 a8d938a59ed896c7595138a407b5b22e installed
+lua-libs-5.4.4-3.el9.x86_64 1682524459 549518 bb0941603d748f56006547fd8d86e6b3 installed
+libcap-ng-0.8.2-7.el9.x86_64 1652703377 75196 45dc2b2ff774e4f4e94f7c354dd56e74 installed
+audit-libs-3.0.7-103.el9.x86_64 1666652425 307377 070e28bb05fb855fdc397d28b15f2706 installed
+libsigsegv-2.13-4.el9.x86_64 1652567842 50354 06625e6afe8f42ae91ba0e98dfa9e222 installed
+gawk-5.1.0-6.el9.x86_64 1652446843 1685670 6a721f681e66961ab13ef1288f028e22 installed
+libunistring-0.9.10-15.el9.x86_64 1652703686 1643051 354dedb80398de4afb10e8e3806bc5da installed
+libidn2-2.3.0-7.el9.x86_64 1652703429 253476 b212886c674f27c872317e6ee6855977 installed
+libffi-3.4.2-7.el9.x86_64 1653509725 66393 f785e66fc31a5a3492711bc73f59a126 installed
+p11-kit-0.24.1-2.el9.x86_64 1653576499 1664534 62e10d92cbb4cece17bdca34e1e472a5 installed
+libsepol-3.5-1.el9.x86_64 1681356489 787907 88ff4c93e723c05637dd1b84b773b204 installed
+libgomp-11.3.1-4.3.el9.x86_64 1681093488 420940 4f772fa71c4d3efba25f72daed9971c4 installed
+libsmartcols-2.37.4-11.el9_2.x86_64 1683655339 134795 0d151b91992aac6a8313baf9272ca415 installed
+zip-3.0-35.el9.x86_64 1682535986 741151 12a2063a23942b9626bc54af762d1769 installed
+zstd-1.5.1-2.el9.x86_64 1653582655 1902812 93bd29879478cc8b29fe7bb3df2ad891 installed
+cpp-11.3.1-4.3.el9.x86_64 1681093488 30205675 cf2624b4a03d8ce265b6dcc6cc6548f3 installed
+dwz-0.14-3.el9.x86_64 1653510016 281782 fec391e14ef27979b4a5fe5393ebeeb1 installed
+bzip2-1.0.8-8.el9.x86_64 1652703093 96080 f9622388dbbb4fe985601ec886c8f75f installed
+libxml2-2.9.13-3.el9_2.1.x86_64 1690924622 1955276 7341db4b122c52fdb5c41efb83479d94 installed
+groff-base-1.22.4-10.el9.x86_64 1652712412 4040406 b3cf69de02fcebc8ae460f871b3efde4 installed
+libstdc++-devel-11.3.1-4.3.el9.x86_64 1681093488 13536344 5c44981a825732ae81d5f31ff34362b0 installed
+info-6.7-15.el9.x86_64 1652703914 508027 9065cd2c5f7bf7c4203969e66fe0f4fe installed
+ed-1.14.2-12.el9.x86_64 1652567904 129931 19769aef4345277f58192dedc6418bfc installed
+libbrotli-1.0.9-6.el9.x86_64 1652703155 784602 dd9791df1bf67a89043b6bf44bbb00b6 installed
+libverto-0.3.2-3.el9.x86_64 1652703457 30381 ab20fd3e76a7e65cda2205582d56669d installed
+libdb-5.3.28-53.el9.x86_64 1652703451 1898046 17ac83fdc2ddf31f044c79c5519c00eb installed
+cpio-2.13-16.el9.x86_64 1652704061 1088176 92b5a0e69a90cb4cdd561954ef2f92e6 installed
+libnghttp2-1.43.0-5.el9_2.1.x86_64 1697644548 169772 512892dfd2f80264b4e5cc221ba69908 installed
+libpkgconf-1.7.3-10.el9.x86_64 1681536714 75425 5d8bf5d30b338e5cddf9ac38db81428b installed
+pkgconf-1.7.3-10.el9.x86_64 1681536714 77890 6d4afc2fa1090836b5e24e8ab21be4a6 installed
+pkgconf-pkg-config-1.7.3-10.el9.x86_64 1681536714 1203 22a1213f2869406a12ca4174b5dd103e installed
+gdbm-libs-1:1.19-4.el9.x86_64 1652195596 116306 6ed9a672d0f5351adb623e32417e420f installed
+diffutils-3.7-12.el9.x86_64 1652899808 1467877 3fbd27f737957ccf8bc68713319471db installed
+libedit-3.1-37.20210216cvs.el9.x86_64 1653509808 251951 befdcfa41b95ffae938f9040dde68718 installed
+llvm-libs-15.0.7-1.el9.x86_64 1681235901 94554504 6afe98a428f1ea48a88c850334d1d005 installed
+libtasn1-4.16.0-8.el9_1.x86_64 1674521524 183348 7b5cc1f1fccf947259c8ba1417cab526 installed
+p11-kit-trust-0.24.1-2.el9.x86_64 1653576499 450935 e19a9e3de3775a96c92dc7918dbbd4a2 installed
+libgpg-error-1.42-5.el9.x86_64 1653510224 837056 99c44f4fadc8f9a9103d47e9b21d2620 installed
+libgcrypt-1.10.0-10.el9_2.x86_64 1683633842 1382018 a5fccf5816538fa7cf26454c06ba2d6c installed
+pcre-8.44-3.el9.3.x86_64 1653563012 539328 f608ec9403e9878f626da9042fc07a6e installed
+grep-3.6-5.el9.x86_64 1652712553 857864 98d808fd3d09606215d7de3258c9f1a9 installed
+xz-5.2.5-8.el9_0.x86_64 1655269093 685931 32384d0037322e70b1394d34df5d71ab installed
+ncurses-6.2-8.20210508.el9.x86_64 1653576260 629396 ac33641f6a79a7140ab95cd493cba847 installed
+perl-Text-Tabs+Wrap-2013.0523-460.el9.noarch 1652703807 24828 6038ed059fb2e061a8f24754e6d59676 installed
+perl-Pod-Escapes-1:1.07-460.el9.noarch 1652704129 25764 bc30ec7f10e23f50a4e6b4a2a232bc7b installed
+perl-if-0:0.60.800-480.el9.noarch 1681324517 6874 d480f19230b44c083553c93556bb8ab2 installed
+perl-File-Path-2.18-4.el9.noarch 1652267626 65333 0913f114ee7544e2c36b3c1306b3cacd installed
+perl-Time-Local-2:1.300-7.el9.noarch 1652267583 67344 1ceb12a5fab9494f14aeeae4f98974f8 installed
+perl-Term-ANSIColor-5.01-461.el9.noarch 1652704129 100303 6269583276d0a928ad3fca3fe17a56ea installed
+perl-POSIX-0:1.94-480.el9.x86_64 1681324517 240027 ea23135a3406874fae889a719dd7b9d7 installed
+perl-Term-Cap-1.17-460.el9.noarch 1652703890 29851 1907857c90d2b95a426abf39cf156412 installed
+perl-subs-0:1.03-480.el9.noarch 1681324517 3061 7ff96a890d77d650f491143501bc73d8 installed
+perl-Pod-Simple-1:3.42-4.el9.noarch 1652267663 577293 82d3854aa1de3ebb86a9312a6340e90f installed
+perl-Class-Struct-0:0.66-480.el9.noarch 1681324517 26953 42e86a1f81fd8eb3ae7de194f9eb1693 installed
+perl-HTTP-Tiny-0.076-460.el9.noarch 1652703956 150122 f47b9db25137eae1e266d8a4c14723df installed
+perl-File-Temp-1:0.231.100-4.el9.noarch 1652801313 166550 f59e524679a0053d68e5543e8e7e314f installed
+perl-IPC-Open3-0:1.21-480.el9.noarch 1681324517 25045 04f7bd9a67bb9fad2cc335a3af6d848a installed
+perl-Socket-4:2.031-4.el9.x86_64 1653563160 124985 249702354e9054c64a9e9e44c213ec96 installed
+perl-Symbol-0:1.08-480.el9.noarch 1681324517 7847 82dc059d3bc037d22bf5c062da500118 installed
+perl-SelectSaver-0:1.02-480.el9.noarch 1681324517 3171 e8be37d350d415c259b78fa2d28f31e8 installed
+perl-podlators-1:4.14-460.el9.noarch 1652703807 288742 75c523a2efcbe66c05f7ab55f9c528a8 installed
+perl-Pod-Perldoc-3.28.01-461.el9.noarch 1652267564 170960 83cda205537bd2ad32547af109e20f11 installed
+perl-File-stat-0:1.09-480.el9.noarch 1681324517 13949 acc240fb36ae95196f1478111a9858fd installed
+perl-Text-ParseWords-3.30-460.el9.noarch 1652267600 13101 f0cff9642d107f0207c44c00e68af130 installed
+perl-mro-0:1.23-480.el9.x86_64 1681324517 43475 57303e6dc3e4a1b3635e074308b115cf installed
+perl-overloading-0:0.02-480.el9.noarch 1681324517 5893 b6141cbb61c05fe16490e3bed1cfb1d3 installed
+perl-Pod-Usage-4:2.01-4.el9.noarch 1652267606 87186 98f6af2a3d64753ac904d5d9407e878e installed
+perl-IO-0:1.43-480.el9.x86_64 1681324517 163130 e3a1885835b6b39303e79672c7e91c8a installed
+perl-Fcntl-0:1.13-480.el9.x86_64 1681324517 30124 9815071cba673b661606e6330c30af4d installed
+perl-constant-1.33-461.el9.noarch 1652703807 27104 5ce71c74c1015b01495bb65d073fe87a installed
+perl-Scalar-List-Utils-4:1.56-461.el9.x86_64 1652703723 143660 0b0074f36e52345e656a4c7cf4d844e1 installed
+perl-Storable-1:3.21-460.el9.x86_64 1652704072 228556 f562f7fa711e68402776f692f3add570 installed
+perl-MIME-Base64-3.16-4.el9.x86_64 1652703869 48153 79131d65e200b0c6e64dc18850ff8a06 installed
+perl-Errno-0:1.30-480.el9.x86_64 1681324517 9533 0dc0e41969d9ebf2cf154eebd262737c installed
+perl-vars-0:1.05-480.el9.noarch 1681324517 4926 19ae1ce28cf4d95ed79ff58951cc5220 installed
+perl-overload-0:1.31-480.el9.noarch 1681324517 72822 8c5f94bbf25a16f2543567465b990ec8 installed
+perl-Getopt-Std-0:1.12-480.el9.noarch 1681324517 12107 399b7228f82ea150c792970d0e3d5743 installed
+perl-File-Basename-0:2.85-480.el9.noarch 1681324517 15339 15ee4a0df67ece5e1edc2b1116d62437 installed
+perl-parent-1:0.238-460.el9.noarch 1653563243 9535 cd964be73bdf6940a87b3d0fe0476847 installed
+perl-Getopt-Long-1:2.52-4.el9.noarch 1652267711 139937 d27908b132dda891df7dc6951fa2c34b installed
+perl-Exporter-5.74-461.el9.noarch 1652267594 55359 c01c2a31a2561b748052cc0463c35215 installed
+perl-Carp-1.50-460.el9.noarch 1652703890 47889 681f4c99b5527e73056664a5218266f1 installed
+perl-PathTools-3.78-461.el9.x86_64 1652704061 182542 835426614e155f37f1ffa650efe6de40 installed
+perl-Encode-4:3.08-462.el9.x86_64 1652703595 10240082 cf3cbbaf60be22194fd1dae2a20da92a installed
+perl-libs-4:5.32.1-480.el9.x86_64 1681324517 8953710 0a8d78b762e750b4564a492c299a65c1 installed
+perl-interpreter-4:5.32.1-480.el9.x86_64 1681324517 120077 6518b2251316b136e99e73cd32649a1f installed
+kernel-srpm-macros-1.0-12.el9.noarch 1681091766 16918 4afe5c032237df73baaa1fca4fea2667 installed
+make-1:4.3-7.el9.x86_64 1652568082 1720870 a9d3baca50da8945c6ccb56c0582cea1 installed
+keyutils-libs-1.6.3-1.el9.x86_64 1681766930 55267 b280a8e5cca83fc5e3df0704a38e180f installed
+libeconf-0.4.1-3.el9_2.x86_64 1690924622 45723 e85f6d8877b8fba279b99a0cdb336e66 installed
+glibc-headers-2.34-60.el9_2.7.x86_64 1696521514 2165380 2b3593bfec83085f9b4d765896df9fa9 installed
+libxcrypt-devel-4.4.18-3.el9.x86_64 1653510262 31019 fda458b53a75fcd4b21c7f7e2b02e461 installed
+glibc-devel-2.34-60.el9_2.7.x86_64 1696521514 135336 e284c303a024177845d56fda5a27762d installed
+elfutils-default-yama-scope-0.188-3.el9.noarch 1681593019 1810 b1044ff3400d1144d2d59c2a12d054e6 installed
+elfutils-libs-0.188-3.el9.x86_64 1681593018 685085 50807ac46209575f7884a8cd48f59c0a installed
+pcre2-syntax-10.40-2.el9.noarch 1667115951 234324 1573427a88007995fe7918f38a324e48 installed
+pcre2-10.40-2.el9.x86_64 1667115951 653850 805e42e70c2e9451b52f6bcb1a05c948 installed
+libselinux-3.5-1.el9.x86_64 1681357212 176653 f89e34475276c9381064d8924e33432b installed
+sed-4.8-9.el9.x86_64 1652712399 813607 415f8fb73ee020b229344cba9cfc297d installed
+findutils-1:4.8.0-5.el9.x86_64 1652567917 1758438 a39c6d1b192f204a3cd3569235d70f7d installed
+openssl-libs-1:3.0.7-17.el9_2.x86_64 1690927837 6763732 60a2650afa71e8a53066439c0bcdcf68 installed
+coreutils-8.32-34.el9.x86_64 1682292345 5966362 f12140d1053d4d1c85848bda6f0f6537 installed
+ca-certificates-2023.2.60_v7.0.306-90.1.el9_2.noarch 1694587905 2354652 e0ef61291e4078224c329f3c7825d8d3 installed
+libblkid-2.37.4-11.el9_2.x86_64 1683655339 229745 9f14ba25946d6fcbf2d02c6315521814 installed
+krb5-libs-1.20.1-9.el9_2.x86_64 1687465371 2182856 bee1ee787ee65a574277b15c875ebcd9 installed
+libmount-2.37.4-11.el9_2.x86_64 1683655339 310101 3c526f4095bf77b0cf630faf64d611f6 installed
+gzip-1.12-1.el9.x86_64 1667088950 377005 c3b6a711959934acd5bde6ee77091d4f installed
+cracklib-2.9.6-27.el9.x86_64 1654018888 251890 9e558ac1727da7b9f6ecabf18a83daa1 installed
+systemd-libs-252-14.el9_2.3.0.1.x86_64 1692855782 1806480 dd9944cb016bff49160845ce75fa4d28 installed
+util-linux-core-2.37.4-11.el9_2.x86_64 1683655339 1262791 a1fe9ed1fb8a53e28acf1815c0ebb3b7 installed
+cracklib-dicts-2.9.6-27.el9.x86_64 1654018888 9815154 12acec65b7f9b7b688070dc47712c208 installed
+libssh-0.10.4-8.el9.x86_64 1682439066 531603 6adfb831d1511ef6eec31b9a3b3a4ff4 installed
+cyrus-sasl-lib-2.1.27-21.el9.x86_64 1681491786 2380296 f75fe2d474957477a7aa070621dad34e installed
+libfdisk-2.37.4-11.el9_2.x86_64 1683655339 367763 5aaf91848f6e9023314471fb9f55c3fa installed
+openssl-1:3.0.7-17.el9_2.x86_64 1690927837 1894453 e72b86016629a8cdf2d0a745252d1278 installed
+libpwquality-1.4.4-8.el9.x86_64 1653510445 416416 fca0191f7104f50acf34e27c0fb604a8 installed
+pam-1.5.1-14.el9.x86_64 1681335499 1894097 b384da90f7d83379f84860978815f922 installed
+libarchive-3.5.3-4.el9.x86_64 1682093863 906150 c927e702f1f7169c694bec2912280c3f installed
+libevent-2.1.12-6.el9.x86_64 1652801006 932234 e3249eb46abdc2d5d925ecfe88b269ed installed
+openldap-2.6.2-3.el9.x86_64 1667289489 1077140 fcd856e7c61816dd1dae7b2958e9a5fe installed
+libsemanage-3.5-1.el9.x86_64 1681357892 307110 5f66ba6e8049910c712d1e951ac9cbde installed
+shadow-utils-2:4.9-6.el9.x86_64 1681622190 3812491 fab6263d43a20a5de0a0466efc99c5ac installed
+libutempter-1.2.1-6.el9.x86_64 1652703699 59433 c8a01f5605facb680c8781954f73e338 installed
+tar-2:1.34-6.el9_1.x86_64 1677603436 3155245 d1b6a5af5ea77f2b87f8a7462e54117c installed
+patch-2.7.6-16.el9.x86_64 1652704128 265546 bdfc6d2c361a1fc7c381fea53c0a76ac installed
+publicsuffix-list-dafsa-20210518-3.el9.noarch 1652444449 68815 d1ed826a6c010597e8edb6dc130b0901 installed
+libpsl-0.21.1-5.el9.x86_64 1653510225 78616 cc480e6508a7637917397ee92fede3a0 installed
+libcurl-7.76.1-23.el9_2.4.x86_64 1697556847 663422 331986ea746a028bf3c372aa381a0182 installed
+elfutils-debuginfod-client-0.188-3.el9.x86_64 1681593018 61175 dfc1ddd50e7c198354b633a0c430ea46 installed
+binutils-gold-2.35.2-37.el9.x86_64 1681327453 2115907 bcedf3cdea3336b2ac998da7d77dae8e installed
+binutils-2.35.2-37.el9.x86_64 1681327453 25191451 d9936b03e6017d7ebfeb4bd977247966 installed
+gcc-11.3.1-4.3.el9.x86_64 1681093488 88961138 06800ae7b4e6488d5380be8e6802eed7 installed
+annobin-11.05-1.el9.x86_64 1681322912 1084744 d9dbf6df3b81c3409a8050242facbd3b installed
+gcc-plugin-annobin-11.3.1-4.3.el9.x86_64 1681093488 53610 30c635d7eb4efb69408a419765daedf9 installed
+elfutils-0.188-3.el9.x86_64 1681593018 2805138 587bf7991903ee483ba3c22da96d185a installed
+gdb-minimal-10.2-10.el9.0.1.x86_64 1695228640 11534230 93610da91b156d8fb9abfddf3cfe0cb4 installed
+curl-7.76.1-23.el9_2.4.x86_64 1697556847 684529 352421a393103c578c9ebad6c507fcc2 installed
+rpm-libs-4.16.1.3-22.el9.x86_64 1682124367 764820 da827864ccb6da1c3599c57b2d19f0ea installed
+rpm-4.16.1.3-22.el9.x86_64 1682124367 2749462 23ea3f56221f101bcedab7df996da6dd installed
+efi-srpm-macros-6-2.el9_0.noarch 1653178850 41043 54ec93ffc50a97134d68cad135ce9d80 installed
+lua-srpm-macros-1-6.el9.noarch 1652484897 1314 870f5bd7a9f316ac2a42d6cda3bc6d41 installed
+python-srpm-macros-3.9-52.el9.noarch 1652267549 37100 b7980c4834da4d6c2a75e4e909e1d1ab installed
+fonts-srpm-macros-1:2.0.5-7.el9.1.noarch 1652446192 56503 356003bd30cda7187d766cba0c547d8c installed
+go-srpm-macros-3.2.0-1.el9.noarch 1681091771 61043 247d519faece87e4d863b6e7c62cd522 installed
+redhat-rpm-config-199-1.el9.noarch 1682567318 191186 731e55dc00af6dbd0922df9e8a63172f installed
+rpm-build-libs-4.16.1.3-22.el9.x86_64 1682124367 198430 35d89070cf55e6628a7d3c92ee5bef99 installed
+rpm-build-4.16.1.3-22.el9.x86_64 1682124367 235778 dcdf825581947d51f82f02350637b428 installed
+gcc-c++-11.3.1-4.3.el9.x86_64 1681093488 33337420 65f096ec0c287acf8ab615b4764abd80 installed
+util-linux-2.37.4-11.el9_2.x86_64 1683655339 11138551 f355f953770c2e523abf7a8068bcdaca installed
+which-2.21-28.el9.x86_64 1667109072 82485 74d7b783566101f55bd661a1575ae70c installed
+nspr-4.35.0-3.el9_2.x86_64 1694568880 320976 d209ea98ed634fbe6af40b9124f2df5a installed
+nss-util-3.90.0-3.el9_2.x86_64 1694568880 229736 b4360994e64add20932a2f46577cc83c installed
+expat-2.5.0-1.el9.x86_64 1681979642 309077 0b1389d43c63088a42aabde88d85e121 installed
+nss-softokn-freebl-3.90.0-3.el9_2.x86_64 1694568880 782118 12b68d4d5a35f133dea1924a6003605a installed
+nss-softokn-3.90.0-3.el9_2.x86_64 1694568880 1292291 6105101976f800cec538f67aee1f6ce7 installed
+zlib-devel-1.2.11-39.el9.x86_64 1681591979 141092 44bfbd72c9e6f88e0adc2f909f862a48 installed
+emacs-filesystem-1:27.2-8.el9_2.1.noarch 1683666622 0 0cf38248c316b1d07c5ad4a52e5bd278 installed
+perl-File-Find-0:1.37-480.el9.noarch 1681324517 39638 062c189a92ba11ff1384a02664095f25 installed
+perl-DynaLoader-0:1.47-480.el9.x86_64 1681324517 33065 97ae8fc1a83bd13f71e102d530a6172b installed
+perl-TermReadKey-2.38-11.el9.x86_64 1652703717 66306 2388c75bfbcc2bbe4d6ad168b1c076d9 installed
+perl-lib-0:0.65-480.el9.x86_64 1681324517 9672 3f2cddd7b5241c71df37267e75711e9f installed
+perl-Error-1:0.17029-7.el9.noarch 1652703941 79692 e75c50c2088e94664970cad57c76876b installed
+openssh-8.7p1-30.el9_2.x86_64 1690947980 1960766 0affafc539e2eb07a568ea171312a745 installed
+libcbor-0.7.0-5.el9.x86_64 1653563037 100001 e7a300d3feeed5ec45c3787ade0ba026 installed
+libfido2-1.6.0-7.el9.x86_64 1652704061 171443 27e5fa1069836eed055ce47bdc527c43 installed
+openssh-clients-8.7p1-30.el9_2.x86_64 1690947980 2112277 907ef5dcca525d7be748296d43657a9b installed
+less-590-2.el9_2.x86_64 1687455180 364648 b35b28bbda05a044352d1b9c170c1db4 installed
+git-core-2.39.3-1.el9_2.x86_64 1684738904 20265227 d34697c6ad5c4d5d8c94abe4ec66fac7 installed
+git-core-doc-2.39.3-1.el9_2.noarch 1684738884 17299641 36daa6d972430f4c915b4000182f6029 installed
+perl-Git-2.39.3-1.el9_2.noarch 1684738884 66673 6f4f35d9d57edfcf3cc70adc64d50680 installed
+git-2.39.3-1.el9_2.x86_64 1684738904 135731 fb876aac55508695ea2e688d32d9c54f installed
+python3-setuptools-wheel-53.0.0-12.el9.noarch 1682304797 562584 6ff272eb8366a638ff9039ee0cc7d16b installed
+python3-pip-wheel-21.2.3-6.el9.noarch 1652703398 1220567 077bbca8571067db2f626ca434edfa5c installed
+python3-3.9.16-1.el9_2.2.x86_64 1696525216 32632 a1d08933091b033f8ac53939a83660df installed
+python3-libs-3.9.16-1.el9_2.2.x86_64 1696525216 32457257 51bf3a7457df74db541f694219d6c5cd installed
+crypto-policies-scripts-20221215-1.git9a18988.el9_2.1.noarch 1694573529 236175 bd79ad750d0e16b330c90bf1e21c05e9 installed
+nss-sysinit-3.90.0-3.el9_2.x86_64 1694568880 18177 5e1ed31a7047ba6f8ca871773e85d669 installed
+nss-3.90.0-3.el9_2.x86_64 1694568880 1931276 7d7d4bf291d51afe414d9168392f6870 installed
+nss-tools-3.90.0-3.el9_2.x86_64 1694568880 1393452 6b313de5dff47d44b8084c5d2d1c259c installed
+efivar-libs-38-3.el9.x86_64 1682294971 375306 d346ce1cc99b463038c89dfedc4d07b9 installed
+pesign-115-6.el9_1.rocky.2.x86_64 1678119758 828382 e130d4552a2876781543892fc0c6a018 installed
+elfutils-libelf-devel-0.188-3.el9.x86_64 1681593018 34389 d709a4d3235e268eaf82bfe45bde3ecc installed
+openssl-devel-1:3.0.7-17.el9_2.x86_64 1690927837 4880528 da7d980ed9622ecbe6dfcca6a734c805 installed
+dos2unix-7.4.2-4.el9.x86_64 1652703907 708167 357d3d476cb6ee76d0a1456b5784e190 installed
