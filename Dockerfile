@@ -24,7 +24,17 @@ COPY ciq_static_shim.repo /etc/yum.repos.d/
 
 # Install and build
 RUN dnf -y install dnf-plugins-core rpm-build cpio &&     dnf -y builddep /builddir/build/SPECS/shim-unsigned-x64.spec
-RUN rpmbuild -bb /builddir/build/SPECS/shim-unsigned-x64.spec
+
+# Create logs directory for x64 build
+RUN mkdir -p /shim_result/logs/mock-build
+
+# Capture rpmbuild output to log file
+RUN rpmbuild -bb /builddir/build/SPECS/shim-unsigned-x64.spec 2>&1 | tee /shim_result/logs/mock-build/build.log
+
+# Copy mock-related logs (if available)
+RUN cp /var/lib/mock/*/root.log /shim_result/logs/mock-build/ 2>/dev/null || true
+RUN cp /var/lib/mock/*/state.log /shim_result/logs/mock-build/ 2>/dev/null || true
+RUN rpm -qa | sort > /shim_result/logs/mock-build/installed_pkgs.log
 
 # Extract built RPMs to /shim_result (proven pattern)
 RUN mkdir -p /shim_result
@@ -48,7 +58,17 @@ COPY ciq_static_shim_aa64.repo /etc/yum.repos.d/
 
 # Install and build
 RUN dnf -y install dnf-plugins-core rpm-build cpio &&     dnf -y builddep /builddir/build/SPECS/shim-unsigned-aarch64.spec
-RUN rpmbuild -bb /builddir/build/SPECS/shim-unsigned-aarch64.spec
+
+# Create logs directory for aa64 build
+RUN mkdir -p /shim_result/logs/mock-build-aa64
+
+# Capture rpmbuild output to log file
+RUN rpmbuild -bb /builddir/build/SPECS/shim-unsigned-aarch64.spec 2>&1 | tee /shim_result/logs/mock-build-aa64/build.log
+
+# Copy mock-related logs (if available)
+RUN cp /var/lib/mock/*/root.log /shim_result/logs/mock-build-aa64/ 2>/dev/null || true
+RUN cp /var/lib/mock/*/state.log /shim_result/logs/mock-build-aa64/ 2>/dev/null || true
+RUN rpm -qa | sort > /shim_result/logs/mock-build-aa64/installed_pkgs.log
 
 # Extract built RPM to /shim_result
 RUN mkdir -p /shim_result
