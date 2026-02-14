@@ -1,5 +1,5 @@
 setting SOURCE_DATE_EPOCH=1770768000
-Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.a3HUXq
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.GFoZSt
 + umask 022
 + cd /builddir/build//BUILD
 + cd /builddir/build/BUILD
@@ -79,7 +79,7 @@ Options:
 + RPM_EC=0
 ++ jobs -p
 + exit 0
-Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.s9Q5fi
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.nlwSYN
 + umask 022
 + cd /builddir/build//BUILD
 + cd shim-16.1
@@ -803,7 +803,7 @@ validate_nx_compat():380: NX Compatibility flag is not set
 + RPM_EC=0
 ++ jobs -p
 + exit 0
-Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.mJpwM1
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.1gmGE0
 + umask 022
 + cd /builddir/build//BUILD
 + '[' /builddir/build/BUILDROOT/shim-unsigned-aarch64-16.1-0.el9.aarch64 '!=' / ']'
@@ -905,7 +905,7 @@ done
 + /usr/lib/rpm/brp-python-hardlink
 + /usr/lib/rpm/redhat/brp-mangle-shebangs
 Processing files: shim-unsigned-aarch64-16.1-0.el9.aarch64
-Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.bVNRTm
+Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.IAKAm2
 + umask 022
 + cd /builddir/build//BUILD
 + cd shim-16.1
@@ -931,7 +931,7 @@ Checking for unpackaged file(s): /usr/lib/rpm/check-files /builddir/build/BUILDR
 Wrote: /builddir/build/RPMS/aarch64/shim-unsigned-aarch64-16.1-0.el9.aarch64.rpm
 Wrote: /builddir/build/RPMS/noarch/shim-unsigned-aarch64-debuginfo-16.1-0.el9.noarch.rpm
 Wrote: /builddir/build/RPMS/noarch/shim-unsigned-aarch64-debugsource-16.1-0.el9.noarch.rpm
-Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.9SQv3H
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.qITux7
 + umask 022
 + cd /builddir/build//BUILD
 + cd shim-16.1
