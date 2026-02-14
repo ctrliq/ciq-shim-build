@@ -1,15 +1,15 @@
-# Multi-platform CIQ shim build for x86_64 (with ia32) and aarch64
+# Multi-platform CIQ shim build for x86_64 and aarch64
 # Following proven reproducibility verification pattern
 #
 # Build with: docker buildx build --platform linux/amd64 --tag ciq-shim-review:16.1 --load .
 
-# Stage 1: Build x64 + ia32 on AMD64 platform
+# Stage 1: Build x64 on AMD64 platform
 FROM --platform=linux/amd64 rockylinux:9.2.20230513 AS amd64
-ARG SHIM_VERSION=16.1-1.el9
+ARG SHIM_VERSION=16.1-0.el9
 
 # Copy build configuration
 COPY rpmmacros /root/.rpmmacros
-COPY shim-unsigned-x64-16.1-1.el9.src.rpm /root/shim-unsigned-x64-${SHIM_VERSION}.src.rpm
+COPY shim-unsigned-x64-16.1-0.el9.src.rpm /root/shim-unsigned-x64-${SHIM_VERSION}.src.rpm
 RUN rpm -ivh /root/shim-unsigned-x64-${SHIM_VERSION}.src.rpm
 
 # Fix spec file for container builds
@@ -31,22 +31,17 @@ RUN mkdir -p /shim_result/logs/mock-build
 # Capture rpmbuild output to log file
 RUN rpmbuild -bb /builddir/build/SPECS/shim-unsigned-x64.spec 2>&1 | tee /shim_result/logs/mock-build/build.log
 
-# Copy mock-related logs (if available)
-RUN cp /var/lib/mock/*/root.log /shim_result/logs/mock-build/ 2>/dev/null || true
-RUN cp /var/lib/mock/*/state.log /shim_result/logs/mock-build/ 2>/dev/null || true
-RUN rpm -qa | sort > /shim_result/logs/mock-build/installed_pkgs.log
-
 # Extract built RPMs to /shim_result (proven pattern)
 RUN mkdir -p /shim_result
 RUN rpm2cpio /builddir/build/RPMS/x86_64/shim-unsigned-x64-${SHIM_VERSION}.x86_64.rpm | cpio -diu -D /shim_result
 
 # Stage 2: Build aa64 on ARM64 platform
 FROM --platform=linux/arm64 rockylinux:9.2.20230513 AS arm64
-ARG SHIM_VERSION=16.1-1.el9
+ARG SHIM_VERSION=16.1-0.el9
 
 # Copy build configuration
 COPY rpmmacros /root/.rpmmacros
-COPY shim-unsigned-aarch64-16.1-1.el9.src.rpm /root/shim-unsigned-aarch64-${SHIM_VERSION}.src.rpm
+COPY shim-unsigned-aarch64-16.1-0.el9.src.rpm /root/shim-unsigned-aarch64-${SHIM_VERSION}.src.rpm
 RUN rpm -ivh /root/shim-unsigned-aarch64-${SHIM_VERSION}.src.rpm
 
 # Copy control binary to root
@@ -65,18 +60,13 @@ RUN mkdir -p /shim_result/logs/mock-build-aa64
 # Capture rpmbuild output to log file
 RUN rpmbuild -bb /builddir/build/SPECS/shim-unsigned-aarch64.spec 2>&1 | tee /shim_result/logs/mock-build-aa64/build.log
 
-# Copy mock-related logs (if available)
-RUN cp /var/lib/mock/*/root.log /shim_result/logs/mock-build-aa64/ 2>/dev/null || true
-RUN cp /var/lib/mock/*/state.log /shim_result/logs/mock-build-aa64/ 2>/dev/null || true
-RUN rpm -qa | sort > /shim_result/logs/mock-build-aa64/installed_pkgs.log
-
 # Extract built RPM to /shim_result
 RUN mkdir -p /shim_result
 RUN rpm2cpio /builddir/build/RPMS/aarch64/shim-unsigned-aarch64-${SHIM_VERSION}.aarch64.rpm | cpio -diu -D /shim_result
 
 # Final Stage: Aggregate and run reproducibility verification
 FROM --platform=linux/amd64 rockylinux:9.2.20230513
-ARG SHIM_VERSION=16.1-1.el9
+ARG SHIM_VERSION=16.1-0.el9
 
 # Install pesign and diffutils for verification (diffutils provides cmp command)
 RUN dnf install -y pesign diffutils

@@ -13,7 +13,7 @@ Thread(s) per core:                      2
 Core(s) per socket:                      16
 Socket(s):                               2
 Stepping:                                1
-CPU(s) scaling MHz:                      98%
+CPU(s) scaling MHz:                      97%
 CPU max MHz:                             3600.0000
 CPU min MHz:                             1200.0000
 BogoMIPS:                                5188.07
@@ -45,7 +45,7 @@ Vulnerability Tsx async abort:           Mitigation; Clear CPU buffers; SMT vuln
 
 Memory:
                total        used        free      shared  buff/cache   available
-Mem:           125Gi        25Gi       2.3Gi       206Mi        99Gi        99Gi
+Mem:           125Gi        25Gi       3.2Gi       206Mi        98Gi        99Gi
 Swap:           31Gi       1.0Mi        31Gi
 
 
