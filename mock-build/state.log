@@ -1,26 +1,22 @@
-2026-02-13 17:52:05,308 - Mock Version: 6.5
-2026-02-13 17:52:05,316 - Start(bootstrap): chroot init
-2026-02-13 17:52:05,333 - Start(bootstrap): cleaning package manager metadata
-2026-02-13 17:52:05,333 - Finish(bootstrap): cleaning package manager metadata
-2026-02-13 17:52:07,376 - Start(bootstrap): installing dnf tooling
-2026-02-13 17:52:15,078 - Finish(bootstrap): installing dnf tooling
-2026-02-13 17:52:15,126 - Start(bootstrap): creating root cache
-2026-02-13 17:52:15,612 - Finish(bootstrap): creating root cache
-2026-02-13 17:52:15,613 - Finish(bootstrap): chroot init
-2026-02-13 17:52:15,616 - Start: chroot init
-2026-02-13 17:52:15,633 - Start: cleaning package manager metadata
-2026-02-13 17:52:15,633 - Finish: cleaning package manager metadata
-2026-02-13 17:52:16,048 - Start: installing minimal buildroot with dnf
-2026-02-13 17:52:46,023 - Finish: installing minimal buildroot with dnf
-2026-02-13 17:52:46,301 - Start: creating root cache
-2026-02-13 17:52:47,133 - Finish: creating root cache
-2026-02-13 17:52:47,134 - Finish: chroot init
-2026-02-13 17:52:47,471 - Start: build phase for shim-unsigned-x64-16.1-0.el9.src.rpm
-2026-02-13 17:52:47,472 - Start: build setup for shim-unsigned-x64-16.1-0.el9.src.rpm
-2026-02-13 17:52:53,994 - Finish: build setup for shim-unsigned-x64-16.1-0.el9.src.rpm
-2026-02-13 17:52:53,995 - Start: rpmbuild shim-unsigned-x64-16.1-0.el9.src.rpm
-2026-02-13 17:52:53,996 - Start: Outputting list of installed packages
-2026-02-13 17:52:54,322 - Finish: Outputting list of installed packages
-2026-02-13 17:53:10,043 - Finish: rpmbuild shim-unsigned-x64-16.1-0.el9.src.rpm
-2026-02-13 17:53:10,048 - Finish: build phase for shim-unsigned-x64-16.1-0.el9.src.rpm
-2026-02-13 17:53:10,051 - Finish: run
+2026-02-13 19:14:28,981 - Mock Version: 6.5
+2026-02-13 19:14:28,987 - Start(bootstrap): chroot init
+2026-02-13 19:14:29,045 - Start(bootstrap): cleaning package manager metadata
+2026-02-13 19:14:29,046 - Finish(bootstrap): cleaning package manager metadata
+2026-02-13 19:14:29,421 - Finish(bootstrap): chroot init
+2026-02-13 19:14:29,424 - Start: chroot init
+2026-02-13 19:14:29,436 - Start: unpacking root cache
+2026-02-13 19:14:31,849 - Finish: unpacking root cache
+2026-02-13 19:14:31,852 - Start: cleaning package manager metadata
+2026-02-13 19:14:31,854 - Finish: cleaning package manager metadata
+2026-02-13 19:14:32,315 - Start: dnf4 update
+2026-02-13 19:14:34,135 - Finish: dnf4 update
+2026-02-13 19:14:34,554 - Finish: chroot init
+2026-02-13 19:14:34,555 - Start: build phase for shim-unsigned-x64-16.1-0.el9.src.rpm
+2026-02-13 19:14:34,556 - Start: build setup for shim-unsigned-x64-16.1-0.el9.src.rpm
+2026-02-13 19:14:40,919 - Finish: build setup for shim-unsigned-x64-16.1-0.el9.src.rpm
+2026-02-13 19:14:40,919 - Start: rpmbuild shim-unsigned-x64-16.1-0.el9.src.rpm
+2026-02-13 19:14:40,921 - Start: Outputting list of installed packages
+2026-02-13 19:14:41,247 - Finish: Outputting list of installed packages
+2026-02-13 19:14:57,109 - Finish: rpmbuild shim-unsigned-x64-16.1-0.el9.src.rpm
+2026-02-13 19:14:57,114 - Finish: build phase for shim-unsigned-x64-16.1-0.el9.src.rpm
+2026-02-13 19:14:57,117 - Finish: run
