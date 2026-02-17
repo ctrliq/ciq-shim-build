@@ -428,8 +428,8 @@ We now sign UKI for kernels that support the feature.
 
 ---
 
-* SHA256 (shimx64.efi) \= 2bcd6d6df6141b358c078cc21ba330e0b74f721b99c7f59bcb13db543e580be4  
-* SHA256 (shimaa64.efi) \= 27794c47776751a92df354a66f83f2e90c838015d48f68001eb7629cb3c3319d
+* SHA256 (shimx64.efi) \= 29d631aecba165d322cbd1d8421c59b069135fe4a91e1fc53661c9bf36e54ffb  
+* SHA256 (shimaa64.efi) \= 18c9778e315d551cfe870afee33b35b957b70cf6e6a92a4b79b8d1368f83336c
 
 ---
 
@@ -503,7 +503,7 @@ fwupd-efi.ciq_rocky,1,Rocky Linux (CIQ modified),fwupd,1.9.31,mail:secureboot@ci
 objcopy --only-section .sbat -O binary shimx64.efi /dev/stdout
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
-shim.ciq_rocky,2,Ctrl IQ Inc,shim,16.1,mail:it_security@ciq.com
+shim.ciq_rocky,1,Ctrl IQ Inc,shim,16.1,mail:it_security@ciq.com
 ```
 
 ```
@@ -543,7 +543,7 @@ fwupd-efi.ciq_rocky,1,Rocky Linux (CIQ modified),fwupd,1.9.31,mail:secureboot@ci
 objcopy --only-section .sbat -O binary shimaa64.efi /dev/stdout
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
-shim.ciq_rocky,2,Ctrl IQ Inc,shim,16.1,mail:it_security@ciq.com
+shim.ciq_rocky,1,Ctrl IQ Inc,shim,16.1,mail:it_security@ciq.com
 ```
 
 ```
