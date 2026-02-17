@@ -1,23 +1,23 @@
-# Rocky Linux 9.2 vault repositories for x86_64 shim builds
+# Rocky Linux 9.6 vault repositories for x86_64 shim builds
 # Frozen repositories for reproducible builds
 
-[rocky-appstream-92]
-name=Rocky Linux 9.2 AppStream
-baseurl=https://dl.rockylinux.org/vault/rocky/9.2/AppStream/x86_64/os/
+[rocky-appstream-96]
+name=Rocky Linux 9.6 AppStream
+baseurl=https://dl.rockylinux.org/vault/rocky/9.6/AppStream/x86_64/os/
 gpgcheck=1
 enabled=1
 gpgkey=https://dl.rockylinux.org/pub/rocky/RPM-GPG-KEY-Rocky-9
 
-[rocky-baseos-92]
-name=Rocky Linux 9.2 BaseOS
-baseurl=https://dl.rockylinux.org/vault/rocky/9.2/BaseOS/x86_64/os/
+[rocky-baseos-96]
+name=Rocky Linux 9.6 BaseOS
+baseurl=https://dl.rockylinux.org/vault/rocky/9.6/BaseOS/x86_64/os/
 gpgcheck=1
 enabled=1
 gpgkey=https://dl.rockylinux.org/pub/rocky/RPM-GPG-KEY-Rocky-9
 
-[rocky-crb-92]
-name=Rocky Linux 9.2 CRB
-baseurl=https://dl.rockylinux.org/vault/rocky/9.2/CRB/x86_64/os/
+[rocky-crb-96]
+name=Rocky Linux 9.6 CRB
+baseurl=https://dl.rockylinux.org/vault/rocky/9.6/CRB/x86_64/os/
 gpgcheck=1
 enabled=1
 gpgkey=https://dl.rockylinux.org/pub/rocky/RPM-GPG-KEY-Rocky-9

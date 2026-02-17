@@ -1,26 +1,26 @@
-# Rocky Linux 9.2 vault repositories for aarch64 shim builds
+# Rocky Linux 9.6 vault repositories for aarch64 shim builds
 # Frozen repositories for reproducible builds
 # Using vault ensures packages don't change between builds
 
-[baseos-9.2-aarch64]
-name=Rocky Linux 9.2 - BaseOS (aarch64)
-baseurl=https://dl.rockylinux.org/vault/rocky/9.2/BaseOS/aarch64/os/
+[baseos-9.6-aarch64]
+name=Rocky Linux 9.6 - BaseOS (aarch64)
+baseurl=https://dl.rockylinux.org/vault/rocky/9.6/BaseOS/aarch64/os/
 gpgcheck=1
 enabled=1
 gpgkey=https://dl.rockylinux.org/pub/rocky/RPM-GPG-KEY-Rocky-9
 priority=1
 
-[appstream-9.2-aarch64]
-name=Rocky Linux 9.2 - AppStream (aarch64)
-baseurl=https://dl.rockylinux.org/vault/rocky/9.2/AppStream/aarch64/os/
+[appstream-9.6-aarch64]
+name=Rocky Linux 9.6 - AppStream (aarch64)
+baseurl=https://dl.rockylinux.org/vault/rocky/9.6/AppStream/aarch64/os/
 gpgcheck=1
 enabled=1
 gpgkey=https://dl.rockylinux.org/pub/rocky/RPM-GPG-KEY-Rocky-9
 priority=1
 
-[crb-9.2-aarch64]
-name=Rocky Linux 9.2 - CRB (aarch64)
-baseurl=https://dl.rockylinux.org/vault/rocky/9.2/CRB/aarch64/os/
+[crb-9.6-aarch64]
+name=Rocky Linux 9.6 - CRB (aarch64)
+baseurl=https://dl.rockylinux.org/vault/rocky/9.6/CRB/aarch64/os/
 gpgcheck=1
 enabled=1
 gpgkey=https://dl.rockylinux.org/pub/rocky/RPM-GPG-KEY-Rocky-9

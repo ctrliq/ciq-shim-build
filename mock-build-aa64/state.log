@@ -1,22 +1,22 @@
-2026-02-17 12:12:12,704 - Mock Version: 6.6
-2026-02-17 12:12:12,712 - Start(bootstrap): chroot init
-2026-02-17 12:12:12,736 - Start(bootstrap): cleaning package manager metadata
-2026-02-17 12:12:12,737 - Finish(bootstrap): cleaning package manager metadata
-2026-02-17 12:12:13,014 - Finish(bootstrap): chroot init
-2026-02-17 12:12:13,018 - Start: chroot init
-2026-02-17 12:12:13,039 - Start: cleaning package manager metadata
-2026-02-17 12:12:13,042 - Finish: cleaning package manager metadata
-2026-02-17 12:12:13,348 - Start: installing minimal buildroot with dnf
-2026-02-17 12:12:20,565 - Finish: installing minimal buildroot with dnf
-2026-02-17 12:12:20,711 - Start: creating root cache
-2026-02-17 12:12:52,734 - Finish: creating root cache
-2026-02-17 12:12:52,735 - Finish: chroot init
-2026-02-17 12:12:52,917 - Start: build phase for shim-unsigned-aarch64-16.1-0.el9.src.rpm
-2026-02-17 12:12:52,918 - Start: build setup for shim-unsigned-aarch64-16.1-0.el9.src.rpm
-2026-02-17 12:12:58,045 - Finish: build setup for shim-unsigned-aarch64-16.1-0.el9.src.rpm
-2026-02-17 12:12:58,045 - Start: rpmbuild shim-unsigned-aarch64-16.1-0.el9.src.rpm
-2026-02-17 12:12:58,048 - Start: Outputting list of installed packages
-2026-02-17 12:12:58,203 - Finish: Outputting list of installed packages
-2026-02-17 12:13:16,193 - Finish: rpmbuild shim-unsigned-aarch64-16.1-0.el9.src.rpm
-2026-02-17 12:13:16,199 - Finish: build phase for shim-unsigned-aarch64-16.1-0.el9.src.rpm
-2026-02-17 12:13:16,203 - Finish: run
+2026-02-17 18:27:33,022 - Mock Version: 6.6
+2026-02-17 18:27:33,030 - Start(bootstrap): chroot init
+2026-02-17 18:27:33,049 - Start(bootstrap): cleaning package manager metadata
+2026-02-17 18:27:33,050 - Finish(bootstrap): cleaning package manager metadata
+2026-02-17 18:27:33,295 - Finish(bootstrap): chroot init
+2026-02-17 18:27:33,299 - Start: chroot init
+2026-02-17 18:27:33,319 - Start: cleaning package manager metadata
+2026-02-17 18:27:33,320 - Finish: cleaning package manager metadata
+2026-02-17 18:27:33,589 - Start: installing minimal buildroot with dnf
+2026-02-17 18:28:05,423 - Finish: installing minimal buildroot with dnf
+2026-02-17 18:28:05,562 - Start: creating root cache
+2026-02-17 18:28:10,077 - Finish: creating root cache
+2026-02-17 18:28:10,078 - Finish: chroot init
+2026-02-17 18:28:15,014 - Start: build phase for shim-unsigned-aarch64-16.1-0.el9.src.rpm
+2026-02-17 18:28:15,015 - Start: build setup for shim-unsigned-aarch64-16.1-0.el9.src.rpm
+2026-02-17 18:28:21,625 - Finish: build setup for shim-unsigned-aarch64-16.1-0.el9.src.rpm
+2026-02-17 18:28:21,626 - Start: rpmbuild shim-unsigned-aarch64-16.1-0.el9.src.rpm
+2026-02-17 18:28:21,629 - Start: Outputting list of installed packages
+2026-02-17 18:28:21,766 - Finish: Outputting list of installed packages
+2026-02-17 18:28:37,946 - Finish: rpmbuild shim-unsigned-aarch64-16.1-0.el9.src.rpm
+2026-02-17 18:28:37,951 - Finish: build phase for shim-unsigned-aarch64-16.1-0.el9.src.rpm
+2026-02-17 18:28:37,955 - Finish: run

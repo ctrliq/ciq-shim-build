@@ -380,7 +380,7 @@ If your shim binaries can't be reproduced using the provided Dockerfile, please 
 
 ---
 
-This build is all Rocky 9.2 dependencies, using rpmbuild. To ensure reproducibility, are using Rocky 9.2 packages from a frozen vault. Using a tagged container base plus the rocky vault should ensure binaries are 100% reproducible.
+This build is all Rocky 9.6 dependencies, using rpmbuild. To ensure reproducibility, are using Rocky 9.6 packages from a frozen vault. Using a tagged container base plus the rocky vault should ensure binaries are 100% reproducible.
 
 Current reproducible shim build location:  [https://github.com/ctrliq/ciq-shim-build/tree/r9](https://github.com/ctrliq/ciq-shim-build/tree/r9)
 
@@ -451,7 +451,7 @@ A *yes* or *no* will do. There's no penalty for the latter.
 
 ---
 
-No, only the CIQ secureboot CA (PKI) is embedded in our Shim 
+No
 
 ---
 
