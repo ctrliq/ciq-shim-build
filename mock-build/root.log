@@ -103,7 +103,7 @@ DEBUG util.py:461:  Thread(s) per core:                      2
 DEBUG util.py:461:  Core(s) per socket:                      16
 DEBUG util.py:461:  Socket(s):                               2
 DEBUG util.py:461:  Stepping:                                1
-DEBUG util.py:461:  CPU(s) scaling MHz:                      92%
+DEBUG util.py:461:  CPU(s) scaling MHz:                      96%
 DEBUG util.py:461:  CPU max MHz:                             3600.0000
 DEBUG util.py:461:  CPU min MHz:                             1200.0000
 DEBUG util.py:461:  BogoMIPS:                                5188.07
@@ -135,14 +135,14 @@ DEBUG util.py:608:  Child return code was: 0
 DEBUG util.py:634:  child environment: None
 DEBUG util.py:556:  Executing command: ['/bin/free', '--human'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:461:                 total        used        free      shared  buff/cache   available
-DEBUG util.py:461:  Mem:           125Gi        24Gi        17Gi       206Mi        84Gi       100Gi
+DEBUG util.py:461:  Mem:           125Gi        27Gi        13Gi       215Mi        86Gi        97Gi
 DEBUG util.py:461:  Swap:           31Gi       1.0Mi        31Gi
 DEBUG util.py:608:  Child return code was: 0
 DEBUG util.py:634:  child environment: None
 DEBUG util.py:556:  Executing command: ['/bin/df', '-H', '-T', '/var/lib/mock/rocky-9-x86_64_ciqshim/root', '/var/cache/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:461:  Filesystem                 Type  Size  Used Avail Use% Mounted on
-DEBUG util.py:461:  /dev/mapper/vg_nvme-lv_var xfs   698G  233G  465G  34% /var
-DEBUG util.py:461:  /dev/mapper/vg_nvme-lv_var xfs   698G  233G  465G  34% /var
+DEBUG util.py:461:  /dev/mapper/vg_nvme-lv_var xfs   698G  234G  464G  34% /var
+DEBUG util.py:461:  /dev/mapper/vg_nvme-lv_var xfs   698G  234G  464G  34% /var
 DEBUG util.py:608:  Child return code was: 0
 DEBUG buildroot.py:723:  create skeleton dirs
 DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim/root/var/lib/rpm
@@ -237,7 +237,7 @@ DEBUG util.py:556:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/
 DEBUG util.py:608:  Child return code was: 0
 DEBUG util.py:634:  child environment: None
 DEBUG util.py:551:  Using nspawn with args None
-DEBUG util.py:556:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '23a0c756cf984cc09fbb8fa8d9f0327c', '-D', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root', '-a', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/sh', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', 'rpm', '-q', 'rpm', 'rpm-sequoia', 'python3-dnf', 'python3-dnf-plugins-core', 'yum', 'yum-utils', 'dnf5', 'dnf5-plugins'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+DEBUG util.py:556:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'e859577d175a4fc9992c965b4b6f9eee', '-D', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root', '-a', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/sh', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', 'rpm', '-q', 'rpm', 'rpm-sequoia', 'python3-dnf', 'python3-dnf-plugins-core', 'yum', 'yum-utils', 'dnf5', 'dnf5-plugins'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 DEBUG util.py:461:  rpm-4.16.1.3-39.el9.x86_64
 DEBUG util.py:461:  package rpm-sequoia is not installed
 DEBUG util.py:461:  python3-dnf-4.14.0-31.el9.noarch
@@ -284,7 +284,7 @@ DEBUG util.py:634:  child environment: None
 DEBUG util.py:556:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/mock/rocky-9-x86_64_ciqshim/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:608:  Child return code was: 0
 DEBUG util.py:634:  child environment: None
-DEBUG util.py:556:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.adyngpus', '/var/lib/mock/rocky-9-x86_64_ciqshim/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:556:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.aq28dj60', '/var/lib/mock/rocky-9-x86_64_ciqshim/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:608:  Child return code was: 0
 DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim/root/sys/fs/selinux
 DEBUG util.py:634:  child environment: None
@@ -305,14 +305,14 @@ DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_c
 DEBUG file_util.py:21:  created dir: /var/lib/mock/rocky-9-x86_64_ciqshim/root/installation-homedir
 DEBUG package_manager.py:295:  ['/usr/bin/dnf-3', '--installroot', '/var/lib/mock/rocky-9-x86_64_ciqshim/root/', '--releasever', '9.6', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', 'install', 'tar', 'gcc-c++', 'redhat-rpm-config', 'redhat-release', 'which', 'xz', 'sed', 'make', 'bzip2', 'gzip', 'gcc', 'coreutils', 'unzip', 'shadow-utils', 'diffutils', 'cpio', 'bash', 'gawk', 'rpm-build', 'info', 'patch', 'util-linux', 'findutils', 'grep']
 DEBUG util.py:634:  child environment: None
-DEBUG util.py:551:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.ov1shaqf:/etc/resolv.conf']
-DEBUG util.py:556:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '80555f906cc14e8198995b192f61b65a', '-D', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.ov1shaqf:/etc/resolv.conf', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/var/lib/mock/rocky-9-x86_64_ciqshim/root/installation-homedir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--setenv=LC_MESSAGES=C.UTF-8', '--resolv-conf=off', '/usr/bin/dnf-3', '--installroot', '/var/lib/mock/rocky-9-x86_64_ciqshim/root/', '--releasever', '9.6', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', 'install', 'tar', 'gcc-c++', 'redhat-rpm-config', 'redhat-release', 'which', 'xz', 'sed', 'make', 'bzip2', 'gzip', 'gcc', 'coreutils', 'unzip', 'shadow-utils', 'diffutils', 'cpio', 'bash', 'gawk', 'rpm-build', 'info', 'patch', 'util-linux', 'findutils', 'grep', '--setopt=tsflags=nocontexts'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/var/lib/mock/rocky-9-x86_64_ciqshim/root/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+DEBUG util.py:551:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.qod2omxu:/etc/resolv.conf']
+DEBUG util.py:556:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '6ef673db188c4b1297a75e8c2c0f6513', '-D', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.qod2omxu:/etc/resolv.conf', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/var/lib/mock/rocky-9-x86_64_ciqshim/root/installation-homedir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--setenv=LC_MESSAGES=C.UTF-8', '--resolv-conf=off', '/usr/bin/dnf-3', '--installroot', '/var/lib/mock/rocky-9-x86_64_ciqshim/root/', '--releasever', '9.6', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', 'install', 'tar', 'gcc-c++', 'redhat-rpm-config', 'redhat-release', 'which', 'xz', 'sed', 'make', 'bzip2', 'gzip', 'gcc', 'coreutils', 'unzip', 'shadow-utils', 'diffutils', 'cpio', 'bash', 'gawk', 'rpm-build', 'info', 'patch', 'util-linux', 'findutils', 'grep', '--setopt=tsflags=nocontexts'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/var/lib/mock/rocky-9-x86_64_ciqshim/root/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 DEBUG util.py:459:  No matches found for the following disable plugin patterns: local, spacewalk, versionlock
-DEBUG util.py:461:  Rocky Linux 9.6 - BaseOS                         49 MB/s |  22 MB     00:00    
-DEBUG util.py:461:  Rocky Linux 9.6 - AppStream                      46 MB/s |  17 MB     00:00    
-DEBUG util.py:461:  Rocky Linux 9.6 - CodeReadyBuilder               18 MB/s | 3.6 MB     00:00    
-DEBUG util.py:461:  Rocky Linux 9.6 - Extras                        131 kB/s |  17 kB     00:00    
-DEBUG util.py:461:  Rocky Linux 9.6 - Devel (WARNING: UNSUPPORTED -  74 MB/s | 108 MB     00:01    
+DEBUG util.py:461:  Rocky Linux 9.6 - BaseOS                         40 kB/s | 3.9 kB     00:00    
+DEBUG util.py:461:  Rocky Linux 9.6 - AppStream                      78 kB/s | 4.4 kB     00:00    
+DEBUG util.py:461:  Rocky Linux 9.6 - CodeReadyBuilder               58 kB/s | 4.4 kB     00:00    
+DEBUG util.py:461:  Rocky Linux 9.6 - Extras                         61 kB/s | 3.1 kB     00:00    
+DEBUG util.py:461:  Rocky Linux 9.6 - Devel (WARNING: UNSUPPORTED -  74 kB/s | 3.6 kB     00:00    
 DEBUG util.py:461:  Dependencies resolved.
 DEBUG util.py:461:  ================================================================================
 DEBUG util.py:461:   Package                     Arch   Version                     Repo       Size
@@ -538,226 +538,224 @@ DEBUG util.py:461:   zstd                        x86_64 1.5.5-1.el9             
 DEBUG util.py:461:  Transaction Summary
 DEBUG util.py:461:  ================================================================================
 DEBUG util.py:461:  Install  215 Packages
-DEBUG util.py:461:  Total download size: 183 M
+DEBUG util.py:461:  Total size: 183 M
 DEBUG util.py:461:  Installed size: 611 M
 DEBUG util.py:461:  Downloading Packages:
-DEBUG util.py:461:  (1/215): basesystem-11-13.el9.0.1.noarch.rpm     84 kB/s | 6.4 kB     00:00    
-DEBUG util.py:461:  (2/215): audit-libs-3.1.5-4.el9.x86_64.rpm      1.2 MB/s | 121 kB     00:00    
-DEBUG util.py:461:  (3/215): alternatives-1.24-2.el9.x86_64.rpm     355 kB/s |  38 kB     00:00    
-DEBUG util.py:461:  (4/215): binutils-gold-2.35.2-63.el9.x86_64.rpm 9.2 MB/s | 732 kB     00:00    
-DEBUG util.py:461:  (5/215): bash-5.1.8-9.el9.x86_64.rpm             14 MB/s | 1.7 MB     00:00    
-DEBUG util.py:461:  (6/215): bzip2-1.0.8-10.el9_5.x86_64.rpm        939 kB/s |  51 kB     00:00    
-DEBUG util.py:461:  (7/215): bzip2-libs-1.0.8-10.el9_5.x86_64.rpm   492 kB/s |  39 kB     00:00    
-DEBUG util.py:461:  (8/215): ca-certificates-2024.2.69_v8.0.303-91.  15 MB/s | 911 kB     00:00    
-DEBUG util.py:461:  (9/215): coreutils-8.32-39.el9.x86_64.rpm        10 MB/s | 1.1 MB     00:00    
-DEBUG util.py:461:  (10/215): coreutils-common-8.32-39.el9.x86_64.r  17 MB/s | 2.0 MB     00:00    
-DEBUG util.py:461:  (11/215): cpio-2.13-16.el9.x86_64.rpm           6.5 MB/s | 270 kB     00:00    
-DEBUG util.py:461:  (12/215): binutils-2.35.2-63.el9.x86_64.rpm      13 MB/s | 4.5 MB     00:00    
-DEBUG util.py:461:  (13/215): cracklib-2.9.6-27.el9.x86_64.rpm      2.0 MB/s |  81 kB     00:00    
-DEBUG util.py:461:  (14/215): crypto-policies-20250128-1.git5269e22 1.2 MB/s |  55 kB     00:00    
-DEBUG util.py:461:  (15/215): curl-7.76.1-31.el9_6.1.x86_64.rpm     6.2 MB/s | 293 kB     00:00    
-DEBUG util.py:461:  (16/215): cyrus-sasl-lib-2.1.27-21.el9.x86_64.r  12 MB/s | 764 kB     00:00    
-DEBUG util.py:461:  (17/215): diffutils-3.7-12.el9.x86_64.rpm       6.5 MB/s | 388 kB     00:00    
-DEBUG util.py:461:  (18/215): ed-1.14.2-12.el9.x86_64.rpm           1.8 MB/s |  74 kB     00:00    
-DEBUG util.py:461:  (19/215): elfutils-0.192-6.el9_6.x86_64.rpm      10 MB/s | 560 kB     00:00    
-DEBUG util.py:461:  (20/215): cracklib-dicts-2.9.6-27.el9.x86_64.rp  17 MB/s | 3.6 MB     00:00    
-DEBUG util.py:461:  (21/215): elfutils-debuginfod-client-0.192-6.el 791 kB/s |  42 kB     00:00    
-DEBUG util.py:461:  (22/215): elfutils-libs-0.192-6.el9_6.x86_64.rp 7.6 MB/s | 260 kB     00:00    
-DEBUG util.py:461:  (23/215): elfutils-libelf-0.192-6.el9_6.x86_64. 4.2 MB/s | 203 kB     00:00    
-DEBUG util.py:461:  (24/215): elfutils-default-yama-scope-0.192-6.e  82 kB/s | 8.5 kB     00:00    
-DEBUG util.py:461:  (25/215): file-5.39-16.el9.x86_64.rpm           1.0 MB/s |  48 kB     00:00    
-DEBUG util.py:461:  (26/215): file-libs-5.39-16.el9.x86_64.rpm      9.3 MB/s | 588 kB     00:00    
-DEBUG util.py:461:  (27/215): findutils-4.8.0-7.el9.x86_64.rpm       12 MB/s | 536 kB     00:00    
-DEBUG util.py:461:  (28/215): gawk-5.1.0-6.el9.x86_64.rpm            17 MB/s | 996 kB     00:00    
-DEBUG util.py:461:  (29/215): gdbm-libs-1.23-1.el9.x86_64.rpm       1.2 MB/s |  55 kB     00:00    
-DEBUG util.py:461:  (30/215): filesystem-3.16-5.el9.x86_64.rpm      9.4 MB/s | 1.1 MB     00:00    
-DEBUG util.py:461:  (31/215): glibc-common-2.34-168.el9_6.24.x86_64 6.7 MB/s | 293 kB     00:00    
-DEBUG util.py:461:  (32/215): glibc-minimal-langpack-2.34-168.el9_6 494 kB/s |  20 kB     00:00    
-DEBUG util.py:461:  (33/215): glibc-2.34-168.el9_6.24.x86_64.rpm     17 MB/s | 1.9 MB     00:00    
-DEBUG util.py:461:  (34/215): glibc-gconv-extra-2.34-168.el9_6.24.x  16 MB/s | 1.5 MB     00:00    
-DEBUG util.py:461:  (35/215): gmp-6.2.0-13.el9.x86_64.rpm           5.9 MB/s | 314 kB     00:00    
-DEBUG util.py:461:  (36/215): grep-3.6-5.el9.x86_64.rpm             6.1 MB/s | 257 kB     00:00    
-DEBUG util.py:461:  (37/215): gzip-1.12-1.el9.x86_64.rpm            4.0 MB/s | 157 kB     00:00    
-DEBUG util.py:461:  (38/215): info-6.7-15.el9.x86_64.rpm            4.1 MB/s | 224 kB     00:00    
-DEBUG util.py:461:  (39/215): json-c-0.14-11.el9.x86_64.rpm         1.1 MB/s |  42 kB     00:00    
-DEBUG util.py:461:  (40/215): groff-base-1.22.4-10.el9.x86_64.rpm   9.0 MB/s | 1.0 MB     00:00    
-DEBUG util.py:461:  (41/215): keyutils-libs-1.6.3-1.el9.x86_64.rpm  594 kB/s |  31 kB     00:00    
-DEBUG util.py:461:  (42/215): krb5-libs-1.21.1-8.el9_6.x86_64.rpm    12 MB/s | 755 kB     00:00    
-DEBUG util.py:461:  (43/215): libacl-2.3.1-4.el9.x86_64.rpm         363 kB/s |  22 kB     00:00    
-DEBUG util.py:461:  (44/215): libarchive-3.5.3-6.el9_6.x86_64.rpm   7.0 MB/s | 387 kB     00:00    
-DEBUG util.py:461:  (45/215): libattr-2.5.1-3.el9.x86_64.rpm        450 kB/s |  18 kB     00:00    
-DEBUG util.py:461:  (46/215): libblkid-2.37.4-21.el9.x86_64.rpm     1.9 MB/s | 106 kB     00:00    
-DEBUG util.py:461:  (47/215): libcap-2.48-9.el9_2.x86_64.rpm        1.7 MB/s |  67 kB     00:00    
-DEBUG util.py:461:  (48/215): libbrotli-1.0.9-7.el9_5.x86_64.rpm    5.3 MB/s | 312 kB     00:00    
-DEBUG util.py:461:  (49/215): libcap-ng-0.8.2-7.el9.x86_64.rpm      792 kB/s |  32 kB     00:00    
-DEBUG util.py:461:  (50/215): libcurl-7.76.1-31.el9_6.1.x86_64.rpm  6.6 MB/s | 283 kB     00:00    
-DEBUG util.py:461:  (51/215): libcom_err-1.46.5-7.el9.x86_64.rpm    450 kB/s |  25 kB     00:00    
-DEBUG util.py:461:  (52/215): libedit-3.1-38.20210216cvs.el9.x86_64 3.7 MB/s | 103 kB     00:00    
-DEBUG util.py:461:  (53/215): libeconf-0.4.1-4.el9.x86_64.rpm       628 kB/s |  26 kB     00:00    
-DEBUG util.py:461:  (54/215): libdb-5.3.28-57.el9_6.x86_64.rpm       10 MB/s | 736 kB     00:00    
-DEBUG util.py:461:  (55/215): libevent-2.1.12-8.el9_4.x86_64.rpm    5.5 MB/s | 262 kB     00:00    
-DEBUG util.py:461:  (56/215): libffi-3.4.2-8.el9.x86_64.rpm         970 kB/s |  37 kB     00:00    
-DEBUG util.py:461:  (57/215): libfdisk-2.37.4-21.el9.x86_64.rpm     2.7 MB/s | 153 kB     00:00    
-DEBUG util.py:461:  (58/215): libgcc-11.5.0-5.el9_5.x86_64.rpm      1.8 MB/s |  84 kB     00:00    
-DEBUG util.py:461:  (59/215): libgomp-11.5.0-5.el9_5.x86_64.rpm     6.7 MB/s | 260 kB     00:00    
-DEBUG util.py:461:  (60/215): libgcrypt-1.10.0-11.el9.x86_64.rpm    8.5 MB/s | 507 kB     00:00    
-DEBUG util.py:461:  (61/215): libgpg-error-1.42-5.el9.x86_64.rpm    5.0 MB/s | 211 kB     00:00    
-DEBUG util.py:461:  (62/215): libidn2-2.3.0-7.el9.x86_64.rpm        2.4 MB/s |  95 kB     00:00    
-DEBUG util.py:461:  (63/215): libmount-2.37.4-21.el9.x86_64.rpm     3.0 MB/s | 134 kB     00:00    
-DEBUG util.py:461:  (64/215): libnghttp2-1.43.0-6.el9.x86_64.rpm    2.3 MB/s |  72 kB     00:00    
-DEBUG util.py:461:  (65/215): libpkgconf-1.7.3-10.el9.x86_64.rpm    933 kB/s |  35 kB     00:00    
-DEBUG util.py:461:  (66/215): libpwquality-1.4.4-8.el9.x86_64.rpm   2.8 MB/s | 105 kB     00:00    
-DEBUG util.py:461:  (67/215): libpsl-0.21.1-5.el9.x86_64.rpm        1.2 MB/s |  63 kB     00:00    
-DEBUG util.py:461:  (68/215): libselinux-3.6-3.el9.x86_64.rpm       1.8 MB/s |  85 kB     00:00    
-DEBUG util.py:461:  (69/215): libsepol-3.6-2.el9.x86_64.rpm         9.3 MB/s | 329 kB     00:00    
-DEBUG util.py:461:  (70/215): libsemanage-3.6-5.el9_6.x86_64.rpm    2.4 MB/s | 117 kB     00:00    
-DEBUG util.py:461:  (71/215): libsigsegv-2.13-4.el9.x86_64.rpm      734 kB/s |  26 kB     00:00    
-DEBUG util.py:461:  (72/215): libssh-0.10.4-15.el9_6.x86_64.rpm     6.0 MB/s | 214 kB     00:00    
-DEBUG util.py:461:  (73/215): libsmartcols-2.37.4-21.el9.x86_64.rpm 1.2 MB/s |  62 kB     00:00    
-DEBUG util.py:461:  (74/215): libssh-config-0.10.4-15.el9_6.noarch. 203 kB/s | 7.8 kB     00:00    
-DEBUG util.py:461:  (75/215): libtasn1-4.16.0-9.el9.x86_64.rpm      2.4 MB/s |  73 kB     00:00    
-DEBUG util.py:461:  (76/215): libtool-ltdl-2.4.6-46.el9.x86_64.rpm  867 kB/s |  35 kB     00:00    
-DEBUG util.py:461:  (77/215): libstdc++-11.5.0-5.el9_5.x86_64.rpm    11 MB/s | 731 kB     00:00    
-DEBUG util.py:461:  (78/215): libutempter-1.2.1-6.el9.x86_64.rpm    654 kB/s |  26 kB     00:00    
-DEBUG util.py:461:  (79/215): libunistring-0.9.10-15.el9.x86_64.rpm 7.3 MB/s | 495 kB     00:00    
-DEBUG util.py:461:  (80/215): libuuid-2.37.4-21.el9.x86_64.rpm      593 kB/s |  27 kB     00:00    
-DEBUG util.py:461:  (81/215): libverto-0.3.2-3.el9.x86_64.rpm       711 kB/s |  21 kB     00:00    
-DEBUG util.py:461:  (82/215): libxcrypt-4.4.18-3.el9.x86_64.rpm     3.5 MB/s | 115 kB     00:00    
-DEBUG util.py:461:  (83/215): libzstd-1.5.5-1.el9.x86_64.rpm        7.3 MB/s | 294 kB     00:00    
-DEBUG util.py:461:  (84/215): libxml2-2.9.13-12.el9_6.x86_64.rpm     11 MB/s | 746 kB     00:00    
-DEBUG util.py:461:  (85/215): lua-libs-5.4.4-4.el9.x86_64.rpm       2.7 MB/s | 129 kB     00:00    
-DEBUG util.py:461:  (86/215): lz4-libs-1.9.3-5.el9.x86_64.rpm       2.1 MB/s |  67 kB     00:00    
-DEBUG util.py:461:  (87/215): ncurses-6.2-10.20210508.el9_6.2.x86_6  11 MB/s | 399 kB     00:00    
-DEBUG util.py:461:  (88/215): make-4.3-8.el9.x86_64.rpm             7.8 MB/s | 529 kB     00:00    
-DEBUG util.py:461:  (89/215): mpfr-4.1.0-7.el9.x86_64.rpm           4.6 MB/s | 326 kB     00:00    
-DEBUG util.py:461:  (90/215): ncurses-base-6.2-10.20210508.el9_6.2. 1.3 MB/s |  60 kB     00:00    
-DEBUG util.py:461:  (91/215): ncurses-libs-6.2-10.20210508.el9_6.2. 6.4 MB/s | 322 kB     00:00    
-DEBUG util.py:461:  (92/215): openldap-2.6.8-4.el9.0.1.x86_64.rpm   4.8 MB/s | 256 kB     00:00    
-DEBUG util.py:461:  (93/215): openssl-3.2.2-6.el9_5.1.x86_64.rpm     15 MB/s | 1.3 MB     00:00    
-DEBUG util.py:461:  (94/215): p11-kit-0.25.3-3.el9_5.x86_64.rpm     7.6 MB/s | 510 kB     00:00    
-DEBUG util.py:461:  (95/215): pam-1.5.1-26.el9_6.x86_64.rpm          14 MB/s | 543 kB     00:00    
-DEBUG util.py:461:  (96/215): p11-kit-trust-0.25.3-3.el9_5.x86_64.r 2.5 MB/s | 141 kB     00:00    
-DEBUG util.py:461:  (97/215): openssl-libs-3.2.2-6.el9_5.1.x86_64.r  16 MB/s | 2.4 MB     00:00    
-DEBUG util.py:461:  (98/215): pcre-8.44-4.el9.x86_64.rpm            4.5 MB/s | 196 kB     00:00    
-DEBUG util.py:461:  (99/215): pcre2-10.40-6.el9.x86_64.rpm          5.1 MB/s | 233 kB     00:00    
-DEBUG util.py:461:  (100/215): pkgconf-1.7.3-10.el9.x86_64.rpm      1.5 MB/s |  40 kB     00:00    
-DEBUG util.py:461:  (101/215): pcre2-syntax-10.40-6.el9.noarch.rpm  2.6 MB/s | 140 kB     00:00    
-DEBUG util.py:461:  (102/215): pkgconf-m4-1.7.3-10.el9.noarch.rpm   343 kB/s |  14 kB     00:00    
-DEBUG util.py:461:  (103/215): pkgconf-pkg-config-1.7.3-10.el9.x86_ 325 kB/s |  10 kB     00:00    
-DEBUG util.py:461:  (104/215): publicsuffix-list-dafsa-20210518-3.e 2.3 MB/s |  58 kB     00:00    
-DEBUG util.py:461:  (105/215): popt-1.18-8.el9.x86_64.rpm           1.3 MB/s |  59 kB     00:00    
-DEBUG util.py:461:  (106/215): readline-8.1-4.el9.x86_64.rpm        4.8 MB/s | 210 kB     00:00    
-DEBUG util.py:461:  (107/215): rocky-gpg-keys-9.6-1.3.el9.noarch.rp 279 kB/s |  12 kB     00:00    
-DEBUG util.py:461:  (108/215): rocky-release-9.6-1.3.el9.noarch.rpm 505 kB/s |  22 kB     00:00    
-DEBUG util.py:461:  (109/215): rpm-build-libs-4.16.1.3-37.el9.x86_6 1.9 MB/s |  88 kB     00:00    
-DEBUG util.py:461:  (110/215): rpm-4.16.1.3-37.el9.x86_64.rpm       6.8 MB/s | 485 kB     00:00    
-DEBUG util.py:461:  (111/215): rocky-repos-9.6-1.3.el9.noarch.rpm   123 kB/s |  12 kB     00:00    
-DEBUG util.py:461:  (112/215): rpm-libs-4.16.1.3-37.el9.x86_64.rpm  7.1 MB/s | 307 kB     00:00    
-DEBUG util.py:461:  (113/215): sed-4.8-9.el9.x86_64.rpm             6.6 MB/s | 296 kB     00:00    
-DEBUG util.py:461:  (114/215): sqlite-libs-3.34.1-8.el9_6.x86_64.rp  11 MB/s | 618 kB     00:00    
-DEBUG util.py:461:  (115/215): setup-2.13.7-10.el9.noarch.rpm       1.4 MB/s | 140 kB     00:00    
-DEBUG util.py:461:  (116/215): shadow-utils-4.9-12.el9.x86_64.rpm    13 MB/s | 1.1 MB     00:00    
-DEBUG util.py:461:  (117/215): systemd-libs-252-51.el9_6.3.rocky.0.  11 MB/s | 667 kB     00:00    
-DEBUG util.py:461:  (118/215): tar-1.34-7.el9.x86_64.rpm             14 MB/s | 875 kB     00:00    
-DEBUG util.py:461:  (119/215): tzdata-2025b-1.el9.noarch.rpm        6.9 MB/s | 430 kB     00:00    
-DEBUG util.py:461:  (120/215): unzip-6.0-58.el9_5.x86_64.rpm        3.2 MB/s | 180 kB     00:00    
-DEBUG util.py:461:  (121/215): util-linux-core-2.37.4-21.el9.x86_64 4.9 MB/s | 431 kB     00:00    
-DEBUG util.py:461:  (122/215): which-2.21-30.el9_6.x86_64.rpm       700 kB/s |  40 kB     00:00    
-DEBUG util.py:461:  (123/215): util-linux-2.37.4-21.el9.x86_64.rpm   17 MB/s | 2.2 MB     00:00    
-DEBUG util.py:461:  (124/215): xz-5.2.5-8.el9_0.x86_64.rpm          4.7 MB/s | 214 kB     00:00    
-DEBUG util.py:461:  (125/215): xz-libs-5.2.5-8.el9_0.x86_64.rpm     2.0 MB/s |  92 kB     00:00    
-DEBUG util.py:461:  (126/215): zlib-1.2.11-40.el9.x86_64.rpm        2.7 MB/s |  90 kB     00:00    
-DEBUG util.py:461:  (127/215): zip-3.0-35.el9.x86_64.rpm            4.4 MB/s | 263 kB     00:00    
-DEBUG util.py:461:  (128/215): zstd-1.5.5-1.el9.x86_64.rpm          9.9 MB/s | 461 kB     00:00    
-DEBUG util.py:461:  (129/215): debugedit-5.0-5.el9.x86_64.rpm       1.6 MB/s |  76 kB     00:00    
-DEBUG util.py:461:  (130/215): annobin-12.92-1.el9.x86_64.rpm       8.8 MB/s | 1.1 MB     00:00    
-DEBUG util.py:461:  (131/215): dwz-0.14-3.el9.x86_64.rpm            2.0 MB/s | 127 kB     00:00    
-DEBUG util.py:461:  (132/215): efi-srpm-macros-6-2.el9_0.noarch.rpm 550 kB/s |  22 kB     00:00    
-DEBUG util.py:461:  (133/215): fonts-srpm-macros-2.0.5-7.el9.1.noar 569 kB/s |  27 kB     00:00    
-DEBUG util.py:461:  (134/215): cpp-11.5.0-5.el9_5.x86_64.rpm         18 MB/s |  11 MB     00:00    
-DEBUG util.py:461:  (135/215): gcc-plugin-annobin-11.5.0-5.el9_5.x8 1.3 MB/s |  39 kB     00:00    
-DEBUG util.py:461:  (136/215): gcc-c++-11.5.0-5.el9_5.x86_64.rpm     19 MB/s |  13 MB     00:00    
-DEBUG util.py:461:  (137/215): gdb-minimal-14.2-4.1.el9_6.x86_64.rp  17 MB/s | 4.2 MB     00:00    
-DEBUG util.py:461:  (138/215): ghc-srpm-macros-1.5.0-6.el9.noarch.r 239 kB/s | 7.8 kB     00:00    
-DEBUG util.py:461:  (139/215): glibc-devel-2.34-168.el9_6.24.x86_64 585 kB/s |  30 kB     00:00    
-DEBUG util.py:461:  (140/215): glibc-headers-2.34-168.el9_6.24.x86_ 8.4 MB/s | 435 kB     00:00    
-DEBUG util.py:461:  (141/215): go-srpm-macros-3.6.0-10.el9_6.noarch 758 kB/s |  26 kB     00:00    
-DEBUG util.py:461:  (142/215): kernel-srpm-macros-1.0-13.el9.noarch 566 kB/s |  15 kB     00:00    
-DEBUG util.py:461:  (143/215): libmpc-1.2.1-4.el9.x86_64.rpm        906 kB/s |  61 kB     00:00    
-DEBUG util.py:461:  (144/215): kernel-headers-5.14.0-570.58.1.el9_6  15 MB/s | 3.3 MB     00:00    
-DEBUG util.py:461:  (145/215): libxcrypt-devel-4.4.18-3.el9.x86_64. 764 kB/s |  28 kB     00:00    
-DEBUG util.py:461:  (146/215): libstdc++-devel-11.5.0-5.el9_5.x86_6  14 MB/s | 2.2 MB     00:00    
-DEBUG util.py:461:  (147/215): lua-srpm-macros-1-6.el9.noarch.rpm   355 kB/s | 8.5 kB     00:00    
-DEBUG util.py:461:  (148/215): ocaml-srpm-macros-6-6.el9.noarch.rpm 190 kB/s | 7.8 kB     00:00    
-DEBUG util.py:461:  (149/215): openblas-srpm-macros-2-11.el9.noarch 129 kB/s | 7.3 kB     00:00    
-DEBUG util.py:461:  (150/215): patch-2.7.6-16.el9.x86_64.rpm        1.7 MB/s | 127 kB     00:00    
-DEBUG util.py:461:  (151/215): gcc-11.5.0-5.el9_5.x86_64.rpm         23 MB/s |  32 MB     00:01    
-DEBUG util.py:461:  (152/215): perl-AutoLoader-5.74-481.1.el9_6.noa 133 kB/s |  20 kB     00:00    
-DEBUG util.py:461:  (153/215): perl-Carp-1.50-460.el9.noarch.rpm    292 kB/s |  29 kB     00:00    
-DEBUG util.py:461:  (154/215): perl-B-1.80-481.1.el9_6.x86_64.rpm   1.5 MB/s | 178 kB     00:00    
-DEBUG util.py:461:  (155/215): perl-Class-Struct-0.66-481.1.el9_6.n 813 kB/s |  21 kB     00:00    
-DEBUG util.py:461:  (156/215): perl-Digest-1.19-4.el9.noarch.rpm    1.1 MB/s |  25 kB     00:00    
-DEBUG util.py:461:  (157/215): perl-Data-Dumper-2.174-462.el9.x86_6 1.0 MB/s |  55 kB     00:00    
-DEBUG util.py:461:  (158/215): perl-Digest-MD5-2.58-4.el9.x86_64.rp 882 kB/s |  36 kB     00:00    
-DEBUG util.py:461:  (159/215): perl-Errno-1.30-481.1.el9_6.x86_64.r 255 kB/s |  13 kB     00:00    
-DEBUG util.py:461:  (160/215): perl-Encode-3.08-462.el9.x86_64.rpm   17 MB/s | 1.7 MB     00:00    
-DEBUG util.py:461:  (161/215): perl-Exporter-5.74-461.el9.noarch.rp 790 kB/s |  31 kB     00:00    
-DEBUG util.py:461:  (162/215): perl-Fcntl-1.13-481.1.el9_6.x86_64.r 479 kB/s |  19 kB     00:00    
-DEBUG util.py:461:  (163/215): perl-File-Basename-2.85-481.1.el9_6. 418 kB/s |  16 kB     00:00    
-DEBUG util.py:461:  (164/215): perl-File-Path-2.18-4.el9.noarch.rpm 927 kB/s |  35 kB     00:00    
-DEBUG util.py:461:  (165/215): perl-File-Temp-0.231.100-4.el9.noarc 1.7 MB/s |  59 kB     00:00    
-DEBUG util.py:461:  (166/215): perl-FileHandle-2.03-481.1.el9_6.noa 379 kB/s |  14 kB     00:00    
-DEBUG util.py:461:  (167/215): perl-File-stat-1.09-481.1.el9_6.noar 269 kB/s |  16 kB     00:00    
-DEBUG util.py:461:  (168/215): perl-Getopt-Long-2.52-4.el9.noarch.r 2.2 MB/s |  60 kB     00:00    
-DEBUG util.py:461:  (169/215): perl-Getopt-Std-1.12-481.1.el9_6.noa 575 kB/s |  14 kB     00:00    
-DEBUG util.py:461:  (170/215): perl-HTTP-Tiny-0.076-462.el9.noarch. 2.1 MB/s |  53 kB     00:00    
-DEBUG util.py:461:  (171/215): perl-IO-1.43-481.1.el9_6.x86_64.rpm  2.1 MB/s |  85 kB     00:00    
-DEBUG util.py:461:  (172/215): perl-IO-Socket-IP-0.41-5.el9.noarch. 1.4 MB/s |  42 kB     00:00    
-DEBUG util.py:461:  (173/215): perl-IPC-Open3-1.21-481.1.el9_6.noar 629 kB/s |  21 kB     00:00    
-DEBUG util.py:461:  (174/215): perl-IO-Socket-SSL-2.073-2.el9.noarc 4.2 MB/s | 214 kB     00:00    
-DEBUG util.py:461:  (175/215): perl-MIME-Base64-3.16-4.el9.x86_64.r 1.0 MB/s |  30 kB     00:00    
-DEBUG util.py:461:  (176/215): perl-Mozilla-CA-20200520-6.el9.noarc 422 kB/s |  12 kB     00:00    
-DEBUG util.py:461:  (177/215): perl-Net-SSLeay-1.94-1.el9.x86_64.rp 4.8 MB/s | 391 kB     00:00    
-DEBUG util.py:461:  (178/215): perl-POSIX-1.94-481.1.el9_6.x86_64.r 1.1 MB/s |  95 kB     00:00    
-DEBUG util.py:461:  (179/215): perl-Pod-Escapes-1.07-460.el9.noarch 894 kB/s |  20 kB     00:00    
-DEBUG util.py:461:  (180/215): perl-PathTools-3.78-461.el9.x86_64.r 2.1 MB/s |  85 kB     00:00    
-DEBUG util.py:461:  (181/215): perl-Pod-Perldoc-3.28.01-461.el9.noa 1.9 MB/s |  83 kB     00:00    
-DEBUG util.py:461:  (182/215): perl-Pod-Simple-3.42-4.el9.noarch.rp 5.2 MB/s | 215 kB     00:00    
-DEBUG util.py:461:  (183/215): perl-Pod-Usage-2.01-4.el9.noarch.rpm 1.0 MB/s |  40 kB     00:00    
-DEBUG util.py:461:  (184/215): perl-Scalar-List-Utils-1.56-462.el9. 1.5 MB/s |  70 kB     00:00    
-DEBUG util.py:461:  (185/215): perl-Socket-2.031-4.el9.x86_64.rpm   1.9 MB/s |  54 kB     00:00    
-DEBUG util.py:461:  (186/215): perl-SelectSaver-1.02-481.1.el9_6.no 130 kB/s |  10 kB     00:00    
-DEBUG util.py:461:  (187/215): perl-Storable-3.21-460.el9.x86_64.rp 1.5 MB/s |  95 kB     00:00    
-DEBUG util.py:461:  (188/215): perl-Term-ANSIColor-5.01-461.el9.noa 1.5 MB/s |  48 kB     00:00    
-DEBUG util.py:461:  (189/215): perl-Symbol-1.08-481.1.el9_6.noarch. 195 kB/s |  13 kB     00:00    
-DEBUG util.py:461:  (190/215): perl-Term-Cap-1.17-460.el9.noarch.rp 503 kB/s |  22 kB     00:00    
-DEBUG util.py:461:  (191/215): perl-Text-ParseWords-3.30-460.el9.no 372 kB/s |  16 kB     00:00    
-DEBUG util.py:461:  (192/215): perl-Text-Tabs+Wrap-2013.0523-460.el 893 kB/s |  23 kB     00:00    
-DEBUG util.py:461:  (193/215): perl-Time-Local-1.300-7.el9.noarch.r 961 kB/s |  33 kB     00:00    
-DEBUG util.py:461:  (194/215): perl-URI-5.09-3.el9.noarch.rpm       2.6 MB/s | 108 kB     00:00    
-DEBUG util.py:461:  (195/215): perl-base-2.27-481.1.el9_6.noarch.rp 460 kB/s |  15 kB     00:00    
-DEBUG util.py:461:  (196/215): perl-constant-1.33-461.el9.noarch.rp 625 kB/s |  23 kB     00:00    
-DEBUG util.py:461:  (197/215): perl-if-0.60.800-481.1.el9_6.noarch. 328 kB/s |  13 kB     00:00    
-DEBUG util.py:461:  (198/215): perl-interpreter-5.32.1-481.1.el9_6. 1.8 MB/s |  69 kB     00:00    
-DEBUG util.py:461:  (199/215): perl-libnet-3.13-4.el9.noarch.rpm    3.3 MB/s | 125 kB     00:00    
-DEBUG util.py:461:  (200/215): perl-mro-1.23-481.1.el9_6.x86_64.rpm 969 kB/s |  27 kB     00:00    
-DEBUG util.py:461:  (201/215): perl-overload-1.31-481.1.el9_6.noarc 1.6 MB/s |  44 kB     00:00    
-DEBUG util.py:461:  (202/215): perl-overloading-0.02-481.1.el9_6.no 217 kB/s |  11 kB     00:00    
-DEBUG util.py:461:  (203/215): perl-libs-5.32.1-481.1.el9_6.x86_64.  15 MB/s | 2.0 MB     00:00    
-DEBUG util.py:461:  (204/215): perl-parent-0.238-460.el9.noarch.rpm 436 kB/s |  14 kB     00:00    
-DEBUG util.py:461:  (205/215): perl-podlators-4.14-460.el9.noarch.r 2.9 MB/s | 112 kB     00:00    
-DEBUG util.py:461:  (206/215): perl-srpm-macros-1-41.el9.noarch.rpm 225 kB/s | 8.2 kB     00:00    
-DEBUG util.py:461:  (207/215): perl-vars-1.05-481.1.el9_6.noarch.rp 494 kB/s |  12 kB     00:00    
-DEBUG util.py:461:  (208/215): pyproject-srpm-macros-1.16.2-1.el9.n 558 kB/s |  13 kB     00:00    
-DEBUG util.py:461:  (209/215): perl-subs-1.03-481.1.el9_6.noarch.rp 164 kB/s |  10 kB     00:00    
-DEBUG util.py:461:  (210/215): qt5-srpm-macros-5.15.9-1.el9.noarch. 373 kB/s | 7.9 kB     00:00    
-DEBUG util.py:461:  (211/215): python-srpm-macros-3.9-54.el9.noarch 373 kB/s |  17 kB     00:00    
-DEBUG util.py:461:  (212/215): redhat-rpm-config-209-1.el9.noarch.r 1.4 MB/s |  66 kB     00:00    
-DEBUG util.py:461:  (213/215): rpm-build-4.16.1.3-37.el9.x86_64.rpm 1.7 MB/s |  59 kB     00:00    
-DEBUG util.py:461:  (214/215): rust-srpm-macros-17-4.el9.noarch.rpm 247 kB/s | 9.3 kB     00:00    
-DEBUG util.py:461:  (215/215): llvm-libs-19.1.7-1.el9.x86_64.rpm     22 MB/s |  57 MB     00:02    
-DEBUG util.py:461:  --------------------------------------------------------------------------------
-DEBUG util.py:461:  Total                                            29 MB/s | 183 MB     00:06     
+DEBUG util.py:461:  [SKIPPED] alternatives-1.24-2.el9.x86_64.rpm: Already downloaded               
+DEBUG util.py:461:  [SKIPPED] audit-libs-3.1.5-4.el9.x86_64.rpm: Already downloaded                
+DEBUG util.py:461:  [SKIPPED] basesystem-11-13.el9.0.1.noarch.rpm: Already downloaded              
+DEBUG util.py:461:  [SKIPPED] bash-5.1.8-9.el9.x86_64.rpm: Already downloaded                      
+DEBUG util.py:461:  [SKIPPED] binutils-2.35.2-63.el9.x86_64.rpm: Already downloaded                
+DEBUG util.py:461:  [SKIPPED] binutils-gold-2.35.2-63.el9.x86_64.rpm: Already downloaded           
+DEBUG util.py:461:  [SKIPPED] bzip2-1.0.8-10.el9_5.x86_64.rpm: Already downloaded                  
+DEBUG util.py:461:  [SKIPPED] bzip2-libs-1.0.8-10.el9_5.x86_64.rpm: Already downloaded             
+DEBUG util.py:461:  [SKIPPED] ca-certificates-2024.2.69_v8.0.303-91.4.el9_4.noarch.rpm: Already downloaded
+DEBUG util.py:461:  [SKIPPED] coreutils-8.32-39.el9.x86_64.rpm: Already downloaded                 
+DEBUG util.py:461:  [SKIPPED] coreutils-common-8.32-39.el9.x86_64.rpm: Already downloaded          
+DEBUG util.py:461:  [SKIPPED] cpio-2.13-16.el9.x86_64.rpm: Already downloaded                      
+DEBUG util.py:461:  [SKIPPED] cracklib-2.9.6-27.el9.x86_64.rpm: Already downloaded                 
+DEBUG util.py:461:  [SKIPPED] cracklib-dicts-2.9.6-27.el9.x86_64.rpm: Already downloaded           
+DEBUG util.py:461:  [SKIPPED] crypto-policies-20250128-1.git5269e22.el9.noarch.rpm: Already downloaded
+DEBUG util.py:461:  [SKIPPED] curl-7.76.1-31.el9_6.1.x86_64.rpm: Already downloaded                
+DEBUG util.py:461:  [SKIPPED] cyrus-sasl-lib-2.1.27-21.el9.x86_64.rpm: Already downloaded          
+DEBUG util.py:461:  [SKIPPED] diffutils-3.7-12.el9.x86_64.rpm: Already downloaded                  
+DEBUG util.py:461:  [SKIPPED] ed-1.14.2-12.el9.x86_64.rpm: Already downloaded                      
+DEBUG util.py:461:  [SKIPPED] elfutils-0.192-6.el9_6.x86_64.rpm: Already downloaded                
+DEBUG util.py:461:  [SKIPPED] elfutils-debuginfod-client-0.192-6.el9_6.x86_64.rpm: Already downloaded
+DEBUG util.py:461:  [SKIPPED] elfutils-default-yama-scope-0.192-6.el9_6.noarch.rpm: Already downloaded
+DEBUG util.py:461:  [SKIPPED] elfutils-libelf-0.192-6.el9_6.x86_64.rpm: Already downloaded         
+DEBUG util.py:461:  [SKIPPED] elfutils-libs-0.192-6.el9_6.x86_64.rpm: Already downloaded           
+DEBUG util.py:461:  [SKIPPED] file-5.39-16.el9.x86_64.rpm: Already downloaded                      
+DEBUG util.py:461:  [SKIPPED] file-libs-5.39-16.el9.x86_64.rpm: Already downloaded                 
+DEBUG util.py:461:  [SKIPPED] filesystem-3.16-5.el9.x86_64.rpm: Already downloaded                 
+DEBUG util.py:461:  [SKIPPED] findutils-4.8.0-7.el9.x86_64.rpm: Already downloaded                 
+DEBUG util.py:461:  [SKIPPED] gawk-5.1.0-6.el9.x86_64.rpm: Already downloaded                      
+DEBUG util.py:461:  [SKIPPED] gdbm-libs-1.23-1.el9.x86_64.rpm: Already downloaded                  
+DEBUG util.py:461:  [SKIPPED] glibc-2.34-168.el9_6.24.x86_64.rpm: Already downloaded               
+DEBUG util.py:461:  [SKIPPED] glibc-common-2.34-168.el9_6.24.x86_64.rpm: Already downloaded        
+DEBUG util.py:461:  [SKIPPED] glibc-gconv-extra-2.34-168.el9_6.24.x86_64.rpm: Already downloaded   
+DEBUG util.py:461:  [SKIPPED] glibc-minimal-langpack-2.34-168.el9_6.24.x86_64.rpm: Already downloaded
+DEBUG util.py:461:  [SKIPPED] gmp-6.2.0-13.el9.x86_64.rpm: Already downloaded                      
+DEBUG util.py:461:  [SKIPPED] grep-3.6-5.el9.x86_64.rpm: Already downloaded                        
+DEBUG util.py:461:  [SKIPPED] groff-base-1.22.4-10.el9.x86_64.rpm: Already downloaded              
+DEBUG util.py:461:  [SKIPPED] gzip-1.12-1.el9.x86_64.rpm: Already downloaded                       
+DEBUG util.py:461:  [SKIPPED] info-6.7-15.el9.x86_64.rpm: Already downloaded                       
+DEBUG util.py:461:  [SKIPPED] json-c-0.14-11.el9.x86_64.rpm: Already downloaded                    
+DEBUG util.py:461:  [SKIPPED] keyutils-libs-1.6.3-1.el9.x86_64.rpm: Already downloaded             
+DEBUG util.py:461:  [SKIPPED] krb5-libs-1.21.1-8.el9_6.x86_64.rpm: Already downloaded              
+DEBUG util.py:461:  [SKIPPED] libacl-2.3.1-4.el9.x86_64.rpm: Already downloaded                    
+DEBUG util.py:461:  [SKIPPED] libarchive-3.5.3-6.el9_6.x86_64.rpm: Already downloaded              
+DEBUG util.py:461:  [SKIPPED] libattr-2.5.1-3.el9.x86_64.rpm: Already downloaded                   
+DEBUG util.py:461:  [SKIPPED] libblkid-2.37.4-21.el9.x86_64.rpm: Already downloaded                
+DEBUG util.py:461:  [SKIPPED] libbrotli-1.0.9-7.el9_5.x86_64.rpm: Already downloaded               
+DEBUG util.py:461:  [SKIPPED] libcap-2.48-9.el9_2.x86_64.rpm: Already downloaded                   
+DEBUG util.py:461:  [SKIPPED] libcap-ng-0.8.2-7.el9.x86_64.rpm: Already downloaded                 
+DEBUG util.py:461:  [SKIPPED] libcom_err-1.46.5-7.el9.x86_64.rpm: Already downloaded               
+DEBUG util.py:461:  [SKIPPED] libcurl-7.76.1-31.el9_6.1.x86_64.rpm: Already downloaded             
+DEBUG util.py:461:  [SKIPPED] libdb-5.3.28-57.el9_6.x86_64.rpm: Already downloaded                 
+DEBUG util.py:461:  [SKIPPED] libeconf-0.4.1-4.el9.x86_64.rpm: Already downloaded                  
+DEBUG util.py:461:  [SKIPPED] libedit-3.1-38.20210216cvs.el9.x86_64.rpm: Already downloaded        
+DEBUG util.py:461:  [SKIPPED] libevent-2.1.12-8.el9_4.x86_64.rpm: Already downloaded               
+DEBUG util.py:461:  [SKIPPED] libfdisk-2.37.4-21.el9.x86_64.rpm: Already downloaded                
+DEBUG util.py:461:  [SKIPPED] libffi-3.4.2-8.el9.x86_64.rpm: Already downloaded                    
+DEBUG util.py:461:  [SKIPPED] libgcc-11.5.0-5.el9_5.x86_64.rpm: Already downloaded                 
+DEBUG util.py:461:  [SKIPPED] libgcrypt-1.10.0-11.el9.x86_64.rpm: Already downloaded               
+DEBUG util.py:461:  [SKIPPED] libgomp-11.5.0-5.el9_5.x86_64.rpm: Already downloaded                
+DEBUG util.py:461:  [SKIPPED] libgpg-error-1.42-5.el9.x86_64.rpm: Already downloaded               
+DEBUG util.py:461:  [SKIPPED] libidn2-2.3.0-7.el9.x86_64.rpm: Already downloaded                   
+DEBUG util.py:461:  [SKIPPED] libmount-2.37.4-21.el9.x86_64.rpm: Already downloaded                
+DEBUG util.py:461:  [SKIPPED] libnghttp2-1.43.0-6.el9.x86_64.rpm: Already downloaded               
+DEBUG util.py:461:  [SKIPPED] libpkgconf-1.7.3-10.el9.x86_64.rpm: Already downloaded               
+DEBUG util.py:461:  [SKIPPED] libpsl-0.21.1-5.el9.x86_64.rpm: Already downloaded                   
+DEBUG util.py:461:  [SKIPPED] libpwquality-1.4.4-8.el9.x86_64.rpm: Already downloaded              
+DEBUG util.py:461:  [SKIPPED] libselinux-3.6-3.el9.x86_64.rpm: Already downloaded                  
+DEBUG util.py:461:  [SKIPPED] libsemanage-3.6-5.el9_6.x86_64.rpm: Already downloaded               
+DEBUG util.py:461:  [SKIPPED] libsepol-3.6-2.el9.x86_64.rpm: Already downloaded                    
+DEBUG util.py:461:  [SKIPPED] libsigsegv-2.13-4.el9.x86_64.rpm: Already downloaded                 
+DEBUG util.py:461:  [SKIPPED] libsmartcols-2.37.4-21.el9.x86_64.rpm: Already downloaded            
+DEBUG util.py:461:  [SKIPPED] libssh-0.10.4-15.el9_6.x86_64.rpm: Already downloaded                
+DEBUG util.py:461:  [SKIPPED] libssh-config-0.10.4-15.el9_6.noarch.rpm: Already downloaded         
+DEBUG util.py:461:  [SKIPPED] libstdc++-11.5.0-5.el9_5.x86_64.rpm: Already downloaded              
+DEBUG util.py:461:  [SKIPPED] libtasn1-4.16.0-9.el9.x86_64.rpm: Already downloaded                 
+DEBUG util.py:461:  [SKIPPED] libtool-ltdl-2.4.6-46.el9.x86_64.rpm: Already downloaded             
+DEBUG util.py:461:  [SKIPPED] libunistring-0.9.10-15.el9.x86_64.rpm: Already downloaded            
+DEBUG util.py:461:  [SKIPPED] libutempter-1.2.1-6.el9.x86_64.rpm: Already downloaded               
+DEBUG util.py:461:  [SKIPPED] libuuid-2.37.4-21.el9.x86_64.rpm: Already downloaded                 
+DEBUG util.py:461:  [SKIPPED] libverto-0.3.2-3.el9.x86_64.rpm: Already downloaded                  
+DEBUG util.py:461:  [SKIPPED] libxcrypt-4.4.18-3.el9.x86_64.rpm: Already downloaded                
+DEBUG util.py:461:  [SKIPPED] libxml2-2.9.13-12.el9_6.x86_64.rpm: Already downloaded               
+DEBUG util.py:461:  [SKIPPED] libzstd-1.5.5-1.el9.x86_64.rpm: Already downloaded                   
+DEBUG util.py:461:  [SKIPPED] lua-libs-5.4.4-4.el9.x86_64.rpm: Already downloaded                  
+DEBUG util.py:461:  [SKIPPED] lz4-libs-1.9.3-5.el9.x86_64.rpm: Already downloaded                  
+DEBUG util.py:461:  [SKIPPED] make-4.3-8.el9.x86_64.rpm: Already downloaded                        
+DEBUG util.py:461:  [SKIPPED] mpfr-4.1.0-7.el9.x86_64.rpm: Already downloaded                      
+DEBUG util.py:461:  [SKIPPED] ncurses-6.2-10.20210508.el9_6.2.x86_64.rpm: Already downloaded       
+DEBUG util.py:461:  [SKIPPED] ncurses-base-6.2-10.20210508.el9_6.2.noarch.rpm: Already downloaded  
+DEBUG util.py:461:  [SKIPPED] ncurses-libs-6.2-10.20210508.el9_6.2.x86_64.rpm: Already downloaded  
+DEBUG util.py:461:  [SKIPPED] openldap-2.6.8-4.el9.0.1.x86_64.rpm: Already downloaded              
+DEBUG util.py:461:  [SKIPPED] openssl-3.2.2-6.el9_5.1.x86_64.rpm: Already downloaded               
+DEBUG util.py:461:  [SKIPPED] openssl-libs-3.2.2-6.el9_5.1.x86_64.rpm: Already downloaded          
+DEBUG util.py:461:  [SKIPPED] p11-kit-0.25.3-3.el9_5.x86_64.rpm: Already downloaded                
+DEBUG util.py:461:  [SKIPPED] p11-kit-trust-0.25.3-3.el9_5.x86_64.rpm: Already downloaded          
+DEBUG util.py:461:  [SKIPPED] pam-1.5.1-26.el9_6.x86_64.rpm: Already downloaded                    
+DEBUG util.py:461:  [SKIPPED] pcre-8.44-4.el9.x86_64.rpm: Already downloaded                       
+DEBUG util.py:461:  [SKIPPED] pcre2-10.40-6.el9.x86_64.rpm: Already downloaded                     
+DEBUG util.py:461:  [SKIPPED] pcre2-syntax-10.40-6.el9.noarch.rpm: Already downloaded              
+DEBUG util.py:461:  [SKIPPED] pkgconf-1.7.3-10.el9.x86_64.rpm: Already downloaded                  
+DEBUG util.py:461:  [SKIPPED] pkgconf-m4-1.7.3-10.el9.noarch.rpm: Already downloaded               
+DEBUG util.py:461:  [SKIPPED] pkgconf-pkg-config-1.7.3-10.el9.x86_64.rpm: Already downloaded       
+DEBUG util.py:461:  [SKIPPED] popt-1.18-8.el9.x86_64.rpm: Already downloaded                       
+DEBUG util.py:461:  [SKIPPED] publicsuffix-list-dafsa-20210518-3.el9.noarch.rpm: Already downloaded
+DEBUG util.py:461:  [SKIPPED] readline-8.1-4.el9.x86_64.rpm: Already downloaded                    
+DEBUG util.py:461:  [SKIPPED] rocky-gpg-keys-9.6-1.3.el9.noarch.rpm: Already downloaded            
+DEBUG util.py:461:  [SKIPPED] rocky-release-9.6-1.3.el9.noarch.rpm: Already downloaded             
+DEBUG util.py:461:  [SKIPPED] rocky-repos-9.6-1.3.el9.noarch.rpm: Already downloaded               
+DEBUG util.py:461:  [SKIPPED] rpm-4.16.1.3-37.el9.x86_64.rpm: Already downloaded                   
+DEBUG util.py:461:  [SKIPPED] rpm-build-libs-4.16.1.3-37.el9.x86_64.rpm: Already downloaded        
+DEBUG util.py:461:  [SKIPPED] rpm-libs-4.16.1.3-37.el9.x86_64.rpm: Already downloaded              
+DEBUG util.py:461:  [SKIPPED] sed-4.8-9.el9.x86_64.rpm: Already downloaded                         
+DEBUG util.py:461:  [SKIPPED] setup-2.13.7-10.el9.noarch.rpm: Already downloaded                   
+DEBUG util.py:461:  [SKIPPED] shadow-utils-4.9-12.el9.x86_64.rpm: Already downloaded               
+DEBUG util.py:461:  [SKIPPED] sqlite-libs-3.34.1-8.el9_6.x86_64.rpm: Already downloaded            
+DEBUG util.py:461:  [SKIPPED] systemd-libs-252-51.el9_6.3.rocky.0.1.x86_64.rpm: Already downloaded 
+DEBUG util.py:461:  [SKIPPED] tar-1.34-7.el9.x86_64.rpm: Already downloaded                        
+DEBUG util.py:461:  [SKIPPED] tzdata-2025b-1.el9.noarch.rpm: Already downloaded                    
+DEBUG util.py:461:  [SKIPPED] unzip-6.0-58.el9_5.x86_64.rpm: Already downloaded                    
+DEBUG util.py:461:  [SKIPPED] util-linux-2.37.4-21.el9.x86_64.rpm: Already downloaded              
+DEBUG util.py:461:  [SKIPPED] util-linux-core-2.37.4-21.el9.x86_64.rpm: Already downloaded         
+DEBUG util.py:461:  [SKIPPED] which-2.21-30.el9_6.x86_64.rpm: Already downloaded                   
+DEBUG util.py:461:  [SKIPPED] xz-5.2.5-8.el9_0.x86_64.rpm: Already downloaded                      
+DEBUG util.py:461:  [SKIPPED] xz-libs-5.2.5-8.el9_0.x86_64.rpm: Already downloaded                 
+DEBUG util.py:461:  [SKIPPED] zip-3.0-35.el9.x86_64.rpm: Already downloaded                        
+DEBUG util.py:461:  [SKIPPED] zlib-1.2.11-40.el9.x86_64.rpm: Already downloaded                    
+DEBUG util.py:461:  [SKIPPED] zstd-1.5.5-1.el9.x86_64.rpm: Already downloaded                      
+DEBUG util.py:461:  [SKIPPED] annobin-12.92-1.el9.x86_64.rpm: Already downloaded                   
+DEBUG util.py:461:  [SKIPPED] cpp-11.5.0-5.el9_5.x86_64.rpm: Already downloaded                    
+DEBUG util.py:461:  [SKIPPED] debugedit-5.0-5.el9.x86_64.rpm: Already downloaded                   
+DEBUG util.py:461:  [SKIPPED] dwz-0.14-3.el9.x86_64.rpm: Already downloaded                        
+DEBUG util.py:461:  [SKIPPED] efi-srpm-macros-6-2.el9_0.noarch.rpm: Already downloaded             
+DEBUG util.py:461:  [SKIPPED] fonts-srpm-macros-2.0.5-7.el9.1.noarch.rpm: Already downloaded       
+DEBUG util.py:461:  [SKIPPED] gcc-11.5.0-5.el9_5.x86_64.rpm: Already downloaded                    
+DEBUG util.py:461:  [SKIPPED] gcc-c++-11.5.0-5.el9_5.x86_64.rpm: Already downloaded                
+DEBUG util.py:461:  [SKIPPED] gcc-plugin-annobin-11.5.0-5.el9_5.x86_64.rpm: Already downloaded     
+DEBUG util.py:461:  [SKIPPED] gdb-minimal-14.2-4.1.el9_6.x86_64.rpm: Already downloaded            
+DEBUG util.py:461:  [SKIPPED] ghc-srpm-macros-1.5.0-6.el9.noarch.rpm: Already downloaded           
+DEBUG util.py:461:  [SKIPPED] glibc-devel-2.34-168.el9_6.24.x86_64.rpm: Already downloaded         
+DEBUG util.py:461:  [SKIPPED] glibc-headers-2.34-168.el9_6.24.x86_64.rpm: Already downloaded       
+DEBUG util.py:461:  [SKIPPED] go-srpm-macros-3.6.0-10.el9_6.noarch.rpm: Already downloaded         
+DEBUG util.py:461:  [SKIPPED] kernel-headers-5.14.0-570.58.1.el9_6.x86_64.rpm: Already downloaded  
+DEBUG util.py:461:  [SKIPPED] kernel-srpm-macros-1.0-13.el9.noarch.rpm: Already downloaded         
+DEBUG util.py:461:  [SKIPPED] libmpc-1.2.1-4.el9.x86_64.rpm: Already downloaded                    
+DEBUG util.py:461:  [SKIPPED] libstdc++-devel-11.5.0-5.el9_5.x86_64.rpm: Already downloaded        
+DEBUG util.py:461:  [SKIPPED] libxcrypt-devel-4.4.18-3.el9.x86_64.rpm: Already downloaded          
+DEBUG util.py:461:  [SKIPPED] llvm-libs-19.1.7-1.el9.x86_64.rpm: Already downloaded                
+DEBUG util.py:461:  [SKIPPED] lua-srpm-macros-1-6.el9.noarch.rpm: Already downloaded               
+DEBUG util.py:461:  [SKIPPED] ocaml-srpm-macros-6-6.el9.noarch.rpm: Already downloaded             
+DEBUG util.py:461:  [SKIPPED] openblas-srpm-macros-2-11.el9.noarch.rpm: Already downloaded         
+DEBUG util.py:461:  [SKIPPED] patch-2.7.6-16.el9.x86_64.rpm: Already downloaded                    
+DEBUG util.py:461:  [SKIPPED] perl-AutoLoader-5.74-481.1.el9_6.noarch.rpm: Already downloaded      
+DEBUG util.py:461:  [SKIPPED] perl-B-1.80-481.1.el9_6.x86_64.rpm: Already downloaded               
+DEBUG util.py:461:  [SKIPPED] perl-Carp-1.50-460.el9.noarch.rpm: Already downloaded                
+DEBUG util.py:461:  [SKIPPED] perl-Class-Struct-0.66-481.1.el9_6.noarch.rpm: Already downloaded    
+DEBUG util.py:461:  [SKIPPED] perl-Data-Dumper-2.174-462.el9.x86_64.rpm: Already downloaded        
+DEBUG util.py:461:  [SKIPPED] perl-Digest-1.19-4.el9.noarch.rpm: Already downloaded                
+DEBUG util.py:461:  [SKIPPED] perl-Digest-MD5-2.58-4.el9.x86_64.rpm: Already downloaded            
+DEBUG util.py:461:  [SKIPPED] perl-Encode-3.08-462.el9.x86_64.rpm: Already downloaded              
+DEBUG util.py:461:  [SKIPPED] perl-Errno-1.30-481.1.el9_6.x86_64.rpm: Already downloaded           
+DEBUG util.py:461:  [SKIPPED] perl-Exporter-5.74-461.el9.noarch.rpm: Already downloaded            
+DEBUG util.py:461:  [SKIPPED] perl-Fcntl-1.13-481.1.el9_6.x86_64.rpm: Already downloaded           
+DEBUG util.py:461:  [SKIPPED] perl-File-Basename-2.85-481.1.el9_6.noarch.rpm: Already downloaded   
+DEBUG util.py:461:  [SKIPPED] perl-File-Path-2.18-4.el9.noarch.rpm: Already downloaded             
+DEBUG util.py:461:  [SKIPPED] perl-File-Temp-0.231.100-4.el9.noarch.rpm: Already downloaded        
+DEBUG util.py:461:  [SKIPPED] perl-File-stat-1.09-481.1.el9_6.noarch.rpm: Already downloaded       
+DEBUG util.py:461:  [SKIPPED] perl-FileHandle-2.03-481.1.el9_6.noarch.rpm: Already downloaded      
+DEBUG util.py:461:  [SKIPPED] perl-Getopt-Long-2.52-4.el9.noarch.rpm: Already downloaded           
+DEBUG util.py:461:  [SKIPPED] perl-Getopt-Std-1.12-481.1.el9_6.noarch.rpm: Already downloaded      
+DEBUG util.py:461:  [SKIPPED] perl-HTTP-Tiny-0.076-462.el9.noarch.rpm: Already downloaded          
+DEBUG util.py:461:  [SKIPPED] perl-IO-1.43-481.1.el9_6.x86_64.rpm: Already downloaded              
+DEBUG util.py:461:  [SKIPPED] perl-IO-Socket-IP-0.41-5.el9.noarch.rpm: Already downloaded          
+DEBUG util.py:461:  [SKIPPED] perl-IO-Socket-SSL-2.073-2.el9.noarch.rpm: Already downloaded        
+DEBUG util.py:461:  [SKIPPED] perl-IPC-Open3-1.21-481.1.el9_6.noarch.rpm: Already downloaded       
+DEBUG util.py:461:  [SKIPPED] perl-MIME-Base64-3.16-4.el9.x86_64.rpm: Already downloaded           
+DEBUG util.py:461:  [SKIPPED] perl-Mozilla-CA-20200520-6.el9.noarch.rpm: Already downloaded        
+DEBUG util.py:461:  [SKIPPED] perl-Net-SSLeay-1.94-1.el9.x86_64.rpm: Already downloaded            
+DEBUG util.py:461:  [SKIPPED] perl-POSIX-1.94-481.1.el9_6.x86_64.rpm: Already downloaded           
+DEBUG util.py:461:  [SKIPPED] perl-PathTools-3.78-461.el9.x86_64.rpm: Already downloaded           
+DEBUG util.py:461:  [SKIPPED] perl-Pod-Escapes-1.07-460.el9.noarch.rpm: Already downloaded         
+DEBUG util.py:461:  [SKIPPED] perl-Pod-Perldoc-3.28.01-461.el9.noarch.rpm: Already downloaded      
+DEBUG util.py:461:  [SKIPPED] perl-Pod-Simple-3.42-4.el9.noarch.rpm: Already downloaded            
+DEBUG util.py:461:  [SKIPPED] perl-Pod-Usage-2.01-4.el9.noarch.rpm: Already downloaded             
+DEBUG util.py:461:  [SKIPPED] perl-Scalar-List-Utils-1.56-462.el9.x86_64.rpm: Already downloaded   
+DEBUG util.py:461:  [SKIPPED] perl-SelectSaver-1.02-481.1.el9_6.noarch.rpm: Already downloaded     
+DEBUG util.py:461:  [SKIPPED] perl-Socket-2.031-4.el9.x86_64.rpm: Already downloaded               
+DEBUG util.py:461:  [SKIPPED] perl-Storable-3.21-460.el9.x86_64.rpm: Already downloaded            
+DEBUG util.py:461:  [SKIPPED] perl-Symbol-1.08-481.1.el9_6.noarch.rpm: Already downloaded          
+DEBUG util.py:461:  [SKIPPED] perl-Term-ANSIColor-5.01-461.el9.noarch.rpm: Already downloaded      
+DEBUG util.py:461:  [SKIPPED] perl-Term-Cap-1.17-460.el9.noarch.rpm: Already downloaded            
+DEBUG util.py:461:  [SKIPPED] perl-Text-ParseWords-3.30-460.el9.noarch.rpm: Already downloaded     
+DEBUG util.py:461:  [SKIPPED] perl-Text-Tabs+Wrap-2013.0523-460.el9.noarch.rpm: Already downloaded 
+DEBUG util.py:461:  [SKIPPED] perl-Time-Local-1.300-7.el9.noarch.rpm: Already downloaded           
+DEBUG util.py:461:  [SKIPPED] perl-URI-5.09-3.el9.noarch.rpm: Already downloaded                   
+DEBUG util.py:461:  [SKIPPED] perl-base-2.27-481.1.el9_6.noarch.rpm: Already downloaded            
+DEBUG util.py:461:  [SKIPPED] perl-constant-1.33-461.el9.noarch.rpm: Already downloaded            
+DEBUG util.py:461:  [SKIPPED] perl-if-0.60.800-481.1.el9_6.noarch.rpm: Already downloaded          
+DEBUG util.py:461:  [SKIPPED] perl-interpreter-5.32.1-481.1.el9_6.x86_64.rpm: Already downloaded   
+DEBUG util.py:461:  [SKIPPED] perl-libnet-3.13-4.el9.noarch.rpm: Already downloaded                
+DEBUG util.py:461:  [SKIPPED] perl-libs-5.32.1-481.1.el9_6.x86_64.rpm: Already downloaded          
+DEBUG util.py:461:  [SKIPPED] perl-mro-1.23-481.1.el9_6.x86_64.rpm: Already downloaded             
+DEBUG util.py:461:  [SKIPPED] perl-overload-1.31-481.1.el9_6.noarch.rpm: Already downloaded        
+DEBUG util.py:461:  [SKIPPED] perl-overloading-0.02-481.1.el9_6.noarch.rpm: Already downloaded     
+DEBUG util.py:461:  [SKIPPED] perl-parent-0.238-460.el9.noarch.rpm: Already downloaded             
+DEBUG util.py:461:  [SKIPPED] perl-podlators-4.14-460.el9.noarch.rpm: Already downloaded           
+DEBUG util.py:461:  [SKIPPED] perl-srpm-macros-1-41.el9.noarch.rpm: Already downloaded             
+DEBUG util.py:461:  [SKIPPED] perl-subs-1.03-481.1.el9_6.noarch.rpm: Already downloaded            
+DEBUG util.py:461:  [SKIPPED] perl-vars-1.05-481.1.el9_6.noarch.rpm: Already downloaded            
+DEBUG util.py:461:  [SKIPPED] pyproject-srpm-macros-1.16.2-1.el9.noarch.rpm: Already downloaded    
+DEBUG util.py:461:  [SKIPPED] python-srpm-macros-3.9-54.el9.noarch.rpm: Already downloaded         
+DEBUG util.py:461:  [SKIPPED] qt5-srpm-macros-5.15.9-1.el9.noarch.rpm: Already downloaded          
+DEBUG util.py:461:  [SKIPPED] redhat-rpm-config-209-1.el9.noarch.rpm: Already downloaded           
+DEBUG util.py:461:  [SKIPPED] rpm-build-4.16.1.3-37.el9.x86_64.rpm: Already downloaded             
+DEBUG util.py:461:  [SKIPPED] rust-srpm-macros-17-4.el9.noarch.rpm: Already downloaded             
 DEBUG util.py:461:  Rocky Linux 9.6 - BaseOS                        1.7 MB/s | 1.7 kB     00:00    
 DEBUG util.py:459:  Importing GPG key 0x350D275D:
 DEBUG util.py:459:   Userid     : "Rocky Enterprise Software Foundation - Release key 2022 <releng@rockylinux.org>"
@@ -1528,8 +1526,8 @@ DEBUG util.py:634:  child environment: None
 DEBUG util.py:556:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '--target', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/lib/mock/rocky-9-x86_64_ciqshim/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:608:  Child return code was: 0
 DEBUG util.py:634:  child environment: None
-DEBUG util.py:551:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.ov1shaqf:/etc/resolv.conf']
-DEBUG util.py:556:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'b1d468be5d324b84a6f418d73b94c8bd', '-D', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.ov1shaqf:/etc/resolv.conf', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/bin/rpm', '-qa', '--root', '/var/lib/mock/rocky-9-x86_64_ciqshim/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+DEBUG util.py:551:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.qod2omxu:/etc/resolv.conf']
+DEBUG util.py:556:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'e016cb744a344053b5235ace1ed9e325', '-D', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.qod2omxu:/etc/resolv.conf', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/bin/rpm', '-qa', '--root', '/var/lib/mock/rocky-9-x86_64_ciqshim/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 DEBUG util.py:461:  gpg-pubkey-350d275d-6279464b
 DEBUG util.py:461:  libgcc-11.5.0-5.el9_5.x86_64
 DEBUG util.py:461:  rust-srpm-macros-17-4.el9.noarch
@@ -1973,8 +1971,8 @@ zip-3.0-35.el9.x86_64
 zlib-1.2.11-40.el9.x86_64
 zstd-1.5.5-1.el9.x86_64
 DEBUG util.py:634:  child environment: None
-DEBUG util.py:551:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.kktmr55p:/etc/resolv.conf', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
-DEBUG util.py:556:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '7178ab58ac2c419aa41675ae353bb86e', '-D', '/var/lib/mock/rocky-9-x86_64_ciqshim/root', '-a', '-u', 'mockbuild', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.kktmr55p:/etc/resolv.conf', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/bin/rpm', '-Uvh', '--nodeps', '/builddir/build/originals/shim-unsigned-x64-16.1-0.el9.src.rpm'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+DEBUG util.py:551:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.535_bkt4:/etc/resolv.conf', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
+DEBUG util.py:556:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '4d6e42e54fe94dd2b9c698fdece62cd4', '-D', '/var/lib/mock/rocky-9-x86_64_ciqshim/root', '-a', '-u', 'mockbuild', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.535_bkt4:/etc/resolv.conf', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/bin/rpm', '-Uvh', '--nodeps', '/builddir/build/originals/shim-unsigned-x64-16.1-0.el9.src.rpm'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 DEBUG util.py:461:  Updating / installing...
 DEBUG util.py:459:  shim-unsigned-x64-16.1-0.el9          warning: user jrodriguez does not exist - using root
 DEBUG util.py:459:  warning: group jrodriguez does not exist - using root
@@ -1991,8 +1989,8 @@ DEBUG util.py:459:  warning: group jrodriguez does not exist - using root
 DEBUG util.py:461:  ########################################
 DEBUG util.py:608:  Child return code was: 0
 DEBUG util.py:634:  child environment: None
-DEBUG util.py:551:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.kktmr55p:/etc/resolv.conf', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
-DEBUG util.py:556:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'd42f3bb12a1645eb87cd8f54e028dbf1', '-D', '/var/lib/mock/rocky-9-x86_64_ciqshim/root', '-a', '-u', 'mockbuild', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.kktmr55p:/etc/resolv.conf', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/bin/rpm', '-qpl', '/builddir/build/originals/shim-unsigned-x64-16.1-0.el9.src.rpm'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+DEBUG util.py:551:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.535_bkt4:/etc/resolv.conf', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
+DEBUG util.py:556:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '0896fcd3903a403194d9b6ceb3ce0d96', '-D', '/var/lib/mock/rocky-9-x86_64_ciqshim/root', '-a', '-u', 'mockbuild', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.535_bkt4:/etc/resolv.conf', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/bin/rpm', '-qpl', '/builddir/build/originals/shim-unsigned-x64-16.1-0.el9.src.rpm'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 DEBUG util.py:461:  ciq_sb_ca.der
 DEBUG util.py:461:  sbat.ciq.csv
 DEBUG util.py:461:  shim-16.1.tar.bz2
@@ -2001,13 +1999,13 @@ DEBUG util.py:461:  shim-unsigned-x64.spec
 DEBUG util.py:461:  shim.patches
 DEBUG util.py:608:  Child return code was: 0
 DEBUG util.py:634:  child environment: None
-DEBUG util.py:551:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.kktmr55p:/etc/resolv.conf', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
-DEBUG util.py:556:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '5d699e3d679f4a5896c33f64f6a6602a', '-D', '/var/lib/mock/rocky-9-x86_64_ciqshim/root', '-a', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.kktmr55p:/etc/resolv.conf', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/bin/sh', '-c', 'case $(rpmbuild --help) in *--noclean*) exit 0; esac; exit 1'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+DEBUG util.py:551:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.535_bkt4:/etc/resolv.conf', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
+DEBUG util.py:556:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'a19ecb688f2e4d148c74a5fb996ea512', '-D', '/var/lib/mock/rocky-9-x86_64_ciqshim/root', '-a', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.535_bkt4:/etc/resolv.conf', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/bin/sh', '-c', 'case $(rpmbuild --help) in *--noclean*) exit 0; esac; exit 1'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 DEBUG util.py:608:  Child return code was: 0
-INFO buildroot.py:436:  ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bs --noclean --target x86_64 --nodeps /builddir/build/SPECS/shim-unsigned-x64.spec'], chrootPath='/var/lib/mock/rocky-9-x86_64_ciqshim/root'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0x7f5f9fff3850>timeout=0uid=1000gid=135user='mockbuild'unshare_net=TrueprintOutput=Falsenspawn_args=['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.kktmr55p:/etc/resolv.conf', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11'])
+INFO buildroot.py:436:  ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bs --noclean --target x86_64 --nodeps /builddir/build/SPECS/shim-unsigned-x64.spec'], chrootPath='/var/lib/mock/rocky-9-x86_64_ciqshim/root'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0x7f9cd05ef850>timeout=0uid=1000gid=135user='mockbuild'unshare_net=TrueprintOutput=Falsenspawn_args=['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.535_bkt4:/etc/resolv.conf', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11'])
 DEBUG util.py:634:  child environment: None
-DEBUG util.py:551:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.kktmr55p:/etc/resolv.conf', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
-DEBUG util.py:556:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '279de76facca46738e92b16f108abd20', '-D', '/var/lib/mock/rocky-9-x86_64_ciqshim/root', '-a', '-u', 'mockbuild', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.kktmr55p:/etc/resolv.conf', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', 'bash', '--login', '-c', '/usr/bin/rpmbuild -bs --noclean --target x86_64 --nodeps /builddir/build/SPECS/shim-unsigned-x64.spec'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+DEBUG util.py:551:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.535_bkt4:/etc/resolv.conf', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
+DEBUG util.py:556:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '0cb63b3ba36a4892a7727a8fcba82f50', '-D', '/var/lib/mock/rocky-9-x86_64_ciqshim/root', '-a', '-u', 'mockbuild', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.535_bkt4:/etc/resolv.conf', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', 'bash', '--login', '-c', '/usr/bin/rpmbuild -bs --noclean --target x86_64 --nodeps /builddir/build/SPECS/shim-unsigned-x64.spec'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 DEBUG util.py:461:  Building target platforms: x86_64
 DEBUG util.py:461:  Building for target x86_64
 DEBUG util.py:461:  setting SOURCE_DATE_EPOCH=1770768000
@@ -2044,7 +2042,7 @@ DEBUG util.py:634:  child environment: None
 DEBUG util.py:556:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/mock/rocky-9-x86_64_ciqshim/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:608:  Child return code was: 0
 DEBUG util.py:634:  child environment: None
-DEBUG util.py:556:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.adyngpus', '/var/lib/mock/rocky-9-x86_64_ciqshim/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:556:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.aq28dj60', '/var/lib/mock/rocky-9-x86_64_ciqshim/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:608:  Child return code was: 0
 DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim/root/sys/fs/selinux
 DEBUG util.py:634:  child environment: None
@@ -2064,14 +2062,14 @@ DEBUG util.py:608:  Child return code was: 0
 DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/mock/rocky-9-x86_64_ciqshim/root/installation-homedir
 DEBUG package_manager.py:295:  ['/usr/bin/dnf-3', 'builddep', '--installroot', '/var/lib/mock/rocky-9-x86_64_ciqshim/root/', '--releasever', '9.6', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', '/var/lib/mock/rocky-9-x86_64_ciqshim/root//builddir/build/SRPMS/shim-unsigned-x64-16.1-0.el9.src.rpm']
 DEBUG util.py:634:  child environment: None
-DEBUG util.py:551:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.ov1shaqf:/etc/resolv.conf']
-DEBUG util.py:556:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '8216ccc8000a4e35a235f1822cf12acc', '-D', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.ov1shaqf:/etc/resolv.conf', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/var/lib/mock/rocky-9-x86_64_ciqshim/root/installation-homedir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--setenv=LC_MESSAGES=C.UTF-8', '--resolv-conf=off', '/usr/bin/dnf-3', 'builddep', '--installroot', '/var/lib/mock/rocky-9-x86_64_ciqshim/root/', '--releasever', '9.6', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', '/var/lib/mock/rocky-9-x86_64_ciqshim/root//builddir/build/SRPMS/shim-unsigned-x64-16.1-0.el9.src.rpm', '--setopt=tsflags=nocontexts'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/var/lib/mock/rocky-9-x86_64_ciqshim/root/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+DEBUG util.py:551:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.qod2omxu:/etc/resolv.conf']
+DEBUG util.py:556:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '778bb8f3043b48f38117ba3914869596', '-D', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.qod2omxu:/etc/resolv.conf', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/var/lib/mock/rocky-9-x86_64_ciqshim/root/installation-homedir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--setenv=LC_MESSAGES=C.UTF-8', '--resolv-conf=off', '/usr/bin/dnf-3', 'builddep', '--installroot', '/var/lib/mock/rocky-9-x86_64_ciqshim/root/', '--releasever', '9.6', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', '/var/lib/mock/rocky-9-x86_64_ciqshim/root//builddir/build/SRPMS/shim-unsigned-x64-16.1-0.el9.src.rpm', '--setopt=tsflags=nocontexts'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/var/lib/mock/rocky-9-x86_64_ciqshim/root/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 DEBUG util.py:459:  No matches found for the following disable plugin patterns: local, spacewalk, versionlock
-DEBUG util.py:461:  Rocky Linux 9.6 - BaseOS                         73 kB/s | 3.9 kB     00:00    
-DEBUG util.py:461:  Rocky Linux 9.6 - AppStream                      71 kB/s | 4.4 kB     00:00    
-DEBUG util.py:461:  Rocky Linux 9.6 - CodeReadyBuilder               83 kB/s | 4.4 kB     00:00    
-DEBUG util.py:461:  Rocky Linux 9.6 - Extras                         73 kB/s | 3.1 kB     00:00    
-DEBUG util.py:461:  Rocky Linux 9.6 - Devel (WARNING: UNSUPPORTED -  99 kB/s | 3.6 kB     00:00    
+DEBUG util.py:461:  Rocky Linux 9.6 - BaseOS                         68 kB/s | 3.9 kB     00:00    
+DEBUG util.py:461:  Rocky Linux 9.6 - AppStream                      79 kB/s | 4.4 kB     00:00    
+DEBUG util.py:461:  Rocky Linux 9.6 - CodeReadyBuilder               78 kB/s | 4.4 kB     00:00    
+DEBUG util.py:461:  Rocky Linux 9.6 - Extras                         53 kB/s | 3.1 kB     00:00    
+DEBUG util.py:461:  Rocky Linux 9.6 - Devel (WARNING: UNSUPPORTED -  62 kB/s | 3.6 kB     00:00    
 DEBUG util.py:461:  Package findutils-1:4.8.0-7.el9.x86_64 is already installed.
 DEBUG util.py:461:  Package gcc-11.5.0-5.el9_5.x86_64 is already installed.
 DEBUG util.py:461:  Package make-1:4.3-8.el9.x86_64 is already installed.
@@ -2120,46 +2118,44 @@ DEBUG util.py:461:   zlib-devel                x86_64  1.2.11-40.el9            
 DEBUG util.py:461:  Transaction Summary
 DEBUG util.py:461:  ================================================================================
 DEBUG util.py:461:  Install  35 Packages
-DEBUG util.py:461:  Total download size: 24 M
+DEBUG util.py:461:  Total size: 24 M
 DEBUG util.py:461:  Installed size: 91 M
 DEBUG util.py:461:  Downloading Packages:
-DEBUG util.py:461:  (1/35): crypto-policies-scripts-20250128-1.git5 1.0 MB/s |  83 kB     00:00    
-DEBUG util.py:461:  (2/35): dos2unix-7.4.2-4.el9.x86_64.rpm         2.7 MB/s | 235 kB     00:00    
-DEBUG util.py:461:  (3/35): efivar-libs-38-3.el9.x86_64.rpm         1.1 MB/s | 120 kB     00:00    
-DEBUG util.py:461:  (4/35): expat-2.5.0-5.el9_6.x86_64.rpm          2.8 MB/s | 115 kB     00:00    
-DEBUG util.py:461:  (5/35): less-590-5.el9.x86_64.rpm               3.9 MB/s | 161 kB     00:00    
-DEBUG util.py:461:  (6/35): libfido2-1.13.0-2.el9.x86_64.rpm        2.5 MB/s |  97 kB     00:00    
-DEBUG util.py:461:  (7/35): libcbor-0.7.0-5.el9.x86_64.rpm          909 kB/s |  56 kB     00:00    
-DEBUG util.py:461:  (8/35): openssh-8.7p1-45.el9.rocky.0.1.x86_64.r  10 MB/s | 453 kB     00:00    
-DEBUG util.py:461:  (9/35): python3-3.9.21-2.el9_6.2.x86_64.rpm     867 kB/s |  26 kB     00:00    
-DEBUG util.py:461:  (10/35): openssh-clients-8.7p1-45.el9.rocky.0.1  11 MB/s | 708 kB     00:00    
-DEBUG util.py:461:  (11/35): python3-pip-wheel-21.3.1-1.el9.noarch.  15 MB/s | 1.1 MB     00:00    
-DEBUG util.py:461:  (12/35): python3-setuptools-wheel-53.0.0-13.el9 7.2 MB/s | 467 kB     00:00    
-DEBUG util.py:461:  (13/35): elfutils-libelf-devel-0.192-6.el9_6.x8 888 kB/s |  37 kB     00:00    
-DEBUG util.py:461:  (14/35): emacs-filesystem-27.2-14.el9_6.2.noarc 204 kB/s | 7.9 kB     00:00    
-DEBUG util.py:461:  (15/35): git-2.47.3-1.el9_6.x86_64.rpm          1.6 MB/s |  50 kB     00:00    
-DEBUG util.py:461:  (16/35): git-core-doc-2.47.3-1.el9_6.noarch.rpm  22 MB/s | 2.8 MB     00:00    
-DEBUG util.py:461:  (17/35): python3-libs-3.9.21-2.el9_6.2.x86_64.r  23 MB/s | 7.5 MB     00:00    
-DEBUG util.py:461:  (18/35): libzstd-devel-1.5.5-1.el9.x86_64.rpm   1.3 MB/s |  50 kB     00:00    
-DEBUG util.py:461:  (19/35): nspr-4.36.0-4.el9_4.x86_64.rpm         4.4 MB/s | 133 kB     00:00    
-DEBUG util.py:461:  (20/35): nss-3.112.0-4.el9_4.x86_64.rpm          16 MB/s | 722 kB     00:00    
-DEBUG util.py:461:  (21/35): nss-softokn-3.112.0-4.el9_4.x86_64.rpm  10 MB/s | 397 kB     00:00    
-DEBUG util.py:461:  (22/35): git-core-2.47.3-1.el9_6.x86_64.rpm      17 MB/s | 4.6 MB     00:00    
-DEBUG util.py:461:  (23/35): nss-softokn-freebl-3.112.0-4.el9_4.x86 8.2 MB/s | 413 kB     00:00    
-DEBUG util.py:461:  (24/35): nss-sysinit-3.112.0-4.el9_4.x86_64.rpm 430 kB/s |  18 kB     00:00    
-DEBUG util.py:461:  (25/35): nss-tools-3.112.0-4.el9_4.x86_64.rpm   9.9 MB/s | 432 kB     00:00    
-DEBUG util.py:461:  (26/35): nss-util-3.112.0-4.el9_4.x86_64.rpm    1.8 MB/s |  89 kB     00:00    
-DEBUG util.py:461:  (27/35): perl-DynaLoader-1.47-481.1.el9_6.x86_6 908 kB/s |  24 kB     00:00    
-DEBUG util.py:461:  (28/35): perl-Error-0.17029-7.el9.noarch.rpm    1.8 MB/s |  41 kB     00:00    
-DEBUG util.py:461:  (29/35): perl-Git-2.47.3-1.el9_6.noarch.rpm     1.5 MB/s |  37 kB     00:00    
-DEBUG util.py:461:  (30/35): perl-File-Find-1.37-481.1.el9_6.noarch 598 kB/s |  24 kB     00:00    
-DEBUG util.py:461:  (31/35): perl-TermReadKey-2.38-11.el9.x86_64.rp 901 kB/s |  36 kB     00:00    
-DEBUG util.py:461:  (32/35): perl-lib-0.65-481.1.el9_6.x86_64.rpm   367 kB/s |  13 kB     00:00    
-DEBUG util.py:461:  (33/35): zlib-devel-1.2.11-40.el9.x86_64.rpm    1.7 MB/s |  44 kB     00:00    
-DEBUG util.py:461:  (34/35): openssl-devel-3.2.2-6.el9_5.1.x86_64.r  18 MB/s | 3.2 MB     00:00    
-DEBUG util.py:461:  (35/35): pesign-115-6.el9_1.rocky.2.x86_64.rpm  3.1 MB/s | 171 kB     00:00    
-DEBUG util.py:461:  --------------------------------------------------------------------------------
-DEBUG util.py:461:  Total                                            30 MB/s |  24 MB     00:00     
+DEBUG util.py:461:  [SKIPPED] crypto-policies-scripts-20250128-1.git5269e22.el9.noarch.rpm: Already downloaded
+DEBUG util.py:461:  [SKIPPED] dos2unix-7.4.2-4.el9.x86_64.rpm: Already downloaded                  
+DEBUG util.py:461:  [SKIPPED] efivar-libs-38-3.el9.x86_64.rpm: Already downloaded                  
+DEBUG util.py:461:  [SKIPPED] expat-2.5.0-5.el9_6.x86_64.rpm: Already downloaded                   
+DEBUG util.py:461:  [SKIPPED] less-590-5.el9.x86_64.rpm: Already downloaded                        
+DEBUG util.py:461:  [SKIPPED] libcbor-0.7.0-5.el9.x86_64.rpm: Already downloaded                   
+DEBUG util.py:461:  [SKIPPED] libfido2-1.13.0-2.el9.x86_64.rpm: Already downloaded                 
+DEBUG util.py:461:  [SKIPPED] openssh-8.7p1-45.el9.rocky.0.1.x86_64.rpm: Already downloaded        
+DEBUG util.py:461:  [SKIPPED] openssh-clients-8.7p1-45.el9.rocky.0.1.x86_64.rpm: Already downloaded
+DEBUG util.py:461:  [SKIPPED] python3-3.9.21-2.el9_6.2.x86_64.rpm: Already downloaded              
+DEBUG util.py:461:  [SKIPPED] python3-libs-3.9.21-2.el9_6.2.x86_64.rpm: Already downloaded         
+DEBUG util.py:461:  [SKIPPED] python3-pip-wheel-21.3.1-1.el9.noarch.rpm: Already downloaded        
+DEBUG util.py:461:  [SKIPPED] python3-setuptools-wheel-53.0.0-13.el9_6.1.noarch.rpm: Already downloaded
+DEBUG util.py:461:  [SKIPPED] elfutils-libelf-devel-0.192-6.el9_6.x86_64.rpm: Already downloaded   
+DEBUG util.py:461:  [SKIPPED] emacs-filesystem-27.2-14.el9_6.2.noarch.rpm: Already downloaded      
+DEBUG util.py:461:  [SKIPPED] git-2.47.3-1.el9_6.x86_64.rpm: Already downloaded                    
+DEBUG util.py:461:  [SKIPPED] git-core-2.47.3-1.el9_6.x86_64.rpm: Already downloaded               
+DEBUG util.py:461:  [SKIPPED] git-core-doc-2.47.3-1.el9_6.noarch.rpm: Already downloaded           
+DEBUG util.py:461:  [SKIPPED] libzstd-devel-1.5.5-1.el9.x86_64.rpm: Already downloaded             
+DEBUG util.py:461:  [SKIPPED] nspr-4.36.0-4.el9_4.x86_64.rpm: Already downloaded                   
+DEBUG util.py:461:  [SKIPPED] nss-3.112.0-4.el9_4.x86_64.rpm: Already downloaded                   
+DEBUG util.py:461:  [SKIPPED] nss-softokn-3.112.0-4.el9_4.x86_64.rpm: Already downloaded           
+DEBUG util.py:461:  [SKIPPED] nss-softokn-freebl-3.112.0-4.el9_4.x86_64.rpm: Already downloaded    
+DEBUG util.py:461:  [SKIPPED] nss-sysinit-3.112.0-4.el9_4.x86_64.rpm: Already downloaded           
+DEBUG util.py:461:  [SKIPPED] nss-tools-3.112.0-4.el9_4.x86_64.rpm: Already downloaded             
+DEBUG util.py:461:  [SKIPPED] nss-util-3.112.0-4.el9_4.x86_64.rpm: Already downloaded              
+DEBUG util.py:461:  [SKIPPED] openssl-devel-3.2.2-6.el9_5.1.x86_64.rpm: Already downloaded         
+DEBUG util.py:461:  [SKIPPED] perl-DynaLoader-1.47-481.1.el9_6.x86_64.rpm: Already downloaded      
+DEBUG util.py:461:  [SKIPPED] perl-Error-0.17029-7.el9.noarch.rpm: Already downloaded              
+DEBUG util.py:461:  [SKIPPED] perl-File-Find-1.37-481.1.el9_6.noarch.rpm: Already downloaded       
+DEBUG util.py:461:  [SKIPPED] perl-Git-2.47.3-1.el9_6.noarch.rpm: Already downloaded               
+DEBUG util.py:461:  [SKIPPED] perl-TermReadKey-2.38-11.el9.x86_64.rpm: Already downloaded          
+DEBUG util.py:461:  [SKIPPED] perl-lib-0.65-481.1.el9_6.x86_64.rpm: Already downloaded             
+DEBUG util.py:461:  [SKIPPED] pesign-115-6.el9_1.rocky.2.x86_64.rpm: Already downloaded            
+DEBUG util.py:461:  [SKIPPED] zlib-devel-1.2.11-40.el9.x86_64.rpm: Already downloaded              
 DEBUG util.py:461:  Running transaction check
 DEBUG util.py:461:  Transaction check succeeded.
 DEBUG util.py:461:  Running transaction test
@@ -2327,8 +2323,8 @@ DEBUG util.py:634:  child environment: None
 DEBUG util.py:556:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '--target', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/lib/mock/rocky-9-x86_64_ciqshim/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:608:  Child return code was: 0
 DEBUG util.py:634:  child environment: None
-DEBUG util.py:551:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.ov1shaqf:/etc/resolv.conf']
-DEBUG util.py:556:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'c4e920d06ba649768d499fb9cf62ceab', '-D', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.ov1shaqf:/etc/resolv.conf', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/bin/sh', '-c', "rpm -qa --root '/var/lib/mock/rocky-9-x86_64_ciqshim/root' --qf '%{nevra} %{buildtime} %{size} %{pkgid} installed\\n'"] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+DEBUG util.py:551:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.qod2omxu:/etc/resolv.conf']
+DEBUG util.py:556:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '057e8b64328a4156ac64c553014d209c', '-D', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.qod2omxu:/etc/resolv.conf', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/bin/sh', '-c', "rpm -qa --root '/var/lib/mock/rocky-9-x86_64_ciqshim/root' --qf '%{nevra} %{buildtime} %{size} %{pkgid} installed\\n'"] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 DEBUG util.py:461:  gpg-pubkey-350d275d-6279464b 1652115019 0 (none) installed
 DEBUG util.py:461:  libgcc-11.5.0-5.el9_5.x86_64 1739365842 198756 b8715b9d1f4d8256c12366f1db362af8 installed
 DEBUG util.py:461:  rust-srpm-macros-17-4.el9.noarch 1652267604 2447 f473eb960de326eea8285ce84d1e7972 installed
@@ -2589,14 +2585,14 @@ DEBUG util.py:608:  Child return code was: 0
 DEBUG util.py:634:  child environment: None
 DEBUG util.py:556:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-9-x86_64_ciqshim-bootstrap/root/var/lib/mock/rocky-9-x86_64_ciqshim/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:608:  Child return code was: 0
-INFO buildroot.py:436:  ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bb --noclean --target x86_64 --nodeps /builddir/build/SPECS/shim-unsigned-x64.spec'], chrootPath='/var/lib/mock/rocky-9-x86_64_ciqshim/root'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0x7f5f9fff3850>timeout=0uid=1000gid=135user='mockbuild'unshare_net=TrueprintOutput=Falsenspawn_args=['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.kktmr55p:/etc/resolv.conf', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11'])
+INFO buildroot.py:436:  ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bb --noclean --target x86_64 --nodeps /builddir/build/SPECS/shim-unsigned-x64.spec'], chrootPath='/var/lib/mock/rocky-9-x86_64_ciqshim/root'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0x7f9cd05ef850>timeout=0uid=1000gid=135user='mockbuild'unshare_net=TrueprintOutput=Falsenspawn_args=['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.535_bkt4:/etc/resolv.conf', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11'])
 DEBUG util.py:634:  child environment: None
-DEBUG util.py:551:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.kktmr55p:/etc/resolv.conf', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
-DEBUG util.py:556:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'f25fae82a2104a1f8568946a151deaae', '-D', '/var/lib/mock/rocky-9-x86_64_ciqshim/root', '-a', '-u', 'mockbuild', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.kktmr55p:/etc/resolv.conf', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', 'bash', '--login', '-c', '/usr/bin/rpmbuild -bb --noclean --target x86_64 --nodeps /builddir/build/SPECS/shim-unsigned-x64.spec'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+DEBUG util.py:551:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.535_bkt4:/etc/resolv.conf', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
+DEBUG util.py:556:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '2dcca5e4c3894b4fba9c6a87660d6079', '-D', '/var/lib/mock/rocky-9-x86_64_ciqshim/root', '-a', '-u', 'mockbuild', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.535_bkt4:/etc/resolv.conf', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', 'bash', '--login', '-c', '/usr/bin/rpmbuild -bb --noclean --target x86_64 --nodeps /builddir/build/SPECS/shim-unsigned-x64.spec'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 DEBUG util.py:461:  Building target platforms: x86_64
 DEBUG util.py:461:  Building for target x86_64
 DEBUG util.py:461:  setting SOURCE_DATE_EPOCH=1770768000
-DEBUG util.py:461:  Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.EXmuQY
+DEBUG util.py:461:  Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.WgQZUZ
 DEBUG util.py:461:  + umask 022
 DEBUG util.py:461:  + cd /builddir/build/BUILD
 DEBUG util.py:461:  + cd /builddir/build/BUILD
@@ -2621,7 +2617,7 @@ DEBUG util.py:461:  + cp /builddir/build/SOURCES/sbat.ciq.csv data/
 DEBUG util.py:461:  + RPM_EC=0
 DEBUG util.py:459:  ++ jobs -p
 DEBUG util.py:461:  + exit 0
-DEBUG util.py:461:  Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.uX6uTn
+DEBUG util.py:461:  Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.SyMCl3
 DEBUG util.py:461:  + umask 022
 DEBUG util.py:461:  + cd /builddir/build/BUILD
 DEBUG util.py:461:  + cd shim-16.1
@@ -3295,7 +3291,7 @@ DEBUG util.py:461:  + cd ..
 DEBUG util.py:461:  + RPM_EC=0
 DEBUG util.py:459:  ++ jobs -p
 DEBUG util.py:461:  + exit 0
-DEBUG util.py:461:  Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.aVQoII
+DEBUG util.py:461:  Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.tU4Vmh
 DEBUG util.py:461:  + umask 022
 DEBUG util.py:461:  + cd /builddir/build/BUILD
 DEBUG util.py:461:  + '[' /builddir/build/BUILDROOT/shim-unsigned-x64-16.1-0.el9.x86_64 '!=' / ']'
@@ -3341,7 +3337,7 @@ DEBUG util.py:461:  + /usr/lib/rpm/redhat/brp-python-bytecompile '' 1 0
 DEBUG util.py:461:  + /usr/lib/rpm/brp-python-hardlink
 DEBUG util.py:461:  + /usr/lib/rpm/redhat/brp-mangle-shebangs
 DEBUG util.py:461:  Processing files: shim-unsigned-x64-16.1-0.el9.x86_64
-DEBUG util.py:461:  Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.wMcCyR
+DEBUG util.py:461:  Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.Nx8Dxs
 DEBUG util.py:461:  + umask 022
 DEBUG util.py:461:  + cd /builddir/build/BUILD
 DEBUG util.py:461:  + cd shim-16.1
