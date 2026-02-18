@@ -17,8 +17,8 @@ Confirm the following are included in your repo, checking each box:
 *******************************************************************************
 ### What is the SHA256 hash of your final SHIM binary?
 *******************************************************************************
-* SHA256 (shimx64.efi) \= 29d631aecba165d322cbd1d8421c59b069135fe4a91e1fc53661c9bf36e54ffb  
-* SHA256 (shimaa64.efi) \= 18c9778e315d551cfe870afee33b35b957b70cf6e6a92a4b79b8d1368f83336c
+* SHA256 (shimx64.efi) \= 118eda37b72282ba603b5fd6a725fbe735d9abaa0cf7c39d0be665bf9b6c33ba  
+* SHA256 (shimaa64.efi) \= f15d72ba21f68d3aeed82fe514a7e7a7c52b73a35b96c5637c79b513e17a1c19
 
 *******************************************************************************
 ### What is the link to your previous shim review request (if any, otherwise N/A)?
