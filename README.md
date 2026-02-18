@@ -547,7 +547,12 @@ shim.ciq_rocky,1,Ctrl IQ Inc,shim,16.1,mail:it_security@ciq.com
 ```
 
 ```
-
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+linux,1,CIQ,linux,6.12.30-1.1.0.0.el9_clk.aarch64+64k,mailto:secureboot@ciq.com
+linux.centos,1,Red Hat,linux,6.12.30-1.1.0.0.el9_clk.aarch64+64k,mailto:secalert@redhat.com
+linux.ciq_rocky,1,CIQ,linux,6.12.30-1.1.0.0.el9_clk.aarch64+64k,mailto:secureboot@ciq.com
+kernel-uki-virt.centos,1,Red Hat,kernel-uki-virt,6.12.30-1.1.0.0.el9_clk.aarch64+64k,mailto:secalert@redhat.com
+kernel-uki-virt.ciq_rocky,1,CIQ,kernel-uki-virt,,mailto:secureboot@ciq.com
 ```
 
 ---
