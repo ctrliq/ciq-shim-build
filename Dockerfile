@@ -4,7 +4,7 @@
 # Build with: docker buildx build --platform linux/amd64 --tag ciq-shim-review:16.1 --load .
 
 # Stage 1: Build x64 + ia32 on AMD64 platform
-FROM --platform=linux/amd64 rockylinux:9.6 AS amd64
+FROM --platform=linux/amd64 quay.io/rockylinux/rockylinux:9.6.20250531 AS amd64
 ARG SHIM_VERSION=16.1-0.el9
 
 # Copy build configuration
@@ -31,7 +31,7 @@ RUN mkdir -p /shim_result
 RUN rpm2cpio /builddir/build/RPMS/x86_64/shim-unsigned-x64-${SHIM_VERSION}.x86_64.rpm | cpio -diu -D /shim_result
 
 # Stage 2: Build aa64 on ARM64 platform
-FROM --platform=linux/arm64 rockylinux:9.6 AS arm64
+FROM --platform=linux/arm64 quay.io/rockylinux/rockylinux:9.6.20250531 AS arm64
 ARG SHIM_VERSION=16.1-0.el9
 
 # Copy build configuration
@@ -55,7 +55,7 @@ RUN mkdir -p /shim_result
 RUN rpm2cpio /builddir/build/RPMS/aarch64/shim-unsigned-aarch64-${SHIM_VERSION}.aarch64.rpm | cpio -diu -D /shim_result
 
 # Final Stage: Aggregate and run reproducibility verification
-FROM --platform=linux/amd64 rockylinux:9.6
+FROM --platform=linux/amd64 quay.io/rockylinux/rockylinux:9.6.20250531
 ARG SHIM_VERSION=16.1-0.el9
 
 # Install pesign and diffutils for verification (diffutils provides cmp command)
