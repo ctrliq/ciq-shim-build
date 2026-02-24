@@ -10,8 +10,8 @@ ENV shim_release 16.1-0.el7
 
 # Copy and extract src rpm and macros, modify setarch in spec file because 32-bit mod is not allowed inside containers:
 COPY rpmmacros  /root/.rpmmacros
-COPY shim-unsigned-x64-\${shim_release}.src.rpm  /root
-RUN rpm -ivh /root/shim-unsigned-x64-\${shim_release}.src.rpm
+COPY shim-unsigned-x64-16.1-0.el7.src.rpm  /root
+RUN rpm -ivh /root/shim-unsigned-x64-16.1-0.el7.src.rpm
 RUN sed -i 's/linux32 -B/linux32/g' /builddir/build/SPECS/shim-unsigned-x64.spec
 
 # already-built shim binaries for comparison:
@@ -30,8 +30,8 @@ RUN rpmbuild -bb /builddir/build/SPECS/shim-unsigned-x64.spec
 
 # Put resulting RPM in a temp folder (optionally mounted on host system for extraction)
 RUN mkdir -p /shim_result
-RUN cd /shim_result; rpm2cpio /builddir/build/RPMS/x86_64/shim-unsigned-ia32-\${shim_release}.x86_64.rpm | cpio -diu
-RUN cd /shim_result; rpm2cpio /builddir/build/RPMS/x86_64/shim-unsigned-x64-\${shim_release}.x86_64.rpm | cpio -diu
+RUN cd /shim_result; rpm2cpio /builddir/build/RPMS/x86_64/shim-unsigned-ia32-${shim_release}.x86_64.rpm | cpio -diu
+RUN cd /shim_result; rpm2cpio /builddir/build/RPMS/x86_64/shim-unsigned-x64-${shim_release}.x86_64.rpm | cpio -diu
 
 # Insert shim-compare.sh script and run
 COPY shim-compare.sh  /root
