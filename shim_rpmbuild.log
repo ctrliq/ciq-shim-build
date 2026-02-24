@@ -21,7 +21,7 @@
 #5 DONE 0.1s
 
 #6 [ 3/17] COPY shim-unsigned-x64-${shim_release}.src.rpm  /root
-#6 ERROR: failed to calculate checksum of ref lagvf1sus323nkfc583rnqe0s::ot2ji1me9ahkpa0qov0jpxi9r: "/shim-unsigned-x64-${shim_release}.src.rpm": not found
+#6 ERROR: failed to calculate checksum of ref lagvf1sus323nkfc583rnqe0s::l5mc854sfm15g96rlokjtic0s: "/shim-unsigned-x64-${shim_release}.src.rpm": not found
 
 #7 [ 2/17] COPY rpmmacros  /root/.rpmmacros
 #7 CANCELED
@@ -39,4 +39,4 @@ Dockerfile:13
   14 |     RUN rpm -ivh /root/shim-unsigned-x64-\${shim_release}.src.rpm
   15 |     RUN sed -i 's/linux32 -B/linux32/g' /builddir/build/SPECS/shim-unsigned-x64.spec
 --------------------
-ERROR: failed to build: failed to solve: failed to compute cache key: failed to calculate checksum of ref lagvf1sus323nkfc583rnqe0s::ot2ji1me9ahkpa0qov0jpxi9r: "/shim-unsigned-x64-${shim_release}.src.rpm": not found
+ERROR: failed to build: failed to solve: failed to compute cache key: failed to calculate checksum of ref lagvf1sus323nkfc583rnqe0s::l5mc854sfm15g96rlokjtic0s: "/shim-unsigned-x64-${shim_release}.src.rpm": not found
