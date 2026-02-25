@@ -15,28 +15,58 @@ Note that we really only have experience with using GRUB2 or systemd-boot on Lin
 asking us to endorse anything else for signing is going to require some convincing on
 your part.
 
-Check the docs directory in this repo for guidance on submission and getting your shim signed.
+As of 20 October 2025, shims sent to Microsoft will be signed with the 2011 and 2023 keys. For each shim you submit, you will receive two copies back, each signed by a different key. Here is the latest information from Microsoft: https://techcommunity.microsoft.com/blog/hardware-dev-center/signing-with-the-new-2023-microsoft-uefi-certificates-what-submitters-need-to-kn/4455787
+
+New signing requirements have also taken effect, and are available here: https://techcommunity.microsoft.com/blog/hardware-dev-center/updated-microsoft-uefi-signing-requirements/1062916 Please note that undergoing this shim review exempts you from yearly security audits, as long as your shim only hands off to open source boot loaders.
+
+Hint: check the [docs](./docs/) directory in this repo for guidance on submission and getting your shim signed.
 
 Here's the template:
 
 *******************************************************************************
 ### What organization or people are asking to have this signed?
 *******************************************************************************
+Organization name and website:  
 CIQ Inc.  ( https://ciq.com )
+
+*******************************************************************************
+### What's the legal data that proves the organization's genuineness?
+The reviewers should be able to easily verify, that your organization is a legal entity, to prevent abuse.
+Provide the information, which can prove the genuineness with certainty.
+*******************************************************************************
+Company/tax register entries or equivalent:  
+(a link to the organization entry in your jurisdiction's register will do)  
+
+Legal Entity Verification Information for CIQ Shim Submission Company/Tax Register Information
+
+(Ctrl IQ, Inc.) is registered as a corporation in Nevada.
+
+**Company Registration:**
+
+* **Legal Name:** Ctrl IQ, Inc. (DBA CIQ)  
+* **Jurisdiction:** Nevada, United States  
+* **Physical Address:** 560 Mill St Ste 302, Reno, NV 89502-1195  
+* **Registration Link:** You'll need to search Nevada SOS database at: [https://esos.nv.gov/EntitySearch/OnlineEntitySearch](https://esos.nv.gov/EntitySearch/OnlineEntitySearch)  
+  * Search for "Ctrl IQ Inc"   
+  * Search results will return a single result click link to see CIQ’s company information  
+  * Gregory Kurtzer CIQ’s founder and CEO is listed in the Officer information
+
+```shell
+Issuer: CN=Sectigo Public Code Signing CA EV R36,O=Sectigo Limited,C=GB
+Subject: CN=Ctrl IQ, Inc.,O=Ctrl IQ, Inc.,ST=Nevada,C=US,businessCategory=Private Organization,jurisdictionOfIncorporationStateOrProvinceName=Nevada,jurisdictionOfIncorporationCountryName=US,serialNumber=E22202592022-1
+```
+
+---
 
 *******************************************************************************
 ### What product or service is this for?
 *******************************************************************************
-
 CIQ is offering a product named "CIQ bridge". CIQ Bridge allows for a secure transition from from CentOS 7 to Rocky 8. During the the 3 year transistion period. CIQ will offer Kernel vulnerability patching along with userland and scecure boot chain components.
-
 
 *******************************************************************************
 ### What's the justification that this really does need to be signed for the whole world to be able to boot it?
 *******************************************************************************
-
 Our customers use a variety of hardware platforms.  Many of them have policies in place, or are contractually obligated in some way to use the default EFI firmware with no customized secureboot/MOK key injection.  At the same time, many customers require security backports for their workload.
-
 
 *******************************************************************************
 ### Why are you unable to reuse shim from another distro that is already signed?
@@ -50,57 +80,74 @@ The security contacts need to be verified before the shim can be accepted. For s
 An authorized reviewer will initiate contact verification by sending each security contact a PGP-encrypted email containing random words.
 You will be asked to post the contents of these mails in your `shim-review` issue to prove ownership of the email addresses and PGP keys.
 *******************************************************************************
-- Name: Jason Rodriguez
-- Position: Engineer
-- Email address: jrodriguez@ciq.com
-- PGP key fingerprint: 0310 CFD4 0447 4D14 5072 D3E1 EAFF ECB3 C3AB C924
-- PGP key available on keys.openpgp.org
-- https://keys.openpgp.org/vks/v1/by-fingerprint/0310CFD404474D145072D3E1EAFFECB3C3ABC924
 
-(Key should be signed by the other security contacts, pushed to a keyserver
-like keyserver.ubuntu.com, and preferably have signatures that are reasonably
-well known in the Linux community.)
+- Name: Jason Rodriguez  
+- Position: Sr Principal Software Engineer  
+- Email address: [jrodriguez@ciq.com](mailto:jrodriguez@ciq.com)  
+- PGP key fingerprint: 0310 CFD4 0447 4D14 5072 D3E1 EAFF ECB3 C3AB C924  
+- PGP key URL: [https://keys.openpgp.org/vks/v1/by-fingerprint/0310CFD404474D145072D3E1EAFFECB3C3ABC924](https://keys.openpgp.org/vks/v1/by-fingerprint/0310CFD404474D145072D3E1EAFFECB3C3ABC924)
+
+(Key should be signed by the other security contacts, pushed to a keyserver like keyserver.ubuntu.com, and preferably have signatures that are reasonably well known in the Linux community.)
+
+*******************************************************************************
 
 *******************************************************************************
 ### Who is the secondary contact for security updates, etc.?
 *******************************************************************************
-- Name: Michael Young
-- Position: Information Technology Director
-- Email address: myoung@ciq.com
-- PGP key fingerprint:  CD82 9808 7BCA C022 B5EC  84FA D84A 6A59 1392 6D2B
-- http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xcd8298087bcac022b5ec84fad84a6a5913926d2b
 
-(Key should be signed by the other security contacts, pushed to a keyserver
-like keyserver.ubuntu.com, and preferably have signatures that are reasonably
-well known in the Linux community.)
+- Name: Michael Young  
+- Position: Principal Systems Engineer  
+- Email address: [myoung@ciq.com](mailto:myoung@ciq.com)  
+- PGP key fingerprint: CD82 9808 7BCA C022 B5EC  84FA D84A 6A59 1392 6D2B  
+- PGP key URL: [http://keyserver.ubuntu.com/pks/lookup?op=get\&search=0xcd8298087bcac022b5ec84fad84a6a5913926d2b](http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xcd8298087bcac022b5ec84fad84a6a5913926d2b)
 
-*******************************************************************************
-### Were these binaries created from the 15.8 shim release tar?
-Please create your shim binaries starting with the 15.8 shim release tar file: https://github.com/rhboot/shim/releases/download/15.8/shim-15.8.tar.bz2
-
-This matches https://github.com/rhboot/shim/releases/tag/15.8 and contains the appropriate gnu-efi source.
-
-******************************************************************************
-Yes, along with a patch needed for compilation on CentOS 7
-
+(Key should be signed by the other security contacts, pushed to a keyserver like keyserver.ubuntu.com, and preferably have signatures that are reasonably well known in the Linux community.)
 
 *******************************************************************************
-### URL for a repo that contains the exact code which was built to get this binary:
+### Were these binaries created from the 16.1 shim release tar?
+Please create your shim binaries starting with the 16.1 shim release tar file: https://github.com/rhboot/shim/releases/download/16.1/shim-16.1.tar.bz2
+
+This matches https://github.com/rhboot/shim/releases/tag/16.1 and contains the appropriate gnu-efi source.
+
+Make sure the tarball is correct by verifying your download's checksum
+(SHA256, SHA512) with the following ones:
+
+```
+46319cd228d8f2c06c744241c0f342412329a7c630436fce7f82cf6936b1d603  shim-16.1.tar.bz2
+ca5f80e82f3b80b622028f03ef23105c98ee1b6a25f52a59c823080a3202dd4b9962266489296e99f955eb92e36ce13e0b1d57f688350006bba45f2718f159fb  shim-16.1.tar.bz2
+```
+
+Make sure that you've verified that your build process uses that file
+as a source of truth (excluding external patches) and its checksum
+matches. You can also further validate the release by checking the PGP
+signature: there's [a detached
+signature](https://github.com/rhboot/shim/releases/download/16.1/shim-16.1.tar.bz2.asc)
+
+The release is signed by the maintainer Peter Jones - his master key
+has the fingerprint `B00B48BC731AA8840FED9FB0EED266B70F4FEF10` and the
+signing sub-key in the signature here has the fingerprint
+`02093E0D19DDE0F7DFFBB53C1FD3F540256A1372`. A copy of his public key
+is included here for reference:
+[pjones.asc](https://github.com/rhboot/shim-review/blob/main/pjones.asc)
+
+Once you're sure that the tarball you are using is correct and
+authentic, please confirm this here with a simple *yes*.
+
+A short guide on verifying public keys and signatures should be available in the [docs](./docs/) directory.
 *******************************************************************************
-CIQ shim-unsigned-x64 RPM repository:  https://github.com/ctrliq/shim-unsigned-x64/tree/ciq7
+yes
 
-This code is a combination of:  https://github.com/rhboot/shim/releases/download/15.8/shim-15.8.tar.bz2 and an RPM spec file derived from the RHEL one.
+*******************************************************************************
+### URL for a repo that contains the exact code which was built to result in your binary:
+Hint: If you attach all the patches and modifications that are being used to your application, you can point to the URL of your application here (*`https://github.com/YOUR_ORGANIZATION/shim-review`*).
 
-Additionally, I have a "frozen" repository copy of the Mock buildroot and build dependencies (gcc, openssl, et al.) here:  
-
-https://rl-secure-boot.ewr1.vultrobjects.com/repos/c7/shim_review_deps/  (this gets used by Mock as a source of RPM dependencies)
-
-Using this repository (consisting of public CentOS Linux 7 packages) ensures a reproducible binary when building the shim-unsigned-x64 with mock (or Docker/Podman) and rpmbuild.
-
-
+You can also point to your custom git servers, where the code is hosted.
+*******************************************************************************
+[your url here]
 
 *******************************************************************************
 ### What patches are being applied and why:
+Mention all the external patches and build process modifications, which are used during your building process, that make your shim binary be the exact one that you posted as part of this application.
 *******************************************************************************
 CentOS 7 has a version of dos2unix that doesn't support -f, the patch removes the use of -f in the shim build
 
@@ -112,13 +159,14 @@ See https://techcommunity.microsoft.com/t5/hardware-dev-center/nx-exception-for-
 No, we do not have the NX bit set on our shim
 
 *******************************************************************************
-### If shim is loading GRUB2 bootloader what exact implementation of Secureboot in GRUB2 do you have? (Either Upstream GRUB2 shim_lock verifier or Downstream RHEL/Fedora/Debian/Canonical-like implementation)
+### What exact implementation of Secure Boot in GRUB2 do you have? (Either Upstream GRUB2 shim_lock verifier or Downstream RHEL/Fedora/Debian/Canonical-like implementation)
+Skip this, if you're not using GRUB2.
 *******************************************************************************
 We intend to use the default CentOS 7 GRUB2, as our projects have no need for bootloader modifications.  Our engineers will be patching this grub2 version for security issues as they are discovered.
 
-
 *******************************************************************************
-### If shim is loading GRUB2 bootloader and your previously released shim booted a version of GRUB2 affected by any of the CVEs in the July 2020, the March 2021, the June 7th 2022, the November 15th 2022, or 3rd of October 2023 GRUB2 CVE list, have fixes for all these CVEs been applied?
+### Do you have fixes for all the following GRUB2 CVEs applied?
+**Skip this, if you're not using GRUB2, otherwise make sure these are present and confirm with _yes_.**
 
 * 2020 July - BootHole
   * Details: https://lists.gnu.org/archive/html/grub-devel/2020-07/msg00034.html
@@ -158,6 +206,29 @@ We intend to use the default CentOS 7 GRUB2, as our projects have no need for bo
   * Details: https://lists.gnu.org/archive/html/grub-devel/2023-10/msg00028.html, SBAT increase to 4
   * CVE-2023-4693
   * CVE-2023-4692
+* February 2025
+  * Details: https://lists.gnu.org/archive/html/grub-devel/2025-02/msg00024.html, SBAT increase to 5
+  * CVE-2024-45774
+  * CVE-2024-45775
+  * CVE-2024-45776
+  * CVE-2024-45777
+  * CVE-2024-45778
+  * CVE-2024-45779
+  * CVE-2024-45780
+  * CVE-2024-45781
+  * CVE-2024-45782
+  * CVE-2024-45783
+  * CVE-2025-0622
+  * CVE-2025-0624
+  * CVE-2025-0677
+  * CVE-2025-0678
+  * CVE-2025-0684
+  * CVE-2025-0685
+  * CVE-2025-0686
+  * CVE-2025-0689
+  * CVE-2025-0690
+  * CVE-2025-1118
+  * CVE-2025-1125
 *******************************************************************************
 This is our first submission for CentOS/EL7.  I can confirm that our grub2 builds will not be affected by any of those.  
 
@@ -168,32 +239,38 @@ https://git.centos.org/rpms/grub2/blob/351970dbd07603ccb345cc9d743c9cd90b9e85e8/
 
 The NTFS fixes are not relevant to us, as we don't build or support those modules in the signed bootloader.
 
-
 *******************************************************************************
-### If shim is loading GRUB2 bootloader, and if these fixes have been applied, is the upstream global SBAT generation in your GRUB2 binary set to 4?
-The entry should look similar to: `grub,4,Free Software Foundation,grub,GRUB_UPSTREAM_VERSION,https://www.gnu.org/software/grub/`
+### If shim is loading GRUB2 bootloader, and if these fixes have been applied, is the upstream global SBAT generation in your GRUB2 binary set to 5?
+Skip this, if you're not using GRUB2, otherwise do you have an entry in your GRUB2 binary similar to:  
+`grub,5,Free Software Foundation,grub,GRUB_UPSTREAM_VERSION,https://www.gnu.org/software/grub/`?
 *******************************************************************************
-Our grub2 originates from our upstream (Centos / RHEL 7). Centos has not updated grub and is still on generation level 3, due to being unaffected by the NTFS issue.
+[your text here]
 
-```
-sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
-grub.rhel7,2,Red Hat Enterprise Linux 7,grub2,1:2.02-0.87.el7.14,mail:secalert@redhat.com
-grub.ciq_centos7,1,Centos Linux 7 (CIQ build),grub2,1:2.02-0.87.el7.14,mailto:secureboot@ciq.com
-```
 *******************************************************************************
 ### Were old shims hashes provided to Microsoft for verification and to be added to future DBX updates?
 ### Does your new chain of trust disallow booting old GRUB2 builds affected by the CVEs?
+If you had no previous signed shim, say so here. Otherwise a simple _yes_ will do.
 *******************************************************************************
-This is our first EL7 submission, we do not have old GRUB2 builds affected by CVEs.
 
+- This is the first time upgrading the shim, our previous submissions were based on 15.8, we will be submitting the hashes of our old shims.   
+- Yes, The new chain of trust uses SBAT enforcement to prevent booting GRUB2 builds affected by CVEs.
 *******************************************************************************
 ### If your boot chain of trust includes a Linux kernel:
 ### Is upstream commit [1957a85b0032a81e6482ca4aab883643b8dae06e "efi: Restrict efivar_ssdt_load when the kernel is locked down"](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=1957a85b0032a81e6482ca4aab883643b8dae06e) applied?
 ### Is upstream commit [75b0cea7bf307f362057cc778efe89af4c615354 "ACPI: configfs: Disallow loading ACPI tables when locked down"](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=75b0cea7bf307f362057cc778efe89af4c615354) applied?
 ### Is upstream commit [eadb2f47a3ced5c64b23b90fd2a3463f63726066 "lockdown: also lock down previous kgdb use"](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=eadb2f47a3ced5c64b23b90fd2a3463f63726066) applied?
+Hint: upstream kernels should have all these applied, but if you ship your own heavily-modified older kernel version, that is being maintained separately from upstream, this may not be the case.  
+If you are shipping an older kernel, double-check your sources; maybe you do not have all the patches, but ship a configuration, that does not expose the issue(s).
 *******************************************************************************
 Yes, all of these patches are already in the Centos 7 kernels.
+
+*******************************************************************************
+### How does your signed kernel enforce lockdown when your system runs with Secure Boot enabled?
+Hint: If it does not, we are not likely to sign your shim.
+*******************************************************************************
+
+
+The kernel enforces lockdown out of the box when Secure Boot is enabled.
 
 *******************************************************************************
 ### Do you build your signed kernel with additional local patches? What do they do?
@@ -210,111 +287,94 @@ A temporary ephemral key is used to sign kernel modules
 ### If you use vendor_db functionality of providing multiple certificates and/or hashes please briefly describe your certificate setup.
 ### If there are allow-listed hashes please provide exact binaries for which hashes are created via file sharing service, available in public with anonymous access for verification.
 *******************************************************************************
-We aren't using vendor_db functionality at this time.
+
+We aren't using vendor\_db functionality at this time.
 
 *******************************************************************************
-### If you are re-using a previously used (CA) certificate, you will need to add the hashes of the previous GRUB2 binaries exposed to the CVEs to vendor_dbx in shim in order to prevent GRUB2 from being able to chainload those older GRUB2 binaries. If you are changing to a new (CA) certificate, this does not apply.
-### Please describe your strategy.
+### If you are re-using the CA certificate from your last shim binary, you will need to add the hashes of the previous GRUB2 binaries exposed to the CVEs mentioned earlier to vendor_dbx in shim. Please describe your strategy.
+This ensures that your new shim+GRUB2 can no longer chainload those older GRUB2 binaries with issues.
+
+If this is your first application or you're using a new CA certificate, please say so here.
 *******************************************************************************
-We are using a previously used (currently active) CA from our past Rocky Linux 8-based submission.
 
-There have been no built GRUB2 binaries exposed to the listed CVEs that we have released, as our previous submission was relatively recent.
+We currently sign with a previously used (currently active) CA from our previous submissions. Any older grub2 versions are set to sbat level 3 and will not boot because of the sbat restrictions not set to level 5\.
 
 *******************************************************************************
-### What OS and toolchain must we use to reproduce this build?  Include where to find it, etc.  We're going to try to reproduce your build as closely as possible to verify that it's really a build of the source tree you tell us it is, so these need to be fairly thorough. At the very least include the specific versions of gcc, binutils, and gnu-efi which were used, and where to find those binaries.
-### If the shim binaries can't be reproduced using the provided Dockerfile, please explain why that's the case and what the differences would be.
+
+### Is the Dockerfile in your repository the recipe for reproducing the building of your shim binary?
+
+A reviewer should always be able to run `docker build .` to get the exact binary you attached in your application.
+
+Hint: Prefer using *frozen* packages for your toolchain, since an update to GCC, binutils, gnu-efi may result in building a shim binary with a different checksum.
+
+If your shim binaries can't be reproduced using the provided Dockerfile, please explain why that's the case, what the differences would be and what build environment (OS and toolchain) is being used to reproduce this build? In this case please write a detailed guide, how to setup this build environment from scratch.
+
 *******************************************************************************
-This build is all Centos 7.9 dependencies, using rpmbuild.
-
-To ensure reproducibility, we have "frozen" all the dependent Centos 7 packages needed and put them in their own repository.  It can be found in the builder's Dockerfile.
-
-Using a tagged container base plus this repository should ensure binaries are 100% reproducible.
-
-Current reproducible shim build location:  https://github.com/ctrliq/ciq-shim-build/tree/c7
-
+[your text here]
 
 *******************************************************************************
 ### Which files in this repo are the logs for your build?
 This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 *******************************************************************************
-shim_rpmbuild.log contains a log of the docker build run.  This includes dependency install, compilation, hash comparison, etc.
+[your text here]
 
 *******************************************************************************
 ### What changes were made in the distro's secure boot chain since your SHIM was last signed?
 For example, signing new kernel's variants, UKI, systemd-boot, new certs, new CA, etc..
-*******************************************************************************
 
-Our shim has never been signed for this distro derivative, our previous submission uses a chain derived from Rocky 8.
-
-
+Skip this, if this is your first application for having shim signed.
 *******************************************************************************
-### What is the SHA256 hash of your final SHIM binary?
-*******************************************************************************
-* SHA256 (shimx64.efi) = 088610925c2491017f6488f6235c6daec4e7f567dfb6c4e8c55d64d6acaafbae
-* SHA256 (shimai32.efi) = 14822c87e48f9ca65df08a4595ffa8cc6a7564197826521318488178fdf16272
+no updates for the EL7 product line
 
 *******************************************************************************
-### How do you manage and protect the keys used in your SHIM?
+### What is the SHA256 hash of your final shim binary?
 *******************************************************************************
-We use a managed PKI solution that meets all industry standards and requirements for issuing, protecting, backing up and securing code signing certs.
+[your text here]
 
-There is a Private Root CA and a Private Issuing CA.  The Private Issuing CA was used for issuing of the private code signing certs that are found in the SHIM.
+*******************************************************************************
+### How do you manage and protect the keys used in your shim?
+Describe the security strategy that is used for key protection. This can range from using hardware tokens like HSMs or Smartcards, air-gapped vaults, physical safes to other good practices.
+*******************************************************************************
+
+We use a managed PKI solution that meets all industry standards and requirements for issuing, protecting, backing up and securing code signing certs. There is a Private Root CA and a Private Issuing CA.  The Private Issuing CA was used for issuing of the private code signing certs that are found in the SHIM.
 
 Those issued certs are then stored on a physical HSM.  That HSM is installed within a FIPS environment.  All access to that environment is strictly controlled with physical and logical controls in place, with no outside access permitted.  The servers are in a locked environment and within a secure data center with proper physical access controls in place at that location for security purposes.
 
 *******************************************************************************
-### Do you use EV certificates as embedded certificates in the SHIM?
-*******************************************************************************
-No, only the CIQ secureboot CA (PKI) is embedded in our Shim
-
-*******************************************************************************
-### Do you add a vendor-specific SBAT entry to the SBAT section in each binary that supports SBAT metadata ( GRUB2, fwupd, fwupdate, systemd-boot, systemd-stub, UKI(s), shim + all child shim binaries )?
-### Please provide exact SBAT entries for all shim binaries as well as all SBAT binaries that shim will directly boot.
-### Where your code is only slightly modified from an upstream vendor's, please also preserve their SBAT entries to simplify revocation.
-If you are using a downstream implementation of GRUB2 or systemd-boot (e.g.
-from Fedora or Debian), please preserve the SBAT entry from those distributions
-and only append your own. More information on how SBAT works can be found
-[here](https://github.com/rhboot/shim/blob/main/SBAT.md).
+### Do you use EV certificates as embedded certificates in the shim?
+A _yes_ or _no_ will do. There's no penalty for the latter.
 *******************************************************************************
 
-```
-objcopy --only-section .sbat -O binary ./boot/efi/EFI/centos/grubx64.efi /dev/stdout
-sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
-grub.rhel7,2,Red Hat Enterprise Linux 7,grub2,1:2.02-0.87.el7.14,mail:secalert@redhat.com
-grub.ciq_centos7,1,Centos Linux 7 (CIQ build),grub2,1:2.02-0.87.el7.14,mailto:secureboot@ciq.com
+No
 
-objcopy --only-section .sbat -O binary ./boot/efi/EFI/centos/grubia32.efi /dev/stdout
-sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-grub,3,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
-grub.rhel7,2,Red Hat Enterprise Linux 7,grub2,1:2.02-0.87.el7.14,mail:secalert@redhat.com
-grub.ciq_centos7,1,Centos Linux 7 (CIQ build),grub2,1:2.02-0.87.el7.14,mailto:secureboot@ciq.com
+*******************************************************************************
+### Are you embedding a CA certificate in your shim?
+A _yes_ or _no_ will do. There's no penalty for the latter. However,
+if _yes_: does that certificate include the X509v3 Basic Constraints
+to say that it is a CA? See the [docs](./docs/) for more guidance
+about this.
+*******************************************************************************
 
-objcopy --only-section .sbat -O binary ./boot/efi/EFI/centos/fwupx64.efi /dev/stdout
-sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-fwupdate,1,UEFI firmware update tool,fwupdate,12,https://github.com/rhboot/fwupdate
-fwupdate.rhel7,1,Red Hat Enterprise Linux 7,fwupdate,12-6.el7_6.1,mail:secalert@redhat.com
-fwupdate.ciq_centos7,1,Centos Linux 7 (CIQ build),fwupdate,12-7.el7,mailto:secureboot@ciq.com
+Yes, the CIQ secureboot CA (PKI) is embedded in our Shim with proper X509v3 Basic Constraints.
 
-objcopy --only-section .sbat -O binary ./boot/efi/EFI/centos/fwupia32.efi /dev/stdout
-sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-fwupdate,1,UEFI firmware update tool,fwupdate,12,https://github.com/rhboot/fwupdate
-fwupdate.rhel7,1,Red Hat Enterprise Linux 7,fwupdate,12-6.el7_6.1,mail:secalert@redhat.com
-fwupdate.ciq_centos7,1,Centos Linux 7 (CIQ build),fwupdate,12-7.el7,mailto:secureboot@ciq.com
+*******************************************************************************
+### Do you add a vendor-specific SBAT entry to the SBAT section in each binary that supports SBAT metadata ( GRUB2, fwupd, fwupdate, systemd-boot, systemd-stub, shim + all child shim binaries )?
+### Please provide the exact SBAT entries for all binaries you are booting directly through shim.
+Hint: The history of SBAT and more information on how it works can be found [here](https://github.com/rhboot/shim/blob/main/SBAT.md). That document is large, so for just some examples check out [SBAT.example.md](https://github.com/rhboot/shim/blob/main/SBAT.example.md)
 
-objcopy --only-section .sbat -O binary  shimx64.efi /dev/stdout 
-sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
-shim.ciq,1,Ctrl IQ Inc,shim,15.8,mail:it_security@ciq.com
+If you are using a downstream implementation of GRUB2 (e.g. from Fedora or Debian), make sure you have their SBAT entries preserved and that you **append** your own (don't replace theirs) to simplify revocation.
 
-objcopy --only-section .sbat -O binary  shimia32.efi /dev/stdout
-sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
-shim.ciq,1,Ctrl IQ Inc,shim,15.8,mail:it_security@ciq.com
-```
+**Remember to post the entries of all the binaries. Apart from your bootloader, you may also be shipping e.g. a firmware updater, which will also have these.**
+
+Hint: run `objcopy --dump-section .sbat=/dev/stdout YOUR_EFI_BINARY` to get these entries. Paste them here. Preferably surround each listing with three backticks (\`\`\`), so they render well.
+*******************************************************************************
+[your text here]
 
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader, which modules are built into your signed GRUB2 image?
+Skip this, if you're not using GRUB2.
+
+Hint: this is about those modules that are in the binary itself, not the `.mod` files in your filesystem.
 *******************************************************************************
 Centos 7 / Grub 2.02-0 :
 
@@ -340,26 +400,28 @@ N/a
 We currently use the same version as Centos - 2.02-0.87.el7.14 .  Subject to minor incremental patches as security issues crop up.
 
 *******************************************************************************
-### If your SHIM launches any other components, please provide further details on what is launched.
+### If your shim launches any other components apart from your bootloader, please provide further details on what is launched.
+Hint: The most common case here will be a firmware updater like fwupd.
 *******************************************************************************
 N/a, at one point we considered using certwrapper, but decided against it considering the CentOS 7 CA is expiring and the upstream components are receiving no new updates.
 
 
 *******************************************************************************
 ### If your GRUB2 or systemd-boot launches any other binaries that are not the Linux kernel in SecureBoot mode, please provide further details on what is launched and how it enforces Secureboot lockdown.
+Skip this, if you're not using GRUB2 or systemd-boot.
 *******************************************************************************
 No, Linux kernel launches are all we are interested in.
 
-
 *******************************************************************************
 ### How do the launched components prevent execution of unauthenticated code?
+Summarize in one or two sentences, how your secure bootchain works on higher level.
 *******************************************************************************
 In the case of the kernel, both the Centos variant and the upstream ("new") variants prevent this by default, and we do not want to change that.
 
 In the case of Grub + fwupdate, we are derived from Centos/RHEL versions with minimal ongoing security fixes.  They also do not execute unauthenticated code by default.
 
 *******************************************************************************
-### Does your SHIM load any loaders that support loading unsigned kernels (e.g. GRUB2)?
+### Does your shim load any loaders that support loading unsigned kernels (e.g. certain GRUB2 configurations)?
 *******************************************************************************
 Grub2 will only load unsigned code if the secureboot feature is turned off. Otherwise booting signed code is always enforced, same as upstream CentOS/RHEL.
 
@@ -378,8 +440,8 @@ A reasonable timeframe of waiting for a review can reach 2-3 months. Helping us 
 
 For newcomers, the applications labeled as [*easy to review*](https://github.com/rhboot/shim-review/issues?q=is%3Aopen+is%3Aissue+label%3A%22easy+to+review%22) are recommended to start the contribution process.
 *******************************************************************************
-Jason Rodriguez has contributed to the review process of other submissions, he should do a lot more to invest in the process.
 
+Jason Rodriguez has contributed to the review process of other shim submissions, specifically the EL7 submissions.  
 *******************************************************************************
 ### Add any additional information you think we may need to validate this shim signing application.
 *******************************************************************************
