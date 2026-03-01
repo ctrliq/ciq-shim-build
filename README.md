@@ -143,7 +143,9 @@ Hint: If you attach all the patches and modifications that are being used to you
 
 You can also point to your custom git servers, where the code is hosted.
 *******************************************************************************
-[your url here]
+TODO: update to the exacte repo after merge
+- x64: [https://github.com/ctrliq/shim-unsigned-x64](https://github.com/ctrliq/shim-unsigned-x64)
+- Build scripts: [https://github.com/ctrliq/ciq-shim-build](https://github.com/ctrliq/ciq-shim-build)
 
 *******************************************************************************
 ### What patches are being applied and why:
@@ -230,21 +232,22 @@ We intend to use the default CentOS 7 GRUB2, as our projects have no need for bo
   * CVE-2025-1118
   * CVE-2025-1125
 *******************************************************************************
-This is our first submission for CentOS/EL7.  I can confirm that our grub2 builds will not be affected by any of those.  
-
-All but the NTFS ones have been fixed in our upstream:
-
-https://git.centos.org/rpms/grub2/blob/351970dbd07603ccb345cc9d743c9cd90b9e85e8/f/SPECS/grub2.spec#_471
+grub2 has been patched to remdiate the list of CVEs provided
 
 
-The NTFS fixes are not relevant to us, as we don't build or support those modules in the signed bootloader.
 
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader, and if these fixes have been applied, is the upstream global SBAT generation in your GRUB2 binary set to 5?
 Skip this, if you're not using GRUB2, otherwise do you have an entry in your GRUB2 binary similar to:  
 `grub,5,Free Software Foundation,grub,GRUB_UPSTREAM_VERSION,https://www.gnu.org/software/grub/`?
 *******************************************************************************
-[your text here]
+grub2 has been set to sbat level 5
+  ```
+  sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md  
+  grub,5,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
+  grub.rhel7,3,Red Hat Enterprise Linux 7,grub2,2.02,mail:secalert@redhat.com
+  grub.ciq_cbr7,2,CentOS 7 Bridge (CIQ build),grub2,2.02-0.88.2.el7_9.ciqcbr,mailto:secureboot@ciq.com
+  ```
 
 *******************************************************************************
 ### Were old shims hashes provided to Microsoft for verification and to be added to future DBX updates?
@@ -316,7 +319,7 @@ If your shim binaries can't be reproduced using the provided Dockerfile, please 
 ### Which files in this repo are the logs for your build?
 This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 *******************************************************************************
-[your text here]
+shim_rpmbuild.log contains a log of the docker build run.  This includes dependency install, compilation, hash comparison, etc.
 
 *******************************************************************************
 ### What changes were made in the distro's secure boot chain since your SHIM was last signed?
@@ -355,7 +358,7 @@ to say that it is a CA? See the [docs](./docs/) for more guidance
 about this.
 *******************************************************************************
 
-Yes, the CIQ secureboot CA (PKI) is embedded in our Shim with proper X509v3 Basic Constraints.
+Yes
 
 *******************************************************************************
 ### Do you add a vendor-specific SBAT entry to the SBAT section in each binary that supports SBAT metadata ( GRUB2, fwupd, fwupdate, systemd-boot, systemd-stub, shim + all child shim binaries )?
@@ -368,7 +371,19 @@ If you are using a downstream implementation of GRUB2 (e.g. from Fedora or Debia
 
 Hint: run `objcopy --dump-section .sbat=/dev/stdout YOUR_EFI_BINARY` to get these entries. Paste them here. Preferably surround each listing with three backticks (\`\`\`), so they render well.
 *******************************************************************************
-[your text here]
+
+```
+  objcopy --only-section .sbat -O binary /boot/efi/EFI/centos/grubx64.efi /dev/stdout
+  sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md  
+  grub,5,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
+  grub.rhel7,3,Red Hat Enterprise Linux 7,grub2,2.02,mail:secalert@redhat.com
+  grub.ciq_cbr7,2,CentOS 7 Bridge (CIQ build),grub2,2.02-0.88.2.el7_9.ciqcbr,mailto:secureboot@ciq.com
+  
+  objcopy --only-section .sbat -O binary /boot/efi/EFI/centos/grubia32.efi /dev/stdout
+  sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+  grub,5,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
+  grub.rhel7,3,Red Hat Enterprise Linux 7,grub2,2.02,mail:secalert@redhat.com
+  grub.ciq_cbr7,2,CentOS 7 Bridge (CIQ build),grub2,2.02-0.88.2.el7_9.ciqcbr,mailto:secureboot@ciq.com
 
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader, which modules are built into your signed GRUB2 image?
