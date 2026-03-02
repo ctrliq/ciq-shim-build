@@ -386,6 +386,17 @@ Hint: run `objcopy --dump-section .sbat=/dev/stdout YOUR_EFI_BINARY` to get thes
   grub.rhel7,3,Red Hat Enterprise Linux 7,grub2,2.02,mail:secalert@redhat.com
   grub.ciq_cbr7,2,CentOS 7 Bridge (CIQ build),grub2,2.02-0.88.2.el7_9.ciqcbr,mailto:secureboot@ciq.com
 
+  sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+  fwupdate,1,UEFI firmware update tool,fwupdate,12,https://github.com/rhboot/fwupdate 
+  fwupdate.rhel7,1,Red Hat Enterprise Linux 7,fwupdate,12-6.el7_6.1,mail:secalert@redhat.com
+  fwupdate.ciq_centos7,1,Centos Linux 7 (CIQ build),fwupdate,12-7.el7_9.ciqcbr.1,mailto:secureboot@ciq.com
+  fwupx64.efi SBAT:
+
+  sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+  fwupdate,1,UEFI firmware update tool,fwupdate,12,https://github.com/rhboot/fwupdate 
+  fwupdate.rhel7,1,Red Hat Enterprise Linux 7,fwupdate,12-6.el7_6.1,mail:secalert@redhat.com
+  fwupdate.ciq_centos7,1,Centos Linux 7 (CIQ build),fwupdate,12-7.el7_9.ciqcbr.1,mailto:secureboot@ciq.com
+
   objcopy --only-section .sbat -O binary shimx64.efi /dev/stdout
   sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
   shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
@@ -406,14 +417,16 @@ Hint: this is about those modules that are in the binary itself, not the `.mod` 
 Centos 7 / Grub 2.02-0 :
 
 ```
-all_video boot btrfs cat chain configfile echo
-efifwsetup efinet ext2 fat font gfxmenu gfxterm
-gzio halt hfsplus iso9660 jpeg loadenv loopback
-lvm mdraid09 mdraid1x minicmd normal part_apple
-part_msdos part_gpt password_pbkdf2 png reboot
-regexp search search_fs_uuid search_fs_file
-search_label serial sleep syslinuxcfg test tftp
-video xfs
+    all_video boot btrfs cat chain configfile echo
+		efifwsetup efinet ext2 fat font gfxmenu gfxterm
+		gzio halt hfsplus iso9660 jpeg loadenv loopback
+		lvm mdraid09 mdraid1x minicmd normal part_apple
+		part_msdos part_gpt password_pbkdf2 png reboot
+		regexp search search_fs_uuid search_fs_file
+		search_label serial sleep syslinuxcfg test tftp
+		video xfs backtrace http linuxefi usb usbserial_common 
+    usbserial_pl2303 usbserial_ftdi usbserial_usbdebug 
+    keylayouts at_keyboard
 ```
 
 *******************************************************************************
