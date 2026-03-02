@@ -56,8 +56,6 @@ Issuer: CN=Sectigo Public Code Signing CA EV R36,O=Sectigo Limited,C=GB
 Subject: CN=Ctrl IQ, Inc.,O=Ctrl IQ, Inc.,ST=Nevada,C=US,businessCategory=Private Organization,jurisdictionOfIncorporationStateOrProvinceName=Nevada,jurisdictionOfIncorporationCountryName=US,serialNumber=E22202592022-1
 ```
 
----
-
 *******************************************************************************
 ### What product or service is this for?
 *******************************************************************************
@@ -100,6 +98,18 @@ You will be asked to post the contents of these mails in your `shim-review` issu
 - Email address: [myoung@ciq.com](mailto:myoung@ciq.com)  
 - PGP key fingerprint: CD82 9808 7BCA C022 B5EC  84FA D84A 6A59 1392 6D2B  
 - PGP key URL: [http://keyserver.ubuntu.com/pks/lookup?op=get\&search=0xcd8298087bcac022b5ec84fad84a6a5913926d2b](http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xcd8298087bcac022b5ec84fad84a6a5913926d2b)
+
+- Name: Andrew Jorgensen
+- Position: Senior Principal Linux Engineer  
+- Email address: [ajorgens@ciq.com](mailto:ajorgens@ciq.com)  
+- PGP key fingerprint: 
+- PGP key URL: []()
+
+- Name: Skip Grube 
+- Position: Senior Systems Engineer  
+- Email address: [sgrube@ciq.com](mailto:sgrube@ciq.com)  
+- PGP key fingerprint: 
+- PGP key URL: []()
 
 (Key should be signed by the other security contacts, pushed to a keyserver like keyserver.ubuntu.com, and preferably have signatures that are reasonably well known in the Linux community.)
 
@@ -332,7 +342,9 @@ no updates for the EL7 product line
 *******************************************************************************
 ### What is the SHA256 hash of your final shim binary?
 *******************************************************************************
-[your text here]
+
+994bb797007dc8f006f8793ae7e25c0dd3443e242a9198d8834ab704e7e12e40  shimia32.efi
+5ad9f5742983d21926d938e10283cc45036a15d37a323b74ed027696c01c1168  shimx64.efi
 
 *******************************************************************************
 ### How do you manage and protect the keys used in your shim?
@@ -384,6 +396,16 @@ Hint: run `objcopy --dump-section .sbat=/dev/stdout YOUR_EFI_BINARY` to get thes
   grub,5,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
   grub.rhel7,3,Red Hat Enterprise Linux 7,grub2,2.02,mail:secalert@redhat.com
   grub.ciq_cbr7,2,CentOS 7 Bridge (CIQ build),grub2,2.02-0.88.2.el7_9.ciqcbr,mailto:secureboot@ciq.com
+
+  sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+  shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
+  shim.ciq_rocky,1,Ctrl IQ Inc,shim,16.1,mail:secureboot@ciq.com
+
+  sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+  shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
+  shim.ciq_rocky,1,Ctrl IQ Inc,shim,16.1,mail:secureboot@ciq.com
+```
+
 
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader, which modules are built into your signed GRUB2 image?
