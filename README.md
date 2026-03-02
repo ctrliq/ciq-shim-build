@@ -323,7 +323,7 @@ Hint: Prefer using *frozen* packages for your toolchain, since an update to GCC,
 If your shim binaries can't be reproduced using the provided Dockerfile, please explain why that's the case, what the differences would be and what build environment (OS and toolchain) is being used to reproduce this build? In this case please write a detailed guide, how to setup this build environment from scratch.
 
 *******************************************************************************
-[your text here]
+yes
 
 *******************************************************************************
 ### Which files in this repo are the logs for your build?
@@ -342,9 +342,8 @@ no updates for the EL7 product line
 *******************************************************************************
 ### What is the SHA256 hash of your final shim binary?
 *******************************************************************************
-
-994bb797007dc8f006f8793ae7e25c0dd3443e242a9198d8834ab704e7e12e40  shimia32.efi
-5ad9f5742983d21926d938e10283cc45036a15d37a323b74ed027696c01c1168  shimx64.efi
+* SHA256 (shimx64.efi) = 5ad9f5742983d21926d938e10283cc45036a15d37a323b74ed027696c01c1168
+* SHA256 (shimia32.efi) = 994bb797007dc8f006f8793ae7e25c0dd3443e242a9198d8834ab704e7e12e40
 
 *******************************************************************************
 ### How do you manage and protect the keys used in your shim?
@@ -416,14 +415,16 @@ Hint: this is about those modules that are in the binary itself, not the `.mod` 
 Centos 7 / Grub 2.02-0 :
 
 ```
-all_video boot btrfs cat chain configfile echo
-efifwsetup efinet ext2 fat font gfxmenu gfxterm
-gzio halt hfsplus iso9660 jpeg loadenv loopback
-lvm mdraid09 mdraid1x minicmd normal part_apple
-part_msdos part_gpt password_pbkdf2 png reboot
-regexp search search_fs_uuid search_fs_file
-search_label serial sleep syslinuxcfg test tftp
-video xfs
+    all_video boot btrfs cat chain configfile echo
+    efifwsetup efinet ext2 fat font gfxmenu gfxterm
+    gzio halt hfsplus iso9660 jpeg loadenv loopback
+    lvm mdraid09 mdraid1x minicmd normal part_apple
+    part_msdos part_gpt password_pbkdf2 png reboot
+    regexp search search_fs_uuid search_fs_file
+    search_label serial sleep syslinuxcfg test tftp
+    video xfs backtrace http linuxefi usb usbserial_common 
+    usbserial_pl2303 usbserial_ftdi usbserial_usbdebug 
+    keylayouts at_keyboard
 ```
 
 *******************************************************************************
