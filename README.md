@@ -313,7 +313,7 @@ Hint: Prefer using *frozen* packages for your toolchain, since an update to GCC,
 If your shim binaries can't be reproduced using the provided Dockerfile, please explain why that's the case, what the differences would be and what build environment (OS and toolchain) is being used to reproduce this build? In this case please write a detailed guide, how to setup this build environment from scratch.
 
 *******************************************************************************
-[your text here]
+yes
 
 *******************************************************************************
 ### Which files in this repo are the logs for your build?
@@ -332,7 +332,8 @@ no updates for the EL7 product line
 *******************************************************************************
 ### What is the SHA256 hash of your final shim binary?
 *******************************************************************************
-[your text here]
+* SHA256 (shimx64.efi) = 5ad9f5742983d21926d938e10283cc45036a15d37a323b74ed027696c01c1168
+* SHA256 (shimia32.efi) = 994bb797007dc8f006f8793ae7e25c0dd3443e242a9198d8834ab704e7e12e40
 
 *******************************************************************************
 ### How do you manage and protect the keys used in your shim?
@@ -384,6 +385,17 @@ Hint: run `objcopy --dump-section .sbat=/dev/stdout YOUR_EFI_BINARY` to get thes
   grub,5,Free Software Foundation,grub,2.02,https://www.gnu.org/software/grub/
   grub.rhel7,3,Red Hat Enterprise Linux 7,grub2,2.02,mail:secalert@redhat.com
   grub.ciq_cbr7,2,CentOS 7 Bridge (CIQ build),grub2,2.02-0.88.2.el7_9.ciqcbr,mailto:secureboot@ciq.com
+
+  objcopy --only-section .sbat -O binary shimx64.efi /dev/stdout
+  sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+  shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
+  shim.ciq_rocky,1,Ctrl IQ Inc,shim,16.1,mail:secureboot@ciq.com
+
+  objcopy --only-section .sbat -O binary shimia32.efi /dev/stdout
+  sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+  shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
+  shim.ciq_rocky,1,Ctrl IQ Inc,shim,16.1,mail:secureboot@ciq.com
+```
 
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader, which modules are built into your signed GRUB2 image?
