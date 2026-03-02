@@ -1,55 +1,51 @@
 CPU info:
-Architecture:                            x86_64
-CPU op-mode(s):                          32-bit, 64-bit
-Address sizes:                           46 bits physical, 48 bits virtual
+Architecture:                            aarch64
+CPU op-mode(s):                          64-bit
 Byte Order:                              Little Endian
-CPU(s):                                  64
-On-line CPU(s) list:                     0-63
-Vendor ID:                               GenuineIntel
-Model name:                              Intel(R) Xeon(R) CPU E5-2697A v4 @ 2.60GHz
-CPU family:                              6
-Model:                                   79
-Thread(s) per core:                      2
-Core(s) per socket:                      16
-Socket(s):                               2
-Stepping:                                1
-CPU(s) scaling MHz:                      60%
-CPU max MHz:                             3600.0000
-CPU min MHz:                             1200.0000
-BogoMIPS:                                5188.07
-Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 pti intel_ppin ssbd ibrs ibpb stibp tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap intel_pt xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts vnmi md_clear flush_l1d
-Virtualization:                          VT-x
-L1d cache:                               1 MiB (32 instances)
-L1i cache:                               1 MiB (32 instances)
-L2 cache:                                8 MiB (32 instances)
-L3 cache:                                80 MiB (2 instances)
-NUMA node(s):                            2
-NUMA node0 CPU(s):                       0-15,32-47
-NUMA node1 CPU(s):                       16-31,48-63
+CPU(s):                                  2
+On-line CPU(s) list:                     0,1
+Vendor ID:                               Apple
+Model name:                              -
+Model:                                   0
+Thread(s) per core:                      1
+Core(s) per socket:                      2
+Socket(s):                               1
+Stepping:                                0x0
+BogoMIPS:                                48.00
+Flags:                                   fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 asimddp sha512 asimdfhm dit uscat ilrcpc flagm ssbs sb paca pacg dcpodp flagm2 frint
+L1d cache:                               256 KiB (2 instances)
+L1i cache:                               384 KiB (2 instances)
+L2 cache:                                32 MiB (2 instances)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0,1
 Vulnerability Gather data sampling:      Not affected
+Vulnerability Ghostwrite:                Not affected
 Vulnerability Indirect target selection: Not affected
-Vulnerability Itlb multihit:             KVM: Mitigation: Split huge pages
-Vulnerability L1tf:                      Mitigation; PTE Inversion; VMX conditional cache flushes, SMT vulnerable
-Vulnerability Mds:                       Mitigation; Clear CPU buffers; SMT vulnerable
-Vulnerability Meltdown:                  Mitigation; PTI
-Vulnerability Mmio stale data:           Mitigation; Clear CPU buffers; SMT vulnerable
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Not affected
+Vulnerability Mds:                       Not affected
+Vulnerability Meltdown:                  Not affected
+Vulnerability Mmio stale data:           Not affected
+Vulnerability Old microcode:             Not affected
 Vulnerability Reg file data sampling:    Not affected
 Vulnerability Retbleed:                  Not affected
 Vulnerability Spec rstack overflow:      Not affected
 Vulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
-Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
-Vulnerability Spectre v2:                Mitigation; Retpolines; IBPB conditional; IBRS_FW; STIBP conditional; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected
+Vulnerability Spectre v1:                Mitigation; __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; CSV2, but not BHB
 Vulnerability Srbds:                     Not affected
-Vulnerability Tsx async abort:           Mitigation; Clear CPU buffers; SMT vulnerable
+Vulnerability Tsa:                       Not affected
+Vulnerability Tsx async abort:           Not affected
+Vulnerability Vmscape:                   Not affected
 
 
 Memory:
                total        used        free      shared  buff/cache   available
-Mem:           125Gi        28Gi        10Gi       215Mi        88Gi        97Gi
-Swap:           31Gi       1.0Mi        31Gi
+Mem:           1.9Gi       1.0Gi       307Mi        13Mi       704Mi       906Mi
+Swap:          1.9Gi       698Mi       1.2Gi
 
 
 Storage (chroot, cache_topdir):
-Filesystem                 Type  Size  Used Avail Use% Mounted on
-/dev/mapper/vg_nvme-lv_var xfs   698G  236G  462G  34% /var
-/dev/mapper/vg_nvme-lv_var xfs   698G  236G  462G  34% /var
+Filesystem     Type   Size  Used Avail Use% Mounted on
+/dev/nvme0n1p3 btrfs   72G   14G   57G  20% /
+/dev/nvme0n1p3 btrfs   72G   14G   57G  20% /
