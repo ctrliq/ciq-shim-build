@@ -1,27 +1,27 @@
 Mock Version: 6.6
-ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bs --noclean --target aarch64 --nodeps /builddir/build/SPECS/shim-unsigned-aarch64.spec'], chrootPath='/var/lib/mock/rocky-9-aarch64_ciqshim/root'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0xffff8d83d450>timeout=0uid=1000gid=135user='mockbuild'unshare_net=TrueprintOutput=Truenspawn_args=['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.5alpcsn0:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11'])
-Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.5alpcsn0:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
-Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '84398ec5defa40deb08bbb4f18a55e4e', '-D', '/var/lib/mock/rocky-9-aarch64_ciqshim/root', '-a', '-u', 'mockbuild', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.5alpcsn0:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', 'bash', '--login', '-c', '/usr/bin/rpmbuild -bs --noclean --target aarch64 --nodeps /builddir/build/SPECS/shim-unsigned-aarch64.spec'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bs  --target aarch64 --nodeps /builddir/build/SPECS/shim-unsigned-aarch64.spec'], chrootPath='/var/lib/mock/rocky-9-aarch64/root'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0xffff7674ee40>timeout=0uid=1000gid=135user='mockbuild'unshare_net=TrueprintOutput=Falsenspawn_args=['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.p0e93bbf:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11'])
+Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.p0e93bbf:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
+Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'eabc9861c84c4be88c4611b385dc3762', '-D', '/var/lib/mock/rocky-9-aarch64/root', '-a', '-u', 'mockbuild', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.p0e93bbf:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', 'bash', '--login', '-c', '/usr/bin/rpmbuild -bs  --target aarch64 --nodeps /builddir/build/SPECS/shim-unsigned-aarch64.spec'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 Building target platforms: aarch64
 Building for target aarch64
 setting SOURCE_DATE_EPOCH=1770768000
 Wrote: /builddir/build/SRPMS/shim-unsigned-aarch64-16.1-0.el9.src.rpm
 Child return code was: 0
-ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bs --noclean --target aarch64 --nodeps /builddir/build/SPECS/shim-unsigned-aarch64.spec'], chrootPath='/var/lib/mock/rocky-9-aarch64_ciqshim/root'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0xffff8d83d450>timeout=0uid=1000gid=135user='mockbuild'unshare_net=TrueprintOutput=Truenspawn_args=['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.5alpcsn0:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11'])
-Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.5alpcsn0:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
-Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '5f73a291cbbe414ea60b83cc7acfd888', '-D', '/var/lib/mock/rocky-9-aarch64_ciqshim/root', '-a', '-u', 'mockbuild', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.5alpcsn0:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', 'bash', '--login', '-c', '/usr/bin/rpmbuild -bs --noclean --target aarch64 --nodeps /builddir/build/SPECS/shim-unsigned-aarch64.spec'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bs  --target aarch64 --nodeps /builddir/build/SPECS/shim-unsigned-aarch64.spec'], chrootPath='/var/lib/mock/rocky-9-aarch64/root'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0xffff7674ee40>timeout=0uid=1000gid=135user='mockbuild'unshare_net=TrueprintOutput=Falsenspawn_args=['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.p0e93bbf:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11'])
+Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.p0e93bbf:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
+Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'ae965c907ebd49379439b89b067165cc', '-D', '/var/lib/mock/rocky-9-aarch64/root', '-a', '-u', 'mockbuild', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.p0e93bbf:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', 'bash', '--login', '-c', '/usr/bin/rpmbuild -bs  --target aarch64 --nodeps /builddir/build/SPECS/shim-unsigned-aarch64.spec'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 Building target platforms: aarch64
 Building for target aarch64
 setting SOURCE_DATE_EPOCH=1770768000
 Wrote: /builddir/build/SRPMS/shim-unsigned-aarch64-16.1-0.el9.src.rpm
 Child return code was: 0
-ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bb --noclean --target aarch64 --nodeps /builddir/build/SPECS/shim-unsigned-aarch64.spec'], chrootPath='/var/lib/mock/rocky-9-aarch64_ciqshim/root'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0xffff8d83d450>timeout=0uid=1000gid=135user='mockbuild'unshare_net=TrueprintOutput=Truenspawn_args=['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.5alpcsn0:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11'])
-Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.5alpcsn0:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
-Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '17cdc0803aba434ea46ab080302656a1', '-D', '/var/lib/mock/rocky-9-aarch64_ciqshim/root', '-a', '-u', 'mockbuild', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.5alpcsn0:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', 'bash', '--login', '-c', '/usr/bin/rpmbuild -bb --noclean --target aarch64 --nodeps /builddir/build/SPECS/shim-unsigned-aarch64.spec'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
+ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bb  --target aarch64 --nodeps /builddir/build/SPECS/shim-unsigned-aarch64.spec'], chrootPath='/var/lib/mock/rocky-9-aarch64/root'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0xffff7674ee40>timeout=0uid=1000gid=135user='mockbuild'unshare_net=TrueprintOutput=Falsenspawn_args=['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.p0e93bbf:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11'])
+Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.p0e93bbf:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
+Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'cf958ff6f32d497eaa3901762417dde1', '-D', '/var/lib/mock/rocky-9-aarch64/root', '-a', '-u', 'mockbuild', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.p0e93bbf:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--console=pipe', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', 'bash', '--login', '-c', '/usr/bin/rpmbuild -bb  --target aarch64 --nodeps /builddir/build/SPECS/shim-unsigned-aarch64.spec'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0', 'SYSTEMD_SECCOMP': '0'} and shell False
 Building target platforms: aarch64
 Building for target aarch64
 setting SOURCE_DATE_EPOCH=1770768000
-Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.Lzl0wx
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.aiJg7l
 + umask 022
 + cd /builddir/build/BUILD
 + cd /builddir/build/BUILD
@@ -38,6 +38,60 @@ Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.Lzl0wx
 + /usr/bin/git config gc.auto 0
 + /usr/bin/git add --force .
 + /usr/bin/git commit -q --allow-empty -a --author 'rpm-build <rpm-build>' -m 'shim-unsigned-aarch64-16.1 base'
++ source scl_source enable gcc-toolset-12
+++ _scl_source_help='Usage: source scl_source <action> [<collection> ...]
+Don'\''t use this script outside of SCL scriptlets!
+Options:
+    -h, --help    display this help and exit'
+++ '[' 2 -eq 0 -o enable = -h -o enable = --help ']'
+++ '[' -z '' ']'
+++ _recursion=false
+++ '[' -z '' ']'
+++ _scl_scriptlet_name=enable
+++ shift 1
+++ '[' -z '' ']'
+++ _scl_dir=/etc/scl/conf
+++ '[' '!' -e /etc/scl/conf ']'
+++ for arg in "$@"
+++ _scl_prefix_file=/etc/scl/conf/gcc-toolset-12
++++ cat /etc/scl/conf/gcc-toolset-12
+++ _scl_prefix=/opt/rh
+++ '[' 0 -ne 0 ']'
+++ /usr/bin/scl_enabled gcc-toolset-12
+++ _scls+=("$arg")
+++ _scl_prefixes+=("$_scl_prefix")
+++ '[' false == false ']'
+++ _i=0
+++ _recursion=true
+++ '[' 0 -lt 1 ']'
+++ _scl_scriptlet_path=/opt/rh/gcc-toolset-12/enable
+++ source /opt/rh/gcc-toolset-12/enable
++++ export PATH=/opt/rh/gcc-toolset-12/root/usr/bin:/usr/share/Modules/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
++++ PATH=/opt/rh/gcc-toolset-12/root/usr/bin:/usr/share/Modules/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
++++ export MANPATH=/opt/rh/gcc-toolset-12/root/usr/share/man:/usr/share/man:
++++ MANPATH=/opt/rh/gcc-toolset-12/root/usr/share/man:/usr/share/man:
++++ export INFOPATH=/opt/rh/gcc-toolset-12/root/usr/share/info
++++ INFOPATH=/opt/rh/gcc-toolset-12/root/usr/share/info
++++ export PCP_DIR=/opt/rh/gcc-toolset-12/root
++++ PCP_DIR=/opt/rh/gcc-toolset-12/root
+++++ rpm --eval '%{_libdir}'
++++ rpmlibdir=/usr/lib64
++++ '[' /usr/lib64 '!=' /usr/ ']'
++++ rpmlibdir32=:/opt/rh/gcc-toolset-12/root/usr/lib
++++ rpmlibdir64=
++++ export LD_LIBRARY_PATH=/opt/rh/gcc-toolset-12/root/usr/lib64:/opt/rh/gcc-toolset-12/root/usr/lib
++++ LD_LIBRARY_PATH=/opt/rh/gcc-toolset-12/root/usr/lib64:/opt/rh/gcc-toolset-12/root/usr/lib
++++ export PKG_CONFIG_PATH=/opt/rh/gcc-toolset-12/root/usr/lib64/pkgconfig::/usr/lib64/pkgconfig:/usr/share/pkgconfig
++++ PKG_CONFIG_PATH=/opt/rh/gcc-toolset-12/root/usr/lib64/pkgconfig::/usr/lib64/pkgconfig:/usr/share/pkgconfig
+++ '[' 0 -ne 0 ']'
+++ export 'X_SCLS=gcc-toolset-12 '
+++ X_SCLS='gcc-toolset-12 '
+++ _i=1
+++ '[' 1 -lt 1 ']'
+++ _scls=()
+++ _scl_prefixes=()
+++ _scl_scriptlet_name=
+++ _recursion=false
 + git config --unset user.email
 + git config --unset user.name
 + mkdir build-aa64
@@ -45,12 +99,68 @@ Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.Lzl0wx
 + RPM_EC=0
 ++ jobs -p
 + exit 0
-Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.dNKzDc
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.7XiODm
 + umask 022
 + cd /builddir/build/BUILD
 + cd shim-16.1
-+ COMMIT_ID=afc49558b34548644c1cd0ad1b6526a9470182ed
++ source scl_source enable gcc-toolset-12
+++ _scl_source_help='Usage: source scl_source <action> [<collection> ...]
+Don'\''t use this script outside of SCL scriptlets!
+Options:
+    -h, --help    display this help and exit'
+++ '[' 2 -eq 0 -o enable = -h -o enable = --help ']'
+++ '[' -z '' ']'
+++ _recursion=false
+++ '[' -z '' ']'
+++ _scl_scriptlet_name=enable
+++ shift 1
+++ '[' -z '' ']'
+++ _scl_dir=/etc/scl/conf
+++ '[' '!' -e /etc/scl/conf ']'
+++ for arg in "$@"
+++ _scl_prefix_file=/etc/scl/conf/gcc-toolset-12
++++ cat /etc/scl/conf/gcc-toolset-12
+++ _scl_prefix=/opt/rh
+++ '[' 0 -ne 0 ']'
+++ /usr/bin/scl_enabled gcc-toolset-12
+++ _scls+=("$arg")
+++ _scl_prefixes+=("$_scl_prefix")
+++ '[' false == false ']'
+++ _i=0
+++ _recursion=true
+++ '[' 0 -lt 1 ']'
+++ _scl_scriptlet_path=/opt/rh/gcc-toolset-12/enable
+++ source /opt/rh/gcc-toolset-12/enable
++++ export PATH=/opt/rh/gcc-toolset-12/root/usr/bin:/usr/share/Modules/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
++++ PATH=/opt/rh/gcc-toolset-12/root/usr/bin:/usr/share/Modules/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
++++ export MANPATH=/opt/rh/gcc-toolset-12/root/usr/share/man:/usr/share/man:
++++ MANPATH=/opt/rh/gcc-toolset-12/root/usr/share/man:/usr/share/man:
++++ export INFOPATH=/opt/rh/gcc-toolset-12/root/usr/share/info
++++ INFOPATH=/opt/rh/gcc-toolset-12/root/usr/share/info
++++ export PCP_DIR=/opt/rh/gcc-toolset-12/root
++++ PCP_DIR=/opt/rh/gcc-toolset-12/root
+++++ rpm --eval '%{_libdir}'
++++ rpmlibdir=/usr/lib64
++++ '[' /usr/lib64 '!=' /usr/ ']'
++++ rpmlibdir32=:/opt/rh/gcc-toolset-12/root/usr/lib
++++ rpmlibdir64=
++++ export LD_LIBRARY_PATH=/opt/rh/gcc-toolset-12/root/usr/lib64:/opt/rh/gcc-toolset-12/root/usr/lib
++++ LD_LIBRARY_PATH=/opt/rh/gcc-toolset-12/root/usr/lib64:/opt/rh/gcc-toolset-12/root/usr/lib
++++ export PKG_CONFIG_PATH=/opt/rh/gcc-toolset-12/root/usr/lib64/pkgconfig::/usr/lib64/pkgconfig:/usr/share/pkgconfig
++++ PKG_CONFIG_PATH=/opt/rh/gcc-toolset-12/root/usr/lib64/pkgconfig::/usr/lib64/pkgconfig:/usr/share/pkgconfig
+++ '[' 0 -ne 0 ']'
+++ export 'X_SCLS=gcc-toolset-12 '
+++ X_SCLS='gcc-toolset-12 '
+++ _i=1
+++ '[' 1 -lt 1 ']'
+++ _scls=()
+++ _scl_prefixes=()
+++ _scl_scriptlet_name=
+++ _recursion=false
+++ cat commit
++ COMMITID=afc49558b34548644c1cd0ad1b6526a9470182ed
 + MAKEFLAGS='TOPDIR=.. -f ../Makefile COMMITID=afc49558b34548644c1cd0ad1b6526a9470182ed '
++ COMMIT_ID=afc49558b34548644c1cd0ad1b6526a9470182ed
 + MAKEFLAGS+='EFIDIR=rocky PKGNAME=shim RELEASE=0.el9 '
 + MAKEFLAGS+='ENABLE_SHIM_HASH=true '
 + MAKEFLAGS+='SBAT_AUTOMATIC_DATE=2023012900 '
@@ -604,7 +714,7 @@ gcc -I/builddir/build/BUILD/shim-16.1/gnu-efi//lib -I/builddir/build/BUILD/shim-
 /builddir/build/BUILD/shim-16.1/gnu-efi//lib/aarch64/setjmp.S: Assembler messages:
 /builddir/build/BUILD/shim-16.1/gnu-efi//lib/aarch64/setjmp.S:61: Warning: setting incorrect section attributes for .note.GNU-stack
 gcc-ar rv -U libefi.a boxdraw.o smbios.o console.o crc.o data.o debug.o dpath.o error.o event.o exit.o guid.o hand.o hw.o init.o lock.o misc.o pause.o print.o sread.o str.o cmdline.o runtime/rtlock.o runtime/efirtlib.o runtime/rtstr.o runtime/vm.o runtime/rtdata.o aarch64/initplat.o aarch64/math.o aarch64/setjmp.o
-/usr/bin/ar: creating libefi.a
+/opt/rh/gcc-toolset-12/root/usr/bin/ar: creating libefi.a
 a - boxdraw.o
 a - smbios.o
 a - console.o
@@ -643,12 +753,11 @@ gcc -I/builddir/build/BUILD/shim-16.1/gnu-efi//gnuefi -I/builddir/build/BUILD/sh
 /builddir/build/BUILD/shim-16.1/gnu-efi//gnuefi/crt0-efi-aarch64.S: Assembler messages:
 /builddir/build/BUILD/shim-16.1/gnu-efi//gnuefi/crt0-efi-aarch64.S:54: Warning: setting incorrect section attributes for .note.GNU-stack
 gcc-ar rv -U libgnuefi.a reloc_aarch64.o
-/usr/bin/ar: creating libgnuefi.a
+/opt/rh/gcc-toolset-12/root/usr/bin/ar: creating libgnuefi.a
 a - reloc_aarch64.o
 make[2]: Leaving directory '/builddir/build/BUILD/shim-16.1/build-aa64/gnu-efi/aarch64/gnuefi'
 make[1]: Leaving directory '/builddir/build/BUILD/shim-16.1/build-aa64/gnu-efi'
 ld -o shimaa64.so --hash-style=sysv -nostdlib -znocombreloc -T /builddir/build/BUILD/shim-16.1/elf_aarch64_efi.lds -shared -Bsymbolic -Lgnu-efi/aarch64/gnuefi -Lgnu-efi/aarch64/lib -LCryptlib -LCryptlib/OpenSSL gnu-efi/aarch64/gnuefi/crt0-efi-aarch64.o --build-id=sha1  --no-undefined shim.o globals.o memattrs.o mok.o netboot.o cert.o dp.o loader-proto.o tpm.o version.o errlog.o sbat.o sbat_data.o sbat_var.o pe.o pe-relocate.o httpboot.o csv.o load-options.o utils.o verify.o Cryptlib/libcryptlib.a Cryptlib/OpenSSL/libopenssl.a lib/lib.a gnu-efi/aarch64/lib/libefi.a gnu-efi/aarch64/gnuefi/libgnuefi.a -lefi -lgnuefi --start-group Cryptlib/libcryptlib.a Cryptlib/OpenSSL/libopenssl.a --end-group /usr/lib/gcc/aarch64-redhat-linux/11/libgcc.a lib/lib.a
-ld: warning: shimaa64.so has a LOAD segment with RWX permissions
 gcc -std=gnu11 -Og -g3 -Wall -Wextra -Wno-missing-field-initializers -Werror -o post-process-pe /builddir/build/BUILD/shim-16.1/post-process-pe.c
 objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	-j .dynamic -j .rodata -j .rel* \
@@ -671,7 +780,6 @@ gcc -std=gnu11 -ggdb -gdwarf-4 -gstrict-dwarf -ffreestanding -fmacro-prefix-map=
 gcc -std=gnu11 -ggdb -gdwarf-4 -gstrict-dwarf -ffreestanding -fmacro-prefix-map=/builddir/build/BUILD/shim-16.1/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -DMDE_CPU_AARCH64 -DPAGE_SIZE=4096 -mstrict-align -Werror -nostdinc -I/builddir/build/BUILD/shim-16.1/Cryptlib -I/builddir/build/BUILD/shim-16.1/Cryptlib/Include -I/builddir/build/BUILD/shim-16.1/gnu-efi/inc -I/builddir/build/BUILD/shim-16.1/gnu-efi/inc/aarch64 -I/builddir/build/BUILD/shim-16.1/gnu-efi/inc/protocol -I/builddir/build/BUILD/shim-16.1/include -iquote /builddir/build/BUILD/shim-16.1 -iquote /builddir/build/BUILD/shim-16.1/build-aa64 -isystem /builddir/build/BUILD/shim-16.1/include/system -isystem /usr/lib/gcc/aarch64-redhat-linux/11/include -DDEFAULT_LOADER='L"\\\\grubaa64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubaa64.efi"' -DEFI_ARCH='L"aa64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/aa64-16.1-0.el9/"' -DVENDOR_CERT_FILE=\"/builddir/build/SOURCES/ciq_sb_ca.der\" -DSBAT_AUTOMATIC_DATE=2023012900   -c -o PasswordCrypt.o /builddir/build/BUILD/shim-16.1/PasswordCrypt.c
 gcc -std=gnu11 -ggdb -gdwarf-4 -gstrict-dwarf -ffreestanding -fmacro-prefix-map=/builddir/build/BUILD/shim-16.1/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -DMDE_CPU_AARCH64 -DPAGE_SIZE=4096 -mstrict-align -Werror -nostdinc -I/builddir/build/BUILD/shim-16.1/Cryptlib -I/builddir/build/BUILD/shim-16.1/Cryptlib/Include -I/builddir/build/BUILD/shim-16.1/gnu-efi/inc -I/builddir/build/BUILD/shim-16.1/gnu-efi/inc/aarch64 -I/builddir/build/BUILD/shim-16.1/gnu-efi/inc/protocol -I/builddir/build/BUILD/shim-16.1/include -iquote /builddir/build/BUILD/shim-16.1 -iquote /builddir/build/BUILD/shim-16.1/build-aa64 -isystem /builddir/build/BUILD/shim-16.1/include/system -isystem /usr/lib/gcc/aarch64-redhat-linux/11/include -DDEFAULT_LOADER='L"\\\\grubaa64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubaa64.efi"' -DEFI_ARCH='L"aa64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/aa64-16.1-0.el9/"' -DVENDOR_CERT_FILE=\"/builddir/build/SOURCES/ciq_sb_ca.der\" -DSBAT_AUTOMATIC_DATE=2023012900   -c -o crypt_blowfish.o /builddir/build/BUILD/shim-16.1/crypt_blowfish.c
 ld -o mmaa64.so --hash-style=sysv -nostdlib -znocombreloc -T /builddir/build/BUILD/shim-16.1/elf_aarch64_efi.lds -shared -Bsymbolic -Lgnu-efi/aarch64/gnuefi -Lgnu-efi/aarch64/lib -LCryptlib -LCryptlib/OpenSSL gnu-efi/aarch64/gnuefi/crt0-efi-aarch64.o --build-id=sha1  --no-undefined MokManager.o PasswordCrypt.o crypt_blowfish.o errlog.o sbat_data.o globals.o dp.o Cryptlib/libcryptlib.a Cryptlib/OpenSSL/libopenssl.a lib/lib.a gnu-efi/aarch64/lib/libefi.a gnu-efi/aarch64/gnuefi/libgnuefi.a -lefi -lgnuefi --start-group Cryptlib/libcryptlib.a Cryptlib/OpenSSL/libopenssl.a --end-group /usr/lib/gcc/aarch64-redhat-linux/11/libgcc.a lib/lib.a
-ld: warning: mmaa64.so has a LOAD segment with RWX permissions
 objcopy -D -j .text -j .sdata -j .data \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .dyn -j .reloc -j .eh_frame -j .sbat \
@@ -683,7 +791,6 @@ objcopy -D -j .text -j .sdata -j .data \
 	mmaa64.so mmaa64.efi.debug
 gcc -std=gnu11 -ggdb -gdwarf-4 -gstrict-dwarf -ffreestanding -fmacro-prefix-map=/builddir/build/BUILD/shim-16.1/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -DMDE_CPU_AARCH64 -DPAGE_SIZE=4096 -mstrict-align -Werror -nostdinc -I/builddir/build/BUILD/shim-16.1/Cryptlib -I/builddir/build/BUILD/shim-16.1/Cryptlib/Include -I/builddir/build/BUILD/shim-16.1/gnu-efi/inc -I/builddir/build/BUILD/shim-16.1/gnu-efi/inc/aarch64 -I/builddir/build/BUILD/shim-16.1/gnu-efi/inc/protocol -I/builddir/build/BUILD/shim-16.1/include -iquote /builddir/build/BUILD/shim-16.1 -iquote /builddir/build/BUILD/shim-16.1/build-aa64 -isystem /builddir/build/BUILD/shim-16.1/include/system -isystem /usr/lib/gcc/aarch64-redhat-linux/11/include -DDEFAULT_LOADER='L"\\\\grubaa64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubaa64.efi"' -DEFI_ARCH='L"aa64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/aa64-16.1-0.el9/"' -DVENDOR_CERT_FILE=\"/builddir/build/SOURCES/ciq_sb_ca.der\" -DSBAT_AUTOMATIC_DATE=2023012900   -c -o fallback.o /builddir/build/BUILD/shim-16.1/fallback.c
 ld -o fbaa64.so --hash-style=sysv -nostdlib -znocombreloc -T /builddir/build/BUILD/shim-16.1/elf_aarch64_efi.lds -shared -Bsymbolic -Lgnu-efi/aarch64/gnuefi -Lgnu-efi/aarch64/lib -LCryptlib -LCryptlib/OpenSSL gnu-efi/aarch64/gnuefi/crt0-efi-aarch64.o --build-id=sha1  --no-undefined fallback.o tpm.o errlog.o sbat_data.o globals.o utils.o Cryptlib/libcryptlib.a Cryptlib/OpenSSL/libopenssl.a lib/lib.a gnu-efi/aarch64/lib/libefi.a gnu-efi/aarch64/gnuefi/libgnuefi.a -lefi -lgnuefi --start-group Cryptlib/libcryptlib.a Cryptlib/OpenSSL/libopenssl.a --end-group /usr/lib/gcc/aarch64-redhat-linux/11/libgcc.a lib/lib.a
-ld: warning: fbaa64.so has a LOAD segment with RWX permissions
 objcopy -D -j .text -j .sdata -j .data \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .dyn -j .reloc -j .eh_frame -j .sbat \
@@ -714,7 +821,7 @@ validate_nx_compat():380: NX Compatibility flag is not set
 + RPM_EC=0
 ++ jobs -p
 + exit 0
-Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.otK9Gm
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.ciDIZp
 + umask 022
 + cd /builddir/build/BUILD
 + '[' /builddir/build/BUILDROOT/shim-unsigned-aarch64-16.1-0.el9.aarch64 '!=' / ']'
@@ -723,15 +830,70 @@ Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.otK9Gm
 + mkdir -p /builddir/build/BUILDROOT
 + mkdir /builddir/build/BUILDROOT/shim-unsigned-aarch64-16.1-0.el9.aarch64
 + cd shim-16.1
-+ COMMIT_ID=afc49558b34548644c1cd0ad1b6526a9470182ed
++ source scl_source enable gcc-toolset-12
+++ _scl_source_help='Usage: source scl_source <action> [<collection> ...]
+Don'\''t use this script outside of SCL scriptlets!
+Options:
+    -h, --help    display this help and exit'
+++ '[' 2 -eq 0 -o enable = -h -o enable = --help ']'
+++ '[' -z '' ']'
+++ _recursion=false
+++ '[' -z '' ']'
+++ _scl_scriptlet_name=enable
+++ shift 1
+++ '[' -z '' ']'
+++ _scl_dir=/etc/scl/conf
+++ '[' '!' -e /etc/scl/conf ']'
+++ for arg in "$@"
+++ _scl_prefix_file=/etc/scl/conf/gcc-toolset-12
++++ cat /etc/scl/conf/gcc-toolset-12
+++ _scl_prefix=/opt/rh
+++ '[' 0 -ne 0 ']'
+++ /usr/bin/scl_enabled gcc-toolset-12
+++ _scls+=("$arg")
+++ _scl_prefixes+=("$_scl_prefix")
+++ '[' false == false ']'
+++ _i=0
+++ _recursion=true
+++ '[' 0 -lt 1 ']'
+++ _scl_scriptlet_path=/opt/rh/gcc-toolset-12/enable
+++ source /opt/rh/gcc-toolset-12/enable
++++ export PATH=/opt/rh/gcc-toolset-12/root/usr/bin:/usr/share/Modules/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
++++ PATH=/opt/rh/gcc-toolset-12/root/usr/bin:/usr/share/Modules/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
++++ export MANPATH=/opt/rh/gcc-toolset-12/root/usr/share/man:/usr/share/man:
++++ MANPATH=/opt/rh/gcc-toolset-12/root/usr/share/man:/usr/share/man:
++++ export INFOPATH=/opt/rh/gcc-toolset-12/root/usr/share/info
++++ INFOPATH=/opt/rh/gcc-toolset-12/root/usr/share/info
++++ export PCP_DIR=/opt/rh/gcc-toolset-12/root
++++ PCP_DIR=/opt/rh/gcc-toolset-12/root
+++++ rpm --eval '%{_libdir}'
++++ rpmlibdir=/usr/lib64
++++ '[' /usr/lib64 '!=' /usr/ ']'
++++ rpmlibdir32=:/opt/rh/gcc-toolset-12/root/usr/lib
++++ rpmlibdir64=
++++ export LD_LIBRARY_PATH=/opt/rh/gcc-toolset-12/root/usr/lib64:/opt/rh/gcc-toolset-12/root/usr/lib
++++ LD_LIBRARY_PATH=/opt/rh/gcc-toolset-12/root/usr/lib64:/opt/rh/gcc-toolset-12/root/usr/lib
++++ export PKG_CONFIG_PATH=/opt/rh/gcc-toolset-12/root/usr/lib64/pkgconfig::/usr/lib64/pkgconfig:/usr/share/pkgconfig
++++ PKG_CONFIG_PATH=/opt/rh/gcc-toolset-12/root/usr/lib64/pkgconfig::/usr/lib64/pkgconfig:/usr/share/pkgconfig
+++ '[' 0 -ne 0 ']'
+++ export 'X_SCLS=gcc-toolset-12 '
+++ X_SCLS='gcc-toolset-12 '
+++ _i=1
+++ '[' 1 -lt 1 ']'
+++ _scls=()
+++ _scl_prefixes=()
+++ _scl_scriptlet_name=
+++ _recursion=false
+++ cat commit
++ COMMITID=afc49558b34548644c1cd0ad1b6526a9470182ed
 + MAKEFLAGS='TOPDIR=.. -f ../Makefile COMMITID=afc49558b34548644c1cd0ad1b6526a9470182ed '
++ COMMIT_ID=afc49558b34548644c1cd0ad1b6526a9470182ed
 + MAKEFLAGS+='EFIDIR=rocky PKGNAME=shim RELEASE=0.el9 '
-+ MAKEFLAGS+='ENABLE_SHIM_HASH=true '
-+ MAKEFLAGS+='SBAT_AUTOMATIC_DATE=2023012900 '
++ MAKEFLAGS+='ENABLE_HTTPBOOT=false ENABLE_SHIM_HASH=true '
 + '[' -s /builddir/build/SOURCES/ciq_sb_ca.der ']'
-+ MAKEFLAGS='TOPDIR=.. -f ../Makefile COMMITID=afc49558b34548644c1cd0ad1b6526a9470182ed EFIDIR=rocky PKGNAME=shim RELEASE=0.el9 ENABLE_SHIM_HASH=true SBAT_AUTOMATIC_DATE=2023012900  VENDOR_CERT_FILE=/builddir/build/SOURCES/ciq_sb_ca.der'
++ MAKEFLAGS='TOPDIR=.. -f ../Makefile COMMITID=afc49558b34548644c1cd0ad1b6526a9470182ed EFIDIR=rocky PKGNAME=shim RELEASE=0.el9 ENABLE_HTTPBOOT=false ENABLE_SHIM_HASH=true  VENDOR_CERT_FILE=/builddir/build/SOURCES/ciq_sb_ca.der'
 + cd build-aa64
-+ make TOPDIR=.. -f ../Makefile COMMITID=afc49558b34548644c1cd0ad1b6526a9470182ed EFIDIR=rocky PKGNAME=shim RELEASE=0.el9 ENABLE_SHIM_HASH=true SBAT_AUTOMATIC_DATE=2023012900 VENDOR_CERT_FILE=/builddir/build/SOURCES/ciq_sb_ca.der 'DEFAULT_LOADER=\\\\grubaa64.efi' DESTDIR=/builddir/build/BUILDROOT/shim-unsigned-aarch64-16.1-0.el9.aarch64 install-as-data install-debuginfo install-debugsource
++ make TOPDIR=.. -f ../Makefile COMMITID=afc49558b34548644c1cd0ad1b6526a9470182ed EFIDIR=rocky PKGNAME=shim RELEASE=0.el9 ENABLE_HTTPBOOT=false ENABLE_SHIM_HASH=true VENDOR_CERT_FILE=/builddir/build/SOURCES/ciq_sb_ca.der 'DEFAULT_LOADER=\\\\grubaa64.efi' DESTDIR=/builddir/build/BUILDROOT/shim-unsigned-aarch64-16.1-0.el9.aarch64 install-as-data install-debuginfo install-debugsource
 gcc -I/usr/include -Og -g3 -Wall -Werror -Wextra -o buildid /builddir/build/BUILD/shim-16.1/buildid.c -lelf
 Making BOOTAA64.CSV
 install -d -m 0755 /builddir/build/BUILDROOT/shim-unsigned-aarch64-16.1-0.el9.aarch64//usr/share//shim/16.1-0.el9/aa64/
@@ -759,7 +921,7 @@ done
 + /usr/lib/rpm/brp-python-hardlink
 + /usr/lib/rpm/redhat/brp-mangle-shebangs
 Processing files: shim-unsigned-aarch64-16.1-0.el9.aarch64
-Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.I2TOC9
+Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.0A6PK7
 + umask 022
 + cd /builddir/build/BUILD
 + cd shim-16.1
@@ -785,4 +947,12 @@ Checking for unpackaged file(s): /usr/lib/rpm/check-files /builddir/build/BUILDR
 Wrote: /builddir/build/RPMS/shim-unsigned-aarch64-debuginfo-16.1-0.el9.noarch.rpm
 Wrote: /builddir/build/RPMS/shim-unsigned-aarch64-16.1-0.el9.aarch64.rpm
 Wrote: /builddir/build/RPMS/shim-unsigned-aarch64-debugsource-16.1-0.el9.noarch.rpm
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.43o1SZ
++ umask 022
++ cd /builddir/build/BUILD
++ cd shim-16.1
++ /usr/bin/rm -rf /builddir/build/BUILDROOT/shim-unsigned-aarch64-16.1-0.el9.aarch64
++ RPM_EC=0
+++ jobs -p
++ exit 0
 Child return code was: 0
