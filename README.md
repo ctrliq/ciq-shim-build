@@ -102,8 +102,8 @@ You will be asked to post the contents of these mails in your `shim-review` issu
 - Name: Andrew Jorgensen
 - Position: Senior Principal Linux Engineer  
 - Email address: [ajorgens@ciq.com](mailto:ajorgens@ciq.com)  
-- PGP key fingerprint: 
-- PGP key URL: []()
+- PGP key fingerprint: 6EEF B810 8DF1 6EF5 729E  C8C9 8120 157A 1402 D875
+- PGP key URL: [https://keyserver.ubuntu.com/pks/lookup?search=8120157A1402D875&fingerprint=on&op=index](https://keyserver.ubuntu.com/pks/lookup?search=8120157A1402D875&fingerprint=on&op=index)
 
 - Name: Skip Grube 
 - Position: Senior Systems Engineer  
