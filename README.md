@@ -428,8 +428,8 @@ We now sign UKI for kernels that support the feature.
 
 ---
 
-* SHA256 (shimx64.efi) \= dc5cd229935b21725b4e6739a9282c58fb376acb18ac8268674d28c1fecadb99  
-* SHA256 (shimaa64.efi) \= bc7864ae247a031717fb1ec2047dbf891882af265d187bd1498c3887364f3a5d
+* SHA256 (shimx64.efi) \= dc5cd229935b21725b4e6739a9282c58fb376acb18ac8268674d28c1fecadb99
+* SHA256 (shimaa64.efi) \= a33352422216df4b5f3fd47f5e1320c3c1762813baeb6430cd4aacf6c35c9357
 
 ---
 
