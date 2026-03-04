@@ -1,22 +1,103 @@
-2026-02-24 16:09:33,895 - Mock Version: 6.5
-2026-02-24 16:09:33,903 - Start(bootstrap): chroot init
-2026-02-24 16:09:33,961 - Start(bootstrap): cleaning package manager metadata
-2026-02-24 16:09:33,961 - Finish(bootstrap): cleaning package manager metadata
-2026-02-24 16:09:34,342 - Finish(bootstrap): chroot init
-2026-02-24 16:09:34,345 - Start: chroot init
-2026-02-24 16:09:34,357 - Start: unpacking root cache
-2026-02-24 16:09:36,681 - Finish: unpacking root cache
-2026-02-24 16:09:36,684 - Start: cleaning package manager metadata
-2026-02-24 16:09:36,686 - Finish: cleaning package manager metadata
-2026-02-24 16:09:37,206 - Start: yum update
-2026-02-24 16:09:39,028 - Finish: yum update
-2026-02-24 16:09:39,421 - Finish: chroot init
-2026-02-24 16:09:39,423 - Start: build phase for shim-unsigned-x64-16.1-0.el7.src.rpm
-2026-02-24 16:09:39,424 - Start: build setup for shim-unsigned-x64-16.1-0.el7.src.rpm
-2026-02-24 16:09:48,487 - Finish: build setup for shim-unsigned-x64-16.1-0.el7.src.rpm
-2026-02-24 16:09:48,488 - Start: rpmbuild shim-unsigned-x64-16.1-0.el7.src.rpm
-2026-02-24 16:09:48,490 - Start: Outputting list of installed packages
-2026-02-24 16:09:48,925 - Finish: Outputting list of installed packages
-2026-02-24 16:10:11,486 - Finish: rpmbuild shim-unsigned-x64-16.1-0.el7.src.rpm
-2026-02-24 16:10:11,490 - Finish: build phase for shim-unsigned-x64-16.1-0.el7.src.rpm
-2026-02-24 16:10:11,494 - Finish: run
+2026-02-24 15:39:05,928 - Mock Version: 6.6
+2026-02-24 15:39:05,932 - Start(bootstrap): chroot init
+2026-02-24 15:39:05,940 - Start(bootstrap): cleaning package manager metadata
+2026-02-24 15:39:05,940 - Finish(bootstrap): cleaning package manager metadata
+2026-02-24 15:39:06,205 - Start(bootstrap): installing yum tooling
+2026-02-24 15:39:27,466 - Finish(bootstrap): installing yum tooling
+2026-02-24 15:39:27,504 - Start(bootstrap): creating root cache
+2026-02-24 15:39:28,482 - Finish(bootstrap): creating root cache
+2026-02-24 15:39:28,483 - Finish(bootstrap): chroot init
+2026-02-24 15:39:28,485 - Start: chroot init
+2026-02-24 15:39:28,492 - Start: unpacking root cache
+2026-02-24 15:39:30,224 - Finish: unpacking root cache
+2026-02-24 15:39:30,225 - Start: cleaning package manager metadata
+2026-02-24 15:39:30,226 - Finish: cleaning package manager metadata
+2026-02-24 15:39:30,573 - Start: yum update
+2026-02-24 15:39:31,535 - Finish: yum update
+2026-02-24 15:39:31,971 - Finish: chroot init
+2026-02-24 15:39:31,972 - Start: buildsrpm
+2026-02-24 15:39:31,974 - Start: rpmbuild -bs
+2026-02-24 15:39:32,045 - Finish: rpmbuild -bs
+2026-02-24 15:39:32,046 - Finish: buildsrpm
+2026-02-24 15:39:32,047 - Start: clean chroot
+2026-02-24 15:39:33,251 - Finish: clean chroot
+2026-02-24 15:45:20,756 - Mock Version: 6.6
+2026-02-24 15:45:20,759 - Start(bootstrap): chroot init
+2026-02-24 15:45:20,787 - Start(bootstrap): cleaning package manager metadata
+2026-02-24 15:45:20,787 - Finish(bootstrap): cleaning package manager metadata
+2026-02-24 15:45:21,105 - Finish(bootstrap): chroot init
+2026-02-24 15:45:21,106 - Start: chroot init
+2026-02-24 15:45:21,113 - Start: unpacking root cache
+2026-02-24 15:45:22,802 - Finish: unpacking root cache
+2026-02-24 15:45:22,804 - Start: cleaning package manager metadata
+2026-02-24 15:45:22,805 - Finish: cleaning package manager metadata
+2026-02-24 15:45:23,154 - Start: yum update
+2026-02-24 15:45:24,123 - Finish: yum update
+2026-02-24 15:45:24,563 - Finish: chroot init
+2026-02-24 15:45:24,565 - Start: buildsrpm
+2026-02-24 15:45:24,568 - Start: rpmbuild -bs
+2026-02-24 15:45:24,703 - Finish: rpmbuild -bs
+2026-02-24 15:45:24,704 - Finish: buildsrpm
+2026-02-24 15:45:24,705 - Start: clean chroot
+2026-02-24 15:45:25,849 - Finish: clean chroot
+2026-02-24 15:45:25,849 - Finish: run
+2026-02-24 15:45:26,360 - Mock Version: 6.6
+2026-02-24 15:45:26,364 - Start(bootstrap): chroot init
+2026-02-24 15:45:26,390 - Start(bootstrap): cleaning package manager metadata
+2026-02-24 15:45:26,390 - Finish(bootstrap): cleaning package manager metadata
+2026-02-24 15:45:26,715 - Finish(bootstrap): chroot init
+2026-02-24 15:45:26,716 - Start: chroot init
+2026-02-24 15:45:26,723 - Start: unpacking root cache
+2026-02-24 15:45:28,435 - Finish: unpacking root cache
+2026-02-24 15:45:28,436 - Start: cleaning package manager metadata
+2026-02-24 15:45:28,437 - Finish: cleaning package manager metadata
+2026-02-24 15:45:29,230 - Finish: chroot init
+2026-02-24 15:45:29,231 - Start: build phase for shim-unsigned-x64-16.1-0.el7_9.ciqcbr.src.rpm
+2026-02-24 15:45:29,232 - Start: build setup for shim-unsigned-x64-16.1-0.el7_9.ciqcbr.src.rpm
+2026-02-24 15:45:40,491 - Finish: build setup for shim-unsigned-x64-16.1-0.el7_9.ciqcbr.src.rpm
+2026-02-24 15:45:40,492 - Start: rpmbuild shim-unsigned-x64-16.1-0.el7_9.ciqcbr.src.rpm
+2026-02-24 15:45:40,494 - Start: Outputting list of installed packages
+2026-02-24 15:45:40,701 - Finish: Outputting list of installed packages
+2026-02-24 15:45:58,772 - Finish: rpmbuild shim-unsigned-x64-16.1-0.el7_9.ciqcbr.src.rpm
+2026-02-24 15:45:58,774 - Finish: build phase for shim-unsigned-x64-16.1-0.el7_9.ciqcbr.src.rpm
+2026-02-24 15:45:58,776 - Finish: run
+2026-03-04 09:39:50,096 - Mock Version: 6.6
+2026-03-04 09:39:50,109 - Start(bootstrap): chroot init
+2026-03-04 09:39:50,117 - Start(bootstrap): unpacking root cache
+2026-03-04 09:39:50,928 - Finish(bootstrap): unpacking root cache
+2026-03-04 09:39:50,929 - Start(bootstrap): cleaning package manager metadata
+2026-03-04 09:39:50,929 - Finish(bootstrap): cleaning package manager metadata
+2026-03-04 09:39:51,234 - Finish(bootstrap): chroot init
+2026-03-04 09:39:51,235 - Start: chroot init
+2026-03-04 09:39:51,266 - Start: cleaning package manager metadata
+2026-03-04 09:39:51,266 - Finish: cleaning package manager metadata
+2026-03-04 09:39:51,664 - Start: yum update
+2026-03-04 09:39:52,588 - Finish: yum update
+2026-03-04 09:39:53,387 - Finish: chroot init
+2026-03-04 09:39:53,388 - Start: buildsrpm
+2026-03-04 09:39:53,391 - Start: rpmbuild -bs
+2026-03-04 09:39:53,560 - Finish: rpmbuild -bs
+2026-03-04 09:39:53,561 - Finish: buildsrpm
+2026-03-04 09:39:53,562 - Start: clean chroot
+2026-03-04 09:39:55,124 - Finish: clean chroot
+2026-03-04 09:39:55,124 - Finish: run
+2026-03-04 09:39:55,693 - Mock Version: 6.6
+2026-03-04 09:39:55,696 - Start(bootstrap): chroot init
+2026-03-04 09:39:55,729 - Start(bootstrap): cleaning package manager metadata
+2026-03-04 09:39:55,730 - Finish(bootstrap): cleaning package manager metadata
+2026-03-04 09:39:56,085 - Finish(bootstrap): chroot init
+2026-03-04 09:39:56,087 - Start: chroot init
+2026-03-04 09:39:56,094 - Start: unpacking root cache
+2026-03-04 09:39:58,004 - Finish: unpacking root cache
+2026-03-04 09:39:58,005 - Start: cleaning package manager metadata
+2026-03-04 09:39:58,006 - Finish: cleaning package manager metadata
+2026-03-04 09:39:58,841 - Finish: chroot init
+2026-03-04 09:39:58,842 - Start: build phase for shim-unsigned-x64-16.1-0.el7.src.rpm
+2026-03-04 09:39:58,843 - Start: build setup for shim-unsigned-x64-16.1-0.el7.src.rpm
+2026-03-04 09:40:09,751 - Finish: build setup for shim-unsigned-x64-16.1-0.el7.src.rpm
+2026-03-04 09:40:09,751 - Start: rpmbuild shim-unsigned-x64-16.1-0.el7.src.rpm
+2026-03-04 09:40:09,752 - Start: Outputting list of installed packages
+2026-03-04 09:40:09,981 - Finish: Outputting list of installed packages
+2026-03-04 09:40:28,686 - Finish: rpmbuild shim-unsigned-x64-16.1-0.el7.src.rpm
+2026-03-04 09:40:28,687 - Finish: build phase for shim-unsigned-x64-16.1-0.el7.src.rpm
+2026-03-04 09:40:28,689 - Finish: run
