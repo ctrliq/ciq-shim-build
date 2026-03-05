@@ -41,11 +41,11 @@ Vulnerability Vmscape:                   Not affected
 
 Memory:
                total        used        free      shared  buff/cache   available
-Mem:           1.9Gi       949Mi        31Mi        18Mi       1.0Gi       992Mi
-Swap:          1.9Gi       931Mi       1.0Gi
+Mem:           1.9Gi       992Mi        31Mi        29Mi       1.0Gi       949Mi
+Swap:          1.9Gi       988Mi       953Mi
 
 
 Storage (chroot, cache_topdir):
 Filesystem     Type   Size  Used Avail Use% Mounted on
-/dev/nvme0n1p3 btrfs   72G   17G   54G  24% /home
-/dev/nvme0n1p3 btrfs   72G   17G   54G  24% /
+/dev/nvme0n1p3 btrfs   72G   17G   54G  25% /
+/dev/nvme0n1p3 btrfs   72G   17G   54G  25% /
