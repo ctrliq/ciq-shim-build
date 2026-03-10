@@ -13,7 +13,7 @@ Thread(s) per core:                      2
 Core(s) per socket:                      16
 Socket(s):                               2
 Stepping:                                1
-CPU(s) scaling MHz:                      94%
+CPU(s) scaling MHz:                      97%
 CPU max MHz:                             3600.0000
 CPU min MHz:                             1200.0000
 BogoMIPS:                                5188.07
@@ -45,11 +45,11 @@ Vulnerability Tsx async abort:           Mitigation; Clear CPU buffers; SMT vuln
 
 Memory:
                total        used        free      shared  buff/cache   available
-Mem:           125Gi        26Gi       1.3Gi        61Mi        99Gi        98Gi
-Swap:           31Gi        64Mi        31Gi
+Mem:           125Gi        26Gi       1.9Gi        65Mi        99Gi        99Gi
+Swap:           31Gi       839Mi        31Gi
 
 
 Storage (chroot, cache_topdir):
 Filesystem                 Type  Size  Used Avail Use% Mounted on
-/dev/mapper/vg_nvme-lv_var xfs   698G  248G  450G  36% /var
-/dev/mapper/vg_nvme-lv_var xfs   698G  248G  450G  36% /var
+/dev/mapper/vg_nvme-lv_var xfs   698G  260G  438G  38% /var
+/dev/mapper/vg_nvme-lv_var xfs   698G  260G  438G  38% /var
