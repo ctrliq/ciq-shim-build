@@ -1,22 +1,22 @@
-2026-03-10 16:25:35,323 - Mock Version: 6.6
-2026-03-10 16:25:35,331 - Start(bootstrap): chroot init
-2026-03-10 16:25:35,361 - Start(bootstrap): cleaning package manager metadata
-2026-03-10 16:25:35,364 - Finish(bootstrap): cleaning package manager metadata
-2026-03-10 16:25:35,619 - Finish(bootstrap): chroot init
-2026-03-10 16:25:35,623 - Start: chroot init
-2026-03-10 16:25:35,639 - Start: unpacking root cache
-2026-03-10 16:25:37,941 - Finish: unpacking root cache
-2026-03-10 16:25:37,944 - Start: cleaning package manager metadata
-2026-03-10 16:25:37,952 - Finish: cleaning package manager metadata
-2026-03-10 16:25:38,235 - Start: dnf4 update
-2026-03-10 16:25:39,911 - Finish: dnf4 update
-2026-03-10 16:25:40,030 - Finish: chroot init
-2026-03-10 16:25:40,032 - Start: build phase for shim-unsigned-aarch64-16.1-0.el9.src.rpm
-2026-03-10 16:25:40,033 - Start: build setup for shim-unsigned-aarch64-16.1-0.el9.src.rpm
-2026-03-10 16:26:02,699 - Finish: build setup for shim-unsigned-aarch64-16.1-0.el9.src.rpm
-2026-03-10 16:26:02,700 - Start: rpmbuild shim-unsigned-aarch64-16.1-0.el9.src.rpm
-2026-03-10 16:26:02,702 - Start: Outputting list of installed packages
-2026-03-10 16:26:02,845 - Finish: Outputting list of installed packages
-2026-03-10 16:26:18,952 - Finish: rpmbuild shim-unsigned-aarch64-16.1-0.el9.src.rpm
-2026-03-10 16:26:18,959 - Finish: build phase for shim-unsigned-aarch64-16.1-0.el9.src.rpm
-2026-03-10 16:26:18,963 - Finish: run
+2026-03-11 10:53:19,030 - Mock Version: 6.6
+2026-03-11 10:53:19,038 - Start(bootstrap): chroot init
+2026-03-11 10:53:19,069 - Start(bootstrap): cleaning package manager metadata
+2026-03-11 10:53:19,070 - Finish(bootstrap): cleaning package manager metadata
+2026-03-11 10:53:19,319 - Finish(bootstrap): chroot init
+2026-03-11 10:53:19,323 - Start: chroot init
+2026-03-11 10:53:19,338 - Start: unpacking root cache
+2026-03-11 10:53:21,631 - Finish: unpacking root cache
+2026-03-11 10:53:21,634 - Start: cleaning package manager metadata
+2026-03-11 10:53:21,637 - Finish: cleaning package manager metadata
+2026-03-11 10:53:21,916 - Start: dnf4 update
+2026-03-11 10:53:25,202 - Finish: dnf4 update
+2026-03-11 10:53:25,327 - Finish: chroot init
+2026-03-11 10:53:25,329 - Start: build phase for shim-unsigned-aarch64-16.1-0.el9.src.rpm
+2026-03-11 10:53:25,332 - Start: build setup for shim-unsigned-aarch64-16.1-0.el9.src.rpm
+2026-03-11 10:53:31,875 - Finish: build setup for shim-unsigned-aarch64-16.1-0.el9.src.rpm
+2026-03-11 10:53:31,875 - Start: rpmbuild shim-unsigned-aarch64-16.1-0.el9.src.rpm
+2026-03-11 10:53:31,878 - Start: Outputting list of installed packages
+2026-03-11 10:53:32,024 - Finish: Outputting list of installed packages
+2026-03-11 10:53:48,084 - Finish: rpmbuild shim-unsigned-aarch64-16.1-0.el9.src.rpm
+2026-03-11 10:53:48,089 - Finish: build phase for shim-unsigned-aarch64-16.1-0.el9.src.rpm
+2026-03-11 10:53:48,093 - Finish: run
