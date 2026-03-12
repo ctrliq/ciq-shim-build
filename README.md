@@ -342,8 +342,8 @@ no updates for the EL7 product line
 *******************************************************************************
 ### What is the SHA256 hash of your final shim binary?
 *******************************************************************************
-* SHA256 (shimx64.efi) = 5ad9f5742983d21926d938e10283cc45036a15d37a323b74ed027696c01c1168
-* SHA256 (shimia32.efi) = 994bb797007dc8f006f8793ae7e25c0dd3443e242a9198d8834ab704e7e12e40
+* SHA256 (shimx64.efi) = 9251efbb02f6c95db7395585b53cbc5b47481de89ae49267801ffe4f29bc13d5
+* SHA256 (shimia32.efi) = 922c4fa6318cf68b6b9a3623ffd7ad399aac6fbe339ea395edae0aab51f27818
 
 *******************************************************************************
 ### How do you manage and protect the keys used in your shim?
