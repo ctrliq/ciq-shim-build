@@ -1,20 +1,20 @@
-2026-03-12 11:05:39,268 - Mock Version: 6.6
-2026-03-12 11:05:39,275 - Start(bootstrap): chroot init
-2026-03-12 11:05:39,294 - Start(bootstrap): cleaning package manager metadata
-2026-03-12 11:05:39,294 - Finish(bootstrap): cleaning package manager metadata
-2026-03-12 11:05:39,681 - Finish(bootstrap): chroot init
-2026-03-12 11:05:39,685 - Start: chroot init
-2026-03-12 11:05:39,702 - Start: cleaning package manager metadata
-2026-03-12 11:05:39,704 - Finish: cleaning package manager metadata
-2026-03-12 11:05:40,164 - Start: installing minimal buildroot with yum
-2026-03-12 11:06:17,789 - Finish: installing minimal buildroot with yum
-2026-03-12 11:06:18,157 - Start: creating root cache
-2026-03-12 11:06:19,095 - Finish: creating root cache
-2026-03-12 11:06:19,096 - Finish: chroot init
-2026-03-12 11:06:19,481 - Start: buildsrpm
-2026-03-12 11:06:19,486 - Start: rpmbuild -bs
-2026-03-12 11:06:19,818 - Finish: rpmbuild -bs
-2026-03-12 11:06:19,820 - Finish: buildsrpm
-2026-03-12 11:06:19,822 - Start: clean chroot
-2026-03-12 11:06:22,269 - Finish: clean chroot
-2026-03-12 11:06:22,270 - Finish: run
+2026-03-13 12:58:38,523 - Mock Version: 6.6
+2026-03-13 12:58:38,530 - Start(bootstrap): chroot init
+2026-03-13 12:58:38,546 - Start(bootstrap): cleaning package manager metadata
+2026-03-13 12:58:38,546 - Finish(bootstrap): cleaning package manager metadata
+2026-03-13 12:58:38,930 - Finish(bootstrap): chroot init
+2026-03-13 12:58:38,934 - Start: chroot init
+2026-03-13 12:58:38,946 - Start: unpacking root cache
+2026-03-13 12:58:41,334 - Finish: unpacking root cache
+2026-03-13 12:58:41,337 - Start: cleaning package manager metadata
+2026-03-13 12:58:41,339 - Finish: cleaning package manager metadata
+2026-03-13 12:58:41,875 - Start: yum update
+2026-03-13 12:58:44,082 - Finish: yum update
+2026-03-13 12:58:44,548 - Finish: chroot init
+2026-03-13 12:58:44,551 - Start: buildsrpm
+2026-03-13 12:58:44,556 - Start: rpmbuild -bs
+2026-03-13 12:58:44,881 - Finish: rpmbuild -bs
+2026-03-13 12:58:44,884 - Finish: buildsrpm
+2026-03-13 12:58:44,885 - Start: clean chroot
+2026-03-13 12:58:47,265 - Finish: clean chroot
+2026-03-13 12:58:47,266 - Finish: run
