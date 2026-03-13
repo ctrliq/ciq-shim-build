@@ -108,8 +108,8 @@ You will be asked to post the contents of these mails in your `shim-review` issu
 - Name: Skip Grube 
 - Position: Senior Systems Engineer  
 - Email address: [sgrube@ciq.com](mailto:sgrube@ciq.com)  
-- PGP key fingerprint: 
-- PGP key URL: []()
+- PGP key fingerprint: F58E D7A0 91B6 E50D E7CA EB07 D391 F839 3BEA 6D9C
+- PGP key URL: [https://keyserver.ubuntu.com/pks/lookup?search=Skip+Grube&fingerprint=on&op=index](https://keyserver.ubuntu.com/pks/lookup?search=Skip+Grube&fingerprint=on&op=index)
 
 (Key should be signed by the other security contacts, pushed to a keyserver like keyserver.ubuntu.com, and preferably have signatures that are reasonably well known in the Linux community.)
 
@@ -310,7 +310,7 @@ This ensures that your new shim+GRUB2 can no longer chainload those older GRUB2 
 If this is your first application or you're using a new CA certificate, please say so here.
 *******************************************************************************
 
-We currently sign with a previously used (currently active) CA from our previous submissions. Any older grub2 versions are set to sbat level 3 and will not boot because of the sbat restrictions not set to level 5\.
+We currently sign with a previously used (currently active) CA from our previous submissions. Any older grub2 versions specifically below sbat level 5 will not boot because the SBAT_AUTOMATIC_DATE is set to 2025051000.
 
 *******************************************************************************
 
@@ -456,7 +456,7 @@ Summarize in one or two sentences, how your secure bootchain works on higher lev
 *******************************************************************************
 In the case of the kernel, both the Centos variant and the upstream ("new") variants prevent this by default, and we do not want to change that.
 
-In the case of Grub + fwupdate, we are derived from Centos/RHEL versions with minimal ongoing security fixes.  They also do not execute unauthenticated code by default.
+In the case of Grub, we are derived from Centos/RHEL versions with minimal ongoing security fixes.  They also do not execute unauthenticated code by default.
 
 *******************************************************************************
 ### Does your shim load any loaders that support loading unsigned kernels (e.g. certain GRUB2 configurations)?
