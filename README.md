@@ -106,11 +106,17 @@ An authorized reviewer will initiate contact verification by sending each securi
 
 ---
 
-- Name: Michael Young  
-- Position: Principal Systems Engineer  
-- Email address: [myoung@ciq.com](mailto:myoung@ciq.com)  
-- PGP key fingerprint: CD82 9808 7BCA C022 B5EC  84FA D84A 6A59 1392 6D2B  
-- PGP key URL: [http://keyserver.ubuntu.com/pks/lookup?op=get\&search=0xcd8298087bcac022b5ec84fad84a6a5913926d2b](http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xcd8298087bcac022b5ec84fad84a6a5913926d2b)
+Name: Andrew Jorgensen
+Position: Senior Principal Linux Engineer
+Email address: ajorgens@ciq.com
+PGP key fingerprint: 6EEF B810 8DF1 6EF5 729E C8C9 8120 157A 1402 D875
+PGP key URL: https://keyserver.ubuntu.com/pks/lookup?search=8120157A1402D875&fingerprint=on&op=index
+
+Name: Skip Grube
+Position: Senior Systems Engineer
+Email address: sgrube@ciq.com
+PGP key fingerprint: F58E D7A0 91B6 E50D E7CA EB07 D391 F839 3BEA 6D9C
+PGP key URL: https://keyserver.ubuntu.com/pks/lookup?search=Skip+Grube&fingerprint=on&op=index
 
 (Key should be signed by the other security contacts, pushed to a keyserver like keyserver.ubuntu.com, and preferably have signatures that are reasonably well known in the Linux community.)
 
@@ -643,7 +649,7 @@ Grub2 will only load unsigned code if the secureboot feature is turned off. Othe
 
 ---
 
-We are using our RHEL upstream variant 5.14 with minor patches (on top of the many patches from Red Hat and others). We are also building and packaging supported upstream kernels designed for use on Rocky and enterprise-Linux variants.  These include supported LT versions (5.4, 5.10, 5.15, 6.1), as well as the rolling latest-stable version.
+We are using our RHEL upstream variant 5.14 with minor patches (on top of the many patches from Red Hat and others). We are also building and packaging supported upstream kernels designed for use on Rocky and enterprise-Linux variants.  These include supported LT versions (6.12, 6.18), as well as the rolling latest-stable version.
 
 I understand that these all enforce secure boot "out of the box".
 
