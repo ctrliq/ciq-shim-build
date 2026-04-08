@@ -649,7 +649,7 @@ Grub2 will only load unsigned code if the secureboot feature is turned off. Othe
 
 ---
 
-We are using our RHEL upstream variant 5.14 with minor patches (on top of the many patches from Red Hat and others). We are also building and packaging supported upstream kernels designed for use on Rocky and enterprise-Linux variants.  These include supported LT versions (6.12, 6.18), as well as the rolling latest-stable version.
+We are using our RHEL upstream variant 4.18, 5.14 and 6.12 with minor patches (on top of the many patches from Red Hat and others). We are also building and packaging supported upstream kernels designed for use on Rocky and enterprise-Linux variants.  These include supported LT versions (6.12, 6.18), as well as the rolling latest-stable version.
 
 I understand that these all enforce secure boot "out of the box".
 
