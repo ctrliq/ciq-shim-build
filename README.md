@@ -89,15 +89,15 @@ You will be asked to post the contents of these mails in your `shim-review` issu
 
 *******************************************************************************
 
+- Name: Jason Rodriguez
+- Position: Sr Principal Software Engineer
+- Email address: [jrodriguez@ciq.com](mailto:jrodriguez@ciq.com)
+- PGP key fingerprint: 0310 CFD4 0447 4D14 5072 D3E1 EAFF ECB3 C3AB C924
+- PGP key URL: [https://keys.openpgp.org/vks/v1/by-fingerprint/0310CFD404474D145072D3E1EAFFECB3C3ABC924](https://keys.openpgp.org/vks/v1/by-fingerprint/0310CFD404474D145072D3E1EAFFECB3C3ABC924)
+
 *******************************************************************************
 ### Who is the secondary contact for security updates, etc.?
 *******************************************************************************
-
-- Name: Michael Young  
-- Position: Principal Systems Engineer  
-- Email address: [myoung@ciq.com](mailto:myoung@ciq.com)  
-- PGP key fingerprint: CD82 9808 7BCA C022 B5EC  84FA D84A 6A59 1392 6D2B  
-- PGP key URL: [http://keyserver.ubuntu.com/pks/lookup?op=get\&search=0xcd8298087bcac022b5ec84fad84a6a5913926d2b](http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xcd8298087bcac022b5ec84fad84a6a5913926d2b)
 
 - Name: Andrew Jorgensen
 - Position: Senior Principal Linux Engineer  
