@@ -5,11 +5,11 @@
 
 # Stage 1: Build x64 + ia32 on AMD64 platform
 FROM --platform=linux/amd64 quay.io/rockylinux/rockylinux:9.6.20250531 AS amd64
-ARG SHIM_VERSION=16.1-0.el9
+ARG SHIM_VERSION=16.1-1.el9
 
 # Copy build configuration
 COPY rpmmacros /root/.rpmmacros
-COPY shim-unsigned-x64-16.1-0.el9.src.rpm /root/shim-unsigned-x64-${SHIM_VERSION}.src.rpm
+COPY shim-unsigned-x64-16.1-1.el9.src.rpm /root/shim-unsigned-x64-${SHIM_VERSION}.src.rpm
 RUN rpm -ivh /root/shim-unsigned-x64-${SHIM_VERSION}.src.rpm
 
 # Fix spec file for container builds
@@ -32,11 +32,11 @@ RUN rpm2cpio /builddir/build/RPMS/x86_64/shim-unsigned-x64-${SHIM_VERSION}.x86_6
 
 # Stage 2: Build aa64 on ARM64 platform
 FROM --platform=linux/arm64 quay.io/rockylinux/rockylinux:9.6.20250531 AS arm64
-ARG SHIM_VERSION=16.1-0.el9
+ARG SHIM_VERSION=16.1-1.el9
 
 # Copy build configuration
 COPY rpmmacros /root/.rpmmacros
-COPY shim-unsigned-aarch64-16.1-0.el9.src.rpm /root/shim-unsigned-aarch64-${SHIM_VERSION}.src.rpm
+COPY shim-unsigned-aarch64-16.1-1.el9.src.rpm /root/shim-unsigned-aarch64-${SHIM_VERSION}.src.rpm
 RUN rpm -ivh /root/shim-unsigned-aarch64-${SHIM_VERSION}.src.rpm
 
 # Copy control binary to root
@@ -56,7 +56,7 @@ RUN rpm2cpio /builddir/build/RPMS/aarch64/shim-unsigned-aarch64-${SHIM_VERSION}.
 
 # Final Stage: Aggregate and run reproducibility verification
 FROM --platform=linux/amd64 quay.io/rockylinux/rockylinux:9.6.20250531
-ARG SHIM_VERSION=16.1-0.el9
+ARG SHIM_VERSION=16.1-1.el9
 
 # Install pesign and diffutils for verification (diffutils provides cmp command)
 RUN dnf install -y pesign diffutils

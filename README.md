@@ -158,7 +158,7 @@ You can also point to your custom git servers, where the code is hosted.
 ---
 
 - x64: [https://github.com/ctrliq/shim-unsigned-x64](https://github.com/ctrliq/shim-unsigned-x64)  
-- aa64: [https://github.com/ctrliq/shim-unsigned-aarch64](https://github.com/ctrliq/shim-unsigned-aarch64)  
+- aa64: [https://github.com/ctrliq/shim-unsigned-aa64](https://github.com/ctrliq/shim-unsigned-aa64)  
 - Build scripts: [https://github.com/ctrliq/ciq-shim-build](https://github.com/ctrliq/ciq-shim-build)
 
 ---
@@ -179,7 +179,13 @@ See [https://techcommunity.microsoft.com/t5/hardware-dev-center/nx-exception-for
 
 ---
 
-No, we do not have the NX bit set on our shim.
+Yes, NX is enabled in the shim (DllCharacteristics bit 0x0100 set). The full boot chain has been tested on both x86\_64 (KVM/OVMF) and aarch64 (UTM/AAVMF):
+
+* **shim**: NX\_COMPAT set (`DllCharacteristics=0x0100`)
+* **grub2**: NX-compatible (Rocky/RHEL grub2 2.06-114.el9\_6\_ciq)
+* **mm (MokManager)**: NX\_COMPAT set — tested; non-NX mm was rejected by NX shim, replaced with NX-enabled mm, boot chain completed successfully on both architectures
+* **fb (fallback)**: NX\_COMPAT set
+* **certwrapper**: NX\_COMPAT is not applicable — certwrapper is not executed by shim. Shim reads the `.db` EFI section from the certwrapper binary to extract the embedded certificate ESL; no code in certwrapper is ever called. It functions as a signed data container, not a loaded application.
 
 ---
 
@@ -293,8 +299,7 @@ If you had no previous signed shim, say so here. Otherwise a simple *yes* will d
 
 ---
 
-- This is the first time upgrading the shim, our previous submissions were based on 15.8, we will be submitting the hashes of our old shims.   
-- Yes, The new chain of trust uses SBAT enforcement to prevent booting GRUB2 builds affected by CVEs.
+- The new chain of trust uses SBAT enforcement to prevent booting GRUB2 builds affected by CVEs.
 
 ---
 
@@ -434,8 +439,8 @@ We now sign UKI for kernels that support the feature.
 
 ---
 
-* SHA256 (shimx64.efi) \= b84c025d211dd72a2cd4847d1e090286ae6cc0507b8a144c9eea56bfd8898f72
-* SHA256 (shimaa64.efi) \= 1906bc52b59b09cb3c91df2654ab689c9155609a09135b2496d1dc29c820bb62
+* SHA256 (shimx64.efi) \= 57bb81f83825be1a21693cef657a7f33c860e80aa4ac5a9f68ea6b56991eccd0
+* SHA256 (shimaa64.efi) \= 61efe8d165cd838598eaf8d369d7528adc09e91d22aa40660f323eee56378eb4
 
 ---
 

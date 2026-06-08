@@ -12,13 +12,14 @@ Confirm the following are included in your repo, checking each box:
 *******************************************************************************
 ### What is the link to your tag in a repo cloned from rhboot/shim-review?
 *******************************************************************************
-`https://github.com/ctrliq/ciq-shim-build/releases/tag/ciqliq-shim-EL9-x86-aarch64-202602??`
+`https://github.com/ctrliq/ciq-shim-build/releases/tag/ciq-shim-EL9-x86-aarch64-20260608`
 
 *******************************************************************************
 ### What is the SHA256 hash of your final SHIM binary?
 *******************************************************************************
-* SHA256 (shimx64.efi) \= b84c025d211dd72a2cd4847d1e090286ae6cc0507b8a144c9eea56bfd8898f72
-* SHA256 (shimaa64.efi) \= 1906bc52b59b09cb3c91df2654ab689c9155609a09135b2496d1dc29c820bb62
+
+* SHA256 (shimx64.efi) \= 57bb81f83825be1a21693cef657a7f33c860e80aa4ac5a9f68ea6b56991eccd0
+* SHA256 (shimaa64.efi) \= 61efe8d165cd838598eaf8d369d7528adc09e91d22aa40660f323eee56378eb4
 
 *******************************************************************************
 ### What is the link to your previous shim review request (if any, otherwise N/A)?
@@ -28,9 +29,10 @@ Confirm the following are included in your repo, checking each box:
 - [Ctrl IQ, Inc EL7 Shim 15.8 for x64 & ia32 #430](https://github.com/rhboot/shim-review/issues/430)
 - [Ctrl IQ, Inc EL9 Shim 15.8 for x64 #420](https://github.com/rhboot/shim-review/issues/420)
 - [Ctrl IQ, Inc EL9 Shim 15.8 for aa64 #455](https://github.com/rhboot/shim-review/issues/455)
-
+- [Ctrl IQ, Inc EL7 Shim 16.1 for x64 & ia32 #530](https://github.com/rhboot/shim-review/issues/521)
+- [Ctrl IQ, Inc Shim 16.1 for x64 & aa64 #521](https://github.com/rhboot/shim-review/issues/530)
 
 *******************************************************************************
 ### If no security contacts have changed since verification, what is the link to your request, where they've been verified (if any, otherwise N/A)?
 *******************************************************************************
-[Contact verification confirmed by aronowski](https://github.com/rhboot/shim-review/issues/339#issuecomment-1779052456)
+[Contact verification confirmed](https://github.com/rhboot/shim-review/issues/530#event-24953174831)
